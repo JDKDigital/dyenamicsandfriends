@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:comforts_aquamarinesleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_bubblegumsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_cherenkovsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_fluorescentsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_lavendersleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_maroonsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_mintsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_peachsleeping_bag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_persimmonsleeping_bag",
+      "required": false
+    }
+  ]
+}

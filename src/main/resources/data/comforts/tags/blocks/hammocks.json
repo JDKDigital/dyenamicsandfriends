@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:comforts_aquamarine_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_bubblegum_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_cherenkov_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_fluorescent_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_lavender_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_maroon_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_mint_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_peach_hammock",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:comforts_persimmon_hammock",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dyenamicsandfriends:block/quark/framed_glass/peach"
+  }
+}

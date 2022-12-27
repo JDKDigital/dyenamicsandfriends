@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "dyenamicsandfriends:block/quark/shingles/persimmon",
+    "top": "dyenamicsandfriends:block/quark/shingles/persimmon",
+    "side": "dyenamicsandfriends:block/quark/shingles/persimmon"
+  }
+}

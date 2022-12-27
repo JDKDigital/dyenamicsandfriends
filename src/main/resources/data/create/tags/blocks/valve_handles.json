@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:create_aquamarine_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_bubblegum_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_cherenkov_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_fluorescent_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_lavender_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_maroon_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_mint_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_peach_valve_handle",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:create_persimmon_valve_handle",
+      "required": false
+    }
+  ]
+}

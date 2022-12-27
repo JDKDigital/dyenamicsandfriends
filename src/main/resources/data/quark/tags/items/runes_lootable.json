@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_rune",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_rune",
+      "required": false
+    }
+  ]
+}

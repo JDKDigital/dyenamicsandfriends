@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:elevatorid_aquamarine_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_bubblegum_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_cherenkov_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_fluorescent_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_lavender_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_maroon_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_mint_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_peach_elevator",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:elevatorid_persimmon_elevator",
+      "required": false
+    }
+  ]
+}

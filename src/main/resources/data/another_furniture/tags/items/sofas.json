@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:another_furniture_aquamarine_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_bubblegum_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_cherenkov_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_fluorescent_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_lavender_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_maroon_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_mint_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_peach_sofa",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_persimmon_sofa",
+      "required": false
+    }
+  ]
+}

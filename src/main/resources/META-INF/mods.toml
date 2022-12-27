@@ -1,0 +1,32 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)"
+license="All rights reserved"
+
+[[mods]] #mandatory
+modId="dyenamicsandfriends" #mandatory
+version="${file.jarVersion}" #mandatory
+displayName="Dyenamics and Friends" #mandatory
+logoFile="logo.png" #optional
+credits="Dyenamics and me" #optional
+authors="LobsterJonn" #optional
+description='''
+Adds compatibility between Dyenamics new colors and a large range of other mods
+'''
+[[dependencies.dyenamicsandfriends]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[40,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.dyenamicsandfriends]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.dyenamicsandfriends]]
+    modId="dyenamics"
+    mandatory=true
+    versionRange="[1.0.0,)"
+    ordering="NONE"
+    side="BOTH"

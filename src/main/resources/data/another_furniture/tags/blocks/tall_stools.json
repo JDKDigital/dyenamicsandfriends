@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:another_furniture_aquamarine_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_bubblegum_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_cherenkov_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_fluorescent_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_lavender_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_maroon_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_mint_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_peach_tall_stool",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_persimmon_tall_stool",
+      "required": false
+    }
+  ]
+}

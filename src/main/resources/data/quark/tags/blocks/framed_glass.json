@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_shard",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_shard",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:another_furniture_aquamarine_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_bubblegum_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_cherenkov_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_fluorescent_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_lavender_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_maroon_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_mint_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_peach_lamp",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:another_furniture_persimmon_lamp",
+      "required": false
+    }
+  ]
+}
