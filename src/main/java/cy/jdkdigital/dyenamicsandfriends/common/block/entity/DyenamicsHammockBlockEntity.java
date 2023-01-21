@@ -1,14 +1,14 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.entity;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.illusivesoulworks.comforts.common.block.entity.HammockBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsHammockBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import top.theillusivec4.comforts.common.tileentity.HammockTileEntity;
 
-public class DyenamicsHammockBlockEntity extends HammockTileEntity
+public class DyenamicsHammockBlockEntity extends HammockBlockEntity
 {
     private final DyenamicsHammockBlock block;
 

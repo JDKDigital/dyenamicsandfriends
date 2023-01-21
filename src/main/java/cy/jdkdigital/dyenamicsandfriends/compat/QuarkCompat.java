@@ -36,7 +36,7 @@ public class QuarkCompat
     private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> FRAMED_GLASS_PANES = new HashMap<>();
 
     public static void setup() {
-        DyenamicsAndFriends.LOOT_SERIALIZERS.register("shard", StainedGlassBlockLootModifier.Serializer::new);
+        DyenamicsAndFriends.LOOT_SERIALIZERS.register("shard", StainedGlassBlockLootModifier.CODEC);
     }
 
     public static void registerBlocks(DyenamicDyeColor color) {

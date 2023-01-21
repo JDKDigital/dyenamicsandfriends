@@ -53,28 +53,25 @@ public class DyenamicsElevatorBlock extends ElevatorBlock
     public InteractionResult use(@Nonnull BlockState state, Level worldIn, @Nonnull BlockPos pos, @Nonnull Player player, @Nonnull InteractionHand handIn, @Nonnull BlockHitResult hit) {
         if (worldIn.isClientSide) {
             return InteractionResult.SUCCESS;
+        } else {
+            ItemStack handStack = player.getItemInHand(handIn);
+            DyenamicsElevatorBlockEntity tile = this.getElevatorTile(worldIn, pos);
+            if (tile == null) {
+                return InteractionResult.FAIL;
+            } else {
+                Block handBlock = Block.byItem(handStack.getItem());
+                BlockState stateToApply = handBlock.getStateForPlacement(new FakeUseContext(player, handIn, hit));
+                if (tile.setCamoAndUpdate(stateToApply)) {
+                    return InteractionResult.SUCCESS;
+                } else if (player.isCrouching() && tile.getHeldState() != null) {
+                    tile.setCamoAndUpdate(null);
+                    return InteractionResult.SUCCESS;
+                } else {
+                    NetworkHooks.openScreen((ServerPlayer)player, tile, pos);
+                    return InteractionResult.SUCCESS;
+                }
+            }
         }
-
-        ItemStack handStack = player.getItemInHand(handIn);
-        DyenamicsElevatorBlockEntity tile = getElevatorTile(worldIn, pos);
-        if (tile == null) {
-            return InteractionResult.FAIL;
-        }
-
-        Block handBlock = Block.byItem(handStack.getItem());
-        BlockState stateToApply = handBlock.getStateForPlacement(new FakeUseContext(player, handIn, hit));
-        if (tile.setCamoAndUpdate(stateToApply)) {
-            return InteractionResult.SUCCESS; // If we successfully set camo, don't open the menu
-        }
-
-        // Remove camo
-        if (player.isCrouching() && tile.getHeldState() != null) {
-            tile.setCamoAndUpdate(null);
-            return InteractionResult.SUCCESS;
-        }
-
-        NetworkHooks.openGui((ServerPlayer) player, tile, pos);
-        return InteractionResult.SUCCESS;
     }
 
     private DyenamicsElevatorBlockEntity getElevatorTile(BlockGetter world, BlockPos pos) {

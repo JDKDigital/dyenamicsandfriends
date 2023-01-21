@@ -1,14 +1,14 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.entity;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.illusivesoulworks.comforts.common.block.entity.SleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSleepingBagBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import top.theillusivec4.comforts.common.tileentity.SleepingBagTileEntity;
 
-public class DyenamicsSleepingBagBlockEntity extends SleepingBagTileEntity
+public class DyenamicsSleepingBagBlockEntity extends SleepingBagBlockEntity
 {
     private final DyenamicsSleepingBagBlock block;
 

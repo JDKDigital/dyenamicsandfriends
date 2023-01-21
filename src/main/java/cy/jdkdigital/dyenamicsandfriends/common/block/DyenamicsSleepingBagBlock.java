@@ -1,6 +1,8 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
+import com.illusivesoulworks.comforts.common.block.entity.SleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBagBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;
@@ -12,19 +14,17 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import top.theillusivec4.comforts.common.block.ComfortsBaseBlock;
-import top.theillusivec4.comforts.common.tileentity.SleepingBagTileEntity;
 
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
-public class DyenamicsSleepingBagBlock extends ComfortsBaseBlock
+public class DyenamicsSleepingBagBlock extends BaseComfortsBlock
 {
     private static final VoxelShape SLEEPING_BAG_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
     private final DyenamicDyeColor color;
-    private final Supplier<BlockEntityType<SleepingBagTileEntity>> blockEntitySupplier;
+    private final Supplier<BlockEntityType<SleepingBagBlockEntity>> blockEntitySupplier;
 
-    public DyenamicsSleepingBagBlock(DyenamicDyeColor color, BlockBehaviour.Properties properties, Supplier<BlockEntityType<SleepingBagTileEntity>> blockEntitySupplier) {
+    public DyenamicsSleepingBagBlock(DyenamicDyeColor color, BlockBehaviour.Properties properties, Supplier<BlockEntityType<SleepingBagBlockEntity>> blockEntitySupplier) {
         super(null, DyeColor.WHITE, properties);
         this.color = color;
         this.blockEntitySupplier = blockEntitySupplier;
@@ -34,7 +34,7 @@ public class DyenamicsSleepingBagBlock extends ComfortsBaseBlock
         return new DyenamicsSleepingBagBlockEntity(this, pos, state);
     }
 
-    public Supplier<BlockEntityType<SleepingBagTileEntity>> getBlockEntitySupplier() {
+    public Supplier<BlockEntityType<SleepingBagBlockEntity>> getBlockEntitySupplier() {
         return blockEntitySupplier;
     }
 
@@ -44,7 +44,7 @@ public class DyenamicsSleepingBagBlock extends ComfortsBaseBlock
 
     @Nonnull
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+    public VoxelShape getShape(@Nonnull BlockState state, @Nonnull BlockGetter worldIn, @Nonnull BlockPos pos, @Nonnull CollisionContext context) {
         return SLEEPING_BAG_SHAPE;
     }
 }

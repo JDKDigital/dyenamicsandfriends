@@ -17,6 +17,7 @@ templates = [
   r'templates/assets/dyenamicsandfriends/blockstates/quark_$$_shingles.json',
   r'templates/assets/dyenamicsandfriends/blockstates/quark_$$_shingles_slab.json',
   r'templates/assets/dyenamicsandfriends/blockstates/quark_$$_shingles_stairs.json',
+  r'templates/assets/dyenamicsandfriends/blockstates/handcrafted_$$_cushion.json',
 
   r'templates/assets/dyenamicsandfriends/models/block/create_$$_valve_handle.json',
   r'templates/assets/dyenamicsandfriends/models/block/create_$$_seat.json',
@@ -50,6 +51,7 @@ templates = [
   r'templates/assets/dyenamicsandfriends/models/block/quark_$$_shingles_stairs.json',
   r'templates/assets/dyenamicsandfriends/models/block/quark_$$_shingles_stairs_inner.json',
   r'templates/assets/dyenamicsandfriends/models/block/quark_$$_shingles_stairs_outer.json',
+  r'templates/assets/dyenamicsandfriends/models/block/handcrafted/cushion/$$_cushion.json',
 
   r'templates/assets/dyenamicsandfriends/models/item/create_$$_valve_handle.json',
   r'templates/assets/dyenamicsandfriends/models/item/create_$$_seat.json',
@@ -68,6 +70,8 @@ templates = [
   r'templates/assets/dyenamicsandfriends/models/item/quark_$$_shingles.json',
   r'templates/assets/dyenamicsandfriends/models/item/quark_$$_shingles_slab.json',
   r'templates/assets/dyenamicsandfriends/models/item/quark_$$_shingles_stairs.json',
+  r'templates/assets/dyenamicsandfriends/models/item/handcrafted_$$_cushion.json',
+  r'templates/assets/dyenamicsandfriends/models/item/handcrafted_$$_sheet.json',
 
   r'templates/data/dyenamicsandfriends/recipes/create/$$_seat.json',
   r'templates/data/dyenamicsandfriends/recipes/create/$$_seat_from_other_seat.json',
@@ -90,6 +94,8 @@ templates = [
   r'templates/data/dyenamicsandfriends/recipes/quark/$$_shingles_dye.json',
   r'templates/data/dyenamicsandfriends/recipes/quark/$$_shingles_slab.json',
   r'templates/data/dyenamicsandfriends/recipes/quark/$$_shingles_stairs.json',
+  r'templates/data/dyenamicsandfriends/recipes/handcrafted/$$_cushion.json',
+  r'templates/data/dyenamicsandfriends/recipes/handcrafted/$$_sheet.json',
 
   r'templates/data/dyenamicsandfriends/loot_tables/blocks/create_$$_seat.json',
   r'templates/data/dyenamicsandfriends/loot_tables/blocks/create_$$_valve_handle.json',
@@ -106,6 +112,7 @@ templates = [
   r'templates/data/dyenamicsandfriends/loot_tables/blocks/quark_$$_shingles.json',
   r'templates/data/dyenamicsandfriends/loot_tables/blocks/quark_$$_shingles_slab.json',
   r'templates/data/dyenamicsandfriends/loot_tables/blocks/quark_$$_shingles_stairs.json',
+  r'templates/data/dyenamicsandfriends/loot_tables/blocks/handcrafted_$$_cushion.json',
 
   r'templates/data/dyenamicsandfriends/loot_modifiers/quark_$$_shard.json',
 ]

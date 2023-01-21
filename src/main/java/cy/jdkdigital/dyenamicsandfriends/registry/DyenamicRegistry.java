@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -74,6 +74,10 @@ public class DyenamicRegistry
                 // rune
                 QuarkCompat.registerBlocks(color);
                 QuarkCompat.registerItems(color);
+            }
+            if (ModList.get().isLoaded("handcrafted")) {
+                HandcraftedCompat.registerBlocks(color);
+                HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
                 // sofa
@@ -168,11 +172,11 @@ public class DyenamicRegistry
         }
     }
 
-    public static void onModelBake(ModelBakeEvent event) {
+    public static void onModelBake(ModelEvent.BakingCompleted event) {
         if (ModList.get().isLoaded("elevatorid")) {
-            event.getModelRegistry().entrySet().stream()
+            event.getModels().entrySet().stream()
                 .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
-                .forEach(entry -> event.getModelRegistry().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
+                .forEach(entry -> event.getModels().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
         }
     }
 }

@@ -1,6 +1,9 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
+import com.illusivesoulworks.comforts.common.block.RopeAndNailBlock;
+import com.illusivesoulworks.comforts.common.block.entity.HammockBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsHammockBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -20,14 +23,11 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import top.theillusivec4.comforts.common.block.ComfortsBaseBlock;
-import top.theillusivec4.comforts.common.block.RopeAndNailBlock;
-import top.theillusivec4.comforts.common.tileentity.HammockTileEntity;
 
 import javax.annotation.Nonnull;
 import java.util.function.Supplier;
 
-public class DyenamicsHammockBlock extends ComfortsBaseBlock
+public class DyenamicsHammockBlock extends BaseComfortsBlock
 {
     private static final VoxelShape HAMMOCK_SHAPE = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.0D, 15.0D);
     private static final VoxelShape NORTH_SHAPE = Shapes.or(Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.0D, 16.0D), Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 1.0D));
@@ -35,9 +35,9 @@ public class DyenamicsHammockBlock extends ComfortsBaseBlock
     private static final VoxelShape WEST_SHAPE = Shapes.or(Block.box(1.0D, 0.0D, 1.0D, 16.0D, 1.0D, 15.0D), Block.box(0.0D, 0.0D, 0.0D, 1.0D, 1.0D, 16.0D));
     private static final VoxelShape EAST_SHAPE = Shapes.or(Block.box(1.0D, 0.0D, 1.0D, 16.0D, 1.0D, 15.0D), Block.box(15.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D));
     private final DyenamicDyeColor color;
-    private final Supplier<BlockEntityType<HammockTileEntity>> blockEntitySupplier;
+    private final Supplier<BlockEntityType<HammockBlockEntity>> blockEntitySupplier;
 
-    public DyenamicsHammockBlock(DyenamicDyeColor color, BlockBehaviour.Properties properties, Supplier<BlockEntityType<HammockTileEntity>> blockEntitySupplier) {
+    public DyenamicsHammockBlock(DyenamicDyeColor color, BlockBehaviour.Properties properties, Supplier<BlockEntityType<HammockBlockEntity>> blockEntitySupplier) {
         super(null, DyeColor.WHITE, properties);
         this.color = color;
         this.blockEntitySupplier = blockEntitySupplier;
@@ -47,7 +47,7 @@ public class DyenamicsHammockBlock extends ComfortsBaseBlock
         return new DyenamicsHammockBlockEntity(this, pos, state);
     }
 
-    public Supplier<BlockEntityType<HammockTileEntity>> getBlockEntitySupplier() {
+    public Supplier<BlockEntityType<HammockBlockEntity>> getBlockEntitySupplier() {
         return blockEntitySupplier;
     }
 
@@ -59,11 +59,11 @@ public class DyenamicsHammockBlock extends ComfortsBaseBlock
         return part == BedPart.FOOT ? facing : facing.getOpposite();
     }
 
-    public static void dropRopeSupport(BlockPos pos, Direction direction, boolean isHead, Level worldIn) {
+    public static void dropRopeSupport(BlockPos pos, Direction direction, boolean isHead, Level level) {
         BlockPos ropePos = isHead ? pos.relative(direction) : pos.relative(direction.getOpposite());
-        BlockState ropeState = worldIn.getBlockState(ropePos);
+        BlockState ropeState = level.getBlockState(ropePos);
         if (ropeState.getBlock() instanceof RopeAndNailBlock) {
-            worldIn.setBlockAndUpdate(ropePos, ropeState.setValue(RopeAndNailBlock.SUPPORTING, false));
+            level.setBlockAndUpdate(ropePos, (BlockState)ropeState.setValue(RopeAndNailBlock.SUPPORTING, false));
         }
     }
 
@@ -101,7 +101,7 @@ public class DyenamicsHammockBlock extends ComfortsBaseBlock
         final BlockPos blockpos = context.getClickedPos();
         final BlockPos blockpos1 = blockpos.relative(direction);
         final FluidState ifluidstate = context.getLevel().getFluidState(blockpos);
-        return context.getLevel().getBlockState(blockpos1).canBeReplaced(context) ? this.defaultBlockState().setValue(FACING, direction).setValue(ComfortsBaseBlock.WATERLOGGED, ifluidstate.getType() == Fluids.WATER) : null;
+        return context.getLevel().getBlockState(blockpos1).canBeReplaced(context) ? this.defaultBlockState().setValue(FACING, direction).setValue(BaseComfortsBlock.WATERLOGGED, ifluidstate.getType() == Fluids.WATER) : null;
     }
 
 }

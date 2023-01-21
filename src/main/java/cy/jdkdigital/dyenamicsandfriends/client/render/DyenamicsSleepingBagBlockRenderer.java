@@ -1,8 +1,11 @@
 package cy.jdkdigital.dyenamicsandfriends.client.render;
 
+import com.illusivesoulworks.comforts.client.renderer.SleepingBagBlockEntityRenderer;
+import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBagBlockEntity;
+import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BrightnessCombiner;
@@ -18,30 +21,28 @@ import net.minecraft.world.level.block.entity.BedBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
-import org.jetbrains.annotations.NotNull;
-import top.theillusivec4.comforts.client.renderer.SleepingBagTileEntityRenderer;
-import top.theillusivec4.comforts.common.tileentity.ComfortsBaseTileEntity;
 
-public class DyenamicsSleepingBagBlockRenderer extends SleepingBagTileEntityRenderer
+import javax.annotation.Nonnull;
+
+public class DyenamicsSleepingBagBlockRenderer extends SleepingBagBlockEntityRenderer
 {
     public DyenamicsSleepingBagBlockRenderer(BlockEntityRendererProvider.Context ctx) {
         super(ctx);
     }
 
     @Override
-    public void render(ComfortsBaseTileEntity tileEntityIn, float partialTicks, @NotNull PoseStack matrixStackIn, @NotNull MultiBufferSource bufferIn, int combinedLightIn, int combinedOverlayIn) {
-        if (tileEntityIn instanceof DyenamicsSleepingBagBlockEntity blockEntity) {
-            Material material = new Material(InventoryMenu.BLOCK_ATLAS, new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + blockEntity.getDyenamicColor().getSerializedName()));
-            final Level level = tileEntityIn.getLevel();
-
+    public void render(BaseComfortsBlockEntity blockEntity, float partialTicks, @Nonnull PoseStack matrixStack, @Nonnull MultiBufferSource buffer, int combinedLightIn, int combinedOverlayIn) {
+        if (blockEntity instanceof DyenamicsSleepingBagBlockEntity dyenamicsSleepingBagBlockEntity) {
+            Material material = new Material(InventoryMenu.BLOCK_ATLAS, new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + dyenamicsSleepingBagBlockEntity.getDyenamicColor().getSerializedName()));
+            Level level = blockEntity.getLevel();
             if (level != null) {
-                final BlockState blockstate = tileEntityIn.getBlockState();
-                DoubleBlockCombiner.NeighborCombineResult<? extends BedBlockEntity> icallbackwrapper = DoubleBlockCombiner.combineWithNeigbour(BlockEntityType.BED, BedBlock::getBlockType, BedBlock::getConnectedDirection, ChestBlock.FACING, blockstate, level, tileEntityIn.getBlockPos(), (l, p) -> false);
-                final int i = icallbackwrapper.apply(new BrightnessCombiner<>()).get(combinedLightIn);
-                this.renderPiece(matrixStackIn, bufferIn, blockstate.getValue(BedBlock.PART) == BedPart.HEAD, blockstate.getValue(BedBlock.FACING), material, i, combinedOverlayIn, false);
+                BlockState blockstate = blockEntity.getBlockState();
+                DoubleBlockCombiner.NeighborCombineResult<? extends BedBlockEntity> icallbackwrapper = DoubleBlockCombiner.combineWithNeigbour(BlockEntityType.BED, BedBlock::getBlockType, BedBlock::getConnectedDirection, ChestBlock.FACING, blockstate, level, blockEntity.getBlockPos(), (p_228846_0_, p_228846_1_) -> false);
+                int i = ((Int2IntFunction)icallbackwrapper.apply(new BrightnessCombiner())).get(combinedLightIn);
+                this.renderPiece(matrixStack, buffer, blockstate.getValue(BedBlock.PART) == BedPart.HEAD, (Direction)blockstate.getValue(BedBlock.FACING), material, i, combinedOverlayIn, false);
             } else {
-                this.renderPiece(matrixStackIn, bufferIn, true, Direction.SOUTH, material, combinedLightIn, combinedOverlayIn, false);
-                this.renderPiece(matrixStackIn, bufferIn, false, Direction.SOUTH, material, combinedLightIn, combinedOverlayIn, true);
+                this.renderPiece(matrixStack, buffer, true, Direction.SOUTH, material, combinedLightIn, combinedOverlayIn, false);
+                this.renderPiece(matrixStack, buffer, false, Direction.SOUTH, material, combinedLightIn, combinedOverlayIn, true);
             }
         }
     }
