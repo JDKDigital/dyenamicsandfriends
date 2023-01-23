@@ -1,5 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.client.render;
 
+import com.illusivesoulworks.comforts.client.renderer.HammockBlockEntityRenderer;
 import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
@@ -20,7 +21,6 @@ import net.minecraft.world.level.block.entity.BedBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
-import com.illusivesoulworks.comforts.client.renderer.HammockBlockEntityRenderer;
 
 import javax.annotation.Nonnull;
 

@@ -1,0 +1,7 @@
+{
+  "parent": "botanypots:block/botany_pot_base",
+  "textures": {
+    "terracotta": "dyenamics:block/cherenkov_glazed_terracotta",
+    "particle": "dyenamics:block/cherenkov_glazed_terracotta"
+  }
+}

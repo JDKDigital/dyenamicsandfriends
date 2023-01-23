@@ -16,6 +16,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.registries.RegistryObject;
+import top.theillusivec4.comforts.common.item.HammockItem;
+import top.theillusivec4.comforts.common.item.SleepingBagItem;
 
 import java.util.HashMap;
 import java.util.Map;
