@@ -1,0 +1,7 @@
+{
+  "parent": "botanypots:block/botany_pot_base",
+  "textures": {
+    "terracotta": "dyenamics:block/bubblegum_concrete",
+    "particle": "dyenamics:block/bubblegum_concrete"
+  }
+}

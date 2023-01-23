@@ -1,28 +1,21 @@
 package cy.jdkdigital.dyenamicsandfriends.common.item;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.network.PacketDistributor;
 import top.theillusivec4.comforts.common.ComfortsConfig;
-import top.theillusivec4.comforts.common.block.RopeAndNailBlock;
 import top.theillusivec4.comforts.common.capability.CapabilitySleepData;
 import top.theillusivec4.comforts.common.network.ComfortsNetwork;
 import top.theillusivec4.comforts.common.network.SPacketAutoSleep;
 
 import javax.annotation.Nonnull;
-
-import static top.theillusivec4.comforts.common.block.RopeAndNailBlock.HORIZONTAL_FACING;
-import static top.theillusivec4.comforts.common.block.RopeAndNailBlock.SUPPORTING;
 
 public class DyenamicsSleepingBagItem extends BlockItem
 {

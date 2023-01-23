@@ -7,7 +7,6 @@ import com.simibubi.create.content.contraptions.components.actors.SeatInteractio
 import com.simibubi.create.content.contraptions.components.actors.SeatMovementBehaviour;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSeatBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsValveHandleBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;

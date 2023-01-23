@@ -5,7 +5,6 @@ import cofh.dyenamics.common.blocks.DyenamicStainedGlassPane;
 import cofh.dyenamics.core.init.BlockInit;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.common.item.DyenamicsRuneItem;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -19,13 +18,6 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.RegistryObject;
-import vazkii.quark.base.module.ModuleLoader;
-import vazkii.quark.content.building.block.StoolBlock;
-import vazkii.quark.content.building.block.VerticalSlabBlock;
-import vazkii.quark.content.building.module.FramedGlassModule;
-import vazkii.quark.content.building.module.ShinglesModule;
-import vazkii.quark.content.tools.module.ColorRunesModule;
-import vazkii.quark.content.tweaks.module.GlassShardModule;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,7 +44,6 @@ public class QuarkCompat
     public static void registerItems(DyenamicDyeColor color) {
         String prefix = "quark_" + color.getSerializedName();
         DyenamicRegistry.registerItem(prefix + "_shard", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
-//        DyenamicRegistry.registerItem(prefix + "_rune", () -> new DyenamicsRuneItem(color, new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
     }
 
     public static void registerBlockRendering() {

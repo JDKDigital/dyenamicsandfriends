@@ -140,6 +140,7 @@ dependencies {
 //    implementation fg.deobf("curse.maven:citadel-331936:3783096")
     implementation fg.deobf("curse.maven:selene-499980:3842421")
     implementation fg.deobf("curse.maven:balm-531761:3914491")
+    implementation fg.deobf("curse.maven:bookshelf-228525:4351251") // botany pots
 
     implementation fg.deobf("curse.maven:create-328085:4007544")
     implementation fg.deobf("curse.maven:create-deco-509285:4009050")
@@ -158,6 +159,7 @@ dependencies {
     implementation fg.deobf("curse.maven:skinned-lanterns-414154:3752414")
     implementation fg.deobf("curse.maven:nightlights-651876:4063045")
     implementation fg.deobf("curse.maven:mrcrayfish-furniture-mod-55438:3683524")
+    implementation fg.deobf("curse.maven:botany-pots-353928:4333907")
 }
 
 tasks.jarJar.configure {

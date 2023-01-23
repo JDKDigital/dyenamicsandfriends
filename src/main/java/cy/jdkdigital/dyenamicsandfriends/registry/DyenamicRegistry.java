@@ -40,6 +40,9 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("another_furniture")) {
                 AnotherFurnitureCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("botanypots")) {
+                BotanyPotsCompat.registerBlocks(color);
+            }
             if (ModList.get().isLoaded("comforts")) {
                 ComfortsCompat.registerBlocks(color);
             }
@@ -138,6 +141,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("another_furniture")) {
             AnotherFurnitureCompat.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("botanypots")) {
+            BotanyPotsCompat.registerBlockEntityRenderers(event);
+        }
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.registerBlockEntityRenderers(event);
         }
@@ -146,6 +152,9 @@ public class DyenamicRegistry
     public static void registerBlockRendering(FMLClientSetupEvent event) {
         if (ModList.get().isLoaded("another_furniture")) {
             AnotherFurnitureCompat.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("botanypots")) {
+            BotanyPotsCompat.registerBlockRendering();
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.registerBlockRendering();

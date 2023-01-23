@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_shingles_slab",
+      "required": false
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+      "#botanypots:all_botany_pots",
       {
           "id": "dyenamicsandfriends:quark_aquamarine_framed_glass",
           "required": false
