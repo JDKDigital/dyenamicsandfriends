@@ -139,7 +139,7 @@ dependencies {
 //    implementation fg.deobf("curse.maven:citadel-331936:3783096")
     implementation fg.deobf("curse.maven:selene-499980:4264361")
     implementation fg.deobf("curse.maven:balm-531761:3914527")
-    implementation fg.deobf("curse.maven:bookshelf-228525:4354814") // botany pots
+    implementation fg.deobf("curse.maven:bookshelf-228525:4153136") // botany pots
 
     implementation fg.deobf("curse.maven:create-328085:4174330")
     implementation fg.deobf("curse.maven:create-deco-509285:4183385")
@@ -148,7 +148,7 @@ dependencies {
     implementation fg.deobf("curse.maven:comforts-276951:4105213")
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:4086868")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999157")
-    implementation fg.deobf("curse.maven:reliquary-v1-3-241319:4005376")
+//    implementation fg.deobf("curse.maven:reliquary-v1-3-241319:4005376")
     implementation fg.deobf("curse.maven:snowy-spirit-566142:4263819")
     implementation fg.deobf("curse.maven:supplementaries-412082:4274153")
     implementation fg.deobf("curse.maven:waystones-245755:3901921")

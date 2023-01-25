@@ -46,9 +46,6 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("comforts")) {
                 ComfortsCompat.registerBlocks(color);
             }
-            if (ModList.get().isLoaded("domesticationinnovation")) {
-                // pet bed
-            }
             if (ModList.get().isLoaded("elevatorid")) {
                 ElevatoridCompat.registerBlocks(color);
             }
