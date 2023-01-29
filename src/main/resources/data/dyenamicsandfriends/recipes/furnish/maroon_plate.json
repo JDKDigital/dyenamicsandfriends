@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:maroon_terracotta"
+  },
+  "result": "dyenamicsandfriends:maroon_plate",
+  "count": 1
+}

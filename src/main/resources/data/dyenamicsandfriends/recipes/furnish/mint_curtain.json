@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:mint_carpet"
+  },
+  "result": "dyenamicsandfriends:mint_curtain",
+  "count": 1
+}

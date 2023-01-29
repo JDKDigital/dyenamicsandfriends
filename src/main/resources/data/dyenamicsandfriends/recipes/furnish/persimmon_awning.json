@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:persimmon_carpet"
+  },
+  "result": "dyenamicsandfriends:persimmon_awning",
+  "count": 1
+}

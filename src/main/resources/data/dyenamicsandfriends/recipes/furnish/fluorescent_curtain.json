@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:fluorescent_carpet"
+  },
+  "result": "dyenamicsandfriends:fluorescent_curtain",
+  "count": 1
+}

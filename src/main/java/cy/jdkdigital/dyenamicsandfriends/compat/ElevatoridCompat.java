@@ -8,9 +8,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.registries.RegistryObject;
 import xyz.vsngamer.elevatorid.blocks.ElevatorBlock;
 import xyz.vsngamer.elevatorid.client.render.ColorCamoElevator;
+import xyz.vsngamer.elevatorid.client.render.ElevatorBakedModel;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,5 +32,11 @@ public class ElevatoridCompat
                 ELEVATORS.values().stream().map(RegistryObject::get).toArray(ElevatorBlock[]::new)
         );
         ELEVATORS.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), t -> true));
+    }
+
+    public static void bakeModel(ModelEvent.BakingCompleted event) {
+        event.getModels().entrySet().stream()
+                .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
+                .forEach(entry -> event.getModels().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
     }
 }

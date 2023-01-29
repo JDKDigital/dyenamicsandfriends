@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:lavender_carpet"
+  },
+  "result": "dyenamicsandfriends:lavender_awning",
+  "count": 1
+}

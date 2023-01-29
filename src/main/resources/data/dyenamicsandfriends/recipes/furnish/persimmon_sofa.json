@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:persimmon_wool"
+  },
+  "result": "dyenamicsandfriends:persimmon_sofa",
+  "count": 1
+}

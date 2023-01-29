@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:maroon_carpet"
+  },
+  "result": "dyenamicsandfriends:maroon_awning",
+  "count": 1
+}

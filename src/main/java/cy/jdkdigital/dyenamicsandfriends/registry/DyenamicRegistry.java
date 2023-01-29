@@ -3,8 +3,6 @@ package cy.jdkdigital.dyenamicsandfriends.registry;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -14,10 +12,10 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.ModelEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.RegistryObject;
-import xyz.vsngamer.elevatorid.client.render.ElevatorBakedModel;
 
 import javax.annotation.Nullable;
 import java.util.function.Supplier;
@@ -80,13 +78,7 @@ public class DyenamicRegistry
                 HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
-                // sofa
-                // showcase
-                // awning
-                // curtain
-                // amphora
-                // plate
-                // paper lamp
+                FurnishCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("skinnedlanterns")) {
                 // paper lantern
@@ -148,6 +140,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("furnish")) {
+            FurnishCompat.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockRendering(FMLClientSetupEvent event) {
@@ -160,6 +155,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.registerBlockRendering();
         }
+        if (ModList.get().isLoaded("furnish")) {
+            FurnishCompat.registerBlockRendering();
+        }
         if (ModList.get().isLoaded("quark")) {
             QuarkCompat.registerBlockRendering();
         }
@@ -167,22 +165,19 @@ public class DyenamicRegistry
 
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (ModList.get().isLoaded("comforts")) {
-            if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
-                for (final DyenamicDyeColor color : DyenamicDyeColor.values()) {
-                    if (color.getId() > 15) {
-                        event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/hammock/" + color.getSerializedName()));
-                        event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + color.getSerializedName()));
-                    }
-                }
-            }
+            ComfortsCompat.stitchTextures(event);
         }
     }
 
     public static void onModelBake(ModelEvent.BakingCompleted event) {
         if (ModList.get().isLoaded("elevatorid")) {
-            event.getModels().entrySet().stream()
-                .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
-                .forEach(entry -> event.getModels().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
+            ElevatoridCompat.bakeModel(event);
+        }
+    }
+
+    public static void onEntityPlace(BlockEvent.EntityPlaceEvent event) {
+        if (ModList.get().isLoaded("furnish")) {
+            FurnishCompat.entityPlace(event);
         }
     }
 }

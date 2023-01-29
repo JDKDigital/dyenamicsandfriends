@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "minecraft:glass"
+  },
+  "result": "dyenamicsandfriends:peach_showcase",
+  "count": 1
+}

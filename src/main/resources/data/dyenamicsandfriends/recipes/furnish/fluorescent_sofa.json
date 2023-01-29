@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:fluorescent_wool"
+  },
+  "result": "dyenamicsandfriends:fluorescent_sofa",
+  "count": 1
+}

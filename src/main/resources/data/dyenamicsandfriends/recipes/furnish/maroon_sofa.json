@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:maroon_wool"
+  },
+  "result": "dyenamicsandfriends:maroon_sofa",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:cherenkov_terracotta"
+  },
+  "result": "dyenamicsandfriends:cherenkov_amphora",
+  "count": 1
+}

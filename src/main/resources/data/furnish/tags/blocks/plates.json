@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:furnish_aquamarine_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_bubblegum_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_cherenkov_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_fluorescent_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_lavender_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_maroon_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_mint_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_peach_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_persimmon_plate",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:aquamarine_carpet"
+  },
+  "result": "dyenamicsandfriends:aquamarine_curtain",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:peach_wool"
+  },
+  "result": "dyenamicsandfriends:peach_sofa",
+  "count": 1
+}
