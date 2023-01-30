@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:furnish_aquamarine_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_bubblegum_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_cherenkov_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_fluorescent_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_lavender_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_maroon_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_mint_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_peach_showcase",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_persimmon_showcase",
+      "required": false
+    }
+  ]
+}

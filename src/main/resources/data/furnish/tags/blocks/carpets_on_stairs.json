@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:furnish_aquamarine_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_bubblegum_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_cherenkov_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_fluorescent_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_lavender_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_maroon_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_mint_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_peach_carpet_on_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_persimmon_carpet_on_stairs",
+      "required": false
+    }
+  ]
+}

@@ -18,7 +18,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-jarJar.enable()
+//jarJar.enable()
 
 version = "${mod_version}"
 group = 'cy.jdkdigital.dyenamicsandfriends' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -131,13 +131,12 @@ dependencies {
 
     implementation fg.deobf("libs:dyenamics-1.18.2:2.0.0")
 
-    jarJar(group: 'cofh.dyenamics', name: 'dyenamics', version: '[1.0.0,)') {
-        transitive(false)
-    }
+//    jarJar(group: 'cofh.dyenamics', name: 'dyenamics', version: '[1.0.0,)') {
+//        transitive(false)
+//    }
 
     implementation fg.deobf("curse.maven:flywheel-486392:3934664")
     implementation fg.deobf("curse.maven:autoreglib-250363:3642382")
-//    implementation fg.deobf("curse.maven:citadel-331936:3783096")
     implementation fg.deobf("curse.maven:selene-499980:3842421")
     implementation fg.deobf("curse.maven:balm-531761:3914491")
     implementation fg.deobf("curse.maven:bookshelf-228525:4351251") // botany pots
@@ -147,7 +146,6 @@ dependencies {
     implementation fg.deobf("curse.maven:another-furniture-610492:4034013")
     implementation fg.deobf("curse.maven:chalk-533748:3946794")
     implementation fg.deobf("curse.maven:comforts-276951:4019552")
-//    implementation fg.deobf("curse.maven:domestication-innovation-591149:3826903")
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:3670034")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999153")
     implementation fg.deobf("curse.maven:reliquary-v1-3-241319:4001490")
@@ -162,9 +160,9 @@ dependencies {
     implementation fg.deobf("curse.maven:botany-pots-353928:4333907")
 }
 
-tasks.jarJar.configure {
-    classifier ''
-}
+//tasks.jarJar.configure {
+//    classifier ''
+//}
 
 // Example for how to get properties into the manifest for reading at runtime.
 jar {
@@ -181,7 +179,7 @@ jar {
     }
 }
 
-reobf { jarJar { } }
+//reobf { jarJar { } }
 
 // Example configuration to allow publishing using the maven-publish plugin
 // This is the preferred method to reobfuscate your jar file

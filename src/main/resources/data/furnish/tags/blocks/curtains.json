@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:furnish_aquamarine_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_bubblegum_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_cherenkov_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_fluorescent_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_lavender_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_maroon_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_mint_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_peach_curtain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:furnish_persimmon_curtain",
+      "required": false
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsHammockBlockRenderer;
 import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsSleepingBagBlockRenderer;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsHammockBlock;
@@ -10,6 +11,8 @@ import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBa
 import cy.jdkdigital.dyenamicsandfriends.common.item.DyenamicsHammockItem;
 import cy.jdkdigital.dyenamicsandfriends.common.item.DyenamicsSleepingBagItem;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +20,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
@@ -44,5 +48,16 @@ public class ComfortsCompat
                 event.registerBlockEntityRenderer(hammock.getBlockEntitySupplier().get(), DyenamicsSleepingBagBlockRenderer::new);
             }
         });
+    }
+
+    public static void stitchTextures(TextureStitchEvent.Pre event) {
+        if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
+            for (final DyenamicDyeColor color : DyenamicDyeColor.values()) {
+                if (color.getId() > 15) {
+                    event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/hammock/" + color.getSerializedName()));
+                    event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + color.getSerializedName()));
+                }
+            }
+        }
     }
 }

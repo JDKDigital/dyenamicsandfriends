@@ -5,6 +5,7 @@ import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
+import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.player.Player;
@@ -14,6 +15,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -44,7 +46,14 @@ public class EventHandler
     @SubscribeEvent
     public static void onLootRegister(RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
         event.getRegistry().registerAll(
-            new StainedGlassBlockLootModifier.Serializer().setRegistryName(new ResourceLocation(DyenamicsAndFriends.MODID, "shard"))
+                new StainedGlassBlockLootModifier.Serializer().setRegistryName(new ResourceLocation(DyenamicsAndFriends.MODID, "shard"))
         );
+    }
+
+    @SubscribeEvent
+    public static void entityPlace(BlockEvent.EntityPlaceEvent event) {
+        if (!event.getWorld().isClientSide()) {
+            DyenamicRegistry.onEntityPlace(event);
+        }
     }
 }

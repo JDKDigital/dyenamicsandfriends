@@ -1,0 +1,6 @@
+{
+  "parent": "furnish:block/showcase/showcase",
+  "textures": {
+    "wool": "dyenamics:block/cherenkov_wool"
+  }
+}
