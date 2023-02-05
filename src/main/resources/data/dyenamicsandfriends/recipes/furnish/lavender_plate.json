@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:lavender_terracotta"
   },
-  "result": "dyenamicsandfriends:lavender_plate",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_lavender_plate",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:aquamarine_terracotta"
   },
-  "result": "dyenamicsandfriends:aquamarine_amphora",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_aquamarine_amphora",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:persimmon_terracotta"
   },
-  "result": "dyenamicsandfriends:persimmon_plate",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_persimmon_plate",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

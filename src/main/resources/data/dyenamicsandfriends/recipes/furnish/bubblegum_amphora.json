@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:bubblegum_terracotta"
   },
-  "result": "dyenamicsandfriends:bubblegum_amphora",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_bubblegum_amphora",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

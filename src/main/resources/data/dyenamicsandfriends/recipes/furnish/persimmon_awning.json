@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:persimmon_carpet"
   },
-  "result": "dyenamicsandfriends:persimmon_awning",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_persimmon_awning",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:lavender_wool"
   },
-  "result": "dyenamicsandfriends:lavender_sofa",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_lavender_sofa",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

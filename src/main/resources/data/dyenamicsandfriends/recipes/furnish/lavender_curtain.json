@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:lavender_carpet"
   },
-  "result": "dyenamicsandfriends:lavender_curtain",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_lavender_curtain",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

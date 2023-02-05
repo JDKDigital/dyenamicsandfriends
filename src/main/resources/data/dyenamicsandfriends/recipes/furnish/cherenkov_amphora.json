@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:cherenkov_terracotta"
   },
-  "result": "dyenamicsandfriends:cherenkov_amphora",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_cherenkov_amphora",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

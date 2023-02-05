@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:persimmon_wool"
   },
-  "result": "dyenamicsandfriends:persimmon_sofa",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_persimmon_sofa",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

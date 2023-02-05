@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "minecraft:paper"
   },
-  "result": "dyenamicsandfriends:cherenkov_paper_lamp",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_cherenkov_paper_lamp",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

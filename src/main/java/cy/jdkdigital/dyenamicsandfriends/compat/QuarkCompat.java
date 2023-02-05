@@ -36,9 +36,10 @@ public class QuarkCompat
         FRAMED_GLASS.put(color, DyenamicRegistry.registerBlock(prefix + "_framed_glass", () -> new DyenamicStainedGlassBlock(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true));
         FRAMED_GLASS_PANES.put(color, DyenamicRegistry.registerBlock(prefix + "_framed_glass_pane", () -> new DyenamicStainedGlassPane(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true));
 
-        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(BlockBehaviour.Properties.copy(BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get("terracotta").get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), BlockBehaviour.Properties.copy(BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get("terracotta").get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get("terracotta").get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        var terracotta = BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get("terracotta");
+        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
     }
 
     public static void registerItems(DyenamicDyeColor color) {

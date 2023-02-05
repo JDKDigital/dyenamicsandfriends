@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:bubblegum_wool"
   },
-  "result": "dyenamicsandfriends:bubblegum_sofa",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_bubblegum_sofa",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

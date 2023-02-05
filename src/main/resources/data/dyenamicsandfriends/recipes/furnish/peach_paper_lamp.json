@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "minecraft:paper"
   },
-  "result": "dyenamicsandfriends:peach_paper_lamp",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_peach_paper_lamp",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

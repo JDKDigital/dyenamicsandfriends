@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:maroon_terracotta"
   },
-  "result": "dyenamicsandfriends:maroon_amphora",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_maroon_amphora",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

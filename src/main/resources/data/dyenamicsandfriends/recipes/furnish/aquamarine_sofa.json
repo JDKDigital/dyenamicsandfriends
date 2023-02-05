@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:aquamarine_wool"
   },
-  "result": "dyenamicsandfriends:aquamarine_sofa",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_aquamarine_sofa",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

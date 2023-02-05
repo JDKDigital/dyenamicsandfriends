@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:maroon_carpet"
   },
-  "result": "dyenamicsandfriends:maroon_curtain",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_maroon_curtain",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

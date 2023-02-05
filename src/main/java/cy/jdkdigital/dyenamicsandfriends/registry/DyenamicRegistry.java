@@ -69,7 +69,6 @@ public class DyenamicRegistry
                 // sharestone
             }
             if (ModList.get().isLoaded("quark")) {
-                // rune
                 QuarkCompat.registerBlocks(color);
                 QuarkCompat.registerItems(color);
             }

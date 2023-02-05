@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:mint_wool"
   },
-  "result": "dyenamicsandfriends:mint_sofa",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_mint_sofa",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

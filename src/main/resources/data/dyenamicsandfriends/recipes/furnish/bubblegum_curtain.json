@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:bubblegum_carpet"
   },
-  "result": "dyenamicsandfriends:bubblegum_curtain",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_bubblegum_curtain",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

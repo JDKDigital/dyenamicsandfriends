@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "dyenamics:peach_carpet"
   },
-  "result": "dyenamicsandfriends:peach_awning",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_peach_awning",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }

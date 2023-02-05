@@ -3,6 +3,12 @@
   "ingredient": {
     "item": "minecraft:glass"
   },
-  "result": "dyenamicsandfriends:mint_showcase",
-  "count": 1
+  "result": "dyenamicsandfriends:furnish_mint_showcase",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
 }
