@@ -28,5 +28,5 @@ Adds compatibility between Dyenamics new colors and a large range of other mods
     modId="dyenamics"
     mandatory=true
     versionRange="[1.0.0,)"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
