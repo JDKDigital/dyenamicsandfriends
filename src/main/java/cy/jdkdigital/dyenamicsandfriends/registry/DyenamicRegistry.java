@@ -152,7 +152,7 @@ public class DyenamicRegistry
             BotanyPotsCompat.registerBlockRendering();
         }
         if (ModList.get().isLoaded("elevatorid")) {
-            ElevatoridCompat.registerBlockRendering();
+            ElevatoridCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.registerBlockRendering();
@@ -170,7 +170,7 @@ public class DyenamicRegistry
 
     public static void onModelBake(ModelEvent.BakingCompleted event) {
         if (ModList.get().isLoaded("elevatorid")) {
-            ElevatoridCompat.bakeModel(event);
+            ElevatoridCompat.Client.bakeModel(event);
         }
     }
 
