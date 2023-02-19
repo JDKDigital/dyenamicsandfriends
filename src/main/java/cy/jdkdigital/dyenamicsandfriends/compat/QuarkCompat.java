@@ -2,7 +2,6 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.common.blocks.DyenamicStainedGlassBlock;
 import cofh.dyenamics.common.blocks.DyenamicStainedGlassPane;
-import cofh.dyenamics.core.init.BlockInit;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
@@ -36,10 +35,10 @@ public class QuarkCompat
         FRAMED_GLASS.put(color, DyenamicRegistry.registerBlock(prefix + "_framed_glass", () -> new DyenamicStainedGlassBlock(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true));
         FRAMED_GLASS_PANES.put(color, DyenamicRegistry.registerBlock(prefix + "_framed_glass_pane", () -> new DyenamicStainedGlassPane(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true));
 
-        var terracotta = BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get("terracotta");
-        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(terracotta.get())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        BlockBehaviour.Properties props = BlockBehaviour.Properties.of(Material.STONE, color.getMapColor()).strength(1.25F, 4.2F).lightLevel((state) -> color.getLightValue());
+        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
     }
 
     public static void registerItems(DyenamicDyeColor color) {
@@ -47,16 +46,19 @@ public class QuarkCompat
         DyenamicRegistry.registerItem(prefix + "_shard", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
     }
 
-    public static void registerBlockRendering() {
-        FRAMED_GLASS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof DyenamicStainedGlassBlock glass) {
-                ItemBlockRenderTypes.setRenderLayer(glass, RenderType.translucent());
-            }
-        });
-        FRAMED_GLASS_PANES.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof DyenamicStainedGlassPane pane) {
-                ItemBlockRenderTypes.setRenderLayer(pane, RenderType.translucent());
-            }
-        });
+    public static class Client
+    {
+        public static void registerBlockRendering() {
+            FRAMED_GLASS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof DyenamicStainedGlassBlock glass) {
+                    ItemBlockRenderTypes.setRenderLayer(glass, RenderType.translucent());
+                }
+            });
+            FRAMED_GLASS_PANES.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof DyenamicStainedGlassPane pane) {
+                    ItemBlockRenderTypes.setRenderLayer(pane, RenderType.translucent());
+                }
+            });
+        }
     }
 }

@@ -35,17 +35,20 @@ public class ComfortsCompat
         SLEEPING_BAGS.put(color, DyenamicRegistry.registerBlock(prefix + "_sleeping_bag", () -> new DyenamicsSleepingBagBlock(color, BlockBehaviour.Properties.of(Material.WOOL).sound(SoundType.WOOL).strength(0.1F).lightLevel(state -> color.getLightValue()), DyenamicRegistry.registerBlockEntity(prefix + "_sleeping_bag", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsSleepingBagBlockEntity((DyenamicsSleepingBagBlock) SLEEPING_BAGS.get(color).get(), pos, state), SLEEPING_BAGS.get(color).get()))), () -> new SleepingBagItem(SLEEPING_BAGS.get(color).get())));
     }
 
-    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        HAMMOCKS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof DyenamicsHammockBlock hammock) {
-                event.registerBlockEntityRenderer(hammock.getBlockEntitySupplier().get(), DyenamicsHammockBlockRenderer::new);
-            }
-        });
-        SLEEPING_BAGS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof DyenamicsSleepingBagBlock hammock) {
-                event.registerBlockEntityRenderer(hammock.getBlockEntitySupplier().get(), DyenamicsSleepingBagBlockRenderer::new);
-            }
-        });
+    public static class Client
+    {
+        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            HAMMOCKS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof DyenamicsHammockBlock hammock) {
+                    event.registerBlockEntityRenderer(hammock.getBlockEntitySupplier().get(), DyenamicsHammockBlockRenderer::new);
+                }
+            });
+            SLEEPING_BAGS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof DyenamicsSleepingBagBlock hammock) {
+                    event.registerBlockEntityRenderer(hammock.getBlockEntitySupplier().get(), DyenamicsSleepingBagBlockRenderer::new);
+                }
+            });
+        }
     }
 
     public static void stitchTextures(TextureStitchEvent.Pre event) {

@@ -1,5 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.registry;
 
+import cofh.dyenamics.core.init.BlockInit;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
@@ -134,13 +135,13 @@ public class DyenamicRegistry
             AnotherFurnitureCompat.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
-            BotanyPotsCompat.registerBlockEntityRenderers(event);
+            BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("comforts")) {
-            ComfortsCompat.registerBlockEntityRenderers(event);
+            ComfortsCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("furnish")) {
-            FurnishCompat.registerBlockEntityRenderers(event);
+            FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
     }
 
@@ -149,16 +150,16 @@ public class DyenamicRegistry
             AnotherFurnitureCompat.registerBlockRendering();
         }
         if (ModList.get().isLoaded("botanypots")) {
-            BotanyPotsCompat.registerBlockRendering();
+            BotanyPotsCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("furnish")) {
-            FurnishCompat.registerBlockRendering();
+            FurnishCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("quark")) {
-            QuarkCompat.registerBlockRendering();
+            QuarkCompat.Client.registerBlockRendering();
         }
     }
 
@@ -178,5 +179,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.entityPlace(event);
         }
+    }
+
+    public static Block getDyenamicsBlock(DyenamicDyeColor color, String block) {
+        return BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get(block).get();
     }
 }

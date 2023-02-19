@@ -56,19 +56,22 @@ public class BotanyPotsCompat
                 () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
     }
 
-    public static void registerBlockRendering() {
-        BOTANY_POTS.values().forEach(map -> {
-            map.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), RenderType.cutout()));
-        });
-    }
-
-    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        BOTANY_POTS.values().forEach(map -> {
-            map.values().forEach(registryObject -> {
-                if (registryObject.get() instanceof DyenamicsBotanyPot botanyPot) {
-                    event.registerBlockEntityRenderer(botanyPot.getBlockEntitySupplier().get(), BotanyPotRenderer::new);
-                }
+    public static class Client
+    {
+        public static void registerBlockRendering() {
+            BOTANY_POTS.values().forEach(map -> {
+                map.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), RenderType.cutout()));
             });
-        });
+        }
+
+        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            BOTANY_POTS.values().forEach(map -> {
+                map.values().forEach(registryObject -> {
+                    if (registryObject.get() instanceof DyenamicsBotanyPot botanyPot) {
+                        event.registerBlockEntityRenderer(botanyPot.getBlockEntitySupplier().get(), BotanyPotRenderer::new);
+                    }
+                });
+            });
+        }
     }
 }
