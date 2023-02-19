@@ -26,17 +26,20 @@ public class ElevatoridCompat
         ELEVATORS.put(color, DyenamicRegistry.registerBlock(prefix + "_elevator", () -> new DyenamicsElevatorBlock(color, DyenamicRegistry.registerBlockEntity(prefix + "_elevator", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsElevatorBlockEntity((DyenamicsElevatorBlock) ELEVATORS.get(color).get(), pos, state), ELEVATORS.get(color).get()))), CreativeModeTab.TAB_MISC, true));
     }
 
-    public static void registerBlockRendering() {
-        Minecraft.getInstance().getBlockColors().register(
-                new ColorCamoElevator(),
-                ELEVATORS.values().stream().map(RegistryObject::get).toArray(ElevatorBlock[]::new)
-        );
-        ELEVATORS.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), t -> true));
-    }
+    public static class Client
+    {
+        public static void registerBlockRendering() {
+            Minecraft.getInstance().getBlockColors().register(
+                    new ColorCamoElevator(),
+                    ELEVATORS.values().stream().map(RegistryObject::get).toArray(ElevatorBlock[]::new)
+            );
+            ELEVATORS.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), t -> true));
+        }
 
-    public static void bakeModel(ModelBakeEvent event) {
-        event.getModelRegistry().entrySet().stream()
-                .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
-                .forEach(entry -> event.getModelRegistry().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
+        public static void bakeModel(ModelBakeEvent event) {
+            event.getModelRegistry().entrySet().stream()
+                    .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
+                    .forEach(entry -> event.getModelRegistry().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
+        }
     }
 }
