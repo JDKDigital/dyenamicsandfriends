@@ -99,6 +99,9 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("chalk")) {
                 // chalk
             }
+            if (ModList.get().isLoaded("oreganized")) {
+                OreganizedCompat.registerBlocks(color);
+            }
         }
     }
 
@@ -160,6 +163,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("quark")) {
             QuarkCompat.Client.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("oreganized")) {
+            OreganizedCompat.Client.registerBlockRendering();
         }
     }
 

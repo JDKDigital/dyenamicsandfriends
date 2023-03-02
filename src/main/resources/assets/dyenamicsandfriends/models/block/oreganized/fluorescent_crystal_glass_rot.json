@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dyenamicsandfriends:block/oreganized/fluorescent_crystal_glass_rot"
+  }
+}

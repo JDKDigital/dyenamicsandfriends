@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/another_furniture_persimmon_tall_stool"
+      "model": "dyenamicsandfriends:block/another_furniture/persimmon_tall_stool"
     }
   }
 }

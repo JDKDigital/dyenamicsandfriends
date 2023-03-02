@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "textures": {
+    "pane": "dyenamicsandfriends:block/oreganized/cherenkov_crystal_glass_in"
+  }
+}

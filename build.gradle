@@ -159,6 +159,7 @@ dependencies {
     implementation fg.deobf("curse.maven:mrcrayfish-furniture-mod-55438:3907425")
     implementation fg.deobf("curse.maven:handcrafted-538214:4215477")
     implementation fg.deobf("curse.maven:botany-pots-353928:4357086")
+    implementation fg.deobf("curse.maven:oreganized-769203:4377982")
 }
 
 //tasks.jarJar.configure {
