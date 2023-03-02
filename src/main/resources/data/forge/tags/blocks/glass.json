@@ -36,6 +36,42 @@
     {
       "id": "dyenamicsandfriends:quark_persimmon_framed_glass",
       "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_aquamarine_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_bubblegum_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_cherenkov_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_fluorescent_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_lavender_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_maroon_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_mint_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_peach_crystal_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:oreganized_persimmon_crystal_glass",
+      "required": false
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/another_furniture_cherenkov_tall_stool"
+      "model": "dyenamicsandfriends:block/another_furniture/cherenkov_tall_stool"
     }
   }
 }

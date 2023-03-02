@@ -2,75 +2,75 @@
 {
   "variants": {
     "facing=up,base=true,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp"
     },
     "facing=up,base=true,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_off"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_off"
     },
     "facing=up,base=false,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_tall_top"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_tall_top"
     },
     "facing=up,base=false,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_tall_top_off"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_tall_top_off"
     },
     "facing=north,base=true,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall"
     },
     "facing=north,base=true,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off"
     },
     "facing=north,base=false,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall"
     },
     "facing=north,base=false,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off"
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off"
     },
     "facing=east,base=true,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 90
     },
     "facing=east,base=true,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 90
     },
     "facing=east,base=false,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 90
     },
     "facing=east,base=false,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 90
     },
     "facing=south,base=true,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 180
     },
     "facing=south,base=true,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 180
     },
     "facing=south,base=false,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 180
     },
     "facing=south,base=false,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 180
     },
     "facing=west,base=true,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 270
     },
     "facing=west,base=true,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 270
     },
     "facing=west,base=false,lit=true": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall",
       "y": 270
     },
     "facing=west,base=false,lit=false": {
-      "model": "dyenamicsandfriends:block/another_furniture_fluorescent_lamp_wall_off",
+      "model": "dyenamicsandfriends:block/another_furniture/fluorescent_lamp_wall_off",
       "y": 270
     }
   }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_glass_pane_noside",
+  "textures": {
+    "pane": "dyenamicsandfriends:block/oreganized/persimmon_crystal_glass_rot"
+  }
+}

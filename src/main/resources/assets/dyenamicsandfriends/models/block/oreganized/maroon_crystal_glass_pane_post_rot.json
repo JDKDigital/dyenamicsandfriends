@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_post",
+  "textures": {
+    "pane": "dyenamicsandfriends:block/oreganized/maroon_crystal_glass_rot",
+    "edge": "dyenamicsandfriends:block/oreganized/maroon_crystal_glass_pane_top"
+  }
+}
