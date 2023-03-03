@@ -1,186 +1,294 @@
 {
   "replace": false,
   "values": [
-      "#botanypots:all_botany_pots",
-      {
-          "id": "dyenamicsandfriends:quark_aquamarine_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_bubblegum_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_cherenkov_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_fluorescent_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_lavender_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_maroon_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_mint_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_peach_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_persimmon_framed_glass",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_aquamarine_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_bubblegum_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_cherenkov_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_fluorescent_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_lavender_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_maroon_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_mint_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_peach_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_persimmon_framed_glass_pane",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_aquamarine_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_bubblegum_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_cherenkov_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_fluorescent_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_lavender_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_maroon_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_mint_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_peach_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_persimmon_shingles",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_aquamarine_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_bubblegum_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_cherenkov_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_fluorescent_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_lavender_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_maroon_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_mint_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_peach_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_persimmon_shingles_slab",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_aquamarine_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_bubblegum_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_cherenkov_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_fluorescent_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_lavender_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_maroon_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_mint_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_peach_shingles_stairs",
-          "required": false
-      },
-      {
-          "id": "dyenamicsandfriends:quark_persimmon_shingles_stairs",
-          "required": false
-      }
+    "#botanypots:all_botany_pots",
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_framed_glass_pane",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_shingles",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_shingles_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_shingles_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_porcelain_cistern",
+      "required": false
+    }
   ]
 }

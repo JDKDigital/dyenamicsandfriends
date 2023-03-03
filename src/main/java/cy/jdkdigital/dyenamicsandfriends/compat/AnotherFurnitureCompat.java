@@ -40,24 +40,27 @@ public class AnotherFurnitureCompat
         DyenamicRegistry.registerBlock(prefix + "_tall_stool", () -> new TallStoolBlock(BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(1.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_MISC, true);
     }
 
-    public static void registerBlockRendering() {
-        SOFAS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof SofaBlock sofa) {
-                ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
-            }
-        });
-        LAMPS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof SofaBlock sofa) {
-                ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
-            }
-        });
-    }
+    public static class Client
+    {
+        public static void registerBlockRendering() {
+            SOFAS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof SofaBlock sofa) {
+                    ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
+                }
+            });
+            LAMPS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof SofaBlock sofa) {
+                    ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
+                }
+            });
+        }
 
-    public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        CURTAINS.values().forEach(registryObject -> {
-            if (registryObject.get() instanceof DyenamicsCurtainBlock curtain) {
-                event.registerBlockEntityRenderer(curtain.getBlockEntitySupplier().get(), CurtainRenderer::new);
-            }
-        });
+        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            CURTAINS.values().forEach(registryObject -> {
+                if (registryObject.get() instanceof DyenamicsCurtainBlock curtain) {
+                    event.registerBlockEntityRenderer(curtain.getBlockEntitySupplier().get(), CurtainRenderer::new);
+                }
+            });
+        }
     }
 }

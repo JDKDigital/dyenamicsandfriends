@@ -1,0 +1,15 @@
+{
+  "type": "ceramics:kiln",
+  "ingredient": {
+    "item": "dyenamics:aquamarine_terracotta"
+  },
+  "result": "dyenamics:aquamarine_glazed_terracotta",
+  "experience": 0.1,
+  "cookingtime": 100,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ceramics"
+    }
+  ]
+}

@@ -104,6 +104,33 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("oreganized")) {
                 OreganizedCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("ceramics")) {
+                CeramicsCompat.registerBlocks(color);
+                // porcelain
+                // cistern
+            }
+            if (ModList.get().isLoaded("glazedresymmetry")) {
+//                GlazedResymmetryCompat.registerBlocks(color);
+                // centered glazed terracotta
+                // glazed terracotta pillar
+                // glazed terracotta slab
+                // centered glazed terracotta slab
+                // glazed terracotta pillared slab
+                // glazed terracotta side pillared slab
+            }
+            if (ModList.get().isLoaded("clayworks")) {
+//                ClayworksCompat.registerBlocks(color);
+                // terracotta wall
+                // terracotta slab
+                // terracotta vertical slab
+                // terracotta stairs
+                // terracotta bricks
+                // terracotta bricks wall
+                // terracotta bricks stairs
+                // terracotta bricks slab
+                // terracotta bricks vertical slab
+                // terracotta chiseled bricks
+            }
         }
     }
 
@@ -137,7 +164,7 @@ public class DyenamicRegistry
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.registerBlockEntityRenderers(event);
+            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
@@ -148,11 +175,14 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("ceramics")) {
+            CeramicsCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockRendering(FMLClientSetupEvent event) {
         if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.registerBlockRendering();
+            AnotherFurnitureCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockRendering();
@@ -168,6 +198,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("oreganized")) {
             OreganizedCompat.Client.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("ceramics")) {
+            CeramicsCompat.Client.registerBlockRendering();
         }
     }
 
