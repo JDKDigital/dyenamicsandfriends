@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "dyenamicsandfriends:block/glazedresymmetry/persimmon_glazed_terracotta_pillar",
+    "top": "dyenamicsandfriends:block/glazedresymmetry/persimmon_glazed_terracotta_pillar",
+    "side": "dyenamicsandfriends:block/glazedresymmetry/persimmon_glazed_terracotta_pillar_side"
+  }
+}

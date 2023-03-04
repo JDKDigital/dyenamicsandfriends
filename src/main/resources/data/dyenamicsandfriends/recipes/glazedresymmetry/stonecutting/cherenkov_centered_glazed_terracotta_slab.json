@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamicsandfriends:glazedresymmetry_cherenkov_centered_glazed_terracotta"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_cherenkov_centered_glazed_terracotta_slab",
+  "count": 1
+}

@@ -109,12 +109,6 @@ public class DyenamicRegistry
             }
             if (ModList.get().isLoaded("glazedresymmetry")) {
 //                GlazedResymmetryCompat.registerBlocks(color);
-                // centered glazed terracotta
-                // glazed terracotta pillar
-                // glazed terracotta slab
-                // centered glazed terracotta slab
-                // glazed terracotta pillared slab
-                // glazed terracotta side pillared slab
             }
             if (ModList.get().isLoaded("clayworks")) {
                 ClayworksCompat.registerBlocks(color);

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:fluorescent_glazed_terracotta"
+    },
+    {
+      "item": "dyenamicsandfriends:glazedresymmetry_fluorescent_centered_glazed_terracotta"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_fluorescent_glazed_terracotta_pillar",
+  "count": 1
+}

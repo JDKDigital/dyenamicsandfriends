@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dyenamics:cherenkov_glazed_terracotta"
+    }
+  },
+  "result": {
+    "item": "dyenamicsandfriends:glazedresymmetry_cherenkov_glazed_terracotta_slab",
+    "count": 6
+  }
+}

@@ -26,7 +26,7 @@ public class ClayworksCompat
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "clayworks_" + color.getSerializedName();
 
-        final BlockBehaviour.Properties properties = Block.Properties.of(Material.CLAY, color.getMapColor()).strength(1.25F, 4.2F).noOcclusion().lightLevel(state -> color.getLightValue());
+        final BlockBehaviour.Properties properties = Block.Properties.of(Material.STONE, color.getMapColor()).strength(1.25F, 4.2F).noOcclusion().lightLevel(state -> color.getLightValue());
         DyenamicRegistry.registerBlock(prefix + "_terracotta_wall", () -> new WallBlock(properties), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
         DyenamicRegistry.registerBlock(prefix + "_terracotta_slab", () -> new SlabBlock(properties), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
         DyenamicRegistry.registerBlock(prefix + "_terracotta_vertical_slab", () -> new VerticalSlabBlock(properties), CreativeModeTab.TAB_BUILDING_BLOCKS, true);

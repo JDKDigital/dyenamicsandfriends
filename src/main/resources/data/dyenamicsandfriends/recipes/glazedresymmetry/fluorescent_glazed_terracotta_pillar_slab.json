@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "dyenamicsandfriends:glazedresymmetry_fluorescent_glazed_terracotta_pillar"
+    }
+  },
+  "result": {
+    "item": "dyenamicsandfriends:glazedresymmetry_fluorescent_glazed_terracotta_pillar_slab",
+    "count": 6
+  }
+}

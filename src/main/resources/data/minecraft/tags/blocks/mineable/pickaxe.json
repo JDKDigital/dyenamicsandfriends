@@ -1,9 +1,10 @@
 {
   "replace": false,
   "values": [
-    "#dyenamicsandfridns:mineable/quark_pickaxe",
-    "#dyenamicsandfridns:mineable/ceramics_pickaxe",
-    "#dyenamicsandfridns:mineable/clayworks_pickaxe",
+    "#dyenamicsandfriends:mineable/quark_pickaxe",
+    "#dyenamicsandfriends:mineable/ceramics_pickaxe",
+    "#dyenamicsandfriends:mineable/clayworks_pickaxe",
+    "#dyenamicsandfriends:mineable/glazedresymmetry_pickaxe",
     "#botanypots:all_botany_pots"
   ]
 }
