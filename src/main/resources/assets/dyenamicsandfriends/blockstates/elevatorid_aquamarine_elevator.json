@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/elevatorid_aquamarine_elevator"
+      "model": "dyenamicsandfriends:block/elevatorid/aquamarine_elevator"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/comforts_persimmon_hammock" }
+    "": { "model": "dyenamicsandfriends:block/comforts/persimmon_hammock" }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/elevatorid_peach_elevator"
+      "model": "dyenamicsandfriends:block/elevatorid/peach_elevator"
     }
   }
 }

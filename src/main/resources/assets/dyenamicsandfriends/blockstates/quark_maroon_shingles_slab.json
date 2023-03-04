@@ -1,7 +1,7 @@
 {
   "variants": {
-    "type=bottom": { "model": "dyenamicsandfriends:block/quark_maroon_shingles_slab" },
-    "type=top": { "model": "dyenamicsandfriends:block/quark_maroon_shingles_slab_top" },
-    "type=double": { "model": "dyenamicsandfriends:block/quark_maroon_shingles" }
+    "type=bottom": { "model": "dyenamicsandfriends:block/quark/maroon_shingles_slab" },
+    "type=top": { "model": "dyenamicsandfriends:block/quark/maroon_shingles_slab_top" },
+    "type=double": { "model": "dyenamicsandfriends:block/quark/maroon_shingles" }
   }
 }

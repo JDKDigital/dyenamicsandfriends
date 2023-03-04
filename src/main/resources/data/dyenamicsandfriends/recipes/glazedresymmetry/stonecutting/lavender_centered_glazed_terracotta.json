@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:lavender_glazed_terracotta"
+    },
+    {
+      "item": "dyenamicsandfriends:glazedresymmetry_lavender_glazed_terracotta_pillar"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_lavender_centered_glazed_terracotta",
+  "count": 1
+}

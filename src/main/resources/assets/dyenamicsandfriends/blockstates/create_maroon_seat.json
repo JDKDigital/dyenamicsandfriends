@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/create_maroon_seat"
+      "model": "dyenamicsandfriends:block/create/maroon_seat"
     }
   }
 }

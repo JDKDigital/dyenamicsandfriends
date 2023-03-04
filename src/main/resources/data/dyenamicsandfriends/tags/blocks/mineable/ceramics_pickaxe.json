@@ -1,0 +1,113 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_porcelain",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_terracotta_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_aquamarine_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_bubblegum_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_cherenkov_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_fluorescent_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_lavender_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_maroon_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_mint_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_peach_porcelain_cistern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:ceramics_persimmon_porcelain_cistern",
+      "required": false
+    }
+  ]
+}

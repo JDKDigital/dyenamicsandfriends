@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/create_lavender_seat"
+      "model": "dyenamicsandfriends:block/create/lavender_seat"
     }
   }
 }

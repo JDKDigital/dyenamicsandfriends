@@ -29,6 +29,11 @@ public class DyenamicRegistry
 
     public static void registerCompatBlocks() {
         for (DyenamicDyeColor color: DyenamicDyeColor.dyenamicValues()) {
+            // Vanilla
+            // - banners
+            // - llamas
+            //
+
             if (ModList.get().isLoaded("create")) {
                 CreateCompat.registerBlocks(color);
             }
@@ -102,6 +107,15 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("oreganized")) {
                 OreganizedCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("ceramics")) {
+//                CeramicsCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("glazedresymmetry")) {
+                GlazedResymmetryCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("clayworks")) {
+                ClayworksCompat.registerBlocks(color);
+            }
         }
     }
 
@@ -135,7 +149,7 @@ public class DyenamicRegistry
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.registerBlockEntityRenderers(event);
+            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
@@ -146,11 +160,14 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("ceramics")) {
+//            CeramicsCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockRendering(FMLClientSetupEvent event) {
         if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.registerBlockRendering();
+            AnotherFurnitureCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockRendering();
@@ -166,6 +183,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("oreganized")) {
             OreganizedCompat.Client.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("ceramics")) {
+//            CeramicsCompat.Client.registerBlockRendering();
         }
     }
 

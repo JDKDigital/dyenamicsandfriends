@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "dyenamics:block/maroon_glazed_terracotta",
+    "up": "dyenamics:block/maroon_glazed_terracotta",
+    "down": "dyenamics:block/maroon_glazed_terracotta",
+    "north": "dyenamicsandfriends:block/glazedresymmetry/maroon_centered_glazed_terracotta",
+    "south": "dyenamicsandfriends:block/glazedresymmetry/maroon_centered_glazed_terracotta",
+    "east": "dyenamicsandfriends:block/glazedresymmetry/maroon_centered_glazed_terracotta",
+    "west": "dyenamicsandfriends:block/glazedresymmetry/maroon_centered_glazed_terracotta"
+  }
+}

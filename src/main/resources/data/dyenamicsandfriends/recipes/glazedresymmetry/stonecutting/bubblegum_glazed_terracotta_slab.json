@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:bubblegum_glazed_terracotta"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_bubblegum_glazed_terracotta_slab",
+  "count": 1
+}

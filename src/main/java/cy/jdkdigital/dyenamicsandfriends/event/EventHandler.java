@@ -7,7 +7,6 @@ import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
@@ -22,9 +21,8 @@ public class EventHandler
     public static void entityRightClicked(PlayerInteractEvent.RightClickBlock event) {
         ItemStack itemStack = event.getItemStack();
 
-        if (!itemStack.isEmpty() && itemStack.getItem() instanceof DyenamicDyeItem) {
-            Level level = event.getLevel();
-            if (level instanceof ServerLevel) {
+        if (event.getLevel() instanceof ServerLevel level) {
+            if (!itemStack.isEmpty() && itemStack.getItem() instanceof DyenamicDyeItem) {
                 BlockState state = level.getBlockState(event.getPos());
 
                 var blockKey = ForgeRegistries.BLOCKS.getKey(state.getBlock());

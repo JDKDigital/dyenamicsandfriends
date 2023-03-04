@@ -5,24 +5,24 @@
       "x": 180
     },
     "facing=up": {
-      "model": "dyenamicsandfriends:block/create_peach_sail"
+      "model": "dyenamicsandfriends:block/create/peach_sail"
     },
     "facing=north": {
-      "model": "dyenamicsandfriends:block/create_peach_sail",
+      "model": "dyenamicsandfriends:block/create/peach_sail",
       "x": 90
     },
     "facing=south": {
-      "model": "dyenamicsandfriends:block/create_peach_sail",
+      "model": "dyenamicsandfriends:block/create/peach_sail",
       "x": 90,
       "y": 180
     },
     "facing=west": {
-      "model": "dyenamicsandfriends:block/create_peach_sail",
+      "model": "dyenamicsandfriends:block/create/peach_sail",
       "x": 90,
       "y": 270
     },
     "facing=east": {
-      "model": "dyenamicsandfriends:block/create_peach_sail",
+      "model": "dyenamicsandfriends:block/create/peach_sail",
       "x": 90,
       "y": 90
     }

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": [
+      {"item": "dyenamicsandfriends:glazedresymmetry_bubblegum_glazed_terracotta_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_bubblegum_centered_glazed_terracotta_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_bubblegum_glazed_terracotta_pillar_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_bubblegum_glazed_terracotta_pillar_side_slab"}
+    ]
+  },
+  "result": {
+    "item": "dyenamics:bubblegum_glazed_terracotta"
+  }
+}

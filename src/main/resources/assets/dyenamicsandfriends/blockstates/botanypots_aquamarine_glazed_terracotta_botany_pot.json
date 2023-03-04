@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/botanypots_aquamarine_glazed_terracotta_botany_pot" }
+    "": { "model": "dyenamicsandfriends:block/botanypots/aquamarine_glazed_terracotta_botany_pot" }
   }
 }

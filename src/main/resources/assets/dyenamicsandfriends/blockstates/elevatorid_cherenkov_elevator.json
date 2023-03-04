@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/elevatorid_cherenkov_elevator"
+      "model": "dyenamicsandfriends:block/elevatorid/cherenkov_elevator"
     }
   }
 }

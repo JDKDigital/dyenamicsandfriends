@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/comforts_maroon_sleeping_bag" }
+    "": { "model": "dyenamicsandfriends:block/comforts/maroon_sleeping_bag" }
   }
 }

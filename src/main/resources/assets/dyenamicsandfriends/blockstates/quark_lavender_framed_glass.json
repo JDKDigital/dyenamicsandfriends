@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/quark_lavender_framed_glass"
+      "model": "dyenamicsandfriends:block/quark/lavender_framed_glass"
     }
   }
 }

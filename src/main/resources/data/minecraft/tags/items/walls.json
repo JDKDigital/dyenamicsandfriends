@@ -1,0 +1,77 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_wall",
+      "required": false
+    }
+  ]
+}

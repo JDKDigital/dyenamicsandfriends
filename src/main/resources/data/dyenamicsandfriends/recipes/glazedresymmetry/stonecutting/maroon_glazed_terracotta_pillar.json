@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:maroon_glazed_terracotta"
+    },
+    {
+      "item": "dyenamicsandfriends:glazedresymmetry_maroon_centered_glazed_terracotta"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_maroon_glazed_terracotta_pillar",
+  "count": 1
+}
