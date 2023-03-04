@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/comforts_cherenkov_sleeping_bag" }
+    "": { "model": "dyenamicsandfriends:block/comforts/cherenkov_sleeping_bag" }
   }
 }

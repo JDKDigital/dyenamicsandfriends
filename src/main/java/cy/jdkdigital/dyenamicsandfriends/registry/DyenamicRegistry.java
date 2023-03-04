@@ -106,8 +106,6 @@ public class DyenamicRegistry
             }
             if (ModList.get().isLoaded("ceramics")) {
                 CeramicsCompat.registerBlocks(color);
-                // porcelain
-                // cistern
             }
             if (ModList.get().isLoaded("glazedresymmetry")) {
 //                GlazedResymmetryCompat.registerBlocks(color);
@@ -119,17 +117,7 @@ public class DyenamicRegistry
                 // glazed terracotta side pillared slab
             }
             if (ModList.get().isLoaded("clayworks")) {
-//                ClayworksCompat.registerBlocks(color);
-                // terracotta wall
-                // terracotta slab
-                // terracotta vertical slab
-                // terracotta stairs
-                // terracotta bricks
-                // terracotta bricks wall
-                // terracotta bricks stairs
-                // terracotta bricks slab
-                // terracotta bricks vertical slab
-                // terracotta chiseled bricks
+                ClayworksCompat.registerBlocks(color);
             }
         }
     }

@@ -1,0 +1,6 @@
+{
+  "parent": "handcrafted:block/cushion/cushion",
+  "textures": {
+    "texture": "dyenamicsandfriends:block/handcrafted/cushion/fluorescent_cushion"
+  }
+}

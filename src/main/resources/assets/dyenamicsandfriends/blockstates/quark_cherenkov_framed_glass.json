@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/quark_cherenkov_framed_glass"
+      "model": "dyenamicsandfriends:block/quark/cherenkov_framed_glass"
     }
   }
 }

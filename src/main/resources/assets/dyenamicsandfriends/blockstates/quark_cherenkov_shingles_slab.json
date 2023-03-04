@@ -1,7 +1,7 @@
 {
   "variants": {
-    "type=bottom": { "model": "dyenamicsandfriends:block/quark_cherenkov_shingles_slab" },
-    "type=top": { "model": "dyenamicsandfriends:block/quark_cherenkov_shingles_slab_top" },
-    "type=double": { "model": "dyenamicsandfriends:block/quark_cherenkov_shingles" }
+    "type=bottom": { "model": "dyenamicsandfriends:block/quark/cherenkov_shingles_slab" },
+    "type=top": { "model": "dyenamicsandfriends:block/quark/cherenkov_shingles_slab_top" },
+    "type=double": { "model": "dyenamicsandfriends:block/quark/cherenkov_shingles" }
   }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/create_peach_seat"
+      "model": "dyenamicsandfriends:block/create/peach_seat"
     }
   }
 }

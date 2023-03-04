@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/botanypots_mint_terracotta_hopper_botany_pot" }
+    "": { "model": "dyenamicsandfriends:block/botanypots/mint_terracotta_hopper_botany_pot" }
   }
 }

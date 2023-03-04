@@ -36,6 +36,78 @@
     {
       "id": "dyenamicsandfriends:quark_persimmon_shingles_stairs",
       "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_stairs",
+      "required": false
     }
   ]
 }

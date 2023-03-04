@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/quark_mint_shingles" }
+    "": { "model": "dyenamicsandfriends:block/quark/mint_shingles" }
   }
 }

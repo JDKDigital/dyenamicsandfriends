@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:block/quark_persimmon_framed_glass"
+      "model": "dyenamicsandfriends:block/quark/persimmon_framed_glass"
     }
   }
 }

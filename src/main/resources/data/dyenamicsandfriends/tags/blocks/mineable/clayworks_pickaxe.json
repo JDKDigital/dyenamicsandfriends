@@ -1,0 +1,366 @@
+{
+  "replace": false,
+  "values": [
+
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_vertical_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_terracotta_chiseled_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_chiseled_bricks",
+      "required": false
+    }
+  ]
+}

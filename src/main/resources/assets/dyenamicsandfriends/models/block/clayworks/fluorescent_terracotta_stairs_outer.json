@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "dyenamics:block/fluorescent_terracotta",
+    "side": "dyenamics:block/fluorescent_terracotta",
+    "top": "dyenamics:block/fluorescent_terracotta"
+  }
+}

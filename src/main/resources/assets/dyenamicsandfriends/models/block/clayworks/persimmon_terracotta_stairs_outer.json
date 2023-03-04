@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "dyenamics:block/persimmon_terracotta",
+    "side": "dyenamics:block/persimmon_terracotta",
+    "top": "dyenamics:block/persimmon_terracotta"
+  }
+}

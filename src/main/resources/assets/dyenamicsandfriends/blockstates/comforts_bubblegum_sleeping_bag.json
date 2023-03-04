@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/comforts_bubblegum_sleeping_bag" }
+    "": { "model": "dyenamicsandfriends:block/comforts/bubblegum_sleeping_bag" }
   }
 }

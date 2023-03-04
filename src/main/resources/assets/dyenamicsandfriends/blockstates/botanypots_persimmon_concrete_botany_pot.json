@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "dyenamicsandfriends:block/botanypots_persimmon_concrete_botany_pot" }
+    "": { "model": "dyenamicsandfriends:block/botanypots/persimmon_concrete_botany_pot" }
   }
 }

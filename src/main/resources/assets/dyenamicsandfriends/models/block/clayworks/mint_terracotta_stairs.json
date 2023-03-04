@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "dyenamics:block/mint_terracotta",
+    "side": "dyenamics:block/mint_terracotta",
+    "top": "dyenamics:block/mint_terracotta"
+  }
+}
