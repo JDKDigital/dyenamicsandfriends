@@ -13,6 +13,12 @@
     }
   ],
   "result": {
-    "item": "dyenamicsandfriends:bumblezone_aquamarine_super_candle"
-  }
+    "item": "dyenamicsandfriends:bumblezone_aquamarine_super_candle_base"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ]
 }

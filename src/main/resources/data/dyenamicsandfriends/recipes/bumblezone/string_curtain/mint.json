@@ -22,5 +22,11 @@
   },
   "result": {
     "item": "dyenamicsandfriends:bumblezone_mint_string_curtain"
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ]
 }

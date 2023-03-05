@@ -6,9 +6,7 @@ colors = ["peach","aquamarine","fluorescent","mint","maroon","bubblegum","lavend
 for path, subdirs, files in os.walk('templates'):
   for name in files:
     filename = os.path.join(path, name)
-    if "bumblezone" in filename:
-      continue
-    if "handcrafted" in filename:
+    if "ceramics" in filename:
       continue
     if "glazedresymmetry" in filename:
       continue

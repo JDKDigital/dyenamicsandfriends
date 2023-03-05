@@ -1,6 +1,0 @@
-{
-  "parent": "ceramics:block/cistern/item",
-  "textures": {
-    "texture": "dyenamicsandfriends:block/ceramics/porcelain/lavender"
-  }
-}

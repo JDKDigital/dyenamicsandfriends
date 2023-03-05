@@ -1,6 +1,0 @@
-{
-  "parent": "ceramics:block/cistern/side_full_connected",
-  "textures": {
-    "texture": "dyenamicsandfriends:block/ceramics/porcelain/cherenkov"
-  }
-}
