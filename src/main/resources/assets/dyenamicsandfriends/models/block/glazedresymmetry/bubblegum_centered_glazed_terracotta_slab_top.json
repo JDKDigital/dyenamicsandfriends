@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "dyenamicsandfriends:block/glazedresymmetry/bubblegum_centered_glazed_terracotta",
-    "top": "dyenamicsandfriends:block/glazedresymmetry/bubblegum_centered_glazed_terracotta",
-    "side": "dyenamicsandfriends:block/glazedresymmetry/bubblegum_centered_glazed_terracotta"
-  }
-}

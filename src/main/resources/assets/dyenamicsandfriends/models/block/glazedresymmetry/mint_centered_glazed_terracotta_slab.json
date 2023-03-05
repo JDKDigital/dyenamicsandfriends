@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "dyenamicsandfriends:block/glazedresymmetry/mint_centered_glazed_terracotta",
-    "top": "dyenamicsandfriends:block/glazedresymmetry/mint_centered_glazed_terracotta",
-    "side": "dyenamicsandfriends:block/glazedresymmetry/mint_centered_glazed_terracotta"
-  }
-}

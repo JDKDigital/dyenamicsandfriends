@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "dyenamicsandfriends:block/glazedresymmetry/maroon_glazed_terracotta_pillar",
-    "top": "dyenamicsandfriends:block/glazedresymmetry/maroon_glazed_terracotta_pillar",
-    "side": "dyenamicsandfriends:block/glazedresymmetry/maroon_glazed_terracotta_pillar_side"
-  }
-}

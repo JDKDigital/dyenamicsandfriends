@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": {
-    "item": "dyenamicsandfriends:glazedresymmetry_lavender_glazed_terracotta_pillar_slab"
-  },
-  "result": {
-    "item": "dyenamicsandfriends:glazedresymmetry_lavender_glazed_terracotta_pillar_side_slab"
-  }
-}
