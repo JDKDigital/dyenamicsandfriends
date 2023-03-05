@@ -1,0 +1,26 @@
+{
+  "type": "the_bumblezone:recipe_discovered_hooked_recipe",
+  "group": "the_bumblezone",
+  "pattern": [
+    "ttt",
+    "sgs",
+    "sds"
+  ],
+  "key": {
+    "t": {
+      "item": "minecraft:stick"
+    },
+    "s": {
+      "item": "minecraft:string"
+    },
+    "g": {
+      "item": "minecraft:glass"
+    },
+    "d": {
+      "tag": "forge:dyes/cherenkov"
+    }
+  },
+  "result": {
+    "item": "dyenamicsandfriends:bumblezone_cherenkov_string_curtain"
+  }
+}

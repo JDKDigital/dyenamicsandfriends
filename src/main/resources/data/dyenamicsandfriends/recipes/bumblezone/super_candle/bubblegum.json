@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "the_bumblezone",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:super_candle"
+    },
+    {
+      "tag": "forge:dyes/bubblegum"
+    },
+    {
+      "tag": "forge:dyes/bubblegum"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:bumblezone_bubblegum_super_candle"
+  }
+}

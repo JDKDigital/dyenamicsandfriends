@@ -116,6 +116,9 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("clayworks")) {
                 ClayworksCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("the_bumblezone")) {
+                BumblezoneCompat.registerBlocks(color);
+            }
         }
     }
 
@@ -186,6 +189,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("ceramics")) {
 //            CeramicsCompat.Client.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("oreganized")) {
+            OreganizedCompat.Client.registerBlockRendering();
         }
     }
 

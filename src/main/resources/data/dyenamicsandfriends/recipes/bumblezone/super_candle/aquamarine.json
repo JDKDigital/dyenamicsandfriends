@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "the_bumblezone",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:super_candle"
+    },
+    {
+      "tag": "forge:dyes/aquamarine"
+    },
+    {
+      "tag": "forge:dyes/aquamarine"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:bumblezone_aquamarine_super_candle"
+  }
+}
