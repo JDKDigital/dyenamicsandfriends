@@ -12,7 +12,7 @@
               "conditions": [
                 {
                   "block": "dyenamicsandfriends:clayworks_persimmon_terracotta_slab",
-                  "condition": "minecraft:block_state_property",
+                  "condition": "dyenamicsandfriends:optional_block_state_property",
                   "properties": {
                     "type": "double"
                   }

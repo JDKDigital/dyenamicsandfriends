@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "dyenamicsandfriends:block/glazedresymmetry/peach_centered_glazed_terracotta"
-  }
-}

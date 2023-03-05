@@ -1,8 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "dyenamics:block/lavender_glazed_terracotta",
-    "top": "dyenamics:block/lavender_glazed_terracotta",
-    "side": "dyenamicsandfriends:block/glazedresymmetry/lavender_centered_glazed_terracotta"
-  }
-}

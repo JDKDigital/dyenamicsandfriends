@@ -6,6 +6,12 @@ colors = ["peach","aquamarine","fluorescent","mint","maroon","bubblegum","lavend
 for path, subdirs, files in os.walk('templates'):
   for name in files:
     filename = os.path.join(path, name)
+    if "bumblezone" in filename:
+      continue
+    if "handcrafted" in filename:
+      continue
+    if "glazedresymmetry" in filename:
+      continue
     for x in range(len(colors)):
       resFile = filename.replace("$$", colors[x]).replace("templates\\", "src\\main\\resources\\")
 #       print(resFile)
