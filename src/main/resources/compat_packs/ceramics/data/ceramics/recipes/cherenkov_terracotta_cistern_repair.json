@@ -1,0 +1,13 @@
+{
+  "type": "ceramics:cracked_clay_repair",
+  "item": "dyenamicsandfriends:ceramics_cherenkov_terracotta_cistern",
+  "ingredient": {
+    "tag": "ceramics:terracotta_crack_repair"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ceramics"
+    }
+  ]
+}

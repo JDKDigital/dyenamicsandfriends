@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "dyenamicsandfriends:optional_loot_item",
+          "conditions": [
+            {
+              "condition": "dyenamicsandfriends:optional_block_state_property",
+              "block": "dyenamicsandfriends:comforts_$$_sleeping_bag",
+              "properties": {
+                "part": "head"
+              }
+            }
+          ],
+          "name": "dyenamicsandfriends:comforts_$$_sleeping_bag"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

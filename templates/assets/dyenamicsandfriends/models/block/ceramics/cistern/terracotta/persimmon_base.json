@@ -1,0 +1,6 @@
+{
+  "parent": "ceramics:block/cistern/terracotta/base",
+  "textures": {
+    "texture": "dyenamics:block/persimmon_terracotta"
+  }
+}

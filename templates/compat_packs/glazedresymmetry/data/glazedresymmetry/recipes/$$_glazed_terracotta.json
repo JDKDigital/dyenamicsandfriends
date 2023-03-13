@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": [
+      {"item": "dyenamicsandfriends:glazedresymmetry_$$_glazed_terracotta_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_$$_centered_glazed_terracotta_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_$$_glazed_terracotta_pillar_slab"},
+      {"item": "dyenamicsandfriends:glazedresymmetry_$$_glazed_terracotta_pillar_side_slab"}
+    ]
+  },
+  "result": {
+    "item": "dyenamics:$$_glazed_terracotta"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "glazedresymmetry"
+    }
+  ]
+}

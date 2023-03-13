@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "dyenamics:block/$$_terracotta",
+    "side": "dyenamics:block/$$_terracotta",
+    "top": "dyenamics:block/$$_terracotta"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:$$_glazed_terracotta"
+    },
+    {
+      "item": "dyenamicsandfriends:glazedresymmetry_$$_glazed_terracotta_pillar"
+    }
+  ],
+  "result": "dyenamicsandfriends:glazedresymmetry_$$_centered_glazed_terracotta",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "glazedresymmetry"
+    }
+  ]
+}

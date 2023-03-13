@@ -19,10 +19,28 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
 
 public class DyenamicRegistry
 {
+    public static final List<String> MODS = new ArrayList<>() {{
+        add("another_furniture");
+        add("botanypots");
+        add("ceramics");
+        add("clayworks");
+        add("comforts");
+        add("create");
+        add("elevatorid");
+        add("furnish");
+//        add("glazedresymmetry");
+//        add("handcrafted");
+        add("oreganized");
+        add("quark");
+//        add("the_bumblezone");
+    }};
+
     public static void setup() {
         QuarkCompat.setup();
     }

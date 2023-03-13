@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/furnish/$$_amphora"
+    },
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/furnish/$$_amphora",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/furnish/$$_amphora",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/furnish/$$_amphora",
+      "y": 270
+    }
+  }
+}
