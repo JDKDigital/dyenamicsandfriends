@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:quark_aquamarine_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_bubblegum_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_cherenkov_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_fluorescent_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_lavender_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_maroon_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_mint_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_peach_framed_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:quark_persimmon_framed_glass",
+      "required": false
+    }
+  ]
+}

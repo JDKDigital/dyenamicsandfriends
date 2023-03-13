@@ -1,0 +1,6 @@
+{
+  "parent": "ceramics:block/cistern/terracotta/side_full_connected",
+  "textures": {
+    "texture": "dyenamics:block/cherenkov_terracotta"
+  }
+}

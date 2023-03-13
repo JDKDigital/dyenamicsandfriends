@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dyenamicsandfriends:block/clayworks/$$_terracotta_slab"
+    },
+    "type=double": {
+      "model": "dyenamics:block/$$_terracotta"
+    },
+    "type=top": {
+      "model": "dyenamicsandfriends:block/clayworks/$$_terracotta_slab_top"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "entries": [
+    "quark:aquamarine_shard",
+    "quark:bubblegum_shard",
+    "quark:cherenkov_shard",
+    "quark:fluorescent_shard",
+    "quark:lavender_shard",
+    "quark:maroon_shard",
+    "quark:mint_shard",
+    "quark:peach_shard",
+    "quark:persimmon_shard"
+  ]
+}

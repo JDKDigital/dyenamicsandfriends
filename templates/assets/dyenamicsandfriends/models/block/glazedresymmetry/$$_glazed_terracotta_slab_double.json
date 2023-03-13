@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "dyenamics:block/$$_glazed_terracotta",
+    "up": "dyenamics:block/$$_glazed_terracotta",
+    "down": "dyenamics:block/$$_glazed_terracotta",
+    "north": "dyenamicsandfriends:block/glazedresymmetry/$$_centered_glazed_terracotta",
+    "south": "dyenamicsandfriends:block/glazedresymmetry/$$_centered_glazed_terracotta",
+    "east": "dyenamicsandfriends:block/glazedresymmetry/$$_centered_glazed_terracotta",
+    "west": "dyenamicsandfriends:block/glazedresymmetry/$$_centered_glazed_terracotta"
+  }
+}

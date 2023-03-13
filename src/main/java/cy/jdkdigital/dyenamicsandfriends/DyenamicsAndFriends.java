@@ -8,6 +8,10 @@ import cy.jdkdigital.dyenamicsandfriends.loot.condition.OptionalLootItemBlockSta
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.server.packs.repository.RepositorySource;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -17,14 +21,20 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
+import net.minecraftforge.event.AddPackFindersEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.forgespi.language.IModFileInfo;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.resource.PathResourcePack;
 import org.slf4j.Logger;
+
+import java.util.function.Consumer;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DyenamicsAndFriends.MODID)
@@ -54,6 +64,7 @@ public class DyenamicsAndFriends
         var modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::onPackEvent);
 
         DyenamicRegistry.setup();
         DyenamicRegistry.registerCompatBlocks();
@@ -74,6 +85,38 @@ public class DyenamicsAndFriends
     {
         if (ModList.get().isLoaded("create")) {
             CreateCompat.setup(event);
+        }
+    }
+
+    private void onPackEvent(AddPackFindersEvent event) {
+        DyenamicsAndFriends.LOGGER.info("AddPackFindersEvent");
+        if (event.getPackType() == PackType.SERVER_DATA) {
+            event.addRepositorySource(new ModLoadedPackFinder());
+        }
+    }
+
+    private static class ModLoadedPackFinder implements RepositorySource
+    {
+        @Override
+        public void loadPacks(Consumer<Pack> packLoader, Pack.PackConstructor packBuilder) {
+            DyenamicsAndFriends.LOGGER.info("loadPacks");
+            IModFileInfo modFile = ModList.get().getModContainerById(DyenamicsAndFriends.MODID).get().getModInfo().getOwningFile();
+
+            for (String modId : DyenamicRegistry.MODS) {
+                DyenamicsAndFriends.LOGGER.info("loadPacks " + modId);
+                try {
+                    if (ModList.get().isLoaded(modId)) {
+                        packLoader.accept(Pack.create(
+                                DyenamicsAndFriends.MODID + ":" + modId, false,
+                                () -> new PathResourcePack(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
+                                packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
+                        ));
+                        DyenamicsAndFriends.LOGGER.debug("Loaded compat pack: " + modId);
+                    }
+                } catch (Exception e) {
+                    DyenamicsAndFriends.LOGGER.debug("Failed to load compat pack: " + modId);
+                }
+            }
         }
     }
 }
