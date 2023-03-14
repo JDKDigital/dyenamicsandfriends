@@ -1,3 +1,9 @@
+1.18.2-0.1.4.1
+
+-- Added Oreganized Waxed Concrete
+-- Added missing Clayworks Chiseled Terracotta Bricks recipes
+
+
 1.18.2-0.1.4.0
 
 -- Added Ceramics compat

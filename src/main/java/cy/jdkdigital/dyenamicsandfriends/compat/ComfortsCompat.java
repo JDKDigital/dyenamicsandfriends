@@ -2,12 +2,12 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsHammockBlockRenderer;
-import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsSleepingBagBlockRenderer;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsHammockBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSleepingBagBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsHammockBlockEntity;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBagBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.client.render.comforts.DyenamicsHammockBlockRenderer;
+import cy.jdkdigital.dyenamicsandfriends.client.render.comforts.DyenamicsSleepingBagBlockRenderer;
+import cy.jdkdigital.dyenamicsandfriends.common.block.comforts.DyenamicsHammockBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.comforts.DyenamicsSleepingBagBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsHammockBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsSleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.item.DyenamicsHammockItem;
 import cy.jdkdigital.dyenamicsandfriends.common.item.DyenamicsSleepingBagItem;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;

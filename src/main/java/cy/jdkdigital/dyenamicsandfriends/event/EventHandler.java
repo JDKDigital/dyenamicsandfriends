@@ -3,7 +3,7 @@ package cy.jdkdigital.dyenamicsandfriends.event;
 import cofh.dyenamics.common.items.DyenamicDyeItem;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSailBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.create.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.resources.ResourceLocation;
