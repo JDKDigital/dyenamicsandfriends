@@ -2,12 +2,10 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.common.blocks.DyenamicStainedGlassBlock;
 import cofh.dyenamics.common.blocks.DyenamicStainedGlassPane;
-import cofh.dyenamics.core.init.BlockInit;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.mehvahdjukaar.supplementaries.common.block.BlockProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;

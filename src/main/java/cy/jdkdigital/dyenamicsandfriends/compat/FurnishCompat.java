@@ -1,7 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.common.blocks.DyenamicCarpetBlock;
-import cofh.dyenamics.core.init.BlockInit;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.*;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsAmphoraBlockEntity;

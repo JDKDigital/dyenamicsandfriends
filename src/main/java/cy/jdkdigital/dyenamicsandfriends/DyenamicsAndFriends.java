@@ -22,7 +22,6 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolEntryType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.AddPackFindersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -89,7 +88,6 @@ public class DyenamicsAndFriends
     }
 
     private void onPackEvent(AddPackFindersEvent event) {
-        DyenamicsAndFriends.LOGGER.info("AddPackFindersEvent");
         if (event.getPackType() == PackType.SERVER_DATA) {
             event.addRepositorySource(new ModLoadedPackFinder());
         }
@@ -99,19 +97,18 @@ public class DyenamicsAndFriends
     {
         @Override
         public void loadPacks(Consumer<Pack> packLoader, Pack.PackConstructor packBuilder) {
-            DyenamicsAndFriends.LOGGER.info("loadPacks");
             IModFileInfo modFile = ModList.get().getModContainerById(DyenamicsAndFriends.MODID).get().getModInfo().getOwningFile();
 
             for (String modId : DyenamicRegistry.MODS) {
-                DyenamicsAndFriends.LOGGER.info("loadPacks " + modId);
                 try {
                     if (ModList.get().isLoaded(modId)) {
-                        packLoader.accept(Pack.create(
-                                DyenamicsAndFriends.MODID + ":" + modId, false,
-                                () -> new PathResourcePack(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
-                                packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
-                        ));
-                        DyenamicsAndFriends.LOGGER.debug("Loaded compat pack: " + modId);
+                        packLoader.accept(
+                            Pack.create(
+                            DyenamicsAndFriends.MODID + ":compat_" + modId, false,
+                                () -> new PathResourcePack(DyenamicsAndFriends.MODID + ":compat_" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
+                                packBuilder, Pack.Position.BOTTOM, PackSource.BUILT_IN
+                            )
+                        );
                     }
                 } catch (Exception e) {
                     DyenamicsAndFriends.LOGGER.debug("Failed to load compat pack: " + modId);

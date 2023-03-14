@@ -2,11 +2,7 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsCrystalGlassBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsCrystalGlassPaneBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
@@ -16,10 +12,6 @@ import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ClayworksCompat
 {
