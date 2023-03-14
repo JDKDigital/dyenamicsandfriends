@@ -1,5 +1,5 @@
 {
 	"textures": {
-		"particle": "sleep_tight:block/hammocks/black"
+		"particle": "dyenamicsandfriends:block/sleep_tight/hammocks/$$"
 	}
 }

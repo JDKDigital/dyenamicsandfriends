@@ -9,10 +9,16 @@
       "item": "minecraft:string"
     },
     "1": {
-      "item": "minecraft:blue_carpet"
+      "item": "dyenamics:$$_carpet"
     }
   },
   "result": {
-    "item": "sleep_tight:hammock_blue"
-  }
+    "item": "dyenamicsandfriends:sleep_tight_$$_hammock"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "sleep_tight"
+    }
+  ]
 }

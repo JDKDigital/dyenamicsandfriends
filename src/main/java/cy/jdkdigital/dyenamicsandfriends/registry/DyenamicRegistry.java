@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.fml.ModList;
@@ -28,17 +29,18 @@ public class DyenamicRegistry
     public static final List<String> MODS = new ArrayList<>() {{
         add("another_furniture");
         add("botanypots");
-        add("ceramics");
+//        add("ceramics");
         add("clayworks");
         add("comforts");
         add("create");
         add("elevatorid");
         add("furnish");
 //        add("glazedresymmetry");
-//        add("handcrafted");
+        add("handcrafted");
         add("oreganized");
         add("quark");
-//        add("the_bumblezone");
+        add("sleep_tight");
+        add("the_bumblezone");
     }};
 
     public static void setup() {
@@ -137,6 +139,9 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("the_bumblezone")) {
                 BumblezoneCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("sleep_tight")) {
+                SleepTightCompat.registerBlocks(color);
+            }
         }
     }
 
@@ -184,38 +189,29 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("ceramics")) {
 //            CeramicsCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("sleep_tight")) {
+            SleepTightCompat.Client.registerBlockEntityRenderers(event);
+        }
+    }
+
+    public static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
+        if (ModList.get().isLoaded("elevatorid")) {
+            ElevatoridCompat.Client.registerBlockColors(event);
+        }
     }
 
     public static void registerBlockRendering(FMLClientSetupEvent event) {
-        if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("botanypots")) {
-            BotanyPotsCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("elevatorid")) {
-            ElevatoridCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("furnish")) {
-            FurnishCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("quark")) {
-            QuarkCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("oreganized")) {
-            OreganizedCompat.Client.registerBlockRendering();
-        }
         if (ModList.get().isLoaded("ceramics")) {
 //            CeramicsCompat.Client.registerBlockRendering();
-        }
-        if (ModList.get().isLoaded("oreganized")) {
-            OreganizedCompat.Client.registerBlockRendering();
         }
     }
 
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.stitchTextures(event);
+        }
+        if (ModList.get().isLoaded("sleep_tight")) {
+            SleepTightCompat.stitchTextures(event);
         }
     }
 

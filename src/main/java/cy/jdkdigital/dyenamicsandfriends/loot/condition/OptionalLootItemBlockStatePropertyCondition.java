@@ -32,14 +32,17 @@ public class OptionalLootItemBlockStatePropertyCondition implements LootItemCond
         this.properties = pStatePredicate;
     }
 
+    @Override
     public LootItemConditionType getType() {
         return DyenamicsAndFriends.OPTIONAL_BLOCK_STATE_PROPERTY.get();
     }
 
+    @Override
     public Set<LootContextParam<?>> getReferencedContextParams() {
         return ImmutableSet.of(LootContextParams.BLOCK_STATE);
     }
 
+    @Override
     public boolean test(LootContext p_81772_) {
         BlockState blockstate = p_81772_.getParamOrNull(LootContextParams.BLOCK_STATE);
         return blockstate != null && blockstate.is(this.block) && this.properties.matches(blockstate);
@@ -49,7 +52,8 @@ public class OptionalLootItemBlockStatePropertyCondition implements LootItemCond
         return new OptionalLootItemBlockStatePropertyCondition.Builder(pBlock);
     }
 
-    public static class Builder implements LootItemCondition.Builder {
+    public static class Builder implements LootItemCondition.Builder
+    {
         private final Block block;
         private StatePropertiesPredicate properties = StatePropertiesPredicate.ANY;
 
@@ -62,17 +66,21 @@ public class OptionalLootItemBlockStatePropertyCondition implements LootItemCond
             return this;
         }
 
+        @Override
         public LootItemCondition build() {
             return new OptionalLootItemBlockStatePropertyCondition(this.block, this.properties);
         }
     }
 
-    public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<OptionalLootItemBlockStatePropertyCondition> {
+    public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<OptionalLootItemBlockStatePropertyCondition>
+    {
+        @Override
         public void serialize(JsonObject pJson, OptionalLootItemBlockStatePropertyCondition propertyCondition, JsonSerializationContext p_81797_) {
             pJson.addProperty("block", Registry.BLOCK.getKey(propertyCondition.block).toString());
             pJson.add("properties", propertyCondition.properties.serializeToJson());
         }
 
+        @Override
         public OptionalLootItemBlockStatePropertyCondition deserialize(JsonObject pJson, JsonDeserializationContext p_81806_) {
             ResourceLocation resourcelocation = new ResourceLocation(GsonHelper.getAsString(pJson, "block"));
 

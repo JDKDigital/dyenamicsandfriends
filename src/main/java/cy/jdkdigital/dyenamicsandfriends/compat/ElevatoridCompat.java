@@ -5,10 +5,10 @@ import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsElevatorBlock;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsElevatorBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.registries.RegistryObject;
 import xyz.vsngamer.elevatorid.blocks.ElevatorBlock;
 import xyz.vsngamer.elevatorid.client.render.ColorCamoElevator;
@@ -28,12 +28,11 @@ public class ElevatoridCompat
 
     public static class Client
     {
-        public static void registerBlockRendering() {
-            Minecraft.getInstance().getBlockColors().register(
+        public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
+            event.register(
                     new ColorCamoElevator(),
-                    ELEVATORS.values().stream().map(RegistryObject::get).toArray(ElevatorBlock[]::new)
+                    ELEVATORS.values().stream().map(RegistryObject::get).toArray(Block[]::new)
             );
-            ELEVATORS.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), t -> true));
         }
 
         public static void bakeModel(ModelEvent.BakingCompleted event) {

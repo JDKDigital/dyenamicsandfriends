@@ -42,19 +42,6 @@ public class AnotherFurnitureCompat
 
     public static class Client
     {
-        public static void registerBlockRendering() {
-            SOFAS.values().forEach(registryObject -> {
-                if (registryObject.get() instanceof SofaBlock sofa) {
-                    ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
-                }
-            });
-            LAMPS.values().forEach(registryObject -> {
-                if (registryObject.get() instanceof SofaBlock sofa) {
-                    ItemBlockRenderTypes.setRenderLayer(sofa, RenderType.cutout());
-                }
-            });
-        }
-
         public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             CURTAINS.values().forEach(registryObject -> {
                 if (registryObject.get() instanceof DyenamicsCurtainBlock curtain) {

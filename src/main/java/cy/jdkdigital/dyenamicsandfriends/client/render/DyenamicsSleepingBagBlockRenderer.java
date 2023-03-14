@@ -1,5 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.client.render;
 
+import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.client.renderer.SleepingBagBlockEntityRenderer;
 import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -23,9 +24,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BedPart;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class DyenamicsSleepingBagBlockRenderer extends SleepingBagBlockEntityRenderer
 {
+    public static final Material[] SLEEPING_BAG_TEXTURES = Arrays.stream(DyenamicDyeColor.values()).sorted(Comparator.comparingInt(DyenamicDyeColor::getId)).map((dyeColor) -> {
+        return new Material(InventoryMenu.BLOCK_ATLAS, new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + dyeColor.getSerializedName()));
+    }).toArray(Material[]::new);
+
     public DyenamicsSleepingBagBlockRenderer(BlockEntityRendererProvider.Context ctx) {
         super(ctx);
     }
@@ -33,12 +40,12 @@ public class DyenamicsSleepingBagBlockRenderer extends SleepingBagBlockEntityRen
     @Override
     public void render(BaseComfortsBlockEntity blockEntity, float partialTicks, @Nonnull PoseStack matrixStack, @Nonnull MultiBufferSource buffer, int combinedLightIn, int combinedOverlayIn) {
         if (blockEntity instanceof DyenamicsSleepingBagBlockEntity dyenamicsSleepingBagBlockEntity) {
-            Material material = new Material(InventoryMenu.BLOCK_ATLAS, new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + dyenamicsSleepingBagBlockEntity.getDyenamicColor().getSerializedName()));
+            Material material = SLEEPING_BAG_TEXTURES[dyenamicsSleepingBagBlockEntity.getDyenamicColor().getId()];
             Level level = blockEntity.getLevel();
             if (level != null) {
                 BlockState blockstate = blockEntity.getBlockState();
                 DoubleBlockCombiner.NeighborCombineResult<? extends BedBlockEntity> icallbackwrapper = DoubleBlockCombiner.combineWithNeigbour(BlockEntityType.BED, BedBlock::getBlockType, BedBlock::getConnectedDirection, ChestBlock.FACING, blockstate, level, blockEntity.getBlockPos(), (p_228846_0_, p_228846_1_) -> false);
-                int i = ((Int2IntFunction)icallbackwrapper.apply(new BrightnessCombiner())).get(combinedLightIn);
+                int i = ((Int2IntFunction)icallbackwrapper.apply(new BrightnessCombiner<>())).get(combinedLightIn);
                 this.renderPiece(matrixStack, buffer, blockstate.getValue(BedBlock.PART) == BedPart.HEAD, (Direction)blockstate.getValue(BedBlock.FACING), material, i, combinedOverlayIn, false);
             } else {
                 this.renderPiece(matrixStack, buffer, true, Direction.SOUTH, material, combinedLightIn, combinedOverlayIn, false);

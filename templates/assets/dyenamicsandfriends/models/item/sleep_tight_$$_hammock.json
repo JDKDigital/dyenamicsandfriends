@@ -1,7 +1,6 @@
-
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "sleep_tight:item/hammocks/brown"
+    "layer0": "dyenamicsandfriends:item/sleep_tight/hammocks/$$"
   }
 }

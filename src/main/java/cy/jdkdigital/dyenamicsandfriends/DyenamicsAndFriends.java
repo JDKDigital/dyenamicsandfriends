@@ -22,9 +22,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryType;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
-import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.AddPackFindersEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -33,7 +31,7 @@ import net.minecraftforge.forgespi.language.IModFileInfo;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.resource.PathResourcePack;
+import net.minecraftforge.resource.PathPackResources;
 import org.slf4j.Logger;
 
 import java.util.function.Consumer;
@@ -110,7 +108,7 @@ public class DyenamicsAndFriends
                     if (ModList.get().isLoaded(modId)) {
                         packLoader.accept(Pack.create(
                                 DyenamicsAndFriends.MODID + ":" + modId, false,
-                                () -> new PathResourcePack(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
+                                () -> new PathPackResources(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
                                 packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
                         ));
                         DyenamicsAndFriends.LOGGER.debug("Loaded compat pack: " + modId);

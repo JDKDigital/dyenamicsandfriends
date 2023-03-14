@@ -5,6 +5,7 @@ import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers;
 import net.minecraftforge.client.event.ModelEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,11 @@ public class ClientSetup
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event) {
         DyenamicRegistry.registerBlockRendering(event);
+    }
+    
+    @SubscribeEvent
+    public static void registerBlockColorHandlers(final RegisterColorHandlersEvent.Block event) {
+        DyenamicRegistry.registerBlockColorHandlers(event);
     }
 
     @SubscribeEvent

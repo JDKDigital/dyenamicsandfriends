@@ -1,5 +1,6 @@
 {
   "parent": "botanypots:block/botany_pot_base",
+  "render_type": "cutout",
   "textures": {
     "terracotta": "dyenamics:block/mint_glazed_terracotta",
     "particle": "dyenamics:block/mint_glazed_terracotta"

@@ -58,12 +58,6 @@ public class BotanyPotsCompat
 
     public static class Client
     {
-        public static void registerBlockRendering() {
-            BOTANY_POTS.values().forEach(map -> {
-                map.values().forEach(o -> ItemBlockRenderTypes.setRenderLayer(o.get(), RenderType.cutout()));
-            });
-        }
-
         public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
             BOTANY_POTS.values().forEach(map -> {
                 map.values().forEach(registryObject -> {

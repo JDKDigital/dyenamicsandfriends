@@ -514,5 +514,15 @@
     "block.dyenamicsandfriends.bumblezone_maroon_string_curtain": "Maroon String Curtain",
     "block.dyenamicsandfriends.bumblezone_mint_string_curtain": "Mint String Curtain",
     "block.dyenamicsandfriends.bumblezone_peach_string_curtain": "Peach String Curtain",
-    "block.dyenamicsandfriends.bumblezone_persimmon_string_curtain": "Persimmon String Curtain"
+    "block.dyenamicsandfriends.bumblezone_persimmon_string_curtain": "Persimmon String Curtain",
+
+    "block.dyenamicsandfriends.sleep_tight_aquamarine_hammock": "Aquamarine Hammock",
+    "block.dyenamicsandfriends.sleep_tight_bubblegum_hammock": "Bubblegum Hammock",
+    "block.dyenamicsandfriends.sleep_tight_cherenkov_hammock": "Cherenkov Hammock",
+    "block.dyenamicsandfriends.sleep_tight_fluorescent_hammock": "Fluorescent Hammock",
+    "block.dyenamicsandfriends.sleep_tight_lavender_hammock": "Lavender Hammock",
+    "block.dyenamicsandfriends.sleep_tight_maroon_hammock": "Maroon Hammock",
+    "block.dyenamicsandfriends.sleep_tight_mint_hammock": "Mint Hammock",
+    "block.dyenamicsandfriends.sleep_tight_peach_hammock": "Peach Hammock",
+    "block.dyenamicsandfriends.sleep_tight_persimmon_hammock": "Persimmon Hammock"
 }

@@ -110,11 +110,5 @@ public class FurnishCompat
                 }
             });
         }
-
-        public static void registerBlockRendering() {
-            for(RegistryObject<? extends Block> b : SHOWCASES.values()) {
-                ItemBlockRenderTypes.setRenderLayer(b.get(), RenderType.translucent());
-            }
-        }
     }
 }

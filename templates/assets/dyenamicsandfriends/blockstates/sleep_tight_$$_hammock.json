@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "sleep_tight:block/hammock_black"
+      "model": "dyenamicsandfriends:block/sleep_tight/$$_hammock"
     }
   }
 }

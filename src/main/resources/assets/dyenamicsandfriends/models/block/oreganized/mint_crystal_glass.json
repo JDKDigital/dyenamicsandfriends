@@ -1,5 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
+  "render_type": "translucent",
   "textures": {
     "all": "dyenamicsandfriends:block/oreganized/mint_crystal_glass"
   }

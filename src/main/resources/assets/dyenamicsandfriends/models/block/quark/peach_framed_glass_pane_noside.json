@@ -1,5 +1,6 @@
 {
   "parent": "block/template_glass_pane_noside",
+  "render_type": "translucent",
   "textures": {
     "pane": "dyenamicsandfriends:block/quark/framed_glass/peach"
   }

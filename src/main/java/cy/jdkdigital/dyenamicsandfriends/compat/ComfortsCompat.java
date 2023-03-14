@@ -3,7 +3,6 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.item.HammockItem;
 import com.illusivesoulworks.comforts.common.item.SleepingBagItem;
-import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsHammockBlockRenderer;
 import cy.jdkdigital.dyenamicsandfriends.client.render.DyenamicsSleepingBagBlockRenderer;
 import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsHammockBlock;
@@ -11,7 +10,6 @@ import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsSleepingBagBlock;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsHammockBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -21,6 +19,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,12 +52,12 @@ public class ComfortsCompat
 
     public static void stitchTextures(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
-            for (final DyenamicDyeColor color : DyenamicDyeColor.values()) {
-                if (color.getId() > 15) {
-                    event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/hammock/" + color.getSerializedName()));
-                    event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/comforts/sleeping_bag/" + color.getSerializedName()));
-                }
-            }
+            Arrays.stream(DyenamicsHammockBlockRenderer.HAMMOCK_TEXTURES).forEach((e) -> {
+                event.addSprite(e.texture());
+            });
+            Arrays.stream(DyenamicsSleepingBagBlockRenderer.SLEEPING_BAG_TEXTURES).forEach((e) -> {
+                event.addSprite(e.texture());
+            });
         }
     }
 }
