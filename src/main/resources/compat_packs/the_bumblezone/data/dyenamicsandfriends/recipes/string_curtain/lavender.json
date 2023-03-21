@@ -1,5 +1,5 @@
 {
-  "type": "the_bumblezone:recipe_discovered_hooked_recipe",
+  "type": "minecraft:crafting_shaped",
   "group": "the_bumblezone",
   "pattern": [
     "ttt",
@@ -17,11 +17,11 @@
       "item": "minecraft:glass"
     },
     "d": {
-      "tag": "forge:dyes/aquamarine"
+      "tag": "forge:dyes/lavender"
     }
   },
   "result": {
-    "item": "dyenamicsandfriends:bumblezone_aquamarine_string_curtain"
+    "item": "dyenamicsandfriends:bumblezone_lavender_string_curtain"
   },
   "conditions": [
     {

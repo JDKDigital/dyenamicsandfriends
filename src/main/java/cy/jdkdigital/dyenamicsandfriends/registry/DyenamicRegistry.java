@@ -131,7 +131,7 @@ public class DyenamicRegistry
 //                CeramicsCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("glazedresymmetry")) {
-                GlazedResymmetryCompat.registerBlocks(color);
+//                GlazedResymmetryCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("clayworks")) {
                 ClayworksCompat.registerBlocks(color);

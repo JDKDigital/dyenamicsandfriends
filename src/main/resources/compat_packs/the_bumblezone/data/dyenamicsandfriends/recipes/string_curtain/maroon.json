@@ -1,5 +1,5 @@
 {
-  "type": "the_bumblezone:recipe_discovered_hooked_recipe",
+  "type": "minecraft:crafting_shaped",
   "group": "the_bumblezone",
   "pattern": [
     "ttt",
@@ -17,11 +17,11 @@
       "item": "minecraft:glass"
     },
     "d": {
-      "tag": "forge:dyes/persimmon"
+      "tag": "forge:dyes/maroon"
     }
   },
   "result": {
-    "item": "dyenamicsandfriends:bumblezone_persimmon_string_curtain"
+    "item": "dyenamicsandfriends:bumblezone_maroon_string_curtain"
   },
   "conditions": [
     {

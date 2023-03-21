@@ -164,7 +164,7 @@ dependencies {
     implementation fg.deobf("curse.maven:botany-pots-353928:4357086")
     implementation fg.deobf("curse.maven:oreganized-769203:4377982")
     implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:4417670")
-    implementation fg.deobf("curse.maven:glazed-resymmetry-714619:4403239")
+//    implementation fg.deobf("curse.maven:glazed-resymmetry-714619:4403239")
 //    implementation fg.deobf("curse.maven:ceramics-250617:4049193")
     implementation fg.deobf("curse.maven:clayworks-592162:4396960")
 //    implementation fg.deobf("curse.maven:chipped-456956:4434885")
