@@ -2,7 +2,6 @@ package cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.block.entity.HammockBlockEntity;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsHammockBlock;
 import cy.jdkdigital.dyenamicsandfriends.common.block.comforts.DyenamicsHammockBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;

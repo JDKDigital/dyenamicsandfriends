@@ -5,9 +5,8 @@ import com.illusivesoulworks.comforts.client.renderer.HammockBlockEntityRenderer
 import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsHammockBlockEntity;
-import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsHammockBlockEntity;
+import it.unimi.dsi.fastutil.ints.Int2IntFunction;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.client.renderer.blockentity.BrightnessCombiner;

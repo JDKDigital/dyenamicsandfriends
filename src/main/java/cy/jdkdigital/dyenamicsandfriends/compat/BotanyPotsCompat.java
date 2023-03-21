@@ -1,12 +1,10 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.botanypots.DyenamicsBotanyPot;
 import cy.jdkdigital.dyenamicsandfriends.common.block.botanypots.DyenamicsBlockEntityBotanyPot;
+import cy.jdkdigital.dyenamicsandfriends.common.block.botanypots.DyenamicsBotanyPot;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.darkhax.botanypots.block.BotanyPotRenderer;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;

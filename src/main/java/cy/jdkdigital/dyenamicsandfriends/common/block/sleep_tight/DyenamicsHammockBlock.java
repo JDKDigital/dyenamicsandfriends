@@ -3,7 +3,6 @@ package cy.jdkdigital.dyenamicsandfriends.common.block.sleep_tight;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.sleep_tight.DyenamicsHammockBlockEntity;
 import net.mehvahdjukaar.moonlight.api.util.Utils;
-import net.mehvahdjukaar.sleep_tight.SleepTight;
 import net.mehvahdjukaar.sleep_tight.common.blocks.HammockBlock;
 import net.mehvahdjukaar.sleep_tight.common.tiles.HammockTile;
 import net.minecraft.core.BlockPos;

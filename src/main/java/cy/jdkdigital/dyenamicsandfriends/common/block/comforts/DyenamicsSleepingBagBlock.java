@@ -3,7 +3,6 @@ package cy.jdkdigital.dyenamicsandfriends.common.block.comforts;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
 import com.illusivesoulworks.comforts.common.block.entity.SleepingBagBlockEntity;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsSleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsSleepingBagBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.DyeColor;

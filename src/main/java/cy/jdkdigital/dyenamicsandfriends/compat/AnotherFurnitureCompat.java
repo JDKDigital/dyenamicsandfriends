@@ -10,8 +10,6 @@ import com.starfish_studios.another_furniture.client.renderer.blockentity.Curtai
 import cy.jdkdigital.dyenamicsandfriends.common.block.another_furniture.DyenamicsCurtainBlock;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.another_furniture.DyenamicsCurtainBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;

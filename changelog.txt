@@ -1,5 +1,6 @@
 1.19.2-0.1.4.1
 
+-- Added Sleep Tight compat
 -- Added Oreganized Waxed Concrete
 -- Added missing Clayworks Chiseled Terracotta Bricks recipes
 -- Fixed crash with latest version of Furnish (v22)

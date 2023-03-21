@@ -2,15 +2,15 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.common.blocks.DyenamicCarpetBlock;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.*;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsAmphoraBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsPlateBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsShowcaseBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.furnish.*;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
+import io.github.wouink.furnish.Furnish;
 import io.github.wouink.furnish.block.*;
 import io.github.wouink.furnish.client.renderer.PlateRenderer;
 import io.github.wouink.furnish.client.renderer.ShowcaseRenderer;
-import io.github.wouink.furnish.setup.FurnishItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
@@ -45,20 +45,20 @@ public class FurnishCompat
         String prefix = "furnish_" + color.getSerializedName();
 
         var carpetProps = BlockBehaviour.Properties.of(Material.CLOTH_DECORATION, color.getMapColor()).strength(0.1F).sound(SoundType.WOOL).lightLevel((state) -> color.getLightValue());
-        CARPET_ON_STAIRS.put(color, DyenamicRegistry.registerBlock(prefix + "_carpet_on_stairs", () -> new DyenamicsCarpetOnStairs(carpetProps, color), FurnishItems.Furnish_ItemGroup , false));
-        CARPET_ON_TRAPDOOR.put(color, DyenamicRegistry.registerBlock(prefix + "_carpet_on_trapdoor", () -> new DyenamicsCarpetOnTrapdoor(carpetProps, color), FurnishItems.Furnish_ItemGroup , false));
-        AWNINGS.put(color, DyenamicRegistry.registerBlock(prefix + "_awning", () -> new Awning(carpetProps), FurnishItems.Furnish_ItemGroup , true));
-        CURTAINS.put(color, DyenamicRegistry.registerBlock(prefix + "_curtain", () -> new Curtain(carpetProps), FurnishItems.Furnish_ItemGroup , true));
+        CARPET_ON_STAIRS.put(color, DyenamicRegistry.registerBlock(prefix + "_carpet_on_stairs", () -> new DyenamicsCarpetOnStairs(carpetProps, color), Furnish.CREATIVE_TAB , false));
+        CARPET_ON_TRAPDOOR.put(color, DyenamicRegistry.registerBlock(prefix + "_carpet_on_trapdoor", () -> new DyenamicsCarpetOnTrapdoor(carpetProps, color), Furnish.CREATIVE_TAB , false));
+        AWNINGS.put(color, DyenamicRegistry.registerBlock(prefix + "_awning", () -> new Awning(carpetProps), Furnish.CREATIVE_TAB , true));
+        CURTAINS.put(color, DyenamicRegistry.registerBlock(prefix + "_curtain", () -> new Curtain(carpetProps), Furnish.CREATIVE_TAB , true));
 
         var woolProps = BlockBehaviour.Properties.of(Material.WOOL, color.getMapColor()).strength(0.8F).sound(SoundType.WOOL).lightLevel((state) -> color.getLightValue());
-        SOFAS.put(color, DyenamicRegistry.registerBlock(prefix + "_sofa", () -> new Sofa(woolProps), FurnishItems.Furnish_ItemGroup , true));
-        SHOWCASES.put(color, DyenamicRegistry.registerBlock(prefix + "_showcase", () -> new DyenamicsShowcase(woolProps, DyenamicRegistry.registerBlockEntity(prefix + "_showcase", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsShowcaseBlockEntity(pos, state, (DyenamicsShowcase) SHOWCASES.get(color).get()), SHOWCASES.get(color).get()))), FurnishItems.Furnish_ItemGroup, true));
+        SOFAS.put(color, DyenamicRegistry.registerBlock(prefix + "_sofa", () -> new Sofa(woolProps), Furnish.CREATIVE_TAB , true));
+        SHOWCASES.put(color, DyenamicRegistry.registerBlock(prefix + "_showcase", () -> new DyenamicsShowcase(woolProps, DyenamicRegistry.registerBlockEntity(prefix + "_showcase", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsShowcaseBlockEntity(pos, state, (DyenamicsShowcase) SHOWCASES.get(color).get()), SHOWCASES.get(color).get()))), Furnish.CREATIVE_TAB, true));
 
         BlockBehaviour.Properties terracottaProps = BlockBehaviour.Properties.of(Material.STONE, color.getMapColor()).strength(1.25F, 4.2F).lightLevel((state) -> color.getLightValue());
-        AMPHORAS.put(color, DyenamicRegistry.registerBlock(prefix + "_amphora", () -> new DyenamicsAmphora(terracottaProps, DyenamicRegistry.registerBlockEntity(prefix + "_amphora", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsAmphoraBlockEntity(pos, state, (DyenamicsAmphora) AMPHORAS.get(color).get()), AMPHORAS.get(color).get()))), FurnishItems.Furnish_ItemGroup , true));
-        PLATES.put(color, DyenamicRegistry.registerBlock(prefix + "_plate", () -> new DyenamicsPlate(terracottaProps, DyenamicRegistry.registerBlockEntity(prefix + "_plate", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsPlateBlockEntity(pos, state, (DyenamicsPlate) PLATES.get(color).get()), PLATES.get(color).get()))), FurnishItems.Furnish_ItemGroup , true));
+        AMPHORAS.put(color, DyenamicRegistry.registerBlock(prefix + "_amphora", () -> new DyenamicsAmphora(terracottaProps, DyenamicRegistry.registerBlockEntity(prefix + "_amphora", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsAmphoraBlockEntity(pos, state, (DyenamicsAmphora) AMPHORAS.get(color).get()), AMPHORAS.get(color).get()))), Furnish.CREATIVE_TAB , true));
+        PLATES.put(color, DyenamicRegistry.registerBlock(prefix + "_plate", () -> new DyenamicsPlate(terracottaProps, DyenamicRegistry.registerBlockEntity(prefix + "_plate", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsPlateBlockEntity(pos, state, (DyenamicsPlate) PLATES.get(color).get()), PLATES.get(color).get()))), Furnish.CREATIVE_TAB , true));
 
-        PAPER_LAMPS.put(color, DyenamicRegistry.registerBlock(prefix + "_paper_lamp", PaperLamp::new, FurnishItems.Furnish_ItemGroup , true));
+        PAPER_LAMPS.put(color, DyenamicRegistry.registerBlock(prefix + "_paper_lamp", PaperLamp::new, Furnish.CREATIVE_TAB , true));
     }
 
     public static void entityPlace(BlockEvent.EntityPlaceEvent event) {
