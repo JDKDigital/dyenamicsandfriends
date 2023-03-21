@@ -1,8 +1,8 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsElevatorBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsElevatorBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.elevatorid.DyenamicsElevatorBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.elevatorid.DyenamicsElevatorBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTab;

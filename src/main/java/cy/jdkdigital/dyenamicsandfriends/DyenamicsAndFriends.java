@@ -89,7 +89,6 @@ public class DyenamicsAndFriends
     }
 
     private void onPackEvent(AddPackFindersEvent event) {
-        DyenamicsAndFriends.LOGGER.info("AddPackFindersEvent");
         if (event.getPackType() == PackType.SERVER_DATA) {
             event.addRepositorySource(new ModLoadedPackFinder());
         }
@@ -99,11 +98,9 @@ public class DyenamicsAndFriends
     {
         @Override
         public void loadPacks(Consumer<Pack> packLoader, Pack.PackConstructor packBuilder) {
-            DyenamicsAndFriends.LOGGER.info("loadPacks");
             IModFileInfo modFile = ModList.get().getModContainerById(DyenamicsAndFriends.MODID).get().getModInfo().getOwningFile();
 
             for (String modId : DyenamicRegistry.MODS) {
-                DyenamicsAndFriends.LOGGER.info("loadPacks " + modId);
                 try {
                     if (ModList.get().isLoaded(modId)) {
                         packLoader.accept(Pack.create(
@@ -111,7 +108,6 @@ public class DyenamicsAndFriends
                                 () -> new PathPackResources(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
                                 packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
                         ));
-                        DyenamicsAndFriends.LOGGER.debug("Loaded compat pack: " + modId);
                     }
                 } catch (Exception e) {
                     DyenamicsAndFriends.LOGGER.debug("Failed to load compat pack: " + modId);

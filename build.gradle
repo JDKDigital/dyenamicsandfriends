@@ -155,7 +155,7 @@ dependencies {
     implementation fg.deobf("curse.maven:supplementaries-412082:4356998") // 4363087
     implementation fg.deobf("curse.maven:waystones-245755:3901921")
     implementation fg.deobf("curse.maven:quark-243121:4366541")
-    implementation fg.deobf("curse.maven:furnish-547069:4084047")
+    implementation fg.deobf("curse.maven:furnish-547069:4449620 ")
     implementation fg.deobf("curse.maven:skinned-lanterns-414154:3970173")
     implementation fg.deobf("curse.maven:nightlights-651876:4063048")
     implementation fg.deobf("curse.maven:mrcrayfish-furniture-mod-55438:3907425")

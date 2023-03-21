@@ -1,8 +1,8 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
 //import cofh.dyenamics.core.util.DyenamicDyeColor;
-//import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsFluidCisternBlock;
-//import cy.jdkdigital.dyenamicsandfriends.common.block.entity.DyenamicsCisternBlockEntity;
+//import cy.jdkdigital.dyenamicsandfriends.common.block.ceramics.DyenamicsFluidCisternBlock;
+//import cy.jdkdigital.dyenamicsandfriends.common.block.entity.ceramics.DyenamicsCisternBlockEntity;
 //import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 //import knightminer.ceramics.client.renderer.CisternBlockEntityRenderer;
 //import knightminer.ceramics.items.CrackableBlockItem;

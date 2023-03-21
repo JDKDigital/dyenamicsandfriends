@@ -6,6 +6,8 @@ import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.loot.modifier.StainedGlassBlockLootModifier;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

@@ -1,8 +1,8 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsCrystalGlassBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.DyenamicsCrystalGlassPaneBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.oreganized.DyenamicsCrystalGlassBlock;
+import cy.jdkdigital.dyenamicsandfriends.common.block.oreganized.DyenamicsCrystalGlassPaneBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
