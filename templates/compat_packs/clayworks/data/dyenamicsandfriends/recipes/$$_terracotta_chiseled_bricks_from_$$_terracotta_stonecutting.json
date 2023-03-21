@@ -14,7 +14,7 @@
         "ingredient": {
           "item": "dyenamics:$$_terracotta"
         },
-        "result": "dyenamicsandfriends:$$_terracotta_chiseled_bricks"
+        "result": "dyenamicsandfriends:clayworks_$$_terracotta_chiseled_bricks"
       }
     }
   ],

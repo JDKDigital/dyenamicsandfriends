@@ -12,9 +12,9 @@
         "type": "minecraft:stonecutting",
         "count": 1,
         "ingredient": {
-          "item": "dyenamicsandfriends:maroon_terracotta_bricks"
+          "item": "dyenamicsandfriends:clayworks_maroon_terracotta_bricks"
         },
-        "result": "dyenamicsandfriends:maroon_terracotta_chiseled_bricks"
+        "result": "dyenamicsandfriends:clayworks_maroon_terracotta_chiseled_bricks"
       }
     }
   ],

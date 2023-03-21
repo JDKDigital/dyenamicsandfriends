@@ -12,7 +12,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "#": {
-            "item": "dyenamicsandfriends:mint_terracotta_brick_slab"
+            "item": "dyenamicsandfriends:clayworks_mint_terracotta_brick_slab"
           }
         },
         "pattern": [
@@ -20,7 +20,7 @@
           "#"
         ],
         "result": {
-          "item": "dyenamicsandfriends:mint_terracotta_chiseled_bricks"
+          "item": "dyenamicsandfriends:clayworks_mint_terracotta_chiseled_bricks"
         }
       }
     }
