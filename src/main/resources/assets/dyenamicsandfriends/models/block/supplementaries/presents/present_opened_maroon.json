@@ -1,0 +1,9 @@
+{
+  "parent": "supplementaries:block/present_opened_template",
+  "textures": {
+    "bottom": "dyenamicsandfriends:block/supplementaries/presents/present_bottom_maroon",
+    "inside": "dyenamicsandfriends:block/supplementaries/presents/present_inside_maroon",
+    "particle": "dyenamicsandfriends:block/supplementaries/presents/present_side_maroon",
+    "side": "dyenamicsandfriends:block/supplementaries/presents/present_side_maroon"
+  }
+}

@@ -485,5 +485,24 @@
     "block.dyenamicsandfriends.glazedresymmetry_maroon_glazed_terracotta_pillar_side_slab": "Maroon Glazed Terracotta Side Pillared Slab",
     "block.dyenamicsandfriends.glazedresymmetry_mint_glazed_terracotta_pillar_side_slab": "Mint Glazed Terracotta Side Pillared Slab",
     "block.dyenamicsandfriends.glazedresymmetry_peach_glazed_terracotta_pillar_side_slab": "Peach Glazed Terracotta Side Pillared Slab",
-    "block.dyenamicsandfriends.glazedresymmetry_persimmon_glazed_terracotta_pillar_side_slab": "Persimmon Glazed Terracotta Side Pillared Slab"
+    "block.dyenamicsandfriends.glazedresymmetry_persimmon_glazed_terracotta_pillar_side_slab": "Persimmon Glazed Terracotta Side Pillared Slab",
+
+    "block.dyenamicsandfriends.supplementaries_aquamarine_present": "Aquamarine Present",
+    "block.dyenamicsandfriends.supplementaries_bubblegum_present": "Bubblegum Present",
+    "block.dyenamicsandfriends.supplementaries_cherenkov_present": "Cherenkov Present",
+    "block.dyenamicsandfriends.supplementaries_fluorescent_present": "Fluorescent Present",
+    "block.dyenamicsandfriends.supplementaries_lavender_present": "Lavender Present",
+    "block.dyenamicsandfriends.supplementaries_maroon_present": "Maroon Present",
+    "block.dyenamicsandfriends.supplementaries_mint_present": "Mint Present",
+    "block.dyenamicsandfriends.supplementaries_peach_present": "Peach Present",
+    "block.dyenamicsandfriends.supplementaries_persimmon_present": "Persimmon Present",
+    "block.dyenamicsandfriends.supplementaries_aquamarine_trapped_present": "Aquamarine Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_bubblegum_trapped_present": "Bubblegum Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_cherenkov_trapped_present": "Cherenkov Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_fluorescent_trapped_present": "Fluorescent Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_lavender_trapped_present": "Lavender Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_maroon_trapped_present": "Maroon Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_mint_trapped_present": "Mint Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_peach_trapped_present": "Peach Trapped Present",
+    "block.dyenamicsandfriends.supplementaries_persimmon_trapped_present": "Persimmon Trapped Present"
 }
