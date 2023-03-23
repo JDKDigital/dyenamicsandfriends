@@ -1,13 +1,18 @@
+1.18.2-0.1.4.3
+
+- Fix a tag loading problem when botany pots was not installed
+
+
 1.18.2-0.1.4.1
 
--- Added Oreganized Waxed Concrete
--- Added missing Clayworks Chiseled Terracotta Bricks recipes
+- Added Oreganized Waxed Concrete
+- Added missing Clayworks Chiseled Terracotta Bricks recipes
 
 
 1.18.2-0.1.4.0
 
--- Added Ceramics compat
--- Added Clayworks compat
+- Added Ceramics compat
+- Added Clayworks compat
 
 
 1.18.2-0.1.3.0

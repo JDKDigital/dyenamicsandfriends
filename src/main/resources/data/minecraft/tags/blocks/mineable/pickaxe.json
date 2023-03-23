@@ -5,6 +5,9 @@
     "#dyenamicsandfriends:mineable/ceramics_pickaxe",
     "#dyenamicsandfriends:mineable/clayworks_pickaxe",
     "#dyenamicsandfriends:mineable/glazedresymmetry_pickaxe",
-    "#botanypots:all_botany_pots"
+    {
+      "id": "#botanypots:all_botany_pots",
+      "required": false
+    }
   ]
 }
