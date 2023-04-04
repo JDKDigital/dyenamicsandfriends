@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:supplementaries_aquamarine_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_bubblegum_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_cherenkov_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_fluorescent_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_lavender_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_maroon_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_mint_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_peach_present",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_persimmon_present",
+      "required": false
+    }
+  ]
+}

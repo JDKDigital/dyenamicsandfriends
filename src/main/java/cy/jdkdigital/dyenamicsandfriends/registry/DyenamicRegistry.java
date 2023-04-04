@@ -178,6 +178,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("ceramics")) {
             CeramicsCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("supplementaries")) {
+            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockRendering(FMLClientSetupEvent event) {
@@ -201,6 +204,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("ceramics")) {
             CeramicsCompat.Client.registerBlockRendering();
+        }
+        if (ModList.get().isLoaded("supplementaries")) {
+            SupplementariesCompat.Client.registerBlockRendering();
         }
     }
 

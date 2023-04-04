@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:supplementaries_aquamarine_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_bubblegum_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_cherenkov_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_fluorescent_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_lavender_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_maroon_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_mint_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_peach_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_persimmon_candle_holder",
+      "required": false
+    }
+  ]
+}

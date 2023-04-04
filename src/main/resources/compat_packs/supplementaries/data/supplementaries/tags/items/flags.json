@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:supplementaries_aquamarine_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_bubblegum_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_cherenkov_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_fluorescent_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_lavender_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_maroon_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_mint_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_peach_flag",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:supplementaries_persimmon_flag",
+      "required": false
+    }
+  ]
+}
