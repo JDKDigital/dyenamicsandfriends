@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xdx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "tag": "minecraft:planks"
+    },
+    "d": {
+      "tag": "forge:dyes/$$"
+    }
+  },
+  "result": {
+    "item": "dyenamicsandfriends:regions_unexplored_$$_painted_planks",
+    "count": 8
+  }
+}

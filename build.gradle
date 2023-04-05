@@ -143,6 +143,7 @@ dependencies {
     implementation fg.deobf("curse.maven:blueprint-382216:3991478") // clayworks
     implementation fg.deobf("curse.maven:mantle-74924:4353120") // ceramics
     implementation fg.deobf("curse.maven:ctm-267602:3933537") // chipped
+    implementation fg.deobf("curse.maven:terrablender-563928:3957976") // regions unexplored
 
     implementation fg.deobf("curse.maven:create-328085:4007544")
     implementation fg.deobf("curse.maven:create-deco-509285:4009050")
@@ -166,6 +167,7 @@ dependencies {
     implementation fg.deobf("curse.maven:ceramics-250617:4049193")
     implementation fg.deobf("curse.maven:clayworks-592162:4380997")
     implementation fg.deobf("curse.maven:chipped-456956:4293291")
+    implementation fg.deobf("curse.maven:regions-unexplored-659110:4371805")
 }
 
 //tasks.jarJar.configure {

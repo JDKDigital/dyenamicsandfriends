@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xdx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "tag": "minecraft:planks"
+    },
+    "d": {
+      "tag": "forge:dyes/bubblegum"
+    }
+  },
+  "result": {
+    "item": "dyenamicsandfriends:regions_unexplored_bubblegum_painted_planks",
+    "count": 8
+  }
+}

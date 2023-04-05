@@ -38,6 +38,7 @@ public class DyenamicRegistry
 //        add("handcrafted");
         add("oreganized");
         add("quark");
+        add("regions_unexplored");
         add("supplementaries");
 //        add("the_bumblezone");
     }};
@@ -86,8 +87,10 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("supplementaries")) {
                 // blackboard
                 // flag
-                // candle holder
                 SupplementariesCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("regions_unexplored")) {
+                RegionsUnexploredCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("waystones")) {
                 // sharestone

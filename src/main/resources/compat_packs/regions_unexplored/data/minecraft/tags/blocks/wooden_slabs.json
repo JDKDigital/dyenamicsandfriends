@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_aquamarine_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_bubblegum_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_cherenkov_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_fluorescent_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_lavender_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_maroon_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_mint_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_peach_painted_slab",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:regions_unexplored_persimmon_painted_slab",
+      "required": false
+    }
+  ]
+}
