@@ -13,5 +13,11 @@
   "result": {
     "item": "dyenamicsandfriends:regions_unexplored_cherenkov_painted_stairs",
     "count": 4
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "regions_unexplored"
+    }
+  ]
 }

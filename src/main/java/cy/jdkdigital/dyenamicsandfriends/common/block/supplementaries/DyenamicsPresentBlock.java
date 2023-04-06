@@ -1,7 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.supplementaries;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.ceramics.DyenamicsCisternBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.supplementaries.DyenamicsPresentBlockEntity;
 import net.mehvahdjukaar.supplementaries.common.block.blocks.PresentBlock;
 import net.minecraft.core.BlockPos;
@@ -16,7 +15,7 @@ public class DyenamicsPresentBlock extends PresentBlock
     private final Supplier<BlockEntityType<DyenamicsPresentBlockEntity>> blockEntitySupplier;
 
     public DyenamicsPresentBlock(DyenamicDyeColor color, Properties properties, Supplier<BlockEntityType<DyenamicsPresentBlockEntity>> blockEntitySupplier) {
-        super(color.getVanillaColor(), properties);
+        super(color.getAnalogue(), properties);
         this.blockEntitySupplier = blockEntitySupplier;
     }
 

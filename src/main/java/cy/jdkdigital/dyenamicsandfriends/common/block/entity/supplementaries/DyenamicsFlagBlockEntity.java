@@ -8,15 +8,11 @@ import net.mehvahdjukaar.supplementaries.common.block.tiles.FlagBlockTile;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
-import net.minecraft.world.item.DyeColor;
-import net.minecraft.world.level.block.entity.BannerBlockEntity;
 import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-import javax.annotation.Nullable;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class DyenamicsFlagBlockEntity extends FlagBlockTile
 {

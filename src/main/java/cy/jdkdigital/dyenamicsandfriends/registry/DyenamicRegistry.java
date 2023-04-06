@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -33,6 +34,7 @@ public class DyenamicRegistry
         add("comforts");
         add("create");
         add("elevatorid");
+        add("farmersdelight");
         add("furnish");
 //        add("glazedresymmetry");
 //        add("handcrafted");
@@ -74,7 +76,7 @@ public class DyenamicRegistry
                 ElevatoridCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("farmersdelight")) {
-                // canvas sign
+                FarmersDelightCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("reliquary")) {
                 // pedestal
@@ -175,6 +177,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("farmersdelight")) {
+            FarmersDelightCompat.Client.registerBlockEntityRenderers(event);
+        }
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
@@ -217,6 +222,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.stitchTextures(event);
         }
+        if (ModList.get().isLoaded("farmersdelight")) {
+            FarmersDelightCompat.stitchTextures(event);
+        }
     }
 
     public static void onModelBake(ModelBakeEvent event) {
@@ -228,6 +236,12 @@ public class DyenamicRegistry
     public static void onEntityPlace(BlockEvent.EntityPlaceEvent event) {
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.entityPlace(event);
+        }
+    }
+
+    public static void onPlayerRightClick(PlayerInteractEvent.RightClickBlock event) {
+        if (ModList.get().isLoaded("furnish")) {
+            FarmersDelightCompat.playerRightClick(event);
         }
     }
 

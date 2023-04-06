@@ -550,5 +550,24 @@
     "block.dyenamicsandfriends.regions_unexplored_maroon_painted_stairs": "Maroon Painted Stairs",
     "block.dyenamicsandfriends.regions_unexplored_mint_painted_stairs": "Mint Painted Stairs",
     "block.dyenamicsandfriends.regions_unexplored_peach_painted_stairs": "Peach Painted Stairs",
-    "block.dyenamicsandfriends.regions_unexplored_persimmon_painted_stairs": "Persimmon Painted Stairs"
+    "block.dyenamicsandfriends.regions_unexplored_persimmon_painted_stairs": "Persimmon Painted Stairs",
+
+    "block.dyenamicsandfriends.farmersdelight_aquamarine_canvas_sign": "Aquamarine Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_bubblegum_canvas_sign": "Bubblegum Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_cherenkov_canvas_sign": "Cherenkov Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_fluorescent_canvas_sign": "Fluorescent Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_lavender_canvas_sign": "Lavender Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_maroon_canvas_sign": "Maroon Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_mint_canvas_sign": "Mint Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_peach_canvas_sign": "Peach Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_persimmon_canvas_sign": "Persimmon Canvas Sign",
+    "block.dyenamicsandfriends.farmersdelight_aquamarine_canvas_wall_sign": "Aquamarine Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_bubblegum_canvas_wall_sign": "Bubblegum Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_cherenkov_canvas_wall_sign": "Cherenkov Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_fluorescent_canvas_wall_sign": "Fluorescent Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_lavender_canvas_wall_sign": "Lavender Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_maroon_canvas_wall_sign": "Maroon Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_mint_canvas_wall_sign": "Mint Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_peach_canvas_wall_sign": "Peach Canvas Wall Sign",
+    "block.dyenamicsandfriends.farmersdelight_persimmon_canvas_wall_sign": "Persimmon Canvas Wall Sign"
 }

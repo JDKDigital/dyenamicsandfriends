@@ -16,5 +16,11 @@
   "result": {
     "item": "dyenamicsandfriends:regions_unexplored_fluorescent_painted_planks",
     "count": 8
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "regions_unexplored"
+    }
+  ]
 }

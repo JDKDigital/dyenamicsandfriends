@@ -11,5 +11,11 @@
   "result": {
     "item": "dyenamicsandfriends:regions_unexplored_$$_painted_slab",
     "count": 6
-  }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "regions_unexplored"
+    }
+  ]
 }

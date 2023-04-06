@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:farmersdelight_aquamarine_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_bubblegum_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_cherenkov_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_fluorescent_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_lavender_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_maroon_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_mint_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_peach_canvas_wall_sign",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:farmersdelight_persimmon_canvas_wall_sign",
+      "required": false
+    }
+  ]
+}

@@ -2,7 +2,9 @@ package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.common.blocks.DyenamicCarpetBlock;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.*;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsAmphoraBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsPlateBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish.DyenamicsShowcaseBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.furnish.*;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import io.github.wouink.furnish.block.*;

@@ -15,7 +15,7 @@ public class DyenamicsTrappedPresentBlock extends TrappedPresentBlock
     private final Supplier<BlockEntityType<DyenamicsTrappedPresentBlockEntity>> blockEntitySupplier;
 
     public DyenamicsTrappedPresentBlock(DyenamicDyeColor color, Properties properties, Supplier<BlockEntityType<DyenamicsTrappedPresentBlockEntity>> blockEntitySupplier) {
-        super(color.getVanillaColor(), properties);
+        super(color.getAnalogue(), properties);
         this.blockEntitySupplier = blockEntitySupplier;
     }
 
