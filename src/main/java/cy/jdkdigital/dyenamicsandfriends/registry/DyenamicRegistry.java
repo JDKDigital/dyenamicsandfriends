@@ -30,6 +30,7 @@ public class DyenamicRegistry
         add("another_furniture");
         add("botanypots");
         add("ceramics");
+        add("chalk");
         add("clayworks");
         add("comforts");
         add("create");
@@ -122,7 +123,8 @@ public class DyenamicRegistry
 
             }
             if (ModList.get().isLoaded("chalk")) {
-                // chalk
+                ChalkCompat.registerBlocks(color);
+                ChalkCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("oreganized")) {
                 OreganizedCompat.registerBlocks(color);
@@ -198,6 +200,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockRendering();
         }
+        if (ModList.get().isLoaded("chalk")) {
+            ChalkCompat.Client.registerBlockRendering();
+        }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.registerBlockRendering();
         }
@@ -228,6 +233,9 @@ public class DyenamicRegistry
     }
 
     public static void onModelBake(ModelBakeEvent event) {
+        if (ModList.get().isLoaded("chalk")) {
+            ChalkCompat.Client.bakeModel(event);
+        }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.bakeModel(event);
         }

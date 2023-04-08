@@ -47,7 +47,6 @@ public class DyenamicsCanvasSignBlockEntity extends CanvasSignBlockEntity
     @Override
     public void load(CompoundTag pTag) {
         super.load(pTag);
-        DyenamicsAndFriends.LOGGER.info("load sign " + pTag);
         this.textColor = pTag.contains("DyenamicColor") ? DyenamicDyeColor.byId(pTag.getInt("DyenamicColor")) : DyenamicDyeColor.BLACK;
     }
 
@@ -57,7 +56,6 @@ public class DyenamicsCanvasSignBlockEntity extends CanvasSignBlockEntity
         if (this.textColor != null) {
             pTag.putInt("DyenamicColor", this.textColor.getId());
         }
-        DyenamicsAndFriends.LOGGER.info("save sign " + pTag);
     }
 
     @Override

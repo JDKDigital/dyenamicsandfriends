@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "chalk:chalk",
+  "ingredients": [
+    {
+      "item": "chalk:chalk_box"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:chalk_box"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "chalk"
+    }
+  ]
+}

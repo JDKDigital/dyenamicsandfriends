@@ -569,5 +569,18 @@
     "block.dyenamicsandfriends.farmersdelight_maroon_canvas_wall_sign": "Maroon Canvas Wall Sign",
     "block.dyenamicsandfriends.farmersdelight_mint_canvas_wall_sign": "Mint Canvas Wall Sign",
     "block.dyenamicsandfriends.farmersdelight_peach_canvas_wall_sign": "Peach Canvas Wall Sign",
-    "block.dyenamicsandfriends.farmersdelight_persimmon_canvas_wall_sign": "Persimmon Canvas Wall Sign"
+    "block.dyenamicsandfriends.farmersdelight_persimmon_canvas_wall_sign": "Persimmon Canvas Wall Sign",
+
+    "item.dyenamicsandfriends.chalk_aquamarine_chalk": "Aquamarine Chalk",
+    "item.dyenamicsandfriends.chalk_bubblegum_chalk": "Bubblegum Chalk",
+    "item.dyenamicsandfriends.chalk_cherenkov_chalk": "Cherenkov Chalk",
+    "item.dyenamicsandfriends.chalk_fluorescent_chalk": "Fluorescent Chalk",
+    "item.dyenamicsandfriends.chalk_lavender_chalk": "Lavender Chalk",
+    "item.dyenamicsandfriends.chalk_maroon_chalk": "Maroon Chalk",
+    "item.dyenamicsandfriends.chalk_mint_chalk": "Mint Chalk",
+    "item.dyenamicsandfriends.chalk_peach_chalk": "Peach Chalk",
+    "item.dyenamicsandfriends.chalk_persimmon_chalk": "Persimmon Chalk",
+
+    "item.dyenamicsandfriends.chalk_box": "Dyenamics Chalk Box",
+    "item.dyenamicsandfriends.chalk_box.tooltip.dyenamics": "This one works with Dyenamics dyes"
 }
