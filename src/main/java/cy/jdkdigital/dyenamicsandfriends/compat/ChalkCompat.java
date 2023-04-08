@@ -1,7 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import com.google.common.collect.UnmodifiableIterator;
 import com.mojang.math.Vector3f;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.common.block.chalk.DyenamicsChalkMarkBlock;
@@ -12,11 +11,8 @@ import io.github.mortuusars.chalk.Chalk;
 import io.github.mortuusars.chalk.blocks.ChalkMarkBlock;
 import io.github.mortuusars.chalk.blocks.MarkSymbol;
 import io.github.mortuusars.chalk.core.ChalkMark;
-import io.github.mortuusars.chalk.items.ChalkBoxItem;
-import io.github.mortuusars.chalk.render.ChalkColors;
 import io.github.mortuusars.chalk.render.ChalkMarkBakedModel;
 import io.github.mortuusars.chalk.setup.ClientSetup;
-import io.github.mortuusars.chalk.setup.ModItems;
 import io.github.mortuusars.chalk.setup.ModTags;
 import io.github.mortuusars.chalk.utils.ClickLocationUtils;
 import io.github.mortuusars.chalk.utils.ParticleUtils;
@@ -35,9 +31,7 @@ import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -46,8 +40,8 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.ModelBakeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
@@ -77,7 +71,7 @@ public class ChalkCompat
 
     public static class Client
     {
-        public static void registerBlockRendering() {
+        public static void registerBlockRendering(FMLClientSetupEvent event) {
             Minecraft.getInstance().getBlockColors().register(
                 CHALK_MARK_BLOCK_COLOR,
                 CHALK_MARK_BLOCKS.values().stream().map(RegistryObject::get).toArray(Block[]::new)
@@ -109,6 +103,16 @@ public class ChalkCompat
                 }
             });
         }
+
+        public static final BlockColor CHALK_MARK_BLOCK_COLOR = (blockState, blockAndTintGetter, blockPos, index) -> {
+            if (!(blockState.getBlock() instanceof DyenamicsChalkMarkBlock)) {
+                return 16777215;
+            } else {
+                DyenamicDyeColor blockColor = ((DyenamicsChalkMarkBlock)blockState.getBlock()).getDyenamicColor();
+                DyenamicsAndFriends.LOGGER.info("CHALK_MARK_BLOCK_COLOR " + blockColor.getColorValue());
+                return blockColor.getColorValue();
+            }
+        };
     }
 
     public static InteractionResult draw(MarkSymbol symbol, DyenamicDyeColor color, boolean isGlowing, BlockPos clickedPos, Direction clickedFace, Vec3 clickLocation, Level level) {
@@ -157,16 +161,6 @@ public class ChalkCompat
 
         return isMarkDrawn;
     }
-
-    public static final BlockColor CHALK_MARK_BLOCK_COLOR = (blockState, blockAndTintGetter, blockPos, index) -> {
-        if (!(blockState.getBlock() instanceof DyenamicsChalkMarkBlock)) {
-            return 16777215;
-        } else {
-            DyenamicDyeColor blockColor = ((DyenamicsChalkMarkBlock)blockState.getBlock()).getDyenamicColor();
-            DyenamicsAndFriends.LOGGER.info("CHALK_MARK_BLOCK_COLOR " + blockColor.getColorValue());
-            return blockColor.getColorValue();
-        }
-    };
 
     public static void spawnColorDustParticles(DyenamicDyeColor color, Level level, BlockPos pos, Direction face) {
         int colorValue = color.getColorValue();

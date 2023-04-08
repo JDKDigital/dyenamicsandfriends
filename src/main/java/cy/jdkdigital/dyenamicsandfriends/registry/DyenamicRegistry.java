@@ -201,7 +201,7 @@ public class DyenamicRegistry
             BotanyPotsCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("chalk")) {
-            ChalkCompat.Client.registerBlockRendering();
+            ChalkCompat.Client.registerBlockRendering(event);
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.registerBlockRendering();
