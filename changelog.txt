@@ -1,3 +1,11 @@
+1.19.2-0.1.5.0
+
+- Added Supplementaries compat
+- Added Farmers Delight compat
+- Added Chalk compat
+- Added Regions Unexplored compat
+
+
 1.19.2-0.1.4.3
 
 - Fix a tag loading problem when botany pots was not installed

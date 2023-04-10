@@ -11,7 +11,7 @@ public class DyenamicsCrystalGlassBlock extends CrystalGlassBlock
     private final DyenamicDyeColor color;
 
     public DyenamicsCrystalGlassBlock(DyenamicDyeColor color, Properties properties) {
-        super(color.getVanillaColor(), properties);
+        super(color.getAnalogue(), properties);
         this.color = color;
     }
 

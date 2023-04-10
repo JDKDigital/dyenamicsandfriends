@@ -40,4 +40,11 @@ public class EventHandler
             DyenamicRegistry.onEntityPlace(event);
         }
     }
+
+    @SubscribeEvent
+    public static void playerRightClick(PlayerInteractEvent.RightClickBlock event) {
+        if (!event.getLevel().isClientSide()) {
+            DyenamicRegistry.onPlayerRightClick(event);
+        }
+    }
 }

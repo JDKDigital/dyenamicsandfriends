@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:chalk_aquamarine_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_bubblegum_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_cherenkov_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_fluorescent_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_lavender_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_maroon_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_mint_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_peach_chalk",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chalk_persimmon_chalk",
+      "required": false
+    }
+  ]
+}
