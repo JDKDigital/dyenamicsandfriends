@@ -17,6 +17,6 @@ public class DyenamicsPlateBlockEntity extends PlateTileEntity
 
     @Override
     public BlockEntityType<?> getType() {
-        return plate.getBlockEntitySupplier().get();
+        return plate != null ? plate.getBlockEntitySupplier().get() : null;
     }
 }

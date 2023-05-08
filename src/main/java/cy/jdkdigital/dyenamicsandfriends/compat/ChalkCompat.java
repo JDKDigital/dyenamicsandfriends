@@ -110,7 +110,6 @@ public class ChalkCompat
                 return 16777215;
             } else {
                 DyenamicDyeColor blockColor = ((DyenamicsChalkMarkBlock)blockState.getBlock()).getDyenamicColor();
-                DyenamicsAndFriends.LOGGER.info("CHALK_MARK_BLOCK_COLOR " + blockColor.getColorValue());
                 return blockColor.getColorValue();
             }
         };

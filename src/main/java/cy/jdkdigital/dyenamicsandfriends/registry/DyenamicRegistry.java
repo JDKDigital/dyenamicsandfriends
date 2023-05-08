@@ -46,6 +46,7 @@ public class DyenamicRegistry
         add("the_bumblezone");
         add("regions_unexplored");
         add("supplementaries");
+        add("suppsquared");
     }};
 
     public static void setup() {
@@ -93,6 +94,9 @@ public class DyenamicRegistry
                 // blackboard
                 // flag
                 SupplementariesCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("suppsquared")) {
+                SupplementariesSquaredCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("regions_unexplored")) {
                 RegionsUnexploredCompat.registerBlocks(color);
@@ -223,6 +227,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("supplementaries")) {
             SupplementariesCompat.Client.registerBlockRendering();
         }
+        if (ModList.get().isLoaded("suppsquared")) {
+            SupplementariesSquaredCompat.Client.registerBlockRendering();
+        }
         if (ModList.get().isLoaded("chalk")) {
             ChalkCompat.Client.registerBlockRendering();
         }
@@ -256,7 +263,7 @@ public class DyenamicRegistry
     }
 
     public static void onPlayerRightClick(PlayerInteractEvent.RightClickBlock event) {
-        if (ModList.get().isLoaded("furnish")) {
+        if (ModList.get().isLoaded("farmersdelight")) {
             FarmersDelightCompat.playerRightClick(event);
         }
     }

@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:suppsquared_aquamarine_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_bubblegum_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_cherenkov_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_fluorescent_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_lavender_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_maroon_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_mint_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_peach_gold_candle_holder",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_persimmon_gold_candle_holder",
+      "required": false
+    }
+  ]
+}

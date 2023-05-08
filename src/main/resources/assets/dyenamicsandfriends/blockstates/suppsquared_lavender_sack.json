@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "dyenamicsandfriends:block/suppsquared/sacks/lavender_closed"
+    },
+    "open=true": {
+      "model": "dyenamicsandfriends:block/suppsquared/sacks/lavender_open"
+    }
+  }
+}

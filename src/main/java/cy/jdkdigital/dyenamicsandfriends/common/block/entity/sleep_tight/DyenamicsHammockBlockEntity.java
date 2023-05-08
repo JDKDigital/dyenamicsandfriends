@@ -22,6 +22,6 @@ public class DyenamicsHammockBlockEntity extends HammockTile
 
     @Override
     public BlockEntityType<?> getType() {
-        return block.getBlockEntitySupplier().get();
+        return block != null ? block.getBlockEntitySupplier().get() : null;
     }
 }

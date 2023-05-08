@@ -630,5 +630,24 @@
     "item.dyenamicsandfriends.chalk_persimmon_chalk": "Persimmon Chalk",
 
     "item.dyenamicsandfriends.chalk_box": "Dyenamics Chalk Box",
-    "item.dyenamicsandfriends.chalk_box.tooltip.dyenamics": "This one works with Dyenamics dyes"
+    "item.dyenamicsandfriends.chalk_box.tooltip.dyenamics": "This one works with Dyenamics dyes",
+
+    "block.dyenamicsandfriends.suppsquared_aquamarine_gold_candle_holder": "Gold Aquamarine Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_bubblegum_gold_candle_holder": "Gold Bubblegum Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_cherenkov_gold_candle_holder": "Gold Cherenkov Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_fluorescent_gold_candle_holder": "Gold Fluorescent Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_lavender_gold_candle_holder": "Gold Lavender Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_maroon_gold_candle_holder": "Gold Maroon Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_mint_gold_candle_holder": "Gold Mint Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_peach_gold_candle_holder": "Gold Peach Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_persimmon_gold_candle_holder": "Gold Persimmon Candle Holder",
+    "block.dyenamicsandfriends.suppsquared_aquamarine_sack": "Aquamarine Sack",
+    "block.dyenamicsandfriends.suppsquared_bubblegum_sack": "Bubblegum Sack",
+    "block.dyenamicsandfriends.suppsquared_cherenkov_sack": "Cherenkov Sack",
+    "block.dyenamicsandfriends.suppsquared_fluorescent_sack": "Fluorescent Sack",
+    "block.dyenamicsandfriends.suppsquared_lavender_sack": "Lavender Sack",
+    "block.dyenamicsandfriends.suppsquared_maroon_sack": "Maroon Sack",
+    "block.dyenamicsandfriends.suppsquared_mint_sack": "Mint Sack",
+    "block.dyenamicsandfriends.suppsquared_peach_sack": "Peach Sack",
+    "block.dyenamicsandfriends.suppsquared_persimmon_sack": "Persimmon Sack"
 }

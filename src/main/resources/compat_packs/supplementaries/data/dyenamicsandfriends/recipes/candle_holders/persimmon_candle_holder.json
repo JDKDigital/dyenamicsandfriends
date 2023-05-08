@@ -9,7 +9,7 @@
       "item": "dyenamics:persimmon_candle"
     },
     "2": {
-      "item": "minecraft:iron_ingot"
+      "tag": "forge:ingots/iron"
     }
   },
   "result": {

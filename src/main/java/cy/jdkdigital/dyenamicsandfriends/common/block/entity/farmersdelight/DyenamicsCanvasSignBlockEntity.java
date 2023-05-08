@@ -40,7 +40,7 @@ public class DyenamicsCanvasSignBlockEntity extends CanvasSignBlockEntity
         if (block instanceof DyenamicsWallCanvasSignBlock wallCanvasSignBlock) {
             return wallCanvasSignBlock.getBlockEntitySupplier().get();
         }
-        throw new RuntimeException("Invalid block type");
+        return null;
     }
 
     @Override

@@ -1,0 +1,41 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dyenamicsandfriends:suppsquared_aquamarine_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_bubblegum_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_cherenkov_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_fluorescent_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_lavender_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_maroon_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_mint_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_peach_sack",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:suppsquared_persimmon_sack",
+      "required": false
+    }
+  ]
+}

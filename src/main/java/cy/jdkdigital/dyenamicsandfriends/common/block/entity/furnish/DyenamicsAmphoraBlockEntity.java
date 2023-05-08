@@ -17,6 +17,6 @@ public class DyenamicsAmphoraBlockEntity extends AmphoraTileEntity
 
     @Override
     public BlockEntityType<?> getType() {
-        return amphora.getBlockEntitySupplier().get();
+        return amphora != null ? amphora.getBlockEntitySupplier().get() : null;
     }
 }

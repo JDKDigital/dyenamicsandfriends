@@ -130,19 +130,21 @@ dependencies {
     implementation fg.deobf("curse.maven:the-one-probe-245211:3965693")
 
     implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
+    implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
+    implementation fg.deobf("libs:supplementaries-1.19.2:2.3.4")
+    implementation fg.deobf("libs:suppsquared-1.19.2:1.0.14")
 
 //    jarJar(group: 'cofh.dyenamics', name: 'dyenamics', version: '[1.0.0,)') {
 //        transitive(false)
 //    }
 
     implementation fg.deobf("curse.maven:autoreglib-250363:4100299")
-//    implementation fg.deobf("curse.maven:citadel-331936:3783096")
-    implementation fg.deobf("curse.maven:selene-499980:4431044") // supplementaries, sleep tight
+    implementation fg.deobf("curse.maven:selene-499980:4478861") // supplementaries, sleep tight
     implementation fg.deobf("curse.maven:balm-531761:3914527")
     implementation fg.deobf("curse.maven:bookshelf-228525:4153136") // botany pots
     implementation fg.deobf("curse.maven:blueprint-382216:4019850") // clayworks
 //    implementation fg.deobf("curse.maven:ctm-267602:3933537") // chipped
-    implementation fg.deobf("curse.maven:architectury-api-419699:4384406") // furnish
+    implementation fg.deobf("curse.maven:architectury-api-419699:4476084") // furnish
     implementation fg.deobf("curse.maven:terrablender-563928:4205732") // regions unexplored
 
     implementation fg.deobf("curse.maven:create-328085:4174330")
@@ -152,9 +154,9 @@ dependencies {
     implementation fg.deobf("curse.maven:comforts-276951:4105213")
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:4086868")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999157")
-//    implementation fg.deobf("curse.maven:reliquary-v1-3-241319:4005376")
     implementation fg.deobf("curse.maven:snowy-spirit-566142:4263819")
-    implementation fg.deobf("curse.maven:supplementaries-412082:4356998") // 4363087
+//    implementation fg.deobf("curse.maven:supplementaries-412082:4479100")
+//    implementation fg.deobf("curse.maven:supplementaries-squared-838411:4484170")
     implementation fg.deobf("curse.maven:waystones-245755:3901921")
     implementation fg.deobf("curse.maven:quark-243121:4366541")
     implementation fg.deobf("curse.maven:furnish-547069:4449620")
