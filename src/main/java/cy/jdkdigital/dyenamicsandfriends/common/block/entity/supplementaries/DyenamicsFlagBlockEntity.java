@@ -26,7 +26,7 @@ public class DyenamicsFlagBlockEntity extends FlagBlockTile
 
     @Override
     public BlockEntityType<?> getType() {
-        return block.getBlockEntitySupplier().get();
+        return block != null ? block.getBlockEntitySupplier().get() : null;
     }
 
     public List<Pair<BannerPattern, DyenamicDyeColor>> getDyenamicsPatterns() {

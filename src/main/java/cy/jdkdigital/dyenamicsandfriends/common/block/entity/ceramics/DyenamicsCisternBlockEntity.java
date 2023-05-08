@@ -17,6 +17,6 @@ public class DyenamicsCisternBlockEntity extends CisternBlockEntity
 
     @Override
     public BlockEntityType<?> getType() {
-        return block.getBlockEntitySupplier().get();
+        return block != null ? block.getBlockEntitySupplier().get() : null;
     }
 }

@@ -16,6 +16,6 @@ public class DyenamicsBlockEntityBotanyPot extends BlockEntityBotanyPot
 
     @Override
     public BlockEntityType<?> getType() {
-        return block.getBlockEntitySupplier().get();
+        return block != null ? block.getBlockEntitySupplier().get() : null;
     }
 }

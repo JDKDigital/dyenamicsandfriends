@@ -17,6 +17,6 @@ public class DyenamicsShowcaseBlockEntity extends ShowcaseTileEntity
 
     @Override
     public BlockEntityType<?> getType() {
-        return showcase.getBlockEntitySupplier().get();
+        return showcase != null ? showcase.getBlockEntitySupplier().get() : null;
     }
 }
