@@ -21,11 +21,12 @@ public class HandcraftedCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "handcrafted_" + color.getSerializedName();
-        CUSHIONS.put(color, DyenamicRegistry.registerBlock(prefix + "_cushion", () -> new CushionBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).lightLevel(state -> color.getLightValue())), () -> new CushionBlockItem(CUSHIONS.get(color).get(), new Item.Properties().tab(ModItems.ITEM_GROUP))));
+        // .tab(ModItems.ITEM_GROUP)
+        CUSHIONS.put(color, DyenamicRegistry.registerBlock(prefix + "_cushion", () -> new CushionBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).lightLevel(state -> color.getLightValue())), () -> new CushionBlockItem(CUSHIONS.get(color).get(), new Item.Properties())));
     }
 
     public static void registerItems(DyenamicDyeColor color) {
         String prefix = "handcrafted_" + color.getSerializedName();
-        DyenamicRegistry.registerItem(prefix + "_sheet", () -> new SheetItem(new Item.Properties().tab(ModItems.ITEM_GROUP)));
+        DyenamicRegistry.registerItem(prefix + "_sheet", () -> new SheetItem(new Item.Properties()));
     }
 }

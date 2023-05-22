@@ -20,8 +20,8 @@ public class RegionsUnexploredCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "regions_unexplored_" + color.getSerializedName();
-        PLANKS.put(color, DyenamicRegistry.registerBlock(prefix + "_painted_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true));
-        DyenamicRegistry.registerBlock(prefix + "_painted_stairs", () -> new StairBlock(() -> PLANKS.get(color).get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_painted_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        PLANKS.put(color, DyenamicRegistry.registerBlock(prefix + "_painted_planks", () -> new Block(BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), true));
+        DyenamicRegistry.registerBlock(prefix + "_painted_stairs", () -> new StairBlock(() -> PLANKS.get(color).get().defaultBlockState(),BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), true);
+        DyenamicRegistry.registerBlock(prefix + "_painted_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD, color.getMapColor()).strength(2.0F, 3.0F).sound(SoundType.WOOD).lightLevel(state -> color.getLightValue())), true);
     }
 }

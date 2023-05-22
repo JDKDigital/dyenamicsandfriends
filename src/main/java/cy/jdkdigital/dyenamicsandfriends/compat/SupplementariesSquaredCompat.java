@@ -33,8 +33,8 @@ public class SupplementariesSquaredCompat
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "suppsquared_" + color.getSerializedName();
 
-        CANDLE_HOLDERS.put(color, DyenamicRegistry.registerBlock(prefix + "_gold_candle_holder", () -> new CandleHolderBlock(color.getAnalogue(), BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().sound(SoundType.LANTERN).lightLevel(state -> color.getLightValue())), () -> new BlockItem(CANDLE_HOLDERS.get(color).get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS))));
-        SACKS.put(color, DyenamicRegistry.registerBlock(prefix + "_sack", () -> new SackBlock(BlockBehaviour.Properties.of(Material.WOOL, color.getMapColor()).strength(0.8F).sound(ModSounds.SACK).color(color.getMapColor()).lightLevel(state -> color.getLightValue())), () -> new BlockItem(SACKS.get(color).get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS))));
+        CANDLE_HOLDERS.put(color, DyenamicRegistry.registerBlock(prefix + "_gold_candle_holder", () -> new CandleHolderBlock(color.getAnalogue(), BlockBehaviour.Properties.of(Material.DECORATION).noCollission().instabreak().sound(SoundType.LANTERN).lightLevel(state -> color.getLightValue())), () -> new BlockItem(CANDLE_HOLDERS.get(color).get(), new Item.Properties())));
+        SACKS.put(color, DyenamicRegistry.registerBlock(prefix + "_sack", () -> new SackBlock(BlockBehaviour.Properties.of(Material.WOOL, color.getMapColor()).strength(0.8F).sound(ModSounds.SACK).color(color.getMapColor()).lightLevel(state -> color.getLightValue())), () -> new BlockItem(SACKS.get(color).get(), new Item.Properties())));
     }
 
     public static class Client

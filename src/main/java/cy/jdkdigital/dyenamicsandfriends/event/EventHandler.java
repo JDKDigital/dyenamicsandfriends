@@ -3,7 +3,6 @@ package cy.jdkdigital.dyenamicsandfriends.event;
 import cofh.dyenamics.common.items.DyenamicDyeItem;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.common.block.create.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.item.ItemStack;
@@ -25,12 +24,19 @@ public class EventHandler
             if (!itemStack.isEmpty() && itemStack.getItem() instanceof DyenamicDyeItem) {
                 BlockState state = level.getBlockState(event.getPos());
 
-                var blockKey = ForgeRegistries.BLOCKS.getKey(state.getBlock());
-                if (blockKey != null && blockKey.getNamespace().equals("create") && blockKey.getPath().contains("sail")) {
-                    DyenamicsSailBlock.applyDye(state, level, event.getPos(), event.getHitVec().getLocation(), DyenamicDyeColor.getColor(itemStack));
-                    event.getEntity().swing(event.getHand());
-                }
+//                var blockKey = ForgeRegistries.BLOCKS.getKey(state.getBlock());
+//                if (blockKey != null && blockKey.getNamespace().equals("create") && blockKey.getPath().contains("sail")) {
+//                    DyenamicsSailBlock.applyDye(state, level, event.getPos(), event.getHitVec().getLocation(), DyenamicDyeColor.getColor(itemStack));
+//                    event.getEntity().swing(event.getHand());
+//                }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void blockInteract(PlayerInteractEvent event) {
+        if (!event.getLevel().isClientSide()) {
+            DyenamicRegistry.onBlockInteract(event);
         }
     }
 

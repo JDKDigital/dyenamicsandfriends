@@ -28,30 +28,31 @@ public class BotanyPotsCompat
         Map<String, RegistryObject<? extends Block>> blocks = new HashMap<>();
         BOTANY_POTS.put(color, blocks);
 
+        // .tab(CreativeModeTab.TAB_MISC)
         blocks.put("terracotta",
                 DyenamicRegistry.registerBlock(prefix + "_terracotta_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_terracotta_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("terracotta").get(), pos, state), BOTANY_POTS.get(color).get("terracotta").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("terracotta").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("terracotta").get(), new Item.Properties())));
         blocks.put("terracotta_hopper",
                 DyenamicRegistry.registerBlock(prefix + "_terracotta_hopper_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_terracotta_hopper_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("terracotta_hopper").get(), pos, state), BOTANY_POTS.get(color).get("terracotta_hopper").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("terracotta_hopper").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("terracotta_hopper").get(), new Item.Properties())));
         blocks.put("concrete",
                 DyenamicRegistry.registerBlock(prefix + "_concrete_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_concrete_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("concrete").get(), pos, state), BOTANY_POTS.get(color).get("concrete").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("concrete").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("concrete").get(), new Item.Properties())));
         blocks.put("concrete_hopper",
                 DyenamicRegistry.registerBlock(prefix + "_concrete_hopper_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_concrete_hopper_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("concrete_hopper").get(), pos, state), BOTANY_POTS.get(color).get("concrete_hopper").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("concrete_hopper").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("concrete_hopper").get(), new Item.Properties())));
         blocks.put("glazed_terracotta",
                 DyenamicRegistry.registerBlock(prefix + "_glazed_terracotta_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_glazed_terracotta_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("glazed_terracotta").get(), pos, state), BOTANY_POTS.get(color).get("glazed_terracotta").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta").get(), new Item.Properties())));
         blocks.put("glazed_terracotta_hopper",
                 DyenamicRegistry.registerBlock(prefix + "_glazed_terracotta_hopper_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_glazed_terracotta_hopper_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), pos, state), BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get()))),
-                () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), new Item.Properties().tab(CreativeModeTab.TAB_MISC))));
+                () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), new Item.Properties())));
     }
 
     public static class Client

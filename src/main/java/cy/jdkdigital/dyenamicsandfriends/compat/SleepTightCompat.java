@@ -23,7 +23,7 @@ public class SleepTightCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "sleep_tight_" + color.getSerializedName();
-        HAMMOCKS.put(color, DyenamicRegistry.registerBlock(prefix + "_hammock", () -> new DyenamicsHammockBlock(color, DyenamicRegistry.registerBlockEntity(prefix + "_hammock", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsHammockBlockEntity((DyenamicsHammockBlock) HAMMOCKS.get(color).get(), pos, state), HAMMOCKS.get(color).get()))), () -> new BlockItem(HAMMOCKS.get(color).get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS))));
+        HAMMOCKS.put(color, DyenamicRegistry.registerBlock(prefix + "_hammock", () -> new DyenamicsHammockBlock(color, DyenamicRegistry.registerBlockEntity(prefix + "_hammock", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsHammockBlockEntity((DyenamicsHammockBlock) HAMMOCKS.get(color).get(), pos, state), HAMMOCKS.get(color).get()))), () -> new BlockItem(HAMMOCKS.get(color).get(), new Item.Properties())));
     }
 
     public static class Client
@@ -37,11 +37,12 @@ public class SleepTightCompat
         }
     }
 
-    public static void stitchTextures(TextureStitchEvent.Pre event) {
-        if (event.getAtlas().location().equals(DyenamicsHammockBlockTileRenderer.BED_SHEET)) {
-            Arrays.stream(DyenamicsHammockBlockTileRenderer.HAMMOCK_TEXTURES).forEach((e) -> {
-                event.addSprite(e.texture());
-            });
-        }
-    }
+    // TODO
+//    public static void stitchTextures(TextureStitchEvent.Pre event) {
+//        if (event.getAtlas().location().equals(DyenamicsHammockBlockTileRenderer.BED_SHEET)) {
+//            Arrays.stream(DyenamicsHammockBlockTileRenderer.HAMMOCK_TEXTURES).forEach((e) -> {
+//                event.addSprite(e.texture());
+//            });
+//        }
+//    }
 }

@@ -8,6 +8,7 @@ import com.google.gson.JsonSyntaxException;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.block.Block;
@@ -76,7 +77,7 @@ public class OptionalLootItemBlockStatePropertyCondition implements LootItemCond
     {
         @Override
         public void serialize(JsonObject pJson, OptionalLootItemBlockStatePropertyCondition propertyCondition, JsonSerializationContext p_81797_) {
-            pJson.addProperty("block", Registry.BLOCK.getKey(propertyCondition.block).toString());
+            pJson.addProperty("block", BuiltInRegistries.BLOCK.getKey(propertyCondition.block).toString());
             pJson.add("properties", propertyCondition.properties.serializeToJson());
         }
 

@@ -29,10 +29,10 @@ public class ClientSetup
         DyenamicRegistry.registerBlockEntityRenderers(event);
     }
 
-    @SubscribeEvent
-    public static void textureStitch(TextureStitchEvent.Pre event) {
-        DyenamicRegistry.onTextureStitch(event);
-    }
+//    @SubscribeEvent
+//    public static void textureStitch(TextureStitchEvent.Pre event) {
+//        DyenamicRegistry.onTextureStitch(event);
+//    }
 
     @SubscribeEvent
     public static void onModelBake(ModelEvent.BakingCompleted event) {

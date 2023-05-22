@@ -3,7 +3,7 @@ package cy.jdkdigital.dyenamicsandfriends.client.render.sleep_tight;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.sleep_tight.DyenamicsHammockBlockEntity;
 import net.mehvahdjukaar.sleep_tight.SleepTightClient;
@@ -60,9 +60,9 @@ public class DyenamicsHammockBlockTileRenderer extends HammockBlockTileRenderer
 
             poseStack.pushPose();
             poseStack.translate(0.5D, 0.5D + dy, 0.5D);
-            poseStack.mulPose(Vector3f.YP.rotationDegrees(-state.getValue(HammockBlock.FACING).toYRot()));
+            poseStack.mulPose(Axis.YP.rotationDegrees(-state.getValue(HammockBlock.FACING).toYRot()));
             float yaw = hammockBlockEntity.getRoll(partialTick);
-            poseStack.mulPose(Vector3f.ZP.rotationDegrees(180.0F + yaw));
+            poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F + yaw));
             poseStack.translate(0.0D, 0.5D + dy, (double) zOffset);
             Material material = HAMMOCK_TEXTURES[hammockBlockEntity.getDyenamicColor().getId()];
             VertexConsumer vertexConsumer = material.buffer(bufferSource, RenderType::entityCutoutNoCull);

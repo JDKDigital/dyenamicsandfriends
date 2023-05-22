@@ -61,14 +61,14 @@ public class DyenamicRegistry
             //
 
             if (ModList.get().isLoaded("create")) {
-                CreateCompat.registerBlocks(color);
+//                CreateCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("createdeco")) {
                 // decal item
                 // zinc lamp
             }
             if (ModList.get().isLoaded("another_furniture")) {
-                AnotherFurnitureCompat.registerBlocks(color);
+//                AnotherFurnitureCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("botanypots")) {
                 BotanyPotsCompat.registerBlocks(color);
@@ -80,7 +80,7 @@ public class DyenamicRegistry
                 ElevatoridCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("farmersdelight")) {
-                FarmersDelightCompat.registerBlocks(color);
+//                FarmersDelightCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("reliquary")) {
                 // pedestal
@@ -113,7 +113,7 @@ public class DyenamicRegistry
                 HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
-                FurnishCompat.registerBlocks(color);
+//                FurnishCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("skinnedlanterns")) {
                 // paper lantern
@@ -132,11 +132,11 @@ public class DyenamicRegistry
 
             }
             if (ModList.get().isLoaded("chalk")) {
-                ChalkCompat.registerBlocks(color);
-                ChalkCompat.registerItems(color);
+//                ChalkCompat.registerBlocks(color);
+//                ChalkCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("oreganized")) {
-                OreganizedCompat.registerBlocks(color);
+//                OreganizedCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("ceramics")) {
 //                CeramicsCompat.registerBlocks(color);
@@ -145,7 +145,7 @@ public class DyenamicRegistry
 //                GlazedResymmetryCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("clayworks")) {
-                ClayworksCompat.registerBlocks(color);
+//                ClayworksCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("the_bumblezone")) {
                 BumblezoneCompat.registerBlocks(color);
@@ -156,10 +156,10 @@ public class DyenamicRegistry
         }
     }
 
-    public static RegistryObject<? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, CreativeModeTab tab, boolean registerItem) {
+    public static RegistryObject<? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {
         var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
         if (registerItem) {
-            registerItem(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+            registerItem(name, () -> new BlockItem(block.get(), new Item.Properties()));
         }
         return block;
     }
@@ -186,7 +186,7 @@ public class DyenamicRegistry
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
+//            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
@@ -195,10 +195,10 @@ public class DyenamicRegistry
             ComfortsCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("farmersdelight")) {
-            FarmersDelightCompat.Client.registerBlockEntityRenderers(event);
+//            FarmersDelightCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("furnish")) {
-            FurnishCompat.Client.registerBlockEntityRenderers(event);
+//            FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("ceramics")) {
 //            CeramicsCompat.Client.registerBlockEntityRenderers(event);
@@ -213,7 +213,7 @@ public class DyenamicRegistry
 
     public static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
         if (ModList.get().isLoaded("chalk")) {
-            ChalkCompat.Client.registerBlockColors(event);
+//            ChalkCompat.Client.registerBlockColors(event);
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.registerBlockColors(event);
@@ -231,40 +231,46 @@ public class DyenamicRegistry
             SupplementariesSquaredCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("chalk")) {
-            ChalkCompat.Client.registerBlockRendering();
+//            ChalkCompat.Client.registerBlockRendering();
         }
     }
 
-    public static void onTextureStitch(TextureStitchEvent.Pre event) {
-        if (ModList.get().isLoaded("comforts")) {
-            ComfortsCompat.stitchTextures(event);
-        }
-        if (ModList.get().isLoaded("farmersdelight")) {
-            FarmersDelightCompat.stitchTextures(event);
-        }
-        if (ModList.get().isLoaded("sleep_tight")) {
-            SleepTightCompat.stitchTextures(event);
-        }
-    }
+//    public static void onTextureStitch(TextureStitchEvent.Pre event) {
+//        if (ModList.get().isLoaded("comforts")) {
+//            ComfortsCompat.stitchTextures(event);
+//        }
+//        if (ModList.get().isLoaded("farmersdelight")) {
+////            FarmersDelightCompat.stitchTextures(event);
+//        }
+//        if (ModList.get().isLoaded("sleep_tight")) {
+//            SleepTightCompat.stitchTextures(event);
+//        }
+//    }
 
     public static void onModelBake(ModelEvent.BakingCompleted event) {
         if (ModList.get().isLoaded("chalk")) {
-            ChalkCompat.Client.bakeModel(event);
+//            ChalkCompat.Client.bakeModel(event);
         }
         if (ModList.get().isLoaded("elevatorid")) {
-            ElevatoridCompat.Client.bakeModel(event);
+//            ElevatoridCompat.Client.bakeModel(event);
+        }
+    }
+
+    public static void onBlockInteract(PlayerInteractEvent event) {
+        if (ModList.get().isLoaded("productivebees")) {
+            ProductiveBeesCompat.blockInteract(event);
         }
     }
 
     public static void onEntityPlace(BlockEvent.EntityPlaceEvent event) {
         if (ModList.get().isLoaded("furnish")) {
-            FurnishCompat.entityPlace(event);
+//            FurnishCompat.entityPlace(event);
         }
     }
 
     public static void onPlayerRightClick(PlayerInteractEvent.RightClickBlock event) {
         if (ModList.get().isLoaded("farmersdelight")) {
-            FarmersDelightCompat.playerRightClick(event);
+//            FarmersDelightCompat.playerRightClick(event);
         }
     }
 

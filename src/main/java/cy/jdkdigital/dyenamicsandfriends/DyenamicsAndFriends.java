@@ -2,13 +2,15 @@ package cy.jdkdigital.dyenamicsandfriends;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
-import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import cy.jdkdigital.dyenamicsandfriends.loot.OptionalLootItem;
 import cy.jdkdigital.dyenamicsandfriends.loot.condition.ModLoadedCondition;
 import cy.jdkdigital.dyenamicsandfriends.loot.condition.OptionalLootItemBlockStatePropertyCondition;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.packs.PackResources;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
@@ -49,11 +51,11 @@ public class DyenamicsAndFriends
     public static final DeferredRegister<MenuType<?>> CONTAINER_TYPES = DeferredRegister.create(ForgeRegistries.MENU_TYPES, MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, MODID);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, MODID);
-    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, MODID);
+    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(ForgeRegistries.RECIPE_TYPES, MODID);
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, MODID);
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, MODID);
-    public static final DeferredRegister<LootPoolEntryType> LOOT_POOL_ENTRIES = DeferredRegister.create(Registry.LOOT_ENTRY_REGISTRY, MODID);
-    public static final DeferredRegister<LootItemConditionType> LOOT_POOL_CONDITIONS = DeferredRegister.create(Registry.LOOT_ITEM_REGISTRY, MODID);
+    public static final DeferredRegister<LootPoolEntryType> LOOT_POOL_ENTRIES = DeferredRegister.create(Registries.LOOT_POOL_ENTRY_TYPE, MODID);
+    public static final DeferredRegister<LootItemConditionType> LOOT_POOL_CONDITIONS = DeferredRegister.create(Registries.LOOT_CONDITION_TYPE, MODID);
 
     public static final RegistryObject<LootPoolEntryType> OPTIONAL_LOOT_ITEM = LOOT_POOL_ENTRIES.register("optional_loot_item", () -> new LootPoolEntryType(new OptionalLootItem.Serializer()));
     public static final RegistryObject<LootItemConditionType> OPTIONAL_BLOCK_STATE_PROPERTY = LOOT_POOL_CONDITIONS.register("optional_block_state_property", () -> new LootItemConditionType(new OptionalLootItemBlockStatePropertyCondition.Serializer()));
@@ -84,7 +86,7 @@ public class DyenamicsAndFriends
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         if (ModList.get().isLoaded("create")) {
-            CreateCompat.setup(event);
+//            CreateCompat.setup(event);
         }
     }
 
@@ -97,17 +99,22 @@ public class DyenamicsAndFriends
     private static class ModLoadedPackFinder implements RepositorySource
     {
         @Override
-        public void loadPacks(Consumer<Pack> packLoader, Pack.PackConstructor packBuilder) {
+        public void loadPacks(Consumer<Pack> packLoader) {
             IModFileInfo modFile = ModList.get().getModContainerById(DyenamicsAndFriends.MODID).get().getModInfo().getOwningFile();
 
             for (String modId : DyenamicRegistry.MODS) {
                 try {
                     if (ModList.get().isLoaded(modId)) {
-                        packLoader.accept(Pack.create(
-                                DyenamicsAndFriends.MODID + ":" + modId, false,
-                                () -> new PathPackResources(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
-                                packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
-                        ));
+                        var pack = Pack.readMetaAndCreate(
+                                DyenamicsAndFriends.MODID + ":" + modId,
+                                Component.translatable("dataPack." + MODID + "." + modId),
+                                false,
+                                (name) -> new PathPackResources(DyenamicsAndFriends.MODID + ":" + modId, true,modFile.getFile().findResource("compat_packs/" + modId + "/")),
+                                PackType.SERVER_DATA,
+                                Pack.Position.TOP,
+                                PackSource.BUILT_IN
+                        );
+                        packLoader.accept(pack);
                     }
                 } catch (Exception e) {
                     DyenamicsAndFriends.LOGGER.debug("Failed to load compat pack: " + modId);

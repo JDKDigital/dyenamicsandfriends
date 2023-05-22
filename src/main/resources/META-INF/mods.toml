@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[43,)"
+loaderVersion="[45,)"
 license="All rights reserved"
 
 [[mods]] #mandatory
@@ -15,18 +15,18 @@ Adds compatibility between Dyenamics new colors and a large range of other mods
 [[dependencies.dyenamicsandfriends]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[43,)" #mandatory
+    versionRange="[45,)" #mandatory
     ordering="NONE"
     side="BOTH"
 [[dependencies.dyenamicsandfriends]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,)"
+    versionRange="[1.19.4,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.dyenamicsandfriends]]
     modId="dyenamics"
     mandatory=true
-    versionRange="[1.0.0,)"
+    versionRange="[2.0.0,)"
     ordering="NONE"
     side="BOTH"

@@ -21,7 +21,8 @@ public class ElevatoridCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "elevatorid_" + color.getSerializedName();
-        ELEVATORS.put(color, DyenamicRegistry.registerBlock(prefix + "_elevator", () -> new DyenamicsElevatorBlock(color, DyenamicRegistry.registerBlockEntity(prefix + "_elevator", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsElevatorBlockEntity((DyenamicsElevatorBlock) ELEVATORS.get(color).get(), pos, state), ELEVATORS.get(color).get()))), CreativeModeTab.TAB_MISC, true));
+        // CreativeModeTab.TAB_MISC
+        ELEVATORS.put(color, DyenamicRegistry.registerBlock(prefix + "_elevator", () -> new DyenamicsElevatorBlock(color, DyenamicRegistry.registerBlockEntity(prefix + "_elevator", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsElevatorBlockEntity((DyenamicsElevatorBlock) ELEVATORS.get(color).get(), pos, state), ELEVATORS.get(color).get()))), true));
     }
 
     public static class Client
@@ -33,10 +34,11 @@ public class ElevatoridCompat
             );
         }
 
-        public static void bakeModel(ModelEvent.BakingCompleted event) {
-            event.getModels().entrySet().stream()
-                    .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
-                    .forEach(entry -> event.getModels().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
-        }
+        // TODO 1.20
+//        public static void bakeModel(ModelEvent.BakingCompleted event) {
+//            event.getModels().entrySet().stream()
+//                    .filter(entry -> "dyenamicsandfriends".equals(entry.getKey().getNamespace()) && entry.getKey().getPath().contains("_elevator"))
+//                    .forEach(entry -> event.getModels().put(entry.getKey(), new ElevatorBakedModel(entry.getValue())));
+//        }
     }
 }

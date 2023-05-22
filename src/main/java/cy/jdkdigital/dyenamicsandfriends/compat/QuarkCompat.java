@@ -23,17 +23,19 @@ public class QuarkCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "quark_" + color.getSerializedName();
-        DyenamicRegistry.registerBlock(prefix + "_framed_glass", () -> new DyenamicStainedGlassBlock(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_framed_glass_pane", () -> new DyenamicStainedGlassPane(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        // CreativeModeTab.TAB_BUILDING_BLOCKS
+        DyenamicRegistry.registerBlock(prefix + "_framed_glass", () -> new DyenamicStainedGlassBlock(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), true);
+        DyenamicRegistry.registerBlock(prefix + "_framed_glass_pane", () -> new DyenamicStainedGlassPane(color, BlockBehaviour.Properties.of(Material.GLASS, color.getMapColor()).strength(0.3F).sound(SoundType.GLASS).noOcclusion().isValidSpawn((a, b, c, d) -> false).isRedstoneConductor((a, b, c) -> false).isSuffocating((a, b, c) -> false).isViewBlocking((a, b, c) -> false).lightLevel(state -> color.getLightValue())), true);
 
         BlockBehaviour.Properties props = BlockBehaviour.Properties.of(Material.STONE, color.getMapColor()).strength(1.25F, 4.2F).lightLevel((state) -> color.getLightValue());
-        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
-        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(props), CreativeModeTab.TAB_BUILDING_BLOCKS, true);
+        var shingles = DyenamicRegistry.registerBlock(prefix + "_shingles", () -> new Block(props), true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_stairs", () -> new StairBlock(() -> shingles.get().defaultBlockState(), props), true);
+        DyenamicRegistry.registerBlock(prefix + "_shingles_slab", () -> new SlabBlock(props), true);
     }
 
     public static void registerItems(DyenamicDyeColor color) {
         String prefix = "quark_" + color.getSerializedName();
-        DyenamicRegistry.registerItem(prefix + "_shard", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+        // .tab(CreativeModeTab.TAB_MATERIALS)
+        DyenamicRegistry.registerItem(prefix + "_shard", () -> new Item(new Item.Properties()));
     }
 }
