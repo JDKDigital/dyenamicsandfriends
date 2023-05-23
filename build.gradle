@@ -107,6 +107,9 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    flatDir {
+        dir 'libs'
+    }
     maven {
         url "https://www.cursemaven.com"
     }
@@ -116,9 +119,6 @@ repositories {
     }
     maven { // JEI
         url 'https://dvs1.progwml6.com/files/maven'
-    }
-    flatDir {
-        dir 'libs'
     }
 }
 
@@ -131,7 +131,7 @@ dependencies {
 
     implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
     implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
-    implementation fg.deobf("libs:supplementaries-1.19.2:2.3.4")
+//    implementation fg.deobf("libs:supplementaries-1.19.2:2.3.13")
     implementation fg.deobf("libs:suppsquared-1.19.2:1.0.14")
 
 //    jarJar(group: 'cofh.dyenamics', name: 'dyenamics', version: '[1.0.0,)') {
@@ -139,7 +139,7 @@ dependencies {
 //    }
 
     implementation fg.deobf("curse.maven:autoreglib-250363:4100299")
-    implementation fg.deobf("curse.maven:selene-499980:4478861") // supplementaries, sleep tight
+    implementation fg.deobf("curse.maven:selene-499980:4545412") // supplementaries, sleep tight
     implementation fg.deobf("curse.maven:balm-531761:3914527")
     implementation fg.deobf("curse.maven:bookshelf-228525:4153136") // botany pots
     implementation fg.deobf("curse.maven:blueprint-382216:4019850") // clayworks
@@ -155,16 +155,16 @@ dependencies {
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:4086868")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999157")
     implementation fg.deobf("curse.maven:snowy-spirit-566142:4263819")
-//    implementation fg.deobf("curse.maven:supplementaries-412082:4479100")
+    implementation fg.deobf("curse.maven:supplementaries-412082:4548862")
 //    implementation fg.deobf("curse.maven:supplementaries-squared-838411:4484170")
     implementation fg.deobf("curse.maven:waystones-245755:3901921")
-    implementation fg.deobf("curse.maven:quark-243121:4366541")
+    implementation fg.deobf("curse.maven:quark-243121:4538962")
     implementation fg.deobf("curse.maven:furnish-547069:4449620")
     implementation fg.deobf("curse.maven:skinned-lanterns-414154:3970173")
     implementation fg.deobf("curse.maven:nightlights-651876:4063048")
     implementation fg.deobf("curse.maven:mrcrayfish-furniture-mod-55438:3907425")
     implementation fg.deobf("curse.maven:handcrafted-538214:4215477")
-    implementation fg.deobf("curse.maven:botany-pots-353928:4357086")
+    implementation fg.deobf("curse.maven:botany-pots-353928:4514735")
     implementation fg.deobf("curse.maven:oreganized-769203:4377982")
     implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:4417670")
 //    implementation fg.deobf("curse.maven:glazed-resymmetry-714619:4403239")
