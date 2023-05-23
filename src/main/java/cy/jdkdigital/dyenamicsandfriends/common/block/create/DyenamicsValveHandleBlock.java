@@ -1,10 +1,8 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.create;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import com.jozufozu.flywheel.core.PartialModel;
-import com.simibubi.create.content.contraptions.components.crank.HandCrankBlock;
+import com.simibubi.create.content.kinetics.crank.HandCrankBlock;
 import com.simibubi.create.foundation.utility.BlockHelper;
-import com.simibubi.create.foundation.utility.Couple;
 import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
@@ -15,8 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.registries.ForgeRegistries;
 
 // Create compat
@@ -48,16 +44,7 @@ public class DyenamicsValveHandleBlock extends HandCrankBlock
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
-    public PartialModel getRenderedHandle() {
-        return null;
-    }
-
     public int getRotationSpeed() {
         return 16;
-    }
-
-    public static Couple<Integer> getSpeedRange() {
-        return Couple.create(16, 16);
     }
 }
