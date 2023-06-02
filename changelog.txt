@@ -1,6 +1,7 @@
-1.19.2-0.1.5.2
+1.19.2-1.5.2
 
 - Updated to work with Create 0.5.1
+- Fixed botany pots not ticking
 
 
 1.19.2-0.1.5.1
