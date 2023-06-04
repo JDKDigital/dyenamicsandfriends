@@ -106,7 +106,7 @@ public class DyenamicsAndFriends
                         packLoader.accept(Pack.create(
                                 DyenamicsAndFriends.MODID + ":" + modId, false,
                                 () -> new PathPackResources(DyenamicsAndFriends.MODID + ":" + modId, modFile.getFile().findResource("compat_packs/" + modId + "/")),
-                                packBuilder, Pack.Position.TOP, PackSource.BUILT_IN
+                                packBuilder, Pack.Position.BOTTOM, PackSource.BUILT_IN
                         ));
                     }
                 } catch (Exception e) {

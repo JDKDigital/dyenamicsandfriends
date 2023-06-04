@@ -2,9 +2,8 @@ package cy.jdkdigital.dyenamicsandfriends.common.item.chalk;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.compat.ChalkCompat;
-import io.github.mortuusars.chalk.blocks.MarkSymbol;
 import io.github.mortuusars.chalk.items.ChalkItem;
-import io.github.mortuusars.chalk.setup.ModTags;
+import io.github.mortuusars.chalk.utils.MarkDrawingContext;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -35,18 +34,16 @@ public class DyenamicsChalkItem extends ChalkItem
             if (hand == InteractionHand.OFF_HAND && player.getMainHandItem().getItem() instanceof DyenamicsChalkItem) {
                 return InteractionResult.FAIL;
             } else {
-                Level level = context.getLevel();
-                boolean isGlowingDye = ((DyenamicsChalkItem) itemStack.getItem()).color.equals(DyenamicDyeColor.FLUORESCENT);
-                boolean isGlowingOffhandItem = player.getOffhandItem().is(ModTags.Items.GLOWING);
-                MarkSymbol symbol = context.isSecondaryUseActive() ? MarkSymbol.CROSS : MarkSymbol.NONE;
-                if (ChalkCompat.draw(symbol, this.color, isGlowingOffhandItem || isGlowingDye, context.getClickedPos(), context.getClickedFace(), context.getClickLocation(), level) == InteractionResult.SUCCESS) {
-                    if (!player.isCreative()) {
-                        this.damageAndConsumeItems(hand, itemStack, player, level, isGlowingOffhandItem);
-                    }
-
+                MarkDrawingContext drawingContext = this.createDrawingContext(player, context.getClickedPos(), context.getClickLocation(), context.getClickedFace(), hand);
+                if (!drawingContext.canDraw()) {
+                    return InteractionResult.FAIL;
+                } else if (player.isSecondaryUseActive()) {
+                    drawingContext.openSymbolSelectionScreen();
+                    return InteractionResult.CONSUME;
+                } else if (this.drawMark(drawingContext, ChalkCompat.convertMark(drawingContext.createRegularMark(this.color.getVanillaColor(), false), this.color, false))) {
                     return InteractionResult.sidedSuccess(context.getLevel().isClientSide);
                 } else {
-                    return InteractionResult.FAIL;
+                    return drawingContext.hasExistingMark() ? InteractionResult.PASS : InteractionResult.FAIL;
                 }
             }
         } else {
