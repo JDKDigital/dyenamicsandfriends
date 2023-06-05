@@ -9,7 +9,7 @@ public class DyenamicsSeatBlock extends SeatBlock
     private final DyenamicDyeColor color;
 
     public DyenamicsSeatBlock(Properties properties, DyenamicDyeColor color) {
-        super(properties, color.getVanillaColor(), true);
+        super(properties, color.getAnalogue(), true);
         this.color = color;
     }
 }

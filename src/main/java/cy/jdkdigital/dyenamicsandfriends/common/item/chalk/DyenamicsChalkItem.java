@@ -2,7 +2,11 @@ package cy.jdkdigital.dyenamicsandfriends.common.item.chalk;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.compat.ChalkCompat;
+import io.github.mortuusars.chalk.core.Mark;
+import io.github.mortuusars.chalk.core.MarkSymbol;
+import io.github.mortuusars.chalk.core.SymbolOrientation;
 import io.github.mortuusars.chalk.items.ChalkItem;
+import io.github.mortuusars.chalk.render.ChalkColors;
 import io.github.mortuusars.chalk.utils.MarkDrawingContext;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -24,6 +28,16 @@ public class DyenamicsChalkItem extends ChalkItem
         this.color = dyeColor;
     }
 
+    @Override
+    public Mark getMark(ItemStack itemInHand, MarkDrawingContext drawingContext, MarkSymbol symbol) {
+        return ChalkCompat.convertMark(drawingContext.createMark(color.getColorValue(), symbol, false), color, false);
+    }
+
+    @Override
+    public int getMarkColorValue(ItemStack stack) {
+        return this.color.getColorValue();
+    }
+
     @NotNull
     @Override
     public InteractionResult useOn(UseOnContext context) {
@@ -40,7 +54,7 @@ public class DyenamicsChalkItem extends ChalkItem
                 } else if (player.isSecondaryUseActive()) {
                     drawingContext.openSymbolSelectionScreen();
                     return InteractionResult.CONSUME;
-                } else if (this.drawMark(drawingContext, ChalkCompat.convertMark(drawingContext.createRegularMark(this.color.getVanillaColor(), false), this.color, false))) {
+                } else if (this.drawMark(drawingContext, ChalkCompat.convertMark(getMark(itemStack, drawingContext, drawingContext.getInitialOrientation() == SymbolOrientation.CENTER ? MarkSymbol.CENTER : MarkSymbol.ARROW), this.color, false))) {
                     return InteractionResult.sidedSuccess(context.getLevel().isClientSide);
                 } else {
                     return drawingContext.hasExistingMark() ? InteractionResult.PASS : InteractionResult.FAIL;
@@ -48,19 +62,6 @@ public class DyenamicsChalkItem extends ChalkItem
             }
         } else {
             return InteractionResult.FAIL;
-        }
-    }
-
-    private void damageAndConsumeItems(InteractionHand hand, ItemStack itemStack, Player player, Level level, boolean isGlowing) {
-        itemStack.setDamageValue(itemStack.getDamageValue() + 1);
-        if (itemStack.getDamageValue() >= itemStack.getMaxDamage()) {
-            player.setItemInHand(hand, ItemStack.EMPTY);
-            Vec3 playerPos = player.position();
-            level.playSound(player, playerPos.x, playerPos.y, playerPos.z, SoundEvents.GRAVEL_BREAK, SoundSource.BLOCKS, 0.9F, 0.9F + level.random.nextFloat() * 0.2F);
-        }
-
-        if (isGlowing) {
-            player.getOffhandItem().shrink(1);
         }
     }
 

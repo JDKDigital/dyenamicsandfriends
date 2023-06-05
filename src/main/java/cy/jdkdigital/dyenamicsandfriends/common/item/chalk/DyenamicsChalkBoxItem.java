@@ -1,9 +1,14 @@
 package cy.jdkdigital.dyenamicsandfriends.common.item.chalk;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.google.common.base.Preconditions;
 import com.mojang.datafixers.util.Pair;
+import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.ChalkCompat;
+import io.github.mortuusars.chalk.core.IDrawingTool;
 import io.github.mortuusars.chalk.core.Mark;
+import io.github.mortuusars.chalk.core.MarkSymbol;
+import io.github.mortuusars.chalk.core.SymbolOrientation;
 import io.github.mortuusars.chalk.data.Lang;
 import io.github.mortuusars.chalk.items.ChalkBox;
 import io.github.mortuusars.chalk.items.ChalkBoxItem;
@@ -40,40 +45,41 @@ public class DyenamicsChalkBoxItem extends ChalkBoxItem
     }
 
     @Override
+    public int getMarkColorValue(ItemStack chalkBoxStack) {
+        ItemStack selectedChalk = ChalkBox.getItemInSlot(chalkBoxStack, getSelectedChalkIndex(chalkBoxStack));
+        return selectedChalk.getItem() instanceof IDrawingTool drawingTool ? drawingTool.getMarkColorValue(selectedChalk) : -1;
+    }
+
+    @Override
+    public Mark getMark(ItemStack itemInHand, MarkDrawingContext drawingContext, MarkSymbol symbol) {
+        Preconditions.checkArgument(itemInHand.getItem() instanceof ChalkBoxItem, "ChalkBox expected in player's hand.");
+
+        int selectedChalkIndex = getSelectedChalkIndex(itemInHand);
+
+        if (selectedChalkIndex == -1)
+            return null;
+
+        ItemStack selectedChalk = ChalkBox.getItemInSlot(itemInHand, selectedChalkIndex);
+        int color = ChalkColors.fromDyeColor(DyeColor.WHITE);
+        if (selectedChalk.getItem() instanceof ChalkItem chalkItem) {
+            color = ChalkColors.fromDyeColor(chalkItem.getColor());
+        }
+        boolean isGlowing = getGlowing(itemInHand);
+        Mark mark = drawingContext.createMark(color, symbol, isGlowing);
+        if (selectedChalk.getItem() instanceof DyenamicsChalkItem dyenamicsChalkItem) {
+            boolean isGlowingDye = dyenamicsChalkItem.getDyenamicsColor().equals(DyenamicDyeColor.FLUORESCENT);
+            // Don't use up glow if the dye is already glowing
+            if (isGlowingDye) {
+                isGlowing = false;
+            }
+            mark = dyenamicsChalkItem.getMark(itemInHand, drawingContext, symbol);
+        }
+        return selectedChalk.getItem() instanceof DyenamicsChalkItem chalkItem ? ChalkCompat.convertMark(mark, chalkItem.getDyenamicsColor(), isGlowing) : mark;
+    }
+
+    @Override
     public void appendHoverText(@NotNull ItemStack stack, @Nullable Level pLevel, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag isAdvanced) {
-        int selectedChalkIndex = this.getSelectedChalkIndex(stack);
-        if (selectedChalkIndex != -1) {
-            ItemStack selectedChalk = ChalkBox.getItemInSlot(stack, selectedChalkIndex);
-            Item var9 = selectedChalk.getItem();
-            Style var10000;
-            if (var9 instanceof ChalkItem) {
-                ChalkItem chalkItem = (ChalkItem)var9;
-                var10000 = Style.EMPTY.withColor(ChalkColors.fromDyeColor(chalkItem.getColor()));
-            } else {
-                var10000 = Style.EMPTY.withColor(ChatFormatting.WHITE);
-            }
-
-            Style style = var10000;
-            tooltipComponents.add(Lang.CHALK_BOX_DRAWING_WITH_TOOLTIP.translate().withStyle(ChatFormatting.GRAY).append(((MutableComponent)selectedChalk.getHoverName()).withStyle(style)));
-        }
-
-        if (Minecraft.getInstance().player != null) {
-            Screen var11 = Minecraft.getInstance().screen;
-            if (var11 instanceof AbstractContainerScreen) {
-                AbstractContainerScreen<?> screen = (AbstractContainerScreen)var11;
-                if (screen instanceof CreativeModeInventoryScreen) {
-                    CreativeModeInventoryScreen creativeScreen = (CreativeModeInventoryScreen)screen;
-                    if (creativeScreen.getSelectedTab() != CreativeModeTab.TAB_INVENTORY.getId()) {
-                        return;
-                    }
-                }
-
-                Slot slotUnderMouse = screen.getSlotUnderMouse();
-                if (slotUnderMouse != null && slotUnderMouse.container instanceof Inventory) {
-                    tooltipComponents.add(Lang.CHALK_BOX_OPEN_TOOLTIP.translate().withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.DARK_GRAY));
-                }
-            }
-        }
+        super.appendHoverText(stack, pLevel, tooltipComponents, isAdvanced);
 
         tooltipComponents.add(Component.translatable("item.dyenamicsandfriends.chalk_box.tooltip.dyenamics").withStyle(ChatFormatting.GOLD));
     }
@@ -99,28 +105,21 @@ public class DyenamicsChalkBoxItem extends ChalkBoxItem
                     if (!drawingContext.canDraw()) {
                         return InteractionResult.FAIL;
                     } else {
-                        ItemStack selectedChalk = ChalkBox.getItemInSlot(chalkBox, selectedChalkIndex);
                         if (player.isSecondaryUseActive()) {
                             drawingContext.openSymbolSelectionScreen();
                             return InteractionResult.CONSUME;
                         } else {
-                            boolean isGlowing = ChalkBox.getGlowLevel(chalkBox) > 0;
-                            DyeColor chalkColor = ((ChalkItem) selectedChalk.getItem()).getColor();
-                            Mark mark = drawingContext.createRegularMark(chalkColor, isGlowing);
-                            if (selectedChalk.getItem() instanceof DyenamicsChalkItem dyenamicsChalkItem) {
-                                boolean isGlowingDye = dyenamicsChalkItem.getDyenamicsColor().equals(DyenamicDyeColor.FLUORESCENT);
-                                // Don't use up glow if the dye is already glowing
-                                if (isGlowingDye) {
-                                    isGlowing = false;
-                                }
-                                mark = ChalkCompat.convertMark(mark, dyenamicsChalkItem.getDyenamicsColor(), isGlowing);
-                            }
+                            Mark mark = getMark(chalkBox, drawingContext, drawingContext.getInitialOrientation() == SymbolOrientation.CENTER ? MarkSymbol.CENTER : MarkSymbol.ARROW);
                             return this.drawMark(drawingContext, mark) ? InteractionResult.sidedSuccess(context.getLevel().isClientSide) : InteractionResult.FAIL;
                         }
                     }
                 }
             }
         }
+    }
+
+    public ItemStack getSelectedChalkItem(ItemStack chalkBox) {
+        return ChalkBox.getItemInSlot(chalkBox, getSelectedChalkIndex(chalkBox));
     }
 
     private int getSelectedChalkIndex(ItemStack chalkBoxStack) {

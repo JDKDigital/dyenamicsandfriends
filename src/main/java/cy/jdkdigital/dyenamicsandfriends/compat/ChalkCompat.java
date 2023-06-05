@@ -7,9 +7,15 @@ import cy.jdkdigital.dyenamicsandfriends.common.item.chalk.DyenamicsChalkBoxItem
 import cy.jdkdigital.dyenamicsandfriends.common.item.chalk.DyenamicsChalkItem;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import io.github.mortuusars.chalk.Chalk;
+import io.github.mortuusars.chalk.block.ChalkMarkBlock;
+import io.github.mortuusars.chalk.core.IDrawingTool;
 import io.github.mortuusars.chalk.core.Mark;
+import io.github.mortuusars.chalk.core.MarkSymbol;
+import io.github.mortuusars.chalk.core.SymbolOrientation;
+import io.github.mortuusars.chalk.items.ChalkBox;
 import io.github.mortuusars.chalk.items.ChalkBoxItem;
 import io.github.mortuusars.chalk.render.ChalkMarkBakedModel;
+import io.github.mortuusars.chalk.utils.MarkDrawingContext;
 import io.github.mortuusars.chalk.utils.ParticleUtils;
 import io.github.mortuusars.chalk.utils.PositionUtils;
 import net.minecraft.client.color.block.BlockColor;
@@ -22,8 +28,11 @@ import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -41,7 +50,7 @@ public class ChalkCompat
 {
     private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CHALK_MARK_BLOCKS = new HashMap<>();
     public static final Map<DyenamicDyeColor, RegistryObject<? extends Item>> CHALKS = new HashMap<>();
-//    public static RegistryObject<? extends Item> CHALK_BOX = null;
+    public static RegistryObject<? extends Item> CHALK_BOX = null;
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "chalk_" + color.getSerializedName();
@@ -53,9 +62,9 @@ public class ChalkCompat
         String prefix = "chalk_" + color.getSerializedName();
         CHALKS.put(color, DyenamicRegistry.registerItem(prefix + "_chalk", () -> new DyenamicsChalkItem(color, new Item.Properties())));
 
-//        if (color.equals(DyenamicDyeColor.PEACH)) {
-//            CHALK_BOX = DyenamicRegistry.registerItem("chalk_box", () -> new DyenamicsChalkBoxItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).stacksTo(1)));
-//        }
+        if (color.equals(DyenamicDyeColor.PEACH)) {
+            CHALK_BOX = DyenamicRegistry.registerItem("chalk_box", () -> new DyenamicsChalkBoxItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).stacksTo(1)));
+        }
     }
 
     public static class Client
@@ -65,10 +74,10 @@ public class ChalkCompat
                 ItemBlockRenderTypes.setRenderLayer(registryObject.get(), RenderType.cutout());
             });
 
-//            var chalkBox = (DyenamicsChalkBoxItem)CHALK_BOX.get();
-//            ItemProperties.register(chalkBox, ChalkBoxItem.SELECTED_PROPERTY, (stack, level, entity, damage) -> {
-//                return chalkBox.getSelectedChalkColor(stack);
-//            });
+            var chalkBox = (DyenamicsChalkBoxItem)CHALK_BOX.get();
+            ItemProperties.register(chalkBox, ChalkBoxItem.SELECTED_PROPERTY, (stack, level, entity, damage) -> {
+                return chalkBox.getSelectedChalkColor(stack);
+            });
         }
 
         public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
@@ -106,55 +115,8 @@ public class ChalkCompat
     }
 
     public static Mark convertMark(Mark mark, DyenamicDyeColor color, boolean glowing) {
-        return new Mark(mark.facing(), color.getVanillaColor(), mark.symbol(), mark.orientation(), glowing);
+        return new DyenamicsMark(mark.facing, color.getColorValue(), mark.symbol, mark.orientation, glowing);
     }
-
-//    public static InteractionResult draw(MarkSymbol symbol, DyenamicDyeColor color, boolean isGlowing, BlockPos clickedPos, Direction clickedFace, Vec3 clickLocation, Level level) {
-//        if (!ChalkMark.canBeDrawnAt(clickedPos.relative(clickedFace), clickedPos, clickedFace, level)) {
-//            Chalk.LOGGER.info("Chalk cannot be drawn at this position. ({}, {}, {})", clickedPos.getX(), clickedPos.getY(), clickedPos.getZ());
-//            return InteractionResult.FAIL;
-//        } else {
-//            boolean isClickedOnAMark = level.getBlockState(clickedPos).is(ModTags.Blocks.CHALK_MARK);
-//            BlockPos newMarkPosition = isClickedOnAMark ? clickedPos : clickedPos.relative(clickedFace);
-//            Direction newMarkFacing = isClickedOnAMark ? level.getBlockState(newMarkPosition).getValue(ChalkMarkBlock.FACING) : clickedFace;
-//            BlockState markBlockState = createMarkBlockState(symbol, color, newMarkFacing, clickLocation, clickedPos, isGlowing);
-//            if (isClickedOnAMark) {
-//                BlockState oldMarkBlockState = level.getBlockState(newMarkPosition);
-//                if (markBlockState.getValue(ChalkMarkBlock.ORIENTATION).equals(oldMarkBlockState.getValue(ChalkMarkBlock.ORIENTATION)) && newMarkFacing == oldMarkBlockState.getValue(ChalkMarkBlock.FACING) && symbol == oldMarkBlockState.getValue(ChalkMarkBlock.SYMBOL) && (!isGlowing || (Boolean)oldMarkBlockState.getValue(ChalkMarkBlock.GLOWING))) {
-//                    return InteractionResult.FAIL;
-//                }
-//
-//                level.removeBlock(newMarkPosition, false);
-//            }
-//
-//            drawMark(markBlockState, newMarkPosition, level);
-//            return InteractionResult.SUCCESS;
-//        }
-//    }
-//
-//    private static BlockState createMarkBlockState(MarkSymbol symbol, DyenamicDyeColor color, Direction clickedFace, Vec3 clickLocation, BlockPos clickedPos, boolean isGlowing) {
-//        BlockState newBlockState = CHALK_MARK_BLOCKS.get(color).get().defaultBlockState().setValue(ChalkMarkBlock.FACING, clickedFace).setValue(ChalkMarkBlock.SYMBOL, symbol).setValue(ChalkMarkBlock.GLOWING, isGlowing);
-//        if (symbol == MarkSymbol.NONE) {
-//            newBlockState = newBlockState.setValue(ChalkMarkBlock.ORIENTATION, ClickLocationUtils.getBlockRegion(clickLocation, clickedPos, clickedFace));
-//        }
-//
-//        return newBlockState;
-//    }
-//
-//    private static boolean drawMark(BlockState markState, BlockPos markPos, Level level) {
-//        boolean isMarkDrawn = level.setBlock(markPos, markState, 11);
-//        if (isMarkDrawn) {
-//            double pX = (double)markPos.getX() + 0.5D;
-//            double pY = (double)markPos.getY() + 0.5D;
-//            double pZ = (double)markPos.getZ() + 0.5D;
-//            level.playSound(null, pX, pY, pZ, SoundEvents.UI_CARTOGRAPHY_TABLE_TAKE_RESULT, SoundSource.BLOCKS, 0.7F, (new Random()).nextFloat() * 0.2F + 0.8F);
-//            if (level.isClientSide && markState.getBlock() instanceof DyenamicsChalkMarkBlock markBlock) {
-//                spawnColorDustParticles(markBlock.getDyenamicColor(), level, markPos, markState.getValue(ChalkMarkBlock.FACING));
-//            }
-//        }
-//
-//        return isMarkDrawn;
-//    }
 
     public static void spawnColorDustParticles(DyenamicDyeColor color, Level level, BlockPos pos, Direction face) {
         int colorValue = color.getColorValue();
@@ -163,4 +125,30 @@ public class ChalkCompat
         float B = (float)(colorValue & 255);
         ParticleUtils.spawnParticle(level, new DustParticleOptions(new Vector3f(R / 255.0F, G / 255.0F, B / 255.0F), 2.0F), PositionUtils.blockCenterOffsetToFace(pos, face, 0.25F), 1);
     }
+
+    static class DyenamicsMark extends Mark {
+        public DyenamicsMark(Direction facing, int color, MarkSymbol symbol, SymbolOrientation orientation, boolean glowing) {
+            super(facing, color, symbol, orientation, glowing);
+        }
+
+        @Override
+        public BlockState createBlockState(ItemStack drawingItem) {
+            DyenamicDyeColor color = null;
+            if (drawingItem.getItem() instanceof DyenamicsChalkBoxItem chalkBox) {
+                ItemStack selectedChalk = chalkBox.getSelectedChalkItem(drawingItem);
+                color = selectedChalk.getItem() instanceof DyenamicsChalkItem chalkItem ? chalkItem.getDyenamicsColor() : null;
+            } else if (drawingItem.getItem() instanceof DyenamicsChalkItem chalkItem) {
+                color = chalkItem.getDyenamicsColor();
+            }
+            if (color != null) {
+                return ChalkCompat.CHALK_MARK_BLOCKS.get(color).get().defaultBlockState()
+                    .setValue(ChalkMarkBlock.FACING, facing)
+                    .setValue(ChalkMarkBlock.SYMBOL, symbol)
+                    .setValue(ChalkMarkBlock.ORIENTATION, orientation)
+                    .setValue(ChalkMarkBlock.GLOWING, glowing);
+            }
+            return super.createBlockState(drawingItem);
+        }
+    }
+
 }

@@ -1,12 +1,16 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.chalk;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
+import com.mojang.math.Vector3f;
 import cy.jdkdigital.dyenamicsandfriends.compat.ChalkCompat;
+import io.github.mortuusars.chalk.Chalk;
 import io.github.mortuusars.chalk.block.ChalkMarkBlock;
+import io.github.mortuusars.chalk.utils.PositionUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -61,30 +65,42 @@ public class DyenamicsChalkMarkBlock extends ChalkMarkBlock
 
     @Override
     public void attack(BlockState blockState, Level world, BlockPos pos, Player player) {
-        this.removeMark(world, pos, false);
+        this.removeMarkWithEffects(world, pos);
     }
 
     @Override
     public void neighborChanged(BlockState state, Level world, BlockPos pos, Block block, BlockPos fromPos, boolean isMoving) {
         BlockPos relative = pos.relative(state.getValue(FACING).getOpposite());
         if (relative.equals(fromPos)) {
-            this.removeMark(world, pos, isMoving);
+            this.removeMarkWithEffects(world, pos);
         }
     }
 
     @Override
     public boolean onDestroyedByPlayer(BlockState state, Level world, BlockPos pos, Player player, boolean willHarvest, FluidState fluid) {
-        return this.removeMark(world, pos, false);
+        return this.removeMarkWithEffects(world, pos);
     }
 
-    private boolean removeMark(Level level, BlockPos pos, boolean isMoving) {
-        Direction facing = level.getBlockState(pos).getValue(FACING);
-        if (level.removeBlock(pos, isMoving)) {
-            if (!level.isClientSide()) {
-                level.playSound(null, pos, SoundEvents.WART_BLOCK_HIT, SoundSource.BLOCKS, 0.5F, (new Random()).nextFloat() * 0.2F + 0.8F);
+    private boolean removeMarkWithEffects(Level level, BlockPos pos) {
+        Direction facing = level.getBlockState(pos).getValue(FACING); // Get facing before removing the block.
+
+        if (level.removeBlock(pos, false)) {
+            level.playSound(null, pos, Chalk.SoundEvents.MARK_REMOVED.get(), SoundSource.BLOCKS, 0.5f, new Random().nextFloat() * 0.2f + 0.8f);
+
+            if (level instanceof ServerLevel serverLevel) {
+                int colorValue = this.color.getColorValue();
+                float R = (colorValue & 0x00FF0000) >> 16;
+                float G = (colorValue & 0x0000FF00) >> 8;
+                float B = (colorValue & 0x000000FF);
+
+                Vector3f centerOffset = PositionUtils.blockCenterOffsetToFace(pos, facing, 0.25f);
+                serverLevel.sendParticles(new DustParticleOptions(new Vector3f(R / 255, G / 255, B / 255), 2f),
+                        centerOffset.x(), centerOffset.y(), centerOffset.z(),
+                        1, 0.1, 0.1, 0.1, 0.02);
             } else {
                 ChalkCompat.spawnColorDustParticles(color, level, pos, facing);
             }
+
             return true;
         }
         return false;
