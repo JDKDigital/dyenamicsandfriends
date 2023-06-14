@@ -133,7 +133,7 @@ dependencies {
     implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
 //    implementation fg.deobf("libs:supplementaries-1.19.2:2.3.13")
     implementation fg.deobf("libs:suppsquared-1.19.2:1.0.14")
-    implementation fg.deobf("libs:chalk-1.19.2:1.5.1")
+//    implementation fg.deobf("libs:chalk-1.19.2:1.5.1")
 
 //    jarJar(group: 'cofh.dyenamics', name: 'dyenamics', version: '[1.0.0,)') {
 //        transitive(false)
@@ -151,7 +151,7 @@ dependencies {
     implementation fg.deobf("curse.maven:create-328085:4547147")
 //    implementation fg.deobf("curse.maven:create-deco-509285:4183385")
     implementation fg.deobf("curse.maven:another-furniture-610492:4034009")
-//    implementation fg.deobf("curse.maven:chalk-533748:4554940")
+    implementation fg.deobf("curse.maven:chalk-533748:4571278")
     implementation fg.deobf("curse.maven:comforts-276951:4105213")
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:4086868")
     implementation fg.deobf("curse.maven:farmers-delight-398521:3999157")

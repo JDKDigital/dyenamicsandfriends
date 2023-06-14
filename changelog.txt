@@ -1,3 +1,13 @@
+1.19.2-1.5.6
+
+- Renamed some recipes that wouldn't load otherwise
+
+
+1.19.2-1.5.5
+
+- Chalk compat is back baby!
+
+
 1.19.2-1.5.4
 
 - Fixed Create seat blocks using Another Furniture classes

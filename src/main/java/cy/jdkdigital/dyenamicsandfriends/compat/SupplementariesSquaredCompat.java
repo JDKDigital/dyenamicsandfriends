@@ -1,10 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.supplementaries.DyenamicsPresentBlockEntity;
-import cy.jdkdigital.dyenamicsandfriends.common.block.entity.supplementaries.DyenamicsTrappedPresentBlockEntity;
-import cy.jdkdigital.dyenamicsandfriends.common.block.supplementaries.DyenamicsPresentBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.supplementaries.DyenamicsTrappedPresentBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.mehvahdjukaar.supplementaries.common.block.blocks.CandleHolderBlock;
 import net.mehvahdjukaar.supplementaries.common.block.blocks.SackBlock;
@@ -18,8 +14,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
