@@ -185,9 +185,6 @@ public class DyenamicRegistry
     }
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        if (ModList.get().isLoaded("another_furniture")) {
-            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
-        }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
         }

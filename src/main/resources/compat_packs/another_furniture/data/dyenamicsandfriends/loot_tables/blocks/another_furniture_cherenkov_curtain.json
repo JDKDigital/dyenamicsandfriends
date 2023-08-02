@@ -11,7 +11,7 @@
               "condition": "dyenamicsandfriends:optional_block_state_property",
               "block": "dyenamicsandfriends:another_furniture_cherenkov_curtain",
               "properties": {
-                "top": "true"
+                "facing_vertical": "down"
               }
             }
           ],

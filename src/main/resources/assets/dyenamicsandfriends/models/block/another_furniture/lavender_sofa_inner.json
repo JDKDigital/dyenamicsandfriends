@@ -1,5 +1,6 @@
 {
   "parent": "another_furniture:block/template/sofa_inner",
+  "render_type": "cutout",
   "textures": {
     "seat_top": "dyenamicsandfriends:block/another_furniture/sofa/lavender_seat_inner",
     "seat_front": "dyenamicsandfriends:block/another_furniture/sofa/lavender_seat_front",
