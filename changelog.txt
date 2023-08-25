@@ -1,3 +1,8 @@
+1.18.2-0.1.5.4
+
+- Fix crash with Farmers Delight + Botania
+
+
 1.18.2-0.1.5.3
 
 - Fix crash with Create

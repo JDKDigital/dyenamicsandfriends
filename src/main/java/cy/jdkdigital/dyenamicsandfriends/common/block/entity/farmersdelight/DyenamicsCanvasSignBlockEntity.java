@@ -30,18 +30,18 @@ public class DyenamicsCanvasSignBlockEntity extends CanvasSignBlockEntity
         if (block instanceof DyenamicsWallCanvasSignBlock wallCanvasSignBlock) {
             return wallCanvasSignBlock.getDyenamicColor();
         }
-        throw new RuntimeException("Invalid block type");
+        return DyenamicDyeColor.WHITE;
     }
 
     @Override
-    public @NotNull BlockEntityType<?> getType() {
+    public BlockEntityType<?> getType() {
         if (block instanceof DyenamicsStandingCanvasSignBlock standingCanvasSignBlock) {
             return standingCanvasSignBlock.getBlockEntitySupplier().get();
         }
         if (block instanceof DyenamicsWallCanvasSignBlock wallCanvasSignBlock) {
             return wallCanvasSignBlock.getBlockEntitySupplier().get();
         }
-        throw new RuntimeException("Invalid block type");
+        return null;
     }
 
     @Override
