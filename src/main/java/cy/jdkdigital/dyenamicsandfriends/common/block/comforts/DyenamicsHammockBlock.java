@@ -3,6 +3,7 @@ package cy.jdkdigital.dyenamicsandfriends.common.block.comforts;
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
 import com.illusivesoulworks.comforts.common.block.RopeAndNailBlock;
+import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.illusivesoulworks.comforts.common.block.entity.HammockBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsHammockBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -43,6 +44,12 @@ public class DyenamicsHammockBlock extends BaseComfortsBlock
         this.blockEntitySupplier = blockEntitySupplier;
     }
 
+    @Override
+    public BlockEntityType<? extends BaseComfortsBlockEntity> getBlockEntityType() {
+        return this.blockEntitySupplier != null ? this.blockEntitySupplier.get() : null;
+    }
+
+    @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new DyenamicsHammockBlockEntity(this, pos, state);
     }

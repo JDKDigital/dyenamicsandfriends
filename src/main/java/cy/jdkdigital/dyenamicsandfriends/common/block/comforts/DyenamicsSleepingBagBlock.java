@@ -2,6 +2,7 @@ package cy.jdkdigital.dyenamicsandfriends.common.block.comforts;
 
 import cofh.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
+import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.illusivesoulworks.comforts.common.block.entity.SleepingBagBlockEntity;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.comforts.DyenamicsSleepingBagBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -28,6 +29,11 @@ public class DyenamicsSleepingBagBlock extends BaseComfortsBlock
         super(null, DyeColor.WHITE, properties);
         this.color = color;
         this.blockEntitySupplier = blockEntitySupplier;
+    }
+
+    @Override
+    public BlockEntityType<? extends BaseComfortsBlockEntity> getBlockEntityType() {
+        return this.blockEntitySupplier != null ? this.blockEntitySupplier.get() : null;
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {

@@ -130,7 +130,6 @@ dependencies {
     implementation fg.deobf("curse.maven:the-one-probe-245211:3965693")
 
     implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
-    implementation fg.deobf("libs:dyenamics-1.19.2:2.0.0")
 //    implementation fg.deobf("libs:supplementaries-1.19.2:2.3.13")
     implementation fg.deobf("libs:suppsquared-1.19.2:1.0.14")
 //    implementation fg.deobf("libs:chalk-1.19.2:1.5.1")
@@ -152,7 +151,7 @@ dependencies {
 //    implementation fg.deobf("curse.maven:create-deco-509285:4183385")
     implementation fg.deobf("curse.maven:another-furniture-610492:4675539")
     implementation fg.deobf("curse.maven:chalk-533748:4571278")
-    implementation fg.deobf("curse.maven:comforts-276951:4498935")
+    implementation fg.deobf("curse.maven:comforts-276951:4977779")
     implementation fg.deobf("curse.maven:openblocks-elevator-250832:4086868")
     implementation fg.deobf("curse.maven:farmers-delight-398521:4636013")
     implementation fg.deobf("curse.maven:snowy-spirit-566142:4263819")

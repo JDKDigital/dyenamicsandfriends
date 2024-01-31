@@ -1,3 +1,8 @@
+1.19.2-1.5.8
+
+- Updated to work with new version of Comforts
+
+
 1.19.2-1.5.7
 
 - Fixed compat with new version of Another Furniture
