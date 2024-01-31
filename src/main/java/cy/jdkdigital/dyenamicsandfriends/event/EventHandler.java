@@ -1,7 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.event;
 
-import cofh.dyenamics.common.items.DyenamicDyeItem;
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.common.items.DyenamicDyeItem;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.server.level.ServerLevel;

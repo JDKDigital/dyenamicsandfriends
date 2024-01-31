@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
 //import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 //import net.minecraft.resources.ResourceLocation;

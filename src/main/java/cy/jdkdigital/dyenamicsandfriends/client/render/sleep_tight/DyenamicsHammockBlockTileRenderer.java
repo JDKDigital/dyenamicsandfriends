@@ -1,6 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.client.render.sleep_tight;
 
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;

@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.common.item;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import net.minecraft.core.Direction;
 //import net.minecraft.nbt.CompoundTag;
 //import net.minecraft.world.item.Item;

@@ -1,20 +1,18 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
-//import com.mojang.math.Vector3f;
-//import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import cy.jdkdigital.dyenamicsandfriends.common.block.chalk.DyenamicsChalkMarkBlock;
 //import cy.jdkdigital.dyenamicsandfriends.common.item.chalk.DyenamicsChalkBoxItem;
 //import cy.jdkdigital.dyenamicsandfriends.common.item.chalk.DyenamicsChalkItem;
 //import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 //import io.github.mortuusars.chalk.Chalk;
-//import io.github.mortuusars.chalk.blocks.ChalkMarkBlock;
-//import io.github.mortuusars.chalk.blocks.MarkSymbol;
+//import io.github.mortuusars.chalk.block.ChalkMarkBlock;
 //import io.github.mortuusars.chalk.core.ChalkMark;
+//import io.github.mortuusars.chalk.core.MarkSymbol;
+//import io.github.mortuusars.chalk.core.SymbolOrientation;
+//import io.github.mortuusars.chalk.items.ChalkBoxItem;
 //import io.github.mortuusars.chalk.render.ChalkMarkBakedModel;
-//import io.github.mortuusars.chalk.setup.ClientSetup;
-//import io.github.mortuusars.chalk.setup.ModTags;
-//import io.github.mortuusars.chalk.utils.ClickLocationUtils;
+//import io.github.mortuusars.chalk.render.ChalkMarkBlockColor;
 //import io.github.mortuusars.chalk.utils.ParticleUtils;
 //import io.github.mortuusars.chalk.utils.PositionUtils;
 //import net.minecraft.client.color.block.BlockColor;
@@ -30,18 +28,19 @@
 //import net.minecraft.sounds.SoundEvents;
 //import net.minecraft.sounds.SoundSource;
 //import net.minecraft.world.InteractionResult;
-//import net.minecraft.world.item.CreativeModeTab;
+//import net.minecraft.world.item.CreativeModeTabs;
 //import net.minecraft.world.item.Item;
 //import net.minecraft.world.level.Level;
 //import net.minecraft.world.level.block.Block;
 //import net.minecraft.world.level.block.SoundType;
 //import net.minecraft.world.level.block.state.BlockBehaviour;
 //import net.minecraft.world.level.block.state.BlockState;
-//import net.minecraft.world.level.material.Material;
 //import net.minecraft.world.phys.Vec3;
 //import net.minecraftforge.client.event.ModelEvent;
 //import net.minecraftforge.client.event.RegisterColorHandlersEvent;
+//import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 //import net.minecraftforge.registries.RegistryObject;
+//import org.joml.Vector3f;
 //
 //import java.util.HashMap;
 //import java.util.Map;
@@ -56,7 +55,7 @@
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "chalk_" + color.getSerializedName();
 //
-//        CHALK_MARK_BLOCKS.put(color, DyenamicRegistry.registerBlock(prefix + "_chalk_mark", () -> new DyenamicsChalkMarkBlock(color, BlockBehaviour.Properties.of(Material.REPLACEABLE_FIREPROOF_PLANT, color.getMapColor()).instabreak().noOcclusion().noCollission().sound(SoundType.GRAVEL).lightLevel(state -> color.getLightValue())), null, false));
+//        CHALK_MARK_BLOCKS.put(color, DyenamicRegistry.registerBlock(prefix + "_chalk_mark", () -> new DyenamicsChalkMarkBlock(color, BlockBehaviour.Properties.of().mapColor(color.getMapColor()).instabreak().noOcclusion().noCollission().sound(SoundType.GRAVEL).lightLevel(state -> color.getLightValue())), false));
 //    }
 //
 //    public static void registerItems(DyenamicDyeColor color) {
@@ -64,19 +63,24 @@
 //        CHALKS.put(color, DyenamicRegistry.registerItem(prefix + "_chalk", () -> new DyenamicsChalkItem(color, new Item.Properties())));
 //
 //        if (color.equals(DyenamicDyeColor.PEACH)) {
-//            CHALK_BOX = DyenamicRegistry.registerItem("chalk_box", () -> new DyenamicsChalkBoxItem(new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).stacksTo(1)));
+//            CHALK_BOX = DyenamicRegistry.registerItem("chalk_box", () -> new DyenamicsChalkBoxItem(new Item.Properties().stacksTo(1)));
+//        }
+//    }
+//
+//    public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
+//        if (event.getTabKey().equals(CreativeModeTabs.TOOLS_AND_UTILITIES)) {
+//            CHALKS.forEach((dyenamicDyeColor, registryObject) -> {
+//                event.accept(registryObject);
+//            });
+//            event.accept(CHALK_BOX);
 //        }
 //    }
 //
 //    public static class Client
 //    {
 //        public static void registerBlockRendering() {
-//            CHALK_MARK_BLOCKS.values().forEach(registryObject -> {
-//                ItemBlockRenderTypes.setRenderLayer(registryObject.get(), RenderType.cutout());
-//            });
-//
 //            var chalkBox = (DyenamicsChalkBoxItem)CHALK_BOX.get();
-//            ItemProperties.register(chalkBox, ClientSetup.CHALK_BOX_SELECTED_PROPERTY, (stack, level, entity, damage) -> {
+//            ItemProperties.register(chalkBox, ChalkBoxItem.SELECTED_PROPERTY, (stack, level, entity, damage) -> {
 //                return chalkBox.getSelectedChalkColor(stack);
 //            });
 //        }
@@ -88,24 +92,7 @@
 //            );
 //        }
 //
-//        public static void bakeModel(ModelEvent.BakingCompleted event) {
-//            CHALK_MARK_BLOCKS.forEach((color, block) -> {
-//                for (BlockState blockState : block.get().getStateDefinition().getPossibleStates()) {
-//                    ModelResourceLocation variantMRL = BlockModelShaper.stateToModelLocation(blockState);
-//                    BakedModel existingModel = event.getModels().get(variantMRL);
-//                    if (existingModel == null) {
-//                        Chalk.LOGGER.warn("Did not find the expected vanilla baked model(s) for " + block + " in registry");
-//                    } else if (existingModel instanceof ChalkMarkBakedModel) {
-//                        Chalk.LOGGER.warn("Tried to replace " + block + " twice");
-//                    } else {
-//                        ChalkMarkBakedModel customModel = new ChalkMarkBakedModel(existingModel);
-//                        event.getModels().put(variantMRL, customModel);
-//                    }
-//                }
-//            });
-//        }
-//
-//        public static final BlockColor CHALK_MARK_BLOCK_COLOR = (blockState, blockAndTintGetter, blockPos, index) -> {
+//        private static final BlockColor CHALK_MARK_BLOCK_COLOR = (blockState, blockAndTintGetter, blockPos, index) -> {
 //            if (!(blockState.getBlock() instanceof DyenamicsChalkMarkBlock)) {
 //                return 16777215;
 //            } else {
@@ -113,6 +100,24 @@
 //                return blockColor.getColorValue();
 //            }
 //        };
+//
+//        public static void bakeModel(ModelEvent.BakingCompleted event) {
+//            CHALK_MARK_BLOCKS.forEach((color, block) -> {
+//                for (BlockState blockState : block.get().getStateDefinition().getPossibleStates()) {
+//                    ModelResourceLocation variantMRL = BlockModelShaper.stateToModelLocation(blockState);
+//                    BakedModel existingModel = event.getModels().get(variantMRL);
+//
+//                    if (existingModel instanceof ChalkMarkBakedModel) {
+//                        Chalk.LOGGER.warn("Tried to replace " + block + " model twice");
+//                    } else if (existingModel != null) {
+//                        ChalkMarkBakedModel customModel = new ChalkMarkBakedModel(existingModel);
+//                        event.getModels().put(variantMRL, customModel);
+//                    } else {
+//                        Chalk.LOGGER.warn(variantMRL + " model not found. ChalkMarkBakedModel would not be added for this blockstate.");
+//                    }
+//                }
+//            });
+//        }
 //    }
 //
 //    public static InteractionResult draw(MarkSymbol symbol, DyenamicDyeColor color, boolean isGlowing, BlockPos clickedPos, Direction clickedFace, Vec3 clickLocation, Level level) {
@@ -120,7 +125,7 @@
 //            Chalk.LOGGER.info("Chalk cannot be drawn at this position. ({}, {}, {})", clickedPos.getX(), clickedPos.getY(), clickedPos.getZ());
 //            return InteractionResult.FAIL;
 //        } else {
-//            boolean isClickedOnAMark = level.getBlockState(clickedPos).is(ModTags.Blocks.CHALK_MARK);
+//            boolean isClickedOnAMark = false; // TODO level.getBlockState(clickedPos).is(ModTags.Blocks.CHALK_MARK);
 //            BlockPos newMarkPosition = isClickedOnAMark ? clickedPos : clickedPos.relative(clickedFace);
 //            Direction newMarkFacing = isClickedOnAMark ? level.getBlockState(newMarkPosition).getValue(ChalkMarkBlock.FACING) : clickedFace;
 //            BlockState markBlockState = createMarkBlockState(symbol, color, newMarkFacing, clickLocation, clickedPos, isGlowing);
@@ -139,10 +144,27 @@
 //    }
 //
 //    private static BlockState createMarkBlockState(MarkSymbol symbol, DyenamicDyeColor color, Direction clickedFace, Vec3 clickLocation, BlockPos clickedPos, boolean isGlowing) {
-//        BlockState newBlockState = CHALK_MARK_BLOCKS.get(color).get().defaultBlockState().setValue(ChalkMarkBlock.FACING, clickedFace).setValue(ChalkMarkBlock.SYMBOL, symbol).setValue(ChalkMarkBlock.GLOWING, isGlowing);
-//        if (symbol == MarkSymbol.NONE) {
-//            newBlockState = newBlockState.setValue(ChalkMarkBlock.ORIENTATION, ClickLocationUtils.getBlockRegion(clickLocation, clickedPos, clickedFace));
+//        BlockState newBlockState =
+//                CHALK_MARK_BLOCKS.get(color).get().defaultBlockState()
+//                        .setValue(ChalkMarkBlock.FACING, clickedFace)
+//                        .setValue(ChalkMarkBlock.SYMBOL, symbol)
+//                        .setValue(ChalkMarkBlock.GLOWING, isGlowing);
+//
+//        MarkSymbol.OrientationBehavior rotBehavior = symbol.getOrientationBehavior();
+//
+//        SymbolOrientation orientation;
+//
+//        if (rotBehavior == MarkSymbol.OrientationBehavior.FULL) {
+//            orientation = initialOrientation;
+//        } else if (rotBehavior == MarkSymbol.OrientationBehavior.CARDINAL) {
+//            orientation = SymbolOrientation.fromClickLocationCardinal(hitResult.getLocation(), face);
+//        } else if (rotBehavior == MarkSymbol.OrientationBehavior.UP_DOWN_CARDINAL && (face == Direction.UP || face == Direction.DOWN)) {
+//            orientation = SymbolOrientation.fromRotation(player.getDirection().getOpposite().get2DDataValue() * 90);
+//        } else {
+//            orientation = symbol.getDefaultOrientation();
 //        }
+//
+//        newBlockState = newBlockState.setValue(ChalkMarkBlock.ORIENTATION, orientation);
 //
 //        return newBlockState;
 //    }

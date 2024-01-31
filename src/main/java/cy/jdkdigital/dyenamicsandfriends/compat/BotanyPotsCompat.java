@@ -1,17 +1,20 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.botanypots.DyenamicsBlockEntityBotanyPot;
 import cy.jdkdigital.dyenamicsandfriends.common.block.botanypots.DyenamicsBotanyPot;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.darkhax.botanypots.block.BotanyPotRenderer;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.HashMap;
@@ -23,12 +26,11 @@ public class BotanyPotsCompat
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "botanypots_" + color.getSerializedName();
-        final BlockBehaviour.Properties properties = Block.Properties.of(Material.CLAY, color.getMapColor()).strength(1.25F, 4.2F).noOcclusion().lightLevel(state -> color.getLightValue());
+        final BlockBehaviour.Properties properties = Block.Properties.of().mapColor(color.getMapColor()).strength(1.25F, 4.2F).noOcclusion().lightLevel(state -> color.getLightValue());
 
         Map<String, RegistryObject<? extends Block>> blocks = new HashMap<>();
         BOTANY_POTS.put(color, blocks);
 
-        // .tab(CreativeModeTab.TAB_MISC)
         blocks.put("terracotta",
                 DyenamicRegistry.registerBlock(prefix + "_terracotta_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_terracotta_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("terracotta").get(), pos, state), BOTANY_POTS.get(color).get("terracotta").get()))),
@@ -53,6 +55,15 @@ public class BotanyPotsCompat
                 DyenamicRegistry.registerBlock(prefix + "_glazed_terracotta_hopper_botany_pot", () -> new DyenamicsBotanyPot(properties, false,
                 DyenamicRegistry.registerBlockEntity(prefix + "_glazed_terracotta_hopper_botany_pot", () -> DyenamicRegistry.createBlockEntityType((pos, state) -> new DyenamicsBlockEntityBotanyPot((DyenamicsBotanyPot) BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), pos, state), BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get()))),
                 () -> new BlockItem(BOTANY_POTS.get(color).get("glazed_terracotta_hopper").get(), new Item.Properties())));
+    }
+
+    public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
+        var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("botanypots:creative_tab"));
+        if (event.getTabKey().equals(key)) {
+            BOTANY_POTS.forEach((dyenamicDyeColor, map) -> {
+                map.forEach((c, registryObject) -> event.accept(registryObject));
+            });
+        }
     }
 
     public static class Client

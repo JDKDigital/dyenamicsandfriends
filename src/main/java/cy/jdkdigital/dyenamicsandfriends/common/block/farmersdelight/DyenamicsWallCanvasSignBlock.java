@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.common.block.farmersdelight;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import cy.jdkdigital.dyenamicsandfriends.common.block.entity.farmersdelight.DyenamicsCanvasSignBlockEntity;
 //import net.minecraft.core.BlockPos;
 //import net.minecraft.world.item.DyeColor;

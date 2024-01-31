@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.common.block.oreganized;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import galena.oreganized.content.block.CrystalGlassBlock;
 //import net.minecraft.core.BlockPos;
 //import net.minecraft.world.level.LevelReader;

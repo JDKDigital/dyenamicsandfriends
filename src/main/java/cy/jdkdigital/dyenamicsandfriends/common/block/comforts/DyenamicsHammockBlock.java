@@ -1,6 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.comforts;
 
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.common.block.BaseComfortsBlock;
 import com.illusivesoulworks.comforts.common.block.RopeAndNailBlock;
 import com.illusivesoulworks.comforts.common.block.entity.HammockBlockEntity;

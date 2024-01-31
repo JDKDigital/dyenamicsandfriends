@@ -1,6 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.entity.sleep_tight;
 
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.sleep_tight.DyenamicsHammockBlock;
 import net.mehvahdjukaar.sleep_tight.common.tiles.HammockTile;
 import net.minecraft.core.BlockPos;

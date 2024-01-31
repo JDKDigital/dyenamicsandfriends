@@ -1,7 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.registry;
 
-import cofh.dyenamics.core.init.BlockInit;
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.init.BlockInit;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
 import net.minecraft.world.item.BlockItem;
@@ -32,28 +32,29 @@ public class DyenamicRegistry
         add("botanypots");
 //        add("ceramics");
         add("chalk");
-        add("clayworks");
+//        add("clayworks");
         add("comforts");
-        add("create");
+//        add("create");
         add("elevatorid");
-        add("farmersdelight");
+//        add("farmersdelight");
         add("furnish");
 //        add("glazedresymmetry");
         add("handcrafted");
-        add("oreganized");
-        add("quark");
+//        add("oreganized");
+//        add("quark");
         add("sleep_tight");
-        add("the_bumblezone");
+//        add("the_bumblezone");
         add("regions_unexplored");
-        add("supplementaries");
-        add("suppsquared");
+//        add("supplementaries");
+//        add("suppsquared");
     }};
 
     public static void setup() {
-        QuarkCompat.setup();
+//        QuarkCompat.setup();
     }
 
     public static void registerCompatBlocks() {
+        DyenamicsAndFriends.LOGGER.info("registerCompatBlocks");
         for (DyenamicDyeColor color: DyenamicDyeColor.dyenamicValues()) {
             // Vanilla
             // - banners
@@ -68,7 +69,7 @@ public class DyenamicRegistry
                 // zinc lamp
             }
             if (ModList.get().isLoaded("another_furniture")) {
-//                AnotherFurnitureCompat.registerBlocks(color);
+                AnotherFurnitureCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("botanypots")) {
                 BotanyPotsCompat.registerBlocks(color);
@@ -93,10 +94,10 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("supplementaries")) {
                 // blackboard
                 // flag
-                SupplementariesCompat.registerBlocks(color);
+//                SupplementariesCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("suppsquared")) {
-                SupplementariesSquaredCompat.registerBlocks(color);
+//                SupplementariesSquaredCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("regions_unexplored")) {
                 RegionsUnexploredCompat.registerBlocks(color);
@@ -105,15 +106,15 @@ public class DyenamicRegistry
                 // sharestone
             }
             if (ModList.get().isLoaded("quark")) {
-                QuarkCompat.registerBlocks(color);
-                QuarkCompat.registerItems(color);
+//                QuarkCompat.registerBlocks(color);
+//                QuarkCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("handcrafted")) {
                 HandcraftedCompat.registerBlocks(color);
                 HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
-//                FurnishCompat.registerBlocks(color);
+                FurnishCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("skinnedlanterns")) {
                 // paper lantern
@@ -148,7 +149,7 @@ public class DyenamicRegistry
 //                ClayworksCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("the_bumblezone")) {
-                BumblezoneCompat.registerBlocks(color);
+//                BumblezoneCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("sleep_tight")) {
                 SleepTightCompat.registerBlocks(color);
@@ -185,9 +186,6 @@ public class DyenamicRegistry
     }
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        if (ModList.get().isLoaded("another_furniture")) {
-//            AnotherFurnitureCompat.Client.registerBlockEntityRenderers(event);
-        }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
         }
@@ -198,7 +196,7 @@ public class DyenamicRegistry
 //            FarmersDelightCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("furnish")) {
-//            FurnishCompat.Client.registerBlockEntityRenderers(event);
+            FurnishCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("ceramics")) {
 //            CeramicsCompat.Client.registerBlockEntityRenderers(event);
@@ -207,7 +205,7 @@ public class DyenamicRegistry
             SleepTightCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("supplementaries")) {
-            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
+//            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
         }
     }
 
@@ -225,10 +223,10 @@ public class DyenamicRegistry
 //            CeramicsCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("supplementaries")) {
-            SupplementariesCompat.Client.registerBlockRendering();
+//            SupplementariesCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("suppsquared")) {
-            SupplementariesSquaredCompat.Client.registerBlockRendering();
+//            SupplementariesSquaredCompat.Client.registerBlockRendering();
         }
         if (ModList.get().isLoaded("chalk")) {
 //            ChalkCompat.Client.registerBlockRendering();
@@ -247,12 +245,12 @@ public class DyenamicRegistry
 //        }
 //    }
 
-    public static void onModelBake(ModelEvent.BakingCompleted event) {
+    public static void onModelBake(ModelEvent.ModifyBakingResult event) {
         if (ModList.get().isLoaded("chalk")) {
-//            ChalkCompat.Client.bakeModel(event);
+//            ChalkCompat.Client.bakeModel(event); // MOVE ModelEvent.BakingCompleted
         }
         if (ModList.get().isLoaded("elevatorid")) {
-//            ElevatoridCompat.Client.bakeModel(event);
+            ElevatoridCompat.Client.bakeModel(event);
         }
     }
 
@@ -264,7 +262,7 @@ public class DyenamicRegistry
 
     public static void onEntityPlace(BlockEvent.EntityPlaceEvent event) {
         if (ModList.get().isLoaded("furnish")) {
-//            FurnishCompat.entityPlace(event);
+            FurnishCompat.entityPlace(event);
         }
     }
 

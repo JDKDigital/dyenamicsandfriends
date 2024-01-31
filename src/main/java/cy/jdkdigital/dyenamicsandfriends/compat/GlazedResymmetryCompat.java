@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import com.lethosos.glazedresymmetry.GlazedSlabBlock;
 //import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 //import net.minecraft.world.item.CreativeModeTab;

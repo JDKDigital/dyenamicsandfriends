@@ -1,6 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import cofh.dyenamics.common.items.DyenamicDyeItem;
+import cy.jdkdigital.dyenamics.common.items.DyenamicDyeItem;
 import cy.jdkdigital.productivebees.common.block.entity.CanvasBeehiveBlockEntity;
 import cy.jdkdigital.productivebees.common.block.entity.CanvasExpansionBoxBlockEntity;
 import net.minecraft.world.item.ItemStack;

@@ -1,6 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.client.render.comforts;
 
-import cofh.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import com.illusivesoulworks.comforts.client.renderer.SleepingBagBlockEntityRenderer;
 import com.illusivesoulworks.comforts.common.block.entity.BaseComfortsBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;

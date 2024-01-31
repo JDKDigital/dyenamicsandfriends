@@ -35,7 +35,7 @@ public class ClientSetup
 //    }
 
     @SubscribeEvent
-    public static void onModelBake(ModelEvent.BakingCompleted event) {
+    public static void onModelBake(ModelEvent.ModifyBakingResult event) {
         DyenamicRegistry.onModelBake(event);
     }
 }

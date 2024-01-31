@@ -81,6 +81,11 @@ public class DyenamicsAndFriends
         LOOT_SERIALIZERS.register(modEventBus);
         LOOT_POOL_ENTRIES.register(modEventBus);
         LOOT_POOL_CONDITIONS.register(modEventBus);
+
+//        Unable to load model: 'another_furniture:block/template/curtain_pole' referenced from: dyenamicsandfriends:another_furniture_peach_curtain#facing=north,horizontal=single,open=true,vertical=down,waterlogged=true: java.io.FileNotFoundException: another_furniture:models/block/template/curtain_pole.json
+//        Unable to load model: 'handcrafted:block/cushion/cushion' referenced from: dyenamicsandfriends:handcrafted_peach_cushion#: java.io.FileNotFoundException: handcrafted:models/block/cushion/cushion.json
+//        Unable to load model: 'furnish:block/curtain/parent/curtain_open' referenced from: dyenamicsandfriends:furnish_peach_curtain#down=true,facing=north,left=true,open=true,powered=true,right=true,up=true: java.io.FileNotFoundException: furnish:models/block/curtain/parent/curtain_open.json
+//        Unable to load model: 'furnish:block/curtain/parent/curtain' referenced from: dyenamicsandfriends:furnish_peach_curtain#down=true,facing=north,left=true,open=true,powered=true,right=true,up=true: java.io.FileNotFoundException: furnish:models/block/curtain/parent/curtain.json
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

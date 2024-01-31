@@ -1,8 +1,8 @@
 //package cy.jdkdigital.dyenamicsandfriends.common.block.chalk;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import cy.jdkdigital.dyenamicsandfriends.compat.ChalkCompat;
-//import io.github.mortuusars.chalk.blocks.ChalkMarkBlock;
+//import io.github.mortuusars.chalk.block.ChalkMarkBlock;
 //import net.minecraft.core.BlockPos;
 //import net.minecraft.core.Direction;
 //import net.minecraft.network.chat.MutableComponent;
@@ -14,6 +14,7 @@
 //import net.minecraft.world.level.BlockGetter;
 //import net.minecraft.world.level.Level;
 //import net.minecraft.world.level.block.Block;
+//import net.minecraft.world.level.block.state.BlockBehaviour;
 //import net.minecraft.world.level.block.state.BlockState;
 //import net.minecraft.world.level.material.FluidState;
 //import net.minecraft.world.phys.HitResult;
@@ -24,7 +25,7 @@
 //{
 //    private final DyenamicDyeColor color;
 //
-//    public DyenamicsChalkMarkBlock(DyenamicDyeColor dyeColor, Properties properties) {
+//    public DyenamicsChalkMarkBlock(DyenamicDyeColor dyeColor, BlockBehaviour.Properties properties) {
 //        super(dyeColor.getAnalogue(), properties);
 //        this.color = dyeColor;
 //    }

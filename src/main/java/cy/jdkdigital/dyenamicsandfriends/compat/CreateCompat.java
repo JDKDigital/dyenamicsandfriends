@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import com.simibubi.create.AllInteractionBehaviours;
 //import com.simibubi.create.AllMovementBehaviours;
 //import com.simibubi.create.content.contraptions.components.actors.SeatInteractionBehaviour;

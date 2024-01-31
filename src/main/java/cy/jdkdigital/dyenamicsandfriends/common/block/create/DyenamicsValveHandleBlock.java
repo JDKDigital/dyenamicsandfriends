@@ -1,6 +1,6 @@
 //package cy.jdkdigital.dyenamicsandfriends.common.block.create;
 //
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import com.simibubi.create.content.contraptions.components.crank.HandCrankBlock;
 //import com.simibubi.create.foundation.utility.BlockHelper;
 //import com.simibubi.create.foundation.utility.Couple;

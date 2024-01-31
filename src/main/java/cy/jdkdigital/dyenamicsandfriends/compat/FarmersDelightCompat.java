@@ -1,7 +1,7 @@
 //package cy.jdkdigital.dyenamicsandfriends.compat;
 //
-//import cofh.dyenamics.common.items.DyenamicDyeItem;
-//import cofh.dyenamics.core.util.DyenamicDyeColor;
+//import cy.jdkdigital.dyenamics.common.items.DyenamicDyeItem;
+//import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 //import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 //import cy.jdkdigital.dyenamicsandfriends.client.render.farmersdelight.DyenamicsCanvasSignRenderer;
 //import cy.jdkdigital.dyenamicsandfriends.common.block.entity.farmersdelight.DyenamicsCanvasSignBlockEntity;
