@@ -1,0 +1,6 @@
+{
+    "parent": "another_furniture:block/template/curtain_right_bottom",
+    "textures": {
+        "curtain": "dyenamicsandfriends:block/another_furniture/curtain/bubblegum_open_bottom"
+    }
+}

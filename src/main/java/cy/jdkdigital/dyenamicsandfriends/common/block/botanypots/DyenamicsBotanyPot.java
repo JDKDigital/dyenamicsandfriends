@@ -1,8 +1,11 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.botanypots;
 
 import net.darkhax.botanypots.block.BlockBotanyPot;
+import net.darkhax.botanypots.block.BlockEntityBotanyPot;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -23,5 +26,9 @@ public class DyenamicsBotanyPot extends BlockBotanyPot
 
     public Supplier<BlockEntityType<DyenamicsBlockEntityBotanyPot>> getBlockEntitySupplier() {
         return blockEntitySupplier;
+    }
+
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level worldLevel, BlockState state, BlockEntityType<T> blockEntityType) {
+        return createTickerHelper(blockEntityType, blockEntitySupplier.get(), BlockEntityBotanyPot::tickPot);
     }
 }

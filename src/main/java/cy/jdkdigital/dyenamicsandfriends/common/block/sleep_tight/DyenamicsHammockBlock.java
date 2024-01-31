@@ -21,7 +21,7 @@ public class DyenamicsHammockBlock extends HammockBlock
     private final Supplier<BlockEntityType<HammockTile>> blockEntitySupplier;
 
     public DyenamicsHammockBlock(DyenamicDyeColor color, Supplier<BlockEntityType<HammockTile>> blockEntitySupplier) {
-        super(color.getVanillaColor());
+        super(color.getAnalogue());
         this.color = color;
         this.blockEntitySupplier = blockEntitySupplier;
     }

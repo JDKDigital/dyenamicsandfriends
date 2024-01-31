@@ -1,7 +1,0 @@
-{
-  "parent": "another_furniture:block/template/lamp_tall_top_off",
-  "textures": {
-    "top": "dyenamicsandfriends:block/another_furniture/lamp/cherenkov_top",
-    "side": "dyenamicsandfriends:block/another_furniture/lamp/cherenkov_side"
-  }
-}

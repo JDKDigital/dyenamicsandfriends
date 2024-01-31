@@ -1,5 +1,6 @@
 {
   "parent": "another_furniture:block/template/sofa_right",
+  "render_type": "cutout",
   "textures": {
     "seat_top": "dyenamicsandfriends:block/another_furniture/sofa/aquamarine_seat_edge",
     "seat_front": "dyenamicsandfriends:block/another_furniture/sofa/aquamarine_seat_front",
