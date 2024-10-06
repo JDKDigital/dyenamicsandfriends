@@ -6,8 +6,8 @@
 1.20.1-1.8.0
 
 - Added compatibility with Sophisticated Backpacks so you can be extra fancy
-- Added Productive Bees petrified honey blocks in all colors
-- Fixed botany pot GUI in hopper pots
+- Added Productive Bees Petrified Honey Blocks in all colors
+- Fixed Botany Pot GUI in Hopper Pots
 
 
 1.20.1-1.7.0
