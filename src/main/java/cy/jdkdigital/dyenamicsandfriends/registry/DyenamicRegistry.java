@@ -16,6 +16,8 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 import javax.annotation.Nullable;
@@ -36,16 +38,17 @@ public class DyenamicRegistry
         add("furnish");
         add("regions_unexplored");
         add("sleep_tight");
+        add("sophisticatedbackpacks");
 //        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
 //        add("ceramics");
 //        add("chalk");
 //        add("clayworks");
-//        add("create");
+        add("create");
 //        add("farmersdelight");
 //        add("glazedresymmetry");
 //        add("oreganized");
 //        add("quark");
-//        add("the_bumblezone");
+        add("the_bumblezone");
 //        add("supplementaries");
 //        add("suppsquared");
     }};
@@ -62,7 +65,7 @@ public class DyenamicRegistry
             //
 
             if (ModList.get().isLoaded("create")) {
-//                CreateCompat.registerBlocks(color);
+                CreateCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("createdeco")) {
                 // decal item
@@ -79,6 +82,9 @@ public class DyenamicRegistry
             }
             if (ModList.get().isLoaded("elevatorid")) {
                 ElevatoridCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("productivebees")) {
+                ProductiveBeesCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("farmersdelight")) {
 //                FarmersDelightCompat.registerBlocks(color);
@@ -149,7 +155,7 @@ public class DyenamicRegistry
 //                ClayworksCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("the_bumblezone")) {
-//                BumblezoneCompat.registerBlocks(color);
+                BumblezoneCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("sleep_tight")) {
                 SleepTightCompat.registerBlocks(color);
@@ -157,6 +163,18 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("connectedglass")) {
                 ConnectedGlassCompat.registerBlocks(color);
             }
+        }
+
+        if (ModList.get().isLoaded("ae2")) {
+//            Ae2Compat.postRegister(); // doesn't work
+        }
+
+        if (ModList.get().isLoaded("create")) {
+            CreateCompat.postRegister();
+        }
+
+        if (ModList.get().isLoaded("sophisticatedbackpacks")) {
+            SophisticatedBackpacksCompat.postRegister();
         }
     }
 
@@ -197,6 +215,9 @@ public class DyenamicRegistry
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
+        }
+        if (ModList.get().isLoaded("create")) {
+            CreateCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.Client.registerBlockEntityRenderers(event);
@@ -279,9 +300,18 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("farmersdelight")) {
 //            FarmersDelightCompat.playerRightClick(event);
         }
+        if (ModList.get().isLoaded("create")) {
+            CreateCompat.playerRightClick(event);
+        }
     }
 
     public static Block getDyenamicsBlock(DyenamicDyeColor color, String block) {
         return BlockInit.DYED_BLOCKS.get(color.getSerializedName()).get(block).get();
+    }
+
+    public static void onCommonSetup(FMLCommonSetupEvent event) {
+        if (ModList.get().isLoaded("ae2")) {
+//            Ae2Compat.commonSetup(event);
+        }
     }
 }

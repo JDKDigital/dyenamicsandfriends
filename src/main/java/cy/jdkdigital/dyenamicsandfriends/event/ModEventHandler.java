@@ -2,17 +2,29 @@ package cy.jdkdigital.dyenamicsandfriends.event;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
+import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = DyenamicsAndFriends.MODID)
 public class ModEventHandler
 {
     @SubscribeEvent
+    public static void init(final FMLCommonSetupEvent event) {
+        DyenamicRegistry.onCommonSetup(event);
+    }
+
+    @SubscribeEvent
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
+        if (ModList.get().isLoaded("ae2")) {
+//            Ae2Compat.buildTabContents(event);
+        }
         if (ModList.get().isLoaded("create")) {
+            CreateCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("another_furniture")) {
             AnotherFurnitureCompat.buildTabContents(event);
@@ -25,6 +37,9 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.buildTabContents(event);
+        }
+        if (ModList.get().isLoaded("productivebees")) {
+            ProductiveBeesCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("farmersdelight")) {
         }
@@ -55,6 +70,7 @@ public class ModEventHandler
         if (ModList.get().isLoaded("clayworks")) {
         }
         if (ModList.get().isLoaded("the_bumblezone")) {
+            BumblezoneCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("sleep_tight")) {
             SleepTightCompat.buildTabContents(event);

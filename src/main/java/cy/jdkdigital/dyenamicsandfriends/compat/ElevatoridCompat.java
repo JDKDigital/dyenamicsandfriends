@@ -31,7 +31,7 @@ public class ElevatoridCompat
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
         var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("elevatorid:elevators_tab"));
         if (event.getTabKey().equals(key)) {
-            ELEVATORS.forEach((dyenamicDyeColor, registryObject) -> {event.accept(registryObject);});
+            ELEVATORS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject));
         }
     }
 

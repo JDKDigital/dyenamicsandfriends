@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "forge:dyes/maroon"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:productivebees_maroon_petrified_honey"
+  }
+}

@@ -11,28 +11,13 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 @Mod.EventBusSubscriber(modid = DyenamicsAndFriends.MODID)
 public class EventHandler
 {
-    @SubscribeEvent
-    public static void entityRightClicked(PlayerInteractEvent.RightClickBlock event) {
-        ItemStack itemStack = event.getItemStack();
-
-        if (event.getLevel() instanceof ServerLevel level) {
-            if (!itemStack.isEmpty() && itemStack.getItem() instanceof DyenamicDyeItem) {
-                BlockState state = level.getBlockState(event.getPos());
-
-//                var blockKey = ForgeRegistries.BLOCKS.getKey(state.getBlock());
-//                if (blockKey != null && blockKey.getNamespace().equals("create") && blockKey.getPath().contains("sail")) {
-//                    DyenamicsSailBlock.applyDye(state, level, event.getPos(), event.getHitVec().getLocation(), DyenamicDyeColor.getColor(itemStack));
-//                    event.getEntity().swing(event.getHand());
-//                }
-            }
-        }
-    }
-
     @SubscribeEvent
     public static void blockInteract(PlayerInteractEvent event) {
         if (!event.getLevel().isClientSide()) {

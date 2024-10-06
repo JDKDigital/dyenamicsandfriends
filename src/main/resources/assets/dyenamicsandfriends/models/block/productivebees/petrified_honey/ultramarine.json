@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/honey_block",
+  "render_type": "translucent",
+  "textures": {
+    "down": "dyenamicsandfriends:block/productivebees/petrified_honey/ultramarine_bottom",
+    "particle": "dyenamicsandfriends:block/productivebees/petrified_honey/ultramarine_top",
+    "side": "dyenamicsandfriends:block/productivebees/petrified_honey/ultramarine_side",
+    "up": "dyenamicsandfriends:block/productivebees/petrified_honey/ultramarine_top"
+  }
+}

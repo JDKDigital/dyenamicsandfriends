@@ -59,6 +59,7 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
             add("block.dyenamicsandfriends.oreganized_" + color.getSerializedName() + "_crystal_glass", colorName + " Crystal Glass");
             add("block.dyenamicsandfriends.oreganized_" + color.getSerializedName() + "_crystal_glass_pane", colorName + " Crystal Glass Pane");
             add("block.dyenamicsandfriends.oreganized_" + color.getSerializedName() + "_waxed_concrete_powder", "Waxed " + colorName + " Concrete Powder");
+            add("block.dyenamicsandfriends.productivebees_" + color.getSerializedName() + "_petrified_honey", colorName + " Petrified Honey");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain", colorName + " Porcelain");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_terracotta_cistern", colorName + " Terracotta Cistern");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain_cistern", colorName + " Porcelain Cistern");

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "forge:dyes/cherenkov"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:productivebees_cherenkov_petrified_honey"
+  }
+}

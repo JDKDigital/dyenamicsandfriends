@@ -9,4 +9,9 @@ public class DyenamicsBlockEntityBotanyPot extends BlockEntityBotanyPot
     public DyenamicsBlockEntityBotanyPot(DyenamicsBotanyPot block, BlockPos pPos, BlockState pBlockState) {
         super(block.getBlockEntitySupplier().get(), pPos, pBlockState);
     }
+
+    @Override
+    public boolean isHopper() {
+        return super.isHopper();
+    }
 }

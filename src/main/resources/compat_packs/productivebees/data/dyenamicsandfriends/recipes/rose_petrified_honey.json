@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "forge:dyes/rose"
+    }
+  ],
+  "result": {
+    "item": "dyenamicsandfriends:productivebees_rose_petrified_honey"
+  }
+}

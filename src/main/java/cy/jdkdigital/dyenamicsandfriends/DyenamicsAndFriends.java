@@ -2,6 +2,7 @@ package cy.jdkdigital.dyenamicsandfriends;
 
 import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Codec;
+import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import cy.jdkdigital.dyenamicsandfriends.loot.OptionalLootItem;
 import cy.jdkdigital.dyenamicsandfriends.loot.condition.ModLoadedCondition;
 import cy.jdkdigital.dyenamicsandfriends.loot.condition.OptionalLootItemBlockStatePropertyCondition;
@@ -90,7 +91,7 @@ public class DyenamicsAndFriends
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         if (ModList.get().isLoaded("create")) {
-//            CreateCompat.setup(event);
+            CreateCompat.setup(event);
         }
     }
 

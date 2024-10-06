@@ -1,0 +1,6 @@
+{
+  "parent": "ae2:item/smart_dense_cable_base",
+  "textures": {
+    "base": "dyenamicsandfriends:item/ae2/part/cable/smart_dense/bubblegum"
+  }
+}
