@@ -1,10 +1,10 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.create;
 
 import com.simibubi.create.content.contraptions.bearing.SailBlock;
-import com.simibubi.create.foundation.placement.IPlacementHelper;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import com.simibubi.create.foundation.utility.BlockHelper;
-import com.simibubi.create.foundation.utility.Iterate;
+import net.createmod.catnip.data.Iterate;
+import net.createmod.catnip.placement.IPlacementHelper;
 import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

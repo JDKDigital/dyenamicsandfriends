@@ -1,13 +1,9 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import com.simibubi.create.AllInteractionBehaviours;
-import com.simibubi.create.AllMovementBehaviours;
-import com.simibubi.create.content.contraptions.actors.seat.SeatInteractionBehaviour;
-import com.simibubi.create.content.contraptions.actors.seat.SeatMovementBehaviour;
+import com.simibubi.create.content.contraptions.actors.seat.SeatBlock;
 import cy.jdkdigital.dyenamics.common.items.DyenamicDyeItem;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.create.DyenamicsSailBlock;
-import cy.jdkdigital.dyenamicsandfriends.common.block.create.DyenamicsSeatBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -33,16 +29,18 @@ public class CreateCompat
 {
     public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> SEATS = new HashMap<>();
     public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> SAILS = new HashMap<>();
+    public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> MAILBOXES = new HashMap<>();
+    public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> TABLE_CLOTHS = new HashMap<>();
 
     public static void registerBlocks(DyenamicDyeColor color) {
-        SEATS.put(color, DyenamicRegistry.registerBlock("create_" + color.getSerializedName() + "_seat", () -> new DyenamicsSeatBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).mapColor(color.getMapColor()).lightLevel(state -> color.getLightValue()), color), true));
+        SEATS.put(color, DyenamicRegistry.registerBlock("create_" + color.getSerializedName() + "_seat", () -> new SeatBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).mapColor(color.getMapColor()).lightLevel(state -> color.getLightValue()), color.getAnalogue()), true));
         SAILS.put(color, DyenamicRegistry.registerBlock("create_" + color.getSerializedName() + "_sail", () -> new DyenamicsSailBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_WOOD).mapColor(color.getMapColor()).lightLevel(state -> color.getLightValue()).sound(SoundType.SCAFFOLDING).noOcclusion(), color), false));
     }
 
     public static void setup(FMLCommonSetupEvent event) {
         SEATS.forEach((color, seat) -> {
-            AllInteractionBehaviours.registerBehaviour(seat.get(), new SeatInteractionBehaviour());
-            AllMovementBehaviours.registerBehaviour(seat.get(), new SeatMovementBehaviour());
+//            AllInteractionBehaviours.registerBehaviour(seat.get(), new SeatInteractionBehaviour());
+//            AllMovementBehaviours.registerBehaviour(seat.get(), new SeatMovementBehaviour());
         });
     }
 
@@ -77,7 +75,6 @@ public class CreateCompat
 
     public static class Client
     {
-        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        }
+        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {}
     }
 }

@@ -123,6 +123,7 @@ repositories {
     flatDir {
         dir 'libs'
     }
+    maven { url = "https://maven.createmod.net" } // Ponder, Flywheel
 }
 
 dependencies {
@@ -166,15 +167,21 @@ dependencies {
     implementation fg.deobf("curse.maven:sleep-tight-817564:5085863")
     implementation fg.deobf("curse.maven:regions-unexplored-659110:5558225")
     implementation fg.deobf("curse.maven:handcrafted-538214:5118729")
-    implementation fg.deobf("curse.maven:another-furniture-610492:4815124")
+    implementation fg.deobf("curse.maven:another-furniture-610492:6276829")
 
     implementation fg.deobf("curse.maven:fusion-connected-textures-854949:5129294")
     implementation fg.deobf("curse.maven:supermartijn642s-core-lib-454372:5668859")
     implementation fg.deobf("curse.maven:connected-glass-383129:5656978")
 
     implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:5757424")
-//    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-1.20.1:0.6.10-7")
-    implementation fg.deobf("curse.maven:create-328085:5689514")
+
+//    implementation fg.deobf("curse.maven:create-328085:6323270")
+    implementation(fg.deobf("com.simibubi.create:create-${mc_version}:${create_version}:slim") { transitive = false })
+    implementation(fg.deobf("net.createmod.ponder:Ponder-Forge-${mc_version}:${ponder_version}"))
+    compileOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-api-${mc_version}:${flywheel_version}"))
+    runtimeOnly(fg.deobf("dev.engine-room.flywheel:flywheel-forge-${mc_version}:${flywheel_version}"))
+    implementation(fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}"))
+
     implementation fg.deobf("curse.maven:applied-energistics-2-223794:5641282")
     implementation fg.deobf("curse.maven:sophisticated-core-618298:5769200")
     implementation fg.deobf("curse.maven:sophisticated-backpacks-422301:5787630")
