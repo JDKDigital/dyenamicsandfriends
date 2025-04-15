@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "stools",
+  "ingredients": [
+    {
+      "tag": "c:dyes/spring_green"
+    },
+    {
+      "item": "another_furniture:white_stool"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:another_furniture_spring_green_stool"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "another_furniture"
+    }
+  ]
+}

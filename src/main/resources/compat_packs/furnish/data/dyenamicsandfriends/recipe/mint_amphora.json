@@ -1,0 +1,16 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:mint_terracotta"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:furnish_mint_amphora",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
+}

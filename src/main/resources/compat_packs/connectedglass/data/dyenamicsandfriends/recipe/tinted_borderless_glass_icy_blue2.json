@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "connectedglass:tinted_borderless_glass"
+    },
+    "B": {
+      "tag": "c:dyes/icy_blue"
+    }
+  },
+  "result": {
+    "id": "dyenamicsandfriends:connectedglass_tinted_borderless_glass_icy_blue",
+    "count": 8
+  }
+}

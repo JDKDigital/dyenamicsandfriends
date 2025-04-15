@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "the_bumblezone",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:super_candle"
+    },
+    {
+      "tag": "c:dyes/spring_green"
+    },
+    {
+      "tag": "c:dyes/spring_green"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:bumblezone_spring_green_super_candle_base"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ]
+}

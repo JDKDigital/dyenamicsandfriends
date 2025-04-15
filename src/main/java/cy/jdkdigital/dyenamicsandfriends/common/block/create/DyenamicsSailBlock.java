@@ -1,17 +1,18 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.create;
 
 import com.simibubi.create.content.contraptions.bearing.SailBlock;
-import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import com.simibubi.create.foundation.utility.BlockHelper;
+import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import net.createmod.catnip.data.Iterate;
 import net.createmod.catnip.placement.IPlacementHelper;
-import cy.jdkdigital.dyenamicsandfriends.compat.CreateCompat;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -35,45 +36,48 @@ public class DyenamicsSailBlock extends SailBlock
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult ray) {
-        ItemStack heldItem = player.getItemInHand(hand);
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        if (frame)
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
 
-        DyenamicDyeColor color = DyenamicDyeColor.getColor(heldItem);
+        DyenamicDyeColor color = DyenamicDyeColor.getColor(stack);
         if (color != null && color.getId() > 15) {
             if (!level.isClientSide) {
-                applyDye(state, level, pos, ray.getLocation(), color);
+                level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1.0f, 1.1f - level.random.nextFloat() * .2f);
             }
-            return InteractionResult.SUCCESS;
+            applyDye(state, level, pos, hitResult.getLocation(), color);
+            return ItemInteractionResult.SUCCESS;
         }
 
-        return super.use(state, level, pos, player, hand, ray);
+        return super.useItemOn(stack, state, level, pos, player, hand, hitResult);
     }
 
-    public static void applyDye(BlockState state, Level world, BlockPos pos, Vec3 hit, DyenamicDyeColor color) {
+    public static void applyDye(BlockState state, Level level, BlockPos pos, Vec3 hit, DyenamicDyeColor color) {
         BlockState newState = CreateCompat.SAILS.get(color).get().defaultBlockState();
-        // https://github.com/Creators-of-Create/Create/blob/mc1.20.1/dev/src/main/java/com/simibubi/create/content/contraptions/bearing/SailBlock.java#L110C3-L167C4
         newState = BlockHelper.copyProperties(state, newState);
 
         // Dye the block itself
         if (state != newState) {
-            world.setBlockAndUpdate(pos, newState);
+            level.setBlockAndUpdate(pos, newState);
             return;
         }
 
         // Dye all adjacent
-        List<Direction> directions = IPlacementHelper.orderedByDistanceExceptAxis(pos, hit, state.getValue(FACING)
-                .getAxis());
+        List<Direction> directions = IPlacementHelper.orderedByDistanceExceptAxis(pos, hit, state.getValue(FACING).getAxis());
         for (Direction d : directions) {
             BlockPos offset = pos.relative(d);
-            BlockState adjacentState = world.getBlockState(offset);
+            BlockState adjacentState = level.getBlockState(offset);
             Block block = adjacentState.getBlock();
-            if (!(block instanceof DyenamicsSailBlock) || ((DyenamicsSailBlock) block).frame)
+            if (!(block instanceof SailBlock) || ((SailBlock) block).isFrame()) {
                 continue;
-            if (state.getValue(FACING) != adjacentState.getValue(FACING))
+            }
+            if (state.getValue(FACING) != adjacentState.getValue(FACING)) {
                 continue;
-            if (state == adjacentState)
+            }
+            if (state == adjacentState) {
                 continue;
-            world.setBlockAndUpdate(offset, newState);
+            }
+            level.setBlockAndUpdate(offset, newState);
             return;
         }
 
@@ -86,23 +90,28 @@ public class DyenamicsSailBlock extends SailBlock
             if (timeout-- < 0)
                 break;
 
-            BlockPos currentPos = frontier.remove(0);
+            BlockPos currentPos = frontier.removeFirst();
             visited.add(currentPos);
 
             for (Direction d : Iterate.directions) {
-                if (d.getAxis() == state.getValue(FACING).getAxis())
+                if (d.getAxis() == state.getValue(FACING).getAxis()) {
                     continue;
+                }
                 BlockPos offset = currentPos.relative(d);
-                if (visited.contains(offset))
+                if (visited.contains(offset)) {
                     continue;
-                BlockState adjacentState = world.getBlockState(offset);
+                }
+                BlockState adjacentState = level.getBlockState(offset);
                 Block block = adjacentState.getBlock();
-                if (!(block instanceof DyenamicsSailBlock) || ((DyenamicsSailBlock) block).frame && color != null)
+                if (!(block instanceof SailBlock) || ((SailBlock) block).isFrame() && color != null) {
                     continue;
-                if (adjacentState.getValue(FACING) != state.getValue(FACING))
+                }
+                if (adjacentState.getValue(FACING) != state.getValue(FACING)) {
                     continue;
-                if (state != adjacentState)
-                    world.setBlockAndUpdate(offset, newState);
+                }
+                if (state != adjacentState) {
+                    level.setBlockAndUpdate(offset, newState);
+                }
                 frontier.add(offset);
                 visited.add(offset);
             }

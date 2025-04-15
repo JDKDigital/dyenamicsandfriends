@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "curtains",
+  "ingredients": [
+    {
+      "tag": "c:dyes/cherenkov"
+    },
+    {
+      "item": "another_furniture:white_curtain"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:another_furniture_cherenkov_curtain"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "another_furniture"
+    }
+  ]
+}

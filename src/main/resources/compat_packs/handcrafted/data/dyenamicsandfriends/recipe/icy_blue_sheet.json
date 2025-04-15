@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sheet",
+  "key": {
+    "#": {
+      "item": "dyenamics:icy_blue_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "   "
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_icy_blue_sheet",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

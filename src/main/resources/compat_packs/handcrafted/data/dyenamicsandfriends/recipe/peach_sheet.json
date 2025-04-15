@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sheet",
+  "key": {
+    "#": {
+      "item": "dyenamics:peach_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "   "
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_peach_sheet",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

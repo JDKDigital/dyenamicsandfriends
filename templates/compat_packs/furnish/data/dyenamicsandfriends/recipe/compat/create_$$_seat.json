@@ -1,0 +1,20 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:$$_wool"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:create_$$_seat",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
+}

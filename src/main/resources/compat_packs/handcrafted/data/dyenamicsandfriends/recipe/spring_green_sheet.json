@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sheet",
+  "key": {
+    "#": {
+      "item": "dyenamics:spring_green_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "   "
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_spring_green_sheet",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

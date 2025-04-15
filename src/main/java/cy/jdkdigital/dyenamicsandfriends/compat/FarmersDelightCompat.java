@@ -29,8 +29,8 @@
 //
 //public class FarmersDelightCompat
 //{
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CANVAS_SIGNS = new HashMap<>();
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CANVAS_WALL_SIGNS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CANVAS_SIGNS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CANVAS_WALL_SIGNS = new HashMap<>();
 //
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "farmersdelight_" + color.getSerializedName();
@@ -77,7 +77,7 @@
 //        if (event.getAtlas().location() == Sheets.SIGN_SHEET) {
 //            for (final DyenamicDyeColor color : DyenamicDyeColor.values()) {
 //                if (color.getId() > 15) {
-//                    event.addSprite(new ResourceLocation(DyenamicsAndFriends.MODID, "entity/farmersdelight/canvas_" + color.getSerializedName()));
+//                    event.addSprite(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "entity/farmersdelight/canvas_" + color.getSerializedName()));
 //                }
 //            }
 //        }

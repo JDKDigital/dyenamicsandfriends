@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elevatorsRedye",
+  "ingredients": [
+    {
+      "tag": "elevatorid:elevators"
+    },
+    {
+      "tag": "c:dyes/mint"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:elevatorid_mint_elevator"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "elevatorid"
+    }
+  ]
+}

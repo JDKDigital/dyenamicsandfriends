@@ -9,16 +9,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.ModelEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.level.BlockEvent;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -31,15 +30,16 @@ public class DyenamicRegistry
     {{
         add("another_furniture");
         add("productivebees");
+        add("productivemetalworks");
         add("connectedglass");
-        add("botanypots");
+//        add("botanypots");
         add("comforts");
         add("elevatorid");
         add("furnish");
         add("regions_unexplored");
         add("sleep_tight");
         add("sophisticatedbackpacks");
-//        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
+        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
 //        add("ceramics");
 //        add("chalk");
 //        add("clayworks");
@@ -60,10 +60,9 @@ public class DyenamicRegistry
     public static void registerCompatBlocks() {
         DyenamicsAndFriends.LOGGER.info("registerCompatBlocks");
         for (DyenamicDyeColor color : DyenamicDyeColor.dyenamicValues()) {
-            // Vanilla
-            // - banners
-            //
-
+            if (ModList.get().isLoaded("productivemetalworks")) {
+                // TODO controller, tank, fire brick, window, drain
+            }
             if (ModList.get().isLoaded("create")) {
                 CreateCompat.registerBlocks(color);
             }
@@ -75,7 +74,7 @@ public class DyenamicRegistry
                 AnotherFurnitureCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("botanypots")) {
-                BotanyPotsCompat.registerBlocks(color);
+//                BotanyPotsCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("comforts")) {
                 ComfortsCompat.registerBlocks(color);
@@ -85,6 +84,9 @@ public class DyenamicRegistry
             }
             if (ModList.get().isLoaded("productivebees")) {
                 ProductiveBeesCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("productivemetalworks")) {
+                ProductiveMetalworksCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("farmersdelight")) {
 //                FarmersDelightCompat.registerBlocks(color);
@@ -116,8 +118,8 @@ public class DyenamicRegistry
 //                QuarkCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("handcrafted")) {
-//                HandcraftedCompat.registerBlocks(color);
-//                HandcraftedCompat.registerItems(color);
+                HandcraftedCompat.registerBlocks(color);
+                HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
                 FurnishCompat.registerBlocks(color);
@@ -158,15 +160,20 @@ public class DyenamicRegistry
                 BumblezoneCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("sleep_tight")) {
-                SleepTightCompat.registerBlocks(color);
+//                SleepTightCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("connectedglass")) {
                 ConnectedGlassCompat.registerBlocks(color);
             }
-        }
-
-        if (ModList.get().isLoaded("ae2")) {
-//            Ae2Compat.postRegister(); // doesn't work
+            if (ModList.get().isLoaded("crystalix")) {
+                // TODO glass, clear glass, bordered glass
+            }
+            if (ModList.get().isLoaded("luminax")) {
+                // TODO block, stairs, slab, wall, pressure plate, button, dim
+            }
+            if (ModList.get().isLoaded("cookingforblockheads")) {
+                // TODO oven, fridge, connector, kitchen_floor, cooking_table, counter, cabinet, sink
+            }
         }
 
         if (ModList.get().isLoaded("create")) {
@@ -184,7 +191,7 @@ public class DyenamicRegistry
         }
     }
 
-    public static RegistryObject<? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {
+    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {
         var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
         if (registerItem) {
             registerItem(name, () -> new BlockItem(block.get(), new Item.Properties()));
@@ -192,7 +199,7 @@ public class DyenamicRegistry
         return block;
     }
 
-    public static RegistryObject<? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, @Nullable Supplier<Item> itemSupplier) {
+    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, @Nullable Supplier<Item> itemSupplier) {
         var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
         if (itemSupplier != null) {
             registerItem(name, itemSupplier);
@@ -200,7 +207,7 @@ public class DyenamicRegistry
         return block;
     }
 
-    public static RegistryObject<? extends Item> registerItem(final String name, @Nullable Supplier<Item> itemSupplier) {
+    public static DeferredHolder<Item, ? extends Item> registerItem(final String name, @Nullable Supplier<Item> itemSupplier) {
         return DyenamicsAndFriends.ITEMS.register(name, itemSupplier);
     }
 
@@ -214,7 +221,7 @@ public class DyenamicRegistry
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("botanypots")) {
-            BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
+//            BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("create")) {
             CreateCompat.Client.registerBlockEntityRenderers(event);
@@ -232,7 +239,7 @@ public class DyenamicRegistry
 //            CeramicsCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("sleep_tight")) {
-            SleepTightCompat.Client.registerBlockEntityRenderers(event);
+//            SleepTightCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("supplementaries")) {
 //            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
@@ -281,12 +288,6 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.bakeModel(event);
-        }
-    }
-
-    public static void onBlockInteract(PlayerInteractEvent event) {
-        if (ModList.get().isLoaded("productivebees")) {
-            ProductiveBeesCompat.blockInteract(event);
         }
     }
 

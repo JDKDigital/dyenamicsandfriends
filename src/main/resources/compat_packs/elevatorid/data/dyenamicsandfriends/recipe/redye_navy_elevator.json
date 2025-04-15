@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elevatorsRedye",
+  "ingredients": [
+    {
+      "tag": "elevatorid:elevators"
+    },
+    {
+      "tag": "c:dyes/navy"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:elevatorid_navy_elevator"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "elevatorid"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elevatorsRedye",
+  "ingredients": [
+    {
+      "tag": "elevatorid:elevators"
+    },
+    {
+      "tag": "c:dyes/rose"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:elevatorid_rose_elevator"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "elevatorid"
+    }
+  ]
+}

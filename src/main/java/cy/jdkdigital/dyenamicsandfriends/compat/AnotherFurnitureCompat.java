@@ -7,20 +7,19 @@ import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AnotherFurnitureCompat
 {
-    public static final List<RegistryObject<? extends Block>> BLOCKS = new ArrayList<>();
+    public static final List<DeferredHolder<Block, ? extends Block>> BLOCKS = new ArrayList<>();
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "another_furniture_" + color.getSerializedName();
@@ -32,9 +31,9 @@ public class AnotherFurnitureCompat
     }
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
-        var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("another_furniture:another_furniture"));
+        var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.parse("another_furniture:another_furniture"));
         if (event.getTabKey().equals(key)) {
-            BLOCKS.forEach(event::accept);
+            BLOCKS.forEach(holder -> event.accept(holder.get()));
         }
     }
 }

@@ -23,8 +23,8 @@
 //
 //public class SupplementariesSquaredCompat
 //{
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CANDLE_HOLDERS = new HashMap<>();
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> SACKS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CANDLE_HOLDERS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> SACKS = new HashMap<>();
 //
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "suppsquared_" + color.getSerializedName();

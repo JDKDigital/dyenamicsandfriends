@@ -13,20 +13,20 @@ import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class HandcraftedCompat
 {
-    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CUSHIONS = new HashMap<>();
-    private static final Map<DyenamicDyeColor, RegistryObject<? extends Item>> SHEETS = new HashMap<>();
+    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CUSHIONS = new HashMap<>();
+    private static final Map<DyenamicDyeColor, DeferredHolder<Item, ? extends Item>> SHEETS = new HashMap<>();
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "handcrafted_" + color.getSerializedName();
-        CUSHIONS.put(color, DyenamicRegistry.registerBlock(prefix + "_cushion", () -> new CushionBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL).lightLevel(state -> color.getLightValue())), () -> new ItemNameBlockItem(CUSHIONS.get(color).get(), new Item.Properties())));
+        CUSHIONS.put(color, DyenamicRegistry.registerBlock(prefix + "_cushion", () -> new CushionBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL).lightLevel(state -> color.getLightValue())), () -> new ItemNameBlockItem(CUSHIONS.get(color).get(), new Item.Properties())));
     }
 
     public static void registerItems(DyenamicDyeColor color) {
@@ -35,10 +35,10 @@ public class HandcraftedCompat
     }
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
-        var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("handcrafted:main"));
+        var key = ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.parse("handcrafted:main"));
         if (event.getTabKey().equals(key)) {
-            CUSHIONS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject));
-            SHEETS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject));
+            CUSHIONS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
+            SHEETS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
         }
     }
 }

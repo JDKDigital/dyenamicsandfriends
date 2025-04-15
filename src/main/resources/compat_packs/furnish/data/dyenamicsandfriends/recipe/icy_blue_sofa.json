@@ -1,0 +1,16 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:icy_blue_wool"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:furnish_icy_blue_sofa",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
+}

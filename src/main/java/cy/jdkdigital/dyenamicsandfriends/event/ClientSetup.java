@@ -2,20 +2,20 @@ package cy.jdkdigital.dyenamicsandfriends.event;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers;
-import net.minecraftforge.client.event.ModelEvent;
-import net.minecraftforge.client.event.RegisterColorHandlersEvent;
-import net.minecraftforge.client.event.TextureStitchEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.ModelEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 
-@Mod.EventBusSubscriber(modid = DyenamicsAndFriends.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = DyenamicsAndFriends.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientSetup
 {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event) {
+        DyenamicRegistry.clientRegister();
         DyenamicRegistry.registerBlockRendering(event);
     }
     
@@ -25,7 +25,7 @@ public class ClientSetup
     }
 
     @SubscribeEvent
-    public static void registerEntityRenderers(RegisterRenderers event) {
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         DyenamicRegistry.registerBlockEntityRenderers(event);
     }
 

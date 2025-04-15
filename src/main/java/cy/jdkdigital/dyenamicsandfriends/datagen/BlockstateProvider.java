@@ -2,27 +2,21 @@ package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import com.google.common.collect.Maps;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
-import com.supermartijn642.connectedglass.CGGlassType;
-import com.supermartijn642.fusion.api.predicate.ConnectionPredicate;
-import com.supermartijn642.fusion.api.predicate.DefaultConnectionPredicates;
-import com.supermartijn642.fusion.predicate.IsSameBlockConnectionPredicate;
-import com.supermartijn642.fusion.predicate.OrConnectionPredicate;
-import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.models.blockstates.*;
+import net.minecraft.data.models.blockstates.BlockStateGenerator;
 import net.minecraft.data.models.model.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.registries.ForgeRegistries;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -66,7 +60,7 @@ public class BlockstateProvider implements DataProvider
 
         List<CompletableFuture<?>> output = new ArrayList<>();
         blockModels.forEach((block, supplier) -> {
-            output.add(DataProvider.saveStable(cache, supplier.get(), blockstatePathProvider.json(ForgeRegistries.BLOCKS.getKey(block))));
+            output.add(DataProvider.saveStable(cache, supplier.get(), blockstatePathProvider.json(BuiltInRegistries.BLOCK.getKey(block))));
         });
         itemModels.forEach((rLoc, supplier) -> {
             output.add(DataProvider.saveStable(cache, supplier.get(), modelPathProvider.json(rLoc)));
@@ -84,7 +78,7 @@ public class BlockstateProvider implements DataProvider
     }
 
     private static TextureMapping getFlatItemTextureMap(Item item, String prefix, String suffix) {
-        ResourceLocation resourcelocation = ForgeRegistries.ITEMS.getKey(item);
+        ResourceLocation resourcelocation = BuiltInRegistries.ITEM.getKey(item);
         return (new TextureMapping()).put(TextureSlot.LAYER0, resourcelocation.withPrefix(prefix).withSuffix(suffix));
     }
 
@@ -100,15 +94,15 @@ public class BlockstateProvider implements DataProvider
     private void addBlockItemModel(Block block, String base, Map<ResourceLocation, Supplier<JsonElement>> itemModels) {
         Item item = Item.BY_BLOCK.get(block);
         if (item != null) {
-            addItemModel(item, new DelegatedModel(new ResourceLocation(DyenamicsAndFriends.MODID, "block/" + base)), itemModels);
+            addItemModel(item, new DelegatedModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/" + base)), itemModels);
         }
     }
 
     private void addBlockItemParentModel(Block block, String prefix, Map<ResourceLocation, Supplier<JsonElement>> itemModels) {
         Item item = Item.BY_BLOCK.get(block);
         if (item != null) {
-            var rl = ForgeRegistries.BLOCKS.getKey(block);
-            addItemModel(item, new DelegatedModel(new ResourceLocation(rl.getNamespace(), "block/" + prefix + rl.getPath())), itemModels);
+            var rl = BuiltInRegistries.BLOCK.getKey(block);
+            addItemModel(item, new DelegatedModel(ResourceLocation.fromNamespaceAndPath(rl.getNamespace(), "block/" + prefix + rl.getPath())), itemModels);
         }
     }
 

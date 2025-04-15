@@ -1,0 +1,16 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:wine_wool"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:furnish_wine_sofa",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
+}

@@ -1,22 +1,13 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.entity.furnish;
 
-import cy.jdkdigital.dyenamicsandfriends.common.block.furnish.DyenamicsPlate;
-import io.github.wouink.furnish.block.blockentity.PlateBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.compat.FurnishCompat;
+import io.github.wouink.furnish.block.blockentity.StackHoldingBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class DyenamicsPlateBlockEntity extends PlateBlockEntity
+public class DyenamicsPlateBlockEntity extends StackHoldingBlockEntity
 {
-    private final DyenamicsPlate plate;
-
-    public DyenamicsPlateBlockEntity(BlockPos pos, BlockState state, DyenamicsPlate plate) {
-        super(pos, state);
-        this.plate = plate;
-    }
-
-    @Override
-    public BlockEntityType<?> getType() {
-        return plate != null ? plate.getBlockEntitySupplier().get() : null;
+    public DyenamicsPlateBlockEntity(BlockPos pos, BlockState state) {
+        super(FurnishCompat.PLATE_BLOCK_ENTITY.get(), pos, state);
     }
 }

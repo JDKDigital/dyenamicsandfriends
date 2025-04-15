@@ -150,6 +150,6 @@
 //    }
 //
 //    private static Material getSignMaterial(DyenamicDyeColor dyeType) {
-//        return new Material(Sheets.SIGN_SHEET, new ResourceLocation(DyenamicsAndFriends.MODID, "entity/farmersdelight/canvas_" + dyeType.getSerializedName()));
+//        return new Material(Sheets.SIGN_SHEET, ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "entity/farmersdelight/canvas_" + dyeType.getSerializedName()));
 //    }
 //}

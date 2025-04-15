@@ -24,6 +24,27 @@ colors = {
     "conifer": "#BADA55"
 }
 
+variants = {
+    "peach": "updown",
+    "aquamarine": "normal",
+    "fluorescent": "tile",
+    "mint": "thick",
+    "maroon": "updown",
+    "bubblegum": "thick",
+    "lavender": "big",
+    "persimmon": "tile",
+    "cherenkov": "thick",
+    "amber": "updown",
+    "honey": "normal",
+    "ultramarine": "thick",
+    "spring_green": "diagonal",
+    "rose": "tile",
+    "navy": "normal",
+    "icy_blue": "tile",
+    "wine": "big",
+    "conifer": "big"
+}
+
 def genTextures():
     for path, subdirs, files in os.walk('templates'):
         for name in files:
@@ -33,6 +54,11 @@ def genTextures():
             print("F:" + filename)
             for color in colors:
                 resFile = filename.replace("$$", color).replace("templates\\", "src\\main\\resources\\")
+
+                if "metalworks" in filename:
+                    if (variants[color] not in filename):
+                        continue
+                    resFile = resFile.replace(variants[color], "").replace("//", "/")
 
                 image = Image.open(filename)
                 if (os.path.isfile(filename.replace(".png", "_overlay_" + color + ".png"))):

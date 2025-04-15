@@ -5,7 +5,7 @@ import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import io.github.wouink.furnish.block.CarpetOnTrapdoor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class DyenamicsCarpetOnTrapdoor extends CarpetOnTrapdoor
@@ -18,7 +18,7 @@ public class DyenamicsCarpetOnTrapdoor extends CarpetOnTrapdoor
     }
 
     @Override
-    public ItemStack getCloneItemStack(BlockGetter reader, BlockPos pos, BlockState state) {
+    public ItemStack getCloneItemStack(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
         return new ItemStack(DyenamicRegistry.getDyenamicsBlock(color, "carpet"));
     }
 }

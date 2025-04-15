@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "c:dyes/conifer"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:productivebees_conifer_petrified_honey"
+  }
+}

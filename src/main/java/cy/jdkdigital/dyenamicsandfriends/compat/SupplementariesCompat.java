@@ -23,10 +23,10 @@
 //
 //public class SupplementariesCompat
 //{
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> PRESENTS = new HashMap<>();
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> TRAPPED_PRESENTS = new HashMap<>();
-//    public static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> FLAGS = new HashMap<>();
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CANDLE_HOLDERS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> PRESENTS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> TRAPPED_PRESENTS = new HashMap<>();
+//    public static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FLAGS = new HashMap<>();
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CANDLE_HOLDERS = new HashMap<>();
 //
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "supplementaries_" + color.getSerializedName();

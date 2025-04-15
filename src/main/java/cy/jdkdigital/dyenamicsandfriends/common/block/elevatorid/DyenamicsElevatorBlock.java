@@ -1,11 +1,15 @@
 package cy.jdkdigital.dyenamicsandfriends.common.block.elevatorid;
 
+import com.vsngarcia.level.ElevatorBlockEntityBase;
+import com.vsngarcia.neoforge.ElevatorBlock;
+import com.vsngarcia.util.FakeUseContext;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.common.block.entity.elevatorid.DyenamicsElevatorBlockEntity;
+import cy.jdkdigital.dyenamicsandfriends.compat.ElevatoridCompat;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -13,34 +17,22 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.network.NetworkHooks;
-import xyz.vsngamer.elevatorid.blocks.ElevatorBlock;
-import xyz.vsngamer.elevatorid.tile.ElevatorTileEntity;
-import xyz.vsngamer.elevatorid.util.FakeUseContext;
 
-import javax.annotation.Nonnull;
-import java.util.function.Supplier;
+import java.util.Optional;
 
 public class DyenamicsElevatorBlock extends ElevatorBlock
 {
     private final DyenamicDyeColor color;
-    private final Supplier<BlockEntityType<ElevatorTileEntity>> blockEntitySupplier;
 
-    public DyenamicsElevatorBlock(DyenamicDyeColor color, Supplier<BlockEntityType<ElevatorTileEntity>> blockEntitySupplier) {
+    public DyenamicsElevatorBlock(DyenamicDyeColor color) {
         super(DyeColor.WHITE);
         this.color = color;
-        this.blockEntitySupplier = blockEntitySupplier;
     }
 
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new DyenamicsElevatorBlockEntity(this, pos, state);
-    }
-
-    public Supplier<BlockEntityType<ElevatorTileEntity>> getBlockEntitySupplier() {
-        return blockEntitySupplier;
+        return new DyenamicsElevatorBlockEntity(pos, state);
     }
 
     @Override
@@ -48,39 +40,42 @@ public class DyenamicsElevatorBlock extends ElevatorBlock
         return color.getLightValue();
     }
 
-    @Nonnull
     @Override
-    public InteractionResult use(@Nonnull BlockState state, Level worldIn, @Nonnull BlockPos pos, @Nonnull Player player, @Nonnull InteractionHand handIn, @Nonnull BlockHitResult hit) {
-        if (worldIn.isClientSide) {
-            return InteractionResult.SUCCESS;
-        } else {
-            ItemStack handStack = player.getItemInHand(handIn);
-            DyenamicsElevatorBlockEntity tile = this.getElevatorTile(worldIn, pos);
-            if (tile == null) {
-                return InteractionResult.FAIL;
-            } else {
-                Block handBlock = Block.byItem(handStack.getItem());
-                BlockState stateToApply = handBlock.getStateForPlacement(new FakeUseContext(player, handIn, hit));
-                if (tile.setCamoAndUpdate(stateToApply)) {
-                    return InteractionResult.SUCCESS;
-                } else if (player.isCrouching() && tile.getHeldState() != null) {
-                    tile.setCamoAndUpdate(null);
-                    return InteractionResult.SUCCESS;
-                } else {
-                    NetworkHooks.openScreen((ServerPlayer)player, tile, pos);
-                    return InteractionResult.SUCCESS;
-                }
-            }
+    public ItemInteractionResult useItemOn(
+            ItemStack itemStack,
+            BlockState state,
+            Level level,
+            BlockPos pos,
+            Player player,
+            InteractionHand handIn,
+            BlockHitResult hit
+    ) {
+        if (level.isClientSide) {
+            return ItemInteractionResult.SUCCESS;
         }
+
+        return getElevatorBlockEntity(level, pos).map(tile -> {
+            Block handBlock = Block.byItem(player.getItemInHand(handIn).getItem());
+            BlockState stateToApply = handBlock.getStateForPlacement(new FakeUseContext(player, handIn, hit));
+            if (stateToApply != null && tile.setCamoAndUpdate(stateToApply)) {
+                return ItemInteractionResult.SUCCESS; // If we successfully set camo, don't open the menu
+            }
+            // Remove camo
+            if (player.isCrouching() && tile.getHeldState() != null) {
+                tile.setCamoAndUpdate(null);
+                return ItemInteractionResult.SUCCESS;
+            }
+
+            openMenu(player, tile, pos);
+            return ItemInteractionResult.SUCCESS;
+        }).orElse(ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION);
     }
 
-    private DyenamicsElevatorBlockEntity getElevatorTile(BlockGetter world, BlockPos pos) {
-        if (world != null && pos != null) {
-            BlockEntity tile = world.getBlockEntity(pos);
-            if (tile instanceof DyenamicsElevatorBlockEntity && tile.getType().isValid(world.getBlockState(pos))) {
-                return (DyenamicsElevatorBlockEntity) tile;
-            }
+    private Optional<? extends ElevatorBlockEntityBase> getElevatorBlockEntity(BlockGetter level, BlockPos pos) {
+        if (level == null || pos == null) {
+            return Optional.empty();
         }
-        return null;
+
+        return level.getBlockEntity(pos, ElevatoridCompat.ELEVATOR_BLOCK_ENTITY.get());
     }
 }

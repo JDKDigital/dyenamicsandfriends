@@ -3,13 +3,12 @@ package cy.jdkdigital.dyenamicsandfriends.datagen;
 import com.supermartijn642.connectedglass.CGGlassType;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.compat.AnotherFurnitureCompat;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 
 import java.util.Locale;
 
-public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider
+public class LanguageProvider extends net.neoforged.neoforge.common.data.LanguageProvider
 {
     public LanguageProvider(PackOutput output) {
         super(output, DyenamicsAndFriends.MODID, "en_us");
@@ -60,6 +59,11 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
             add("block.dyenamicsandfriends.oreganized_" + color.getSerializedName() + "_crystal_glass_pane", colorName + " Crystal Glass Pane");
             add("block.dyenamicsandfriends.oreganized_" + color.getSerializedName() + "_waxed_concrete_powder", "Waxed " + colorName + " Concrete Powder");
             add("block.dyenamicsandfriends.productivebees_" + color.getSerializedName() + "_petrified_honey", colorName + " Petrified Honey");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_controller", colorName + " Foundry Controller");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_drain", colorName + " Foundry Drain");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_tank", colorName + " Foundry Tank");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_window", colorName + " Foundry Window");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_fire_bricks", colorName + " Fire Bricks");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain", colorName + " Porcelain");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_terracotta_cistern", colorName + " Terracotta Cistern");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain_cistern", colorName + " Porcelain Cistern");

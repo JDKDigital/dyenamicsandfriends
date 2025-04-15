@@ -5,19 +5,21 @@ import com.supermartijn642.core.registry.ClientRegistrationHandler;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class ConnectedGlassCompat
 {
-    public static final List<RegistryObject<? extends Block>> GLASS_BLOCKS = new ArrayList<>();
-    public static final List<RegistryObject<? extends Block>> GLASS_PANES = new ArrayList<>();
+    public static final List<DeferredHolder<Block, ? extends Block>> GLASS_BLOCKS = new ArrayList<>();
+    public static final List<DeferredHolder<Block, ? extends Block>> GLASS_PANES = new ArrayList<>();
 
     public static void registerBlocks(DyenamicDyeColor color) {
         for (CGGlassType glassType : CGGlassType.values()) {
@@ -34,8 +36,8 @@ public class ConnectedGlassCompat
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(CreativeModeTabs.FUNCTIONAL_BLOCKS)) {
-            GLASS_BLOCKS.forEach(event::accept);
-            GLASS_PANES.forEach(event::accept);
+            GLASS_BLOCKS.forEach(holder -> event.accept(holder.get()));
+            GLASS_PANES.forEach(holder -> event.accept(holder.get()));
         }
     }
 
@@ -50,13 +52,11 @@ public class ConnectedGlassCompat
                 // Register translucent render type for all the colored blocks
                 for (DyenamicDyeColor color: DyenamicDyeColor.dyenamicValues()) {
                     String prefix = "connectedglass_" + typeName + "_" + color.getSerializedName();
-                    var block = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(DyenamicsAndFriends.MODID, prefix));
+                    var block = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, prefix));
                     handler.registerBlockModelTranslucentRenderType(() -> block);
                     if(glassType.hasPanes) {
-                        var pane = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(DyenamicsAndFriends.MODID, prefix + "_pane"));
+                        var pane = BuiltInRegistries.BLOCK.get(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, prefix + "_pane"));
                         handler.registerBlockModelTranslucentRenderType(() -> pane);
-                        // Add overrides for the pane models
-                        handler.registerBlockModelOverwrite(() -> pane, CGPaneBakedModel::new);
                     }
                 }
             }

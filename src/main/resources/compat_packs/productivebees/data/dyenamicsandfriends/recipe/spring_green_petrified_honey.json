@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "c:dyes/spring_green"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:productivebees_spring_green_petrified_honey"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "sheet",
+  "key": {
+    "#": {
+      "item": "dyenamics:cherenkov_wool"
+    }
+  },
+  "pattern": [
+    "   ",
+    "###",
+    "   "
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_cherenkov_sheet",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

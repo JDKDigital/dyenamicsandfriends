@@ -48,9 +48,9 @@
 //
 //public class ChalkCompat
 //{
-//    private static final Map<DyenamicDyeColor, RegistryObject<? extends Block>> CHALK_MARK_BLOCKS = new HashMap<>();
-//    public static final Map<DyenamicDyeColor, RegistryObject<? extends Item>> CHALKS = new HashMap<>();
-//    public static RegistryObject<? extends Item> CHALK_BOX = null;
+//    private static final Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CHALK_MARK_BLOCKS = new HashMap<>();
+//    public static final Map<DyenamicDyeColor, DeferredHolder<Item, ? extends Item>> CHALKS = new HashMap<>();
+//    public static DeferredHolder<Item, ? extends Item> CHALK_BOX = null;
 //
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "chalk_" + color.getSerializedName();

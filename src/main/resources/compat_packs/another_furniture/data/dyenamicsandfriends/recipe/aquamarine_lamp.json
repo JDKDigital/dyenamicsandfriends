@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "curtains",
+  "key": {
+    "/": {
+      "tag": "c:rods/wooden"
+    },
+    "W": {
+      "item": "dyenamics:aquamarine_wool"
+    },
+    "T": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    " W ",
+    "WTW",
+    " / "
+  ],
+  "result": {
+    "count": 3,
+    "id": "dyenamicsandfriends:another_furniture_aquamarine_lamp"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "another_furniture"
+    }
+  ]
+}

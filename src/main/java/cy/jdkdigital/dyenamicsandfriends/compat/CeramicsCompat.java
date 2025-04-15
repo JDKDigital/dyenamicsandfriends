@@ -23,9 +23,9 @@
 //
 //public class CeramicsCompat
 //{
-//    public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> PORCELAIN_BLOCKS = new HashMap<>();
-//    public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> PORCELAIN_CISTERNS = new HashMap<>();
-//    public static Map<DyenamicDyeColor, RegistryObject<? extends Block>> COLORED_CISTERNS = new HashMap<>();
+//    public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> PORCELAIN_BLOCKS = new HashMap<>();
+//    public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> PORCELAIN_CISTERNS = new HashMap<>();
+//    public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> COLORED_CISTERNS = new HashMap<>();
 //
 //    public static void registerBlocks(DyenamicDyeColor color) {
 //        String prefix = "ceramics_" + color.getSerializedName();

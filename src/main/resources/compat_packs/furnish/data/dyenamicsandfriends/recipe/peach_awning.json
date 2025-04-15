@@ -1,0 +1,16 @@
+{
+  "type": "furnish:furniture_making",
+  "ingredient": {
+    "item": "dyenamics:peach_carpet"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:furnish_peach_awning",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "furnish"
+    }
+  ]
+}

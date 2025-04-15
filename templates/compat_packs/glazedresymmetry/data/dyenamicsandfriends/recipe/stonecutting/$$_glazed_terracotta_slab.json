@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "dyenamics:$$_glazed_terracotta"
+    }
+  ],
+  "id": "dyenamicsandfriends:glazedresymmetry_$$_glazed_terracotta_slab",
+  "count": 1,
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "glazedresymmetry"
+    }
+  ]
+}

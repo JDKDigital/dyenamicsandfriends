@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cushion",
+  "key": {
+    "#": {
+      "item": "dyenamics:peach_wool"
+    },
+    "/": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "###",
+    "///",
+    "###"
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_peach_cushion",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

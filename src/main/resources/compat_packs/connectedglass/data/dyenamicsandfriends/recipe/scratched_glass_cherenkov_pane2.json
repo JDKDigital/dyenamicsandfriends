@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "connectedglass:scratched_glass_pane"
+    },
+    "B": {
+      "tag": "c:dyes/cherenkov"
+    }
+  },
+  "result": {
+    "id": "dyenamicsandfriends:connectedglass_scratched_glass_cherenkov_pane",
+    "count": 8
+  }
+}

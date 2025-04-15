@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elevatorsRedye",
+  "ingredients": [
+    {
+      "tag": "elevatorid:elevators"
+    },
+    {
+      "tag": "c:dyes/maroon"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:elevatorid_maroon_elevator"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "elevatorid"
+    }
+  ]
+}

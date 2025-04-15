@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "dyenamics:fluorescent_stained_glass"
+    },
+    "B": {
+      "tag": "c:ingots/lead"
+    }
+  },
+  "result": {
+    "id": "dyenamicsandfriends:oreganized_fluorescent_crystal_glass",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oreganized"
+    }
+  ]
+}

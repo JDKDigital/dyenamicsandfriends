@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "canvas_sign",
+  "ingredients": [
+    {
+      "tag": "farmersdelight:canvas_signs"
+    },
+    {
+      "tag": "c:dyes/navy"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:farmersdelight_navy_canvas_sign"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

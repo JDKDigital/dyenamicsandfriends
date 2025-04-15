@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cushion",
+  "key": {
+    "#": {
+      "item": "dyenamics:cherenkov_wool"
+    },
+    "/": {
+      "item": "minecraft:feather"
+    }
+  },
+  "pattern": [
+    "###",
+    "///",
+    "###"
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:handcrafted_cherenkov_cushion",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "handcrafted"
+    }
+  ]
+}

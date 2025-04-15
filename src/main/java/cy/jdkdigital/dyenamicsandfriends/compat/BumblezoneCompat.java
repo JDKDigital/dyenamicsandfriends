@@ -6,16 +6,16 @@ import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BumblezoneCompat
 {
-    static List<RegistryObject<? extends Block>> CANDLES = new ArrayList<>();
-    static List<RegistryObject<? extends Block>> CURTAINS = new ArrayList<>();
+    static List<DeferredHolder<Block, ? extends Block>> CANDLES = new ArrayList<>();
+    static List<DeferredHolder<Block, ? extends Block>> CURTAINS = new ArrayList<>();
 
     public static void registerBlocks(DyenamicDyeColor color) {
         String prefix = "bumblezone_" + color.getSerializedName();
@@ -26,8 +26,8 @@ public class BumblezoneCompat
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(CreativeModeTabs.COLORED_BLOCKS)) {
-            CANDLES.forEach(event::accept);
-            CURTAINS.forEach(event::accept);
+            CANDLES.forEach(holder -> event.accept(holder.get()));
+            CURTAINS.forEach(holder -> event.accept(holder.get()));
         }
     }
 }

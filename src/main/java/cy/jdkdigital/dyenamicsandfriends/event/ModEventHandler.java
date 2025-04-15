@@ -3,14 +3,14 @@ package cy.jdkdigital.dyenamicsandfriends.event;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = DyenamicsAndFriends.MODID)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = DyenamicsAndFriends.MODID)
 public class ModEventHandler
 {
     @SubscribeEvent
@@ -30,7 +30,7 @@ public class ModEventHandler
             AnotherFurnitureCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
-            BotanyPotsCompat.buildTabContents(event);
+//            BotanyPotsCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.buildTabContents(event);
@@ -40,6 +40,9 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("productivebees")) {
             ProductiveBeesCompat.buildTabContents(event);
+        }
+        if (ModList.get().isLoaded("productivemetalworks")) {
+            ProductiveMetalworksCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("farmersdelight")) {
         }
@@ -73,10 +76,17 @@ public class ModEventHandler
             BumblezoneCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("sleep_tight")) {
-            SleepTightCompat.buildTabContents(event);
+//            SleepTightCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("connectedglass")) {
             ConnectedGlassCompat.buildTabContents(event);
+        }
+    }
+
+    @SubscribeEvent
+    public static void addBlocks(final BlockEntityTypeAddBlocksEvent event) {
+        if (ModList.get().isLoaded("productivemetalworks")) {
+            ProductiveMetalworksCompat.addBlocks(event);
         }
     }
 }

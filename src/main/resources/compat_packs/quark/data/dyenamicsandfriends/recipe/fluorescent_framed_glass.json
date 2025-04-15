@@ -1,0 +1,47 @@
+
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "item": "quark:framed_glass"
+    },
+    {
+      "tag": "c:dyes/fluorescent"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:quark_fluorescent_framed_glass",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    },
+    {
+      "type": "quark:flag",
+      "flag": "framed_glass"
+    }
+  ]
+}

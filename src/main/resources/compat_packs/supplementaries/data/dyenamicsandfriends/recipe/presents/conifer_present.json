@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "supplementaries:present"
+    },
+    {
+      "tag": "c:dyes/conifer"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:supplementaries_conifer_present",
+    "count": 1
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    },
+    {
+      "type": "supplementaries:flag",
+      "flag": "present"
+    }
+  ]
+}

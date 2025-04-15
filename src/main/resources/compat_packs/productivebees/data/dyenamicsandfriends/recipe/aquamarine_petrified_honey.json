@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "productivebees:petrified_honey"
+    },
+    {
+      "tag": "c:dyes/aquamarine"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:productivebees_aquamarine_petrified_honey"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "the_bumblezone",
+  "ingredients": [
+    {
+      "item": "the_bumblezone:super_candle"
+    },
+    {
+      "tag": "c:dyes/mint"
+    },
+    {
+      "tag": "c:dyes/mint"
+    }
+  ],
+  "result": {
+    "id": "dyenamicsandfriends:bumblezone_mint_super_candle_base"
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "the_bumblezone"
+    }
+  ]
+}

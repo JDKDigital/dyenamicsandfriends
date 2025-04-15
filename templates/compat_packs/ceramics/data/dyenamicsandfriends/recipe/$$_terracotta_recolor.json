@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stained_terracotta",
+  "pattern": [
+    "BBB",
+    "BDB",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "tag": "ceramics:colored_terracotta"
+    },
+    "D": {
+      "tag": "c:dyes/$$"
+    }
+  },
+  "result": {
+    "item": "dyenamics:$$_terracotta",
+    "count": 8
+  },
+  "conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ceramics"
+    }
+  ]
+}

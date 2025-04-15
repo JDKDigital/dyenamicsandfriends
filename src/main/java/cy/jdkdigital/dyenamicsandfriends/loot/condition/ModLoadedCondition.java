@@ -1,22 +1,20 @@
 package cy.jdkdigital.dyenamicsandfriends.loot.condition;
 
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializationContext;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import net.minecraft.util.GsonHelper;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
-import net.minecraftforge.fml.ModList;
+import net.neoforged.fml.ModList;
 
-public class ModLoadedCondition implements LootItemCondition
+public record ModLoadedCondition(String modId) implements LootItemCondition
 {
-    private final String modId;
-
-    public ModLoadedCondition(final String modId) {
-        this.modId = modId;
-    }
+    public static MapCodec<ModLoadedCondition> CODEC = RecordCodecBuilder.mapCodec(
+            builder -> builder
+                    .group(Codec.STRING.fieldOf("modId").forGetter(ModLoadedCondition::modId))
+                    .apply(builder, ModLoadedCondition::new));
 
     @Override
     public LootItemConditionType getType() {
@@ -26,20 +24,5 @@ public class ModLoadedCondition implements LootItemCondition
     @Override
     public boolean test(LootContext lootContext) {
         return ModList.get().isLoaded(modId);
-    }
-
-    public static class Serializer implements net.minecraft.world.level.storage.loot.Serializer<ModLoadedCondition>
-    {
-        @Override
-        public void serialize(JsonObject object, ModLoadedCondition instance, JsonSerializationContext ctx)
-        {
-            object.addProperty("modid", instance.modId);
-        }
-
-        @Override
-        public ModLoadedCondition deserialize(JsonObject object, JsonDeserializationContext ctx)
-        {
-            return new ModLoadedCondition(GsonHelper.getAsString(object, "modid"));
-        }
     }
 }

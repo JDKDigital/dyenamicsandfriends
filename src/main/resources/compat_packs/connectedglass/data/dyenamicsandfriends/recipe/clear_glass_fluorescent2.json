@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "connectedglass:clear_glass"
+    },
+    "B": {
+      "tag": "c:dyes/fluorescent"
+    }
+  },
+  "result": {
+    "id": "dyenamicsandfriends:connectedglass_clear_glass_fluorescent",
+    "count": 8
+  }
+}
