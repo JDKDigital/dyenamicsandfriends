@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "dyenamicsandfriends:optional_loot_item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ],
+          "name": "dyenamicsandfriends:productivemetalworks_persimmon_foundry_drain"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dyenamicsandfriends:blocks/productivemetalworks_persimmon_foundry_drain"
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "productivemetalworks:block/foundry_tank_base",
+  "textures": {
+    "front": "dyenamicsandfriends:block/productivemetalworks/conifer_foundry_tank_front",
+    "side": "dyenamicsandfriends:block/productivemetalworks/conifer_fire_bricks",
+    "top": "dyenamicsandfriends:block/productivemetalworks/conifer_fire_bricks"
+  }
+}

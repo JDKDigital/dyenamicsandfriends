@@ -1,0 +1,151 @@
+{
+  "type": "fusion:connecting",
+  "parent": "productivemetalworks:block/foundry_window_base",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:white_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:orange_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:magenta_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:light_blue_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:yellow_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:lime_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:pink_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:gray_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:light_gray_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:cyan_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:purple_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:blue_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:brown_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:green_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:red_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "productivemetalworks:black_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_peach_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_aquamarine_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_fluorescent_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_mint_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_maroon_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_bubblegum_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_lavender_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_persimmon_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_cherenkov_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_amber_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_honey_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_ultramarine_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_spring_green_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_rose_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_navy_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_icy_blue_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_wine_foundry_window"
+      },
+      {
+        "type": "fusion:match_block",
+        "block": "dyenamicsandfriends:productivemetalworks_conifer_foundry_window"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "front": "dyenamicsandfriends:block/productivemetalworks/aquamarine_foundry_window_front",
+    "side": "dyenamicsandfriends:block/productivemetalworks/aquamarine_fire_bricks",
+    "top": "dyenamicsandfriends:block/productivemetalworks/aquamarine_fire_bricks"
+  }
+}

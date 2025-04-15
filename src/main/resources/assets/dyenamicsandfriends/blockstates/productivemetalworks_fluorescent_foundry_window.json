@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/fluorescent_foundry_window",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/fluorescent_foundry_window"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/fluorescent_foundry_window",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/fluorescent_foundry_window",
+      "y": 270
+    }
+  }
+}

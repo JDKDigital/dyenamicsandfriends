@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "productivemetalworks:fire_bricks"
+    },
+    {
+      "tag": "c:dyes/lavender"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:productivemetalworks_lavender_fire_bricks"
+  }
+}

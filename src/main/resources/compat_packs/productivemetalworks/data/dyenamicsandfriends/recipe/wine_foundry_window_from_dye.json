@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "productivemetalworks:foundry_windows"
+    },
+    {
+      "tag": "c:dyes/wine"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:productivemetalworks_wine_foundry_window"
+  }
+}
