@@ -11,6 +11,6 @@
   },
   "loader": "fusion:model",
   "textures": {
-    "all": "dyenamicsandfriends:block/crystalix/bordered/rose"
+    "all": "dyenamicsandfriends:block/crystalix/glass/rose"
   }
 }

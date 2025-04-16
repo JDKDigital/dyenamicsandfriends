@@ -1,10 +1,24 @@
 {
-  "variants": {
-    "shadeless=false": {
-      "model": "dyenamicsandfriends:block/crystalix/clear/crystalix_persimmon_clear_crystalix_glass"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "tag": "c:gems/quartz"
     },
-    "shadeless=true": {
-      "model": "dyenamicsandfriends:block/crystalix/clear/crystalix_persimmon_clear_crystalix_glass_no_shade"
+    "c": {
+      "tag": "c:dyes/persimmon"
+    },
+    "g": {
+      "tag": "crystalix:glass"
     }
+  },
+  "pattern": [
+    "gag",
+    "aca",
+    "gag"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dyenamicsandfriends:crystalix_persimmon_clear_crystalix_glass"
   }
 }

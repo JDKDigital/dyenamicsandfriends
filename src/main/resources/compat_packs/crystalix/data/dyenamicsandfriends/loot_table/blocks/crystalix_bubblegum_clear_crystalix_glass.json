@@ -1,24 +1,21 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "a": {
-      "tag": "c:gems/quartz"
-    },
-    "c": {
-      "tag": "c:dyes/bubblegum"
-    },
-    "g": {
-      "tag": "crystalix:glass"
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "dyenamicsandfriends:optional_loot_item",
+          "name": "dyenamicsandfriends:crystalix_bubblegum_clear_crystalix_glass"
+        }
+      ],
+      "rolls": 1.0
     }
-  },
-  "pattern": [
-    "gag",
-    "aca",
-    "gag"
   ],
-  "result": {
-    "count": 4,
-    "id": "dyenamicsandfriends:crystalix_bubblegum_clear_crystalix_glass"
-  }
+  "random_sequence": "dyenamicsandfriends:block/crystalix_bubblegum_clear_crystalix_glass"
 }
