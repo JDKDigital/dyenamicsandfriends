@@ -4,7 +4,7 @@ from PIL.ImageColor import getcolor, getrgb
 from PIL.ImageOps import grayscale
 
 colors = {
-    "peach": "#BF9873", 
+    "peach": "#BF9873",
     "aquamarine": "#2C7D7F", 
     "fluorescent": "#EEE9B6", 
     "mint": "#89e8b8", 

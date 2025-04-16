@@ -81,6 +81,9 @@ public class ModEventHandler
         if (ModList.get().isLoaded("connectedglass")) {
             ConnectedGlassCompat.buildTabContents(event);
         }
+        if (ModList.get().isLoaded("crystalix")) {
+            CrystalixCompat.buildTabContents(event);
+        }
     }
 
     @SubscribeEvent

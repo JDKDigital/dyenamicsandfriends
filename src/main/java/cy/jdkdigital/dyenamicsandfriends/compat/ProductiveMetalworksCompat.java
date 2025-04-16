@@ -17,7 +17,6 @@ import java.util.Map;
 
 public class ProductiveMetalworksCompat
 {
-    // TODO recipe, loot tables
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_CONTROLLERS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_DRAINS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_TANKS = new HashMap<>();

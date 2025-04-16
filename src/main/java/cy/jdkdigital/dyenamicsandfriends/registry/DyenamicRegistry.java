@@ -51,6 +51,7 @@ public class DyenamicRegistry
         add("the_bumblezone");
 //        add("supplementaries");
 //        add("suppsquared");
+        add("crystalix");
     }};
 
     public static void setup() {
@@ -166,7 +167,7 @@ public class DyenamicRegistry
                 ConnectedGlassCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("crystalix")) {
-                // TODO glass, clear glass, bordered glass
+                CrystalixCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("luminax")) {
                 // TODO block, stairs, slab, wall, pressure plate, button, dim
@@ -243,6 +244,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("supplementaries")) {
 //            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
+        }
+        if (ModList.get().isLoaded("crystalix")) {
+            CrystalixCompat.Client.registerBlockEntityRenderers(event);
         }
     }
 

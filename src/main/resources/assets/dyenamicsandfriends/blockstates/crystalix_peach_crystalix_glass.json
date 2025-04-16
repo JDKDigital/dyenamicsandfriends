@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "shadeless=false": {
+      "model": "dyenamicsandfriends:block/crystalix/glass/crystalix_peach_crystalix_glass"
+    },
+    "shadeless=true": {
+      "model": "dyenamicsandfriends:block/crystalix/glass/crystalix_peach_crystalix_glass_no_shade"
+    }
+  }
+}

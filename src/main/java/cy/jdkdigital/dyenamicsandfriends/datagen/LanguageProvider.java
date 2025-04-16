@@ -98,6 +98,9 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("item.dyenamicsandfriends.chalk_" + color.getSerializedName() + "_chalk", colorName + " Chalk");
             add("block.dyenamicsandfriends.suppsquared_" + color.getSerializedName() + "_gold_candle_holder", "Gold " + colorName + " Candle Holder");
             add("block.dyenamicsandfriends.suppsquared_" + color.getSerializedName() + "_sack", colorName + " Sack");
+            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_crystalix_glass", colorName + " Crystalix Glass");
+            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_clear_crystalix_glass", colorName + " Clear Crystalix Glass");
+            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_bordered_crystalix_glass", colorName + " Bordered Crystalix Glass");
 
             for (CGGlassType glassType : CGGlassType.values()) {
                 var typeName = glassType.name().toLowerCase(Locale.ROOT);

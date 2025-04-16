@@ -1,6 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.compat.CrystalixCompat;
 import cy.jdkdigital.dyenamicsandfriends.compat.ProductiveMetalworksCompat;
 import cy.jdkdigital.productivemetalworks.ProductiveMetalworks;
 import cy.jdkdigital.productivemetalworks.registry.ModTags;
@@ -60,6 +61,16 @@ public class BlockTagProvider extends BlockTagsProvider
             ProductiveMetalworksCompat.FOUNDRY_TANKS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_TANKS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FOUNDRY_WINDOWS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_WINDOWS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FIRE_BRICKS.forEach((dyenamicDyeColor, holder) -> FIRE_BRICKS.addOptional(holder.getId()));
+        }
+
+        if (ModList.get().isLoaded("crystalix")) {
+            var GLASS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "glass")));
+            var CLEAR = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "clear")));
+            var BORDERED = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "bordered")));
+
+            CrystalixCompat.GLASS.forEach((dyenamicDyeColor, holder) -> GLASS.add(holder.get()));
+            CrystalixCompat.CLEAR.forEach((dyenamicDyeColor, holder) -> CLEAR.add(holder.get()));
+            CrystalixCompat.BORDERED.forEach((dyenamicDyeColor, holder) -> BORDERED.add(holder.get()));
         }
     }
 
