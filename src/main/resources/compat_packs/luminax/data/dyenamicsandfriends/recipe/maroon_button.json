@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "luminax"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dyenamicsandfriends:luminax_maroon_luminax_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:luminax_maroon_luminax_button"
+  }
+}

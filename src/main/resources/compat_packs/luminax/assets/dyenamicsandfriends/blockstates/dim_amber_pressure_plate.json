@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "dyenamicsandfriends:block/luminax/dim_amber_luminax_pressure_plate"
+    },
+    "powered=true": {
+      "model": "dyenamicsandfriends:block/luminax/dim_amber_luminax_pressure_plate_down"
+    }
+  }
+}

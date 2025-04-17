@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dyenamicsandfriends:block/luminax/dim_$$_luminax_slab"
+    },
+    "type=double": {
+      "model": "dyenamicsandfriends:block/luminax/dim_$$_luminax_block"
+    },
+    "type=top": {
+      "model": "dyenamicsandfriends:block/luminax/dim_$$_luminax_slab_top"
+    }
+  }
+}

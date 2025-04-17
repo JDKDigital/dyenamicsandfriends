@@ -1,0 +1,6 @@
+{
+  "parent": "luminax:block/no_shade_stair",
+  "textures": {
+    "texture": "dyenamicsandfriends:block/luminax/persimmon_block"
+  }
+}

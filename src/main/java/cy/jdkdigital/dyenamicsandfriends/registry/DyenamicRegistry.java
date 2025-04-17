@@ -52,6 +52,7 @@ public class DyenamicRegistry
 //        add("supplementaries");
 //        add("suppsquared");
         add("crystalix");
+        add("luminax");
     }};
 
     public static void setup() {
@@ -61,9 +62,6 @@ public class DyenamicRegistry
     public static void registerCompatBlocks() {
         DyenamicsAndFriends.LOGGER.info("registerCompatBlocks");
         for (DyenamicDyeColor color : DyenamicDyeColor.dyenamicValues()) {
-            if (ModList.get().isLoaded("productivemetalworks")) {
-                // TODO controller, tank, fire brick, window, drain
-            }
             if (ModList.get().isLoaded("create")) {
                 CreateCompat.registerBlocks(color);
             }
@@ -170,11 +168,15 @@ public class DyenamicRegistry
                 CrystalixCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("luminax")) {
-                // TODO block, stairs, slab, wall, pressure plate, button, dim
+                LuminaxCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("cookingforblockheads")) {
                 // TODO oven, fridge, connector, kitchen_floor, cooking_table, counter, cabinet, sink
             }
+        }
+
+        if (ModList.get().isLoaded("luminax")) {
+            LuminaxCompat.postRegister();
         }
 
         if (ModList.get().isLoaded("create")) {
