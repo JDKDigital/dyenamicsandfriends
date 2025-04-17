@@ -52,27 +52,30 @@ public class LuminaxCompat
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(LuminaxRegistry.CREATIVE_TAB.getKey())) {
-            BLOCKS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            STAIRS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            SLABS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            WALLS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            PRESSURE_PLATES.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            BUTTONS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-
-            DIM_BLOCKS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            DIM_STAIRS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            DIM_SLABS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            DIM_WALLS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            DIM_PRESSURE_PLATES.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            DIM_BUTTONS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
+            Arrays.stream(DyenamicDyeColor.dyenamicValues()).forEach(dyenamicDyeColor -> {
+                event.accept(BLOCKS.get(dyenamicDyeColor).get());
+                event.accept(STAIRS.get(dyenamicDyeColor).get());
+                event.accept(SLABS.get(dyenamicDyeColor).get());
+                event.accept(WALLS.get(dyenamicDyeColor).get());
+                event.accept(PRESSURE_PLATES.get(dyenamicDyeColor).get());
+                event.accept(BUTTONS.get(dyenamicDyeColor).get());
+                event.accept(DIM_BLOCKS.get(dyenamicDyeColor).get());
+                event.accept(DIM_STAIRS.get(dyenamicDyeColor).get());
+                event.accept(DIM_SLABS.get(dyenamicDyeColor).get());
+                event.accept(DIM_WALLS.get(dyenamicDyeColor).get());
+                event.accept(DIM_PRESSURE_PLATES.get(dyenamicDyeColor).get());
+                event.accept(DIM_BUTTONS.get(dyenamicDyeColor).get());
+            });
         }
     }
 
     public static void postRegister() {
         Arrays.stream(DyenamicDyeColor.dyenamicValues()).forEach(dyenamicDyeColor -> {
             for (String name: new String[]{"block", "stairs", "slab", "wall", "pressure_plate", "button"}) {
-                BuiltInRegistries.BLOCK.addAlias(ResourceLocation.parse("luminax:" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
-                BuiltInRegistries.BLOCK.addAlias(ResourceLocation.parse("luminax:dim_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_dim_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
+                BuiltInRegistries.BLOCK.addAlias(ResourceLocation.parse("luminax:" + dyenamicDyeColor.getSerializedName() + "_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
+                BuiltInRegistries.BLOCK.addAlias(ResourceLocation.parse("luminax:dim_" + dyenamicDyeColor.getSerializedName() + "_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_dim_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
+                BuiltInRegistries.ITEM.addAlias(ResourceLocation.parse("luminax:" + dyenamicDyeColor.getSerializedName() + "_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
+                BuiltInRegistries.ITEM.addAlias(ResourceLocation.parse("luminax:dim_" + dyenamicDyeColor.getSerializedName() + "_" + name), ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "luminax_dim_" + dyenamicDyeColor.getSerializedName() + "_luminax_" + name));
             }
         });
     }

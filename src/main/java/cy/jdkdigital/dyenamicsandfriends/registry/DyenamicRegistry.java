@@ -32,27 +32,27 @@ public class DyenamicRegistry
         add("productivebees");
         add("productivemetalworks");
         add("connectedglass");
-//        add("botanypots");
         add("comforts");
         add("elevatorid");
         add("furnish");
         add("regions_unexplored");
         add("sleep_tight");
         add("sophisticatedbackpacks");
-        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
+        add("create");
+        add("the_bumblezone");
+        add("crystalix");
+        add("luminax");
+//        add("botanypots");
+//        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
 //        add("ceramics");
 //        add("chalk");
 //        add("clayworks");
-        add("create");
 //        add("farmersdelight");
 //        add("glazedresymmetry");
 //        add("oreganized");
 //        add("quark");
-        add("the_bumblezone");
 //        add("supplementaries");
 //        add("suppsquared");
-        add("crystalix");
-        add("luminax");
     }};
 
     public static void setup() {
@@ -117,8 +117,8 @@ public class DyenamicRegistry
 //                QuarkCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("handcrafted")) {
-                HandcraftedCompat.registerBlocks(color);
-                HandcraftedCompat.registerItems(color);
+//                HandcraftedCompat.registerBlocks(color);
+//                HandcraftedCompat.registerItems(color);
             }
             if (ModList.get().isLoaded("furnish")) {
                 FurnishCompat.registerBlocks(color);

@@ -56,7 +56,7 @@ public class ModEventHandler
         if (ModList.get().isLoaded("quark")) {
         }
         if (ModList.get().isLoaded("handcrafted")) {
-            HandcraftedCompat.buildTabContents(event);
+//            HandcraftedCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("furnish")) {
             FurnishCompat.buildTabContents(event);
@@ -83,6 +83,9 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("crystalix")) {
             CrystalixCompat.buildTabContents(event);
+        }
+        if (ModList.get().isLoaded("luminax")) {
+            LuminaxCompat.buildTabContents(event);
         }
     }
 

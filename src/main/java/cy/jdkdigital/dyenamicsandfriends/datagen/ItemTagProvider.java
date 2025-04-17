@@ -1,10 +1,6 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.compat.LuminaxCompat;
-import cy.jdkdigital.dyenamicsandfriends.compat.ProductiveMetalworksCompat;
-import cy.jdkdigital.productivemetalworks.ProductiveMetalworks;
-import cy.jdkdigital.productivemetalworks.registry.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -13,7 +9,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.ModList;
-import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;

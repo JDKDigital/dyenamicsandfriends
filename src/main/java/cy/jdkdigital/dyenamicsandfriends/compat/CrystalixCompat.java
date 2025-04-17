@@ -23,6 +23,7 @@ import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,9 +42,11 @@ public class CrystalixCompat
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey().equals(CrystalixRegistry.CREATIVE_TAB.getKey())) {
-            GLASS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            CLEAR.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
-            BORDERED.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
+            Arrays.stream(DyenamicDyeColor.dyenamicValues()).forEach(dyenamicDyeColor -> {
+                event.accept(GLASS.get(dyenamicDyeColor).get());
+                event.accept(CLEAR.get(dyenamicDyeColor).get());
+                event.accept(BORDERED.get(dyenamicDyeColor).get());
+            });
         }
     }
     public static class Client

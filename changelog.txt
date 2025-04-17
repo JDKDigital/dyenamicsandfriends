@@ -1,31 +1,4 @@
-1.20.1-1.9.1
+1.21.1-2.0.0
 
-- Stopped crashing on new Create version
-
-
-1.20.1-1.9.0
-
-- Updated Comforts compatibility
-
-
-1.20.1-1.8.0
-
-- Added compatibility with Sophisticated Backpacks so you can be extra fancy
-- Added Productive Bees Petrified Honey Blocks in all colors
-- Fixed Botany Pot GUI in Hopper Pots
-
-
-1.20.1-1.7.0
-
-- Updated to use the new dyes from Dyenamics
-
-
-1.20.1-1.6.1
-
-- Updated Furnish compat
-
-
-1.20.1-1.6.0
-
-- Updated to 1.20.1
-- Compatible mods: another_furniture, productivebees, connectedglass, botanypots, comforts, elevatorid, furnish, regions_unexplored, sleep_tight
+- Updated to 1.21.1
+- New compatibility: productivemetalworks, crystalix and luminax

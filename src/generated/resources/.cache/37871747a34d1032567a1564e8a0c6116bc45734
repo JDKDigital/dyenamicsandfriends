@@ -1,9 +1,21 @@
-// 1.21.1	2025-04-16T16:14:58.0403147	Dyenamics and Friends Block Tags Provider
-f96d2ace03fc77cb3af33eae6d5b9de762f13752 data/crystalix/tags/block/bordered.json
-efadc48b0e03976e21ac35810418494c6f2d657c data/crystalix/tags/block/clear.json
-e4d994e524274c55528197a8457a0fe3b5326e0e data/crystalix/tags/block/glass.json
-6878824d121433397817ffc8bb74593b8bb67f31 data/productivemetalworks/tags/block/fire_bricks.json
-a01991d0bb666881f553dbf5d801559591b87224 data/productivemetalworks/tags/block/foundry_controllers.json
-72f4502cf0ed6602f7dd355fd9c6991daa12c37e data/productivemetalworks/tags/block/foundry_drains.json
-daa8bc446524b33e44d291e67b107dd6d35c202f data/productivemetalworks/tags/block/foundry_tanks.json
-13eb33528a0df1ec18c18b79cca991a32d3eb322 data/productivemetalworks/tags/block/foundry_windows.json
+// 1.21.1	2025-04-17T15:13:26.0725469	Dyenamics and Friends Block Tags Provider
+c009acdd7489616745b760d578125f6b36745bd1 data/crystalix/tags/block/bordered.json
+db4b58cfabf2e1019ceb02abba32b2b9c200bec1 data/crystalix/tags/block/clear.json
+d586efc944b836918c3c9ec01d5c298b424f2ea6 data/crystalix/tags/block/glass.json
+b89324d4f11a04079b78ae09711dea287ecd0b6f data/luminax/tags/block/blocks.json
+64b1e7e8517b7a5909f4c8ca94d02af6a48fd51b data/luminax/tags/block/buttons.json
+cdfd1e10141282e21fe90da0b8679cb151f0e096 data/luminax/tags/block/dim_blocks.json
+90903d4bd220fd9e70f142826b3e278f06a53a5f data/luminax/tags/block/dim_buttons.json
+a6e335f72d918fe5886f0a417c69a3331907ac62 data/luminax/tags/block/dim_pressure_plates.json
+6a2e1831ed287254b3315dec9f7024b969a75657 data/luminax/tags/block/dim_slabs.json
+87a38f680b5284e362821eb6eafe08a58097668c data/luminax/tags/block/dim_stairs.json
+6fb0aa729f67bcc9804fbd75a89d30f31cdfce7e data/luminax/tags/block/dim_walls.json
+9a5639bb44040a7166661e7ea05a12dfd6387b65 data/luminax/tags/block/pressure_plates.json
+642bc2dcf037777dec25b26e73df621440228639 data/luminax/tags/block/slabs.json
+a1449c853bbcdf9a400fcfc4faa556fca006dbf9 data/luminax/tags/block/stairs.json
+e1573f5e925e0ef13bfba8c2e10bc400a7ae270d data/luminax/tags/block/walls.json
+249810718a9505aea1806c5fe0440526fd55b66d data/productivemetalworks/tags/block/fire_bricks.json
+618c4356f3a2fdfe707f0d1fd09f2379cea2d55b data/productivemetalworks/tags/block/foundry_controllers.json
+3e2043119c6a177fc0e1b92bed019fb768f2e5a4 data/productivemetalworks/tags/block/foundry_drains.json
+0a05e03d431f6615e1039547f9ae046da6a20e77 data/productivemetalworks/tags/block/foundry_tanks.json
+14da7aba9e5a48f959e0489e2974418a9d05a452 data/productivemetalworks/tags/block/foundry_windows.json
