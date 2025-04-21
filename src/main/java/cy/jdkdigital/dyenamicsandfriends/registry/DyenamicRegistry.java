@@ -179,9 +179,6 @@ public class DyenamicRegistry
     }
 
     public static void clientRegister() {
-        if (ModList.get().isLoaded("connectedglass")) {
-            ConnectedGlassCompat.Client.register();
-        }
     }
 
     public static RegistryObject<? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {

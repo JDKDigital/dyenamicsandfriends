@@ -171,7 +171,7 @@ dependencies {
 
     implementation fg.deobf("curse.maven:fusion-connected-textures-854949:5129294")
     implementation fg.deobf("curse.maven:supermartijn642s-core-lib-454372:5668859")
-    implementation fg.deobf("curse.maven:connected-glass-383129:5656978")
+    implementation fg.deobf("curse.maven:connected-glass-383129:6396996")
 
     implementation fg.deobf("curse.maven:the-bumblezone-forge-362479:5757424")
 

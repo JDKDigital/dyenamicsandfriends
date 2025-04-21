@@ -1,3 +1,8 @@
+1.20.1-1.9.2
+
+- Updated Connected Glass compat
+
+
 1.20.1-1.9.1
 
 - Stopped crashing on new Create version
