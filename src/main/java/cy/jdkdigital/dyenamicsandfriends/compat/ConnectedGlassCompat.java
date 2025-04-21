@@ -1,14 +1,20 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import com.supermartijn642.connectedglass.*;
+import com.supermartijn642.connectedglass.CGColoredGlassBlock;
+import com.supermartijn642.connectedglass.CGColoredPaneBlock;
+import com.supermartijn642.connectedglass.CGColoredTintedGlassBlock;
+import com.supermartijn642.connectedglass.CGGlassType;
 import com.supermartijn642.core.registry.ClientRegistrationHandler;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
@@ -29,7 +35,7 @@ public class ConnectedGlassCompat
             var block = DyenamicRegistry.registerBlock(prefix, () -> glassType.isTinted ? new CGColoredTintedGlassBlock(typeName + "_" + color.getSerializedName(), true, color.getAnalogue()) : new CGColoredGlassBlock(prefix + "_glass", true, color.getAnalogue()), true);
             GLASS_BLOCKS.add(block);
             if (glassType.hasPanes) {
-                GLASS_PANES.add(DyenamicRegistry.registerBlock(prefix + "_pane", () -> new CGColoredPaneBlock((CGColoredGlassBlock ) block.get()), true));
+                GLASS_PANES.add(DyenamicRegistry.registerBlock(prefix + "_pane", () -> new CGColoredPaneBlock((CGColoredGlassBlock) block.get()), true));
             }
         }
     }
@@ -43,6 +49,11 @@ public class ConnectedGlassCompat
 
     public static class Client
     {
+        public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            GLASS_BLOCKS.forEach(( holder) -> ItemBlockRenderTypes.setRenderLayer(holder.get(), RenderType.translucent()));
+            GLASS_PANES.forEach(( holder) -> ItemBlockRenderTypes.setRenderLayer(holder.get(), RenderType.translucent()));
+        }
+
         public static void register(){
             ClientRegistrationHandler handler = ClientRegistrationHandler.get(DyenamicsAndFriends.MODID);
 

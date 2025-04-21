@@ -100,3 +100,10 @@ issueTrackerURL="${issue_url}"
     versionRange="${dyenamics_version_range}"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.dyenamicsandfriends]]
+    modId="productivemetalworks"
+    mandatory=false
+    versionRange="${metalworks_version_range}"
+    ordering="AFTER"
+    side="BOTH"

@@ -165,7 +165,7 @@ dependencies {
 
     implementation "curse.maven:fusion-connected-textures-854949:6396619"
     implementation "curse.maven:supermartijn642s-core-lib-454372:6076757"
-    implementation "curse.maven:connected-glass-383129:5657280"
+    implementation "curse.maven:connected-glass-383129:6397204"
 
     implementation "curse.maven:the-bumblezone-forge-362479:6358119"
     implementation "curse.maven:cucumber-272335:6373317"
@@ -212,7 +212,8 @@ tasks.withType(ProcessResources).configureEach {
             mod_authors            : mod_authors,
             mod_description        : mod_description,
             issue_url              : issue_url,
-            dyenamics_version_range : dyenamics_version_range
+            dyenamics_version_range  : dyenamics_version_range,
+            metalworks_version_range : metalworks_version_range
     ]
     inputs.properties replaceProperties
 

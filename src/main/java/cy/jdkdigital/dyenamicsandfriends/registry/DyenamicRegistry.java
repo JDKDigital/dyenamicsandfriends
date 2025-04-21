@@ -250,6 +250,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("crystalix")) {
             CrystalixCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("connectedtextures")) {
+            ConnectedGlassCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
