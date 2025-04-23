@@ -1,0 +1,17 @@
+{
+  "type": "fusion:connecting",
+  "parent": "connectedglass:block/template_glass_pane_side",
+  "connections": {
+    "type": "fusion:or",
+    "predicates": [
+      {
+        "type": "fusion:is_same_block"
+      }
+    ]
+  },
+  "loader": "fusion:model",
+  "textures": {
+    "edge": "dyenamicsandfriends:block/connectedglass/clear_glass/clear_glass_lavender_edge",
+    "pane": "dyenamicsandfriends:block/connectedglass/clear_glass/clear_glass_lavender"
+  }
+}

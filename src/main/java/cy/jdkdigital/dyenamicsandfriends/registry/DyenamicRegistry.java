@@ -42,6 +42,7 @@ public class DyenamicRegistry
         add("the_bumblezone");
         add("crystalix");
         add("luminax");
+        add("cookingforblockheads");
 //        add("botanypots");
 //        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
 //        add("ceramics");
@@ -171,7 +172,7 @@ public class DyenamicRegistry
                 LuminaxCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("cookingforblockheads")) {
-                // TODO oven, fridge, connector, kitchen_floor, cooking_table, counter, cabinet, sink
+                CookingForBlockheadsCompat.registerBlocks(color);
             }
         }
 
@@ -189,8 +190,8 @@ public class DyenamicRegistry
     }
 
     public static void clientRegister() {
-        if (ModList.get().isLoaded("connectedglass")) {
-            ConnectedGlassCompat.Client.register();
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.Client.register();
         }
     }
 
@@ -250,7 +251,7 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("crystalix")) {
             CrystalixCompat.Client.registerBlockEntityRenderers(event);
         }
-        if (ModList.get().isLoaded("connectedtextures")) {
+        if (ModList.get().isLoaded("connectedglass")) {
             ConnectedGlassCompat.Client.registerBlockEntityRenderers(event);
         }
     }
@@ -261,6 +262,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("elevatorid")) {
             ElevatoridCompat.Client.registerBlockColors(event);
+        }
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.Client.registerBlockColors(event);
         }
     }
 

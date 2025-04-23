@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "cookingforblockheads:cabinets"
+    },
+    {
+      "tag": "c:dyes/spring_green"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:cookingforblockheads_spring_green_cabinet"
+  }
+}

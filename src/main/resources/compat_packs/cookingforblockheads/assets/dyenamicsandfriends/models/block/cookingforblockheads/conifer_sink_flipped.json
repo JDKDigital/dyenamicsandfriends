@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/sink_flipped",
+  "textures": {
+    "all": "dyenamics:block/conifer_terracotta",
+    "particle": "dyenamics:block/conifer_terracotta"
+  }
+}

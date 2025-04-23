@@ -1,0 +1,9 @@
+{
+  "parent": "cookingforblockheads:block/fridge_large_door_lower",
+  "textures": {
+    "fridge_back": "dyenamicsandfriends:block/cookingforblockheads/cherenkov_fridge_back",
+    "fridge_inside": "dyenamicsandfriends:block/cookingforblockheads/cherenkov_fridge_inside",
+    "fridge_side": "dyenamicsandfriends:block/cookingforblockheads/cherenkov_fridge_side",
+    "fridge_top": "dyenamicsandfriends:block/cookingforblockheads/cherenkov_fridge_top"
+  }
+}

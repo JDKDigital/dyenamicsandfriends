@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/cabinet",
+  "textures": {
+    "all": "dyenamics:block/spring_green_terracotta",
+    "particle": "dyenamics:block/spring_green_terracotta"
+  }
+}

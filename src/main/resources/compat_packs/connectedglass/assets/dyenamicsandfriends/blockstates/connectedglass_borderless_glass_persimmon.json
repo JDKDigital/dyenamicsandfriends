@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:connectedglass/borderless_glass_persimmon"
+      "model": "dyenamicsandfriends:block/connectedglass/borderless_glass_persimmon"
     }
   }
 }

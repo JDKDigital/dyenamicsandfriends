@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/counter",
+  "textures": {
+    "all": "dyenamics:block/icy_blue_terracotta",
+    "particle": "dyenamics:block/icy_blue_terracotta"
+  }
+}

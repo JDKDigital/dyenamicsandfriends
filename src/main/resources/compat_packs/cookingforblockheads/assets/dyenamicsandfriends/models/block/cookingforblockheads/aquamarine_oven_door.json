@@ -1,0 +1,12 @@
+{
+  "parent": "cookingforblockheads:block/oven_door",
+  "textures": {
+    "backsplash": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_side",
+    "ovenbottom": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_bottom",
+    "ovenfront": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_front",
+    "ovenfront_active": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_front_active",
+    "oventop": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_top",
+    "particle": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_side",
+    "texture": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_oven_side"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "cookingforblockheads:block/fridge_large_door_lower_flipped",
+  "textures": {
+    "fridge_back": "dyenamicsandfriends:block/cookingforblockheads/rose_fridge_back",
+    "fridge_inside": "dyenamicsandfriends:block/cookingforblockheads/rose_fridge_inside",
+    "fridge_side": "dyenamicsandfriends:block/cookingforblockheads/rose_fridge_side",
+    "fridge_top": "dyenamicsandfriends:block/cookingforblockheads/rose_fridge_top"
+  }
+}

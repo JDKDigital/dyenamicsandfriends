@@ -1,6 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.compat.CookingForBlockheadsCompat;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -40,6 +41,50 @@ public class ItemTagProvider extends ItemTagsProvider
                 copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", name)), ItemTags.create(ResourceLocation.fromNamespaceAndPath("luminax", name)));
                 copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "dim_" + name)), ItemTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "dim_" + name)));
             }
+        }
+
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            var CABINETS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:cabinets")));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> CABINETS.add(holder.get().asItem()));
+
+            var CONNECTORS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:connectors")));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> CONNECTORS.add(holder.get().asItem()));
+
+            var COOKING_TABLES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:cooking_tables")));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.add(holder.get().asItem()));
+
+            var COUNTERS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:counters")));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> COUNTERS.add(holder.get().asItem()));
+
+            var FRIDGES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:fridges")));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> FRIDGES.add(holder.get().asItem()));
+
+            var OVENS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:ovens")));
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> OVENS.add(holder.get().asItem()));
+
+            var SINKS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:sinks")));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> SINKS.add(holder.get().asItem()));
+
+            var DYED_CABINETS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_cabinets")));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> DYED_CABINETS.add(holder.get().asItem()));
+
+            var DYED_CONNECTORS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_connectors")));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> DYED_CONNECTORS.add(holder.get().asItem()));
+
+            var DYED_COOKING_TABLES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_cooking_tables")));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> DYED_COOKING_TABLES.add(holder.get().asItem()));
+
+            var DYED_COUNTERS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_counters")));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> DYED_COUNTERS.add(holder.get().asItem()));
+
+            var DYED_FRIDGES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_fridges")));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> DYED_FRIDGES.add(holder.get().asItem()));
+
+            var DYED_OVENS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_ovens")));
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> DYED_OVENS.add(holder.get().asItem()));
+
+            var DYED_SINKS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_sinks")));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> DYED_SINKS.add(holder.get().asItem()));
         }
     }
 

@@ -1,6 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.compat.CookingForBlockheadsCompat;
 import cy.jdkdigital.dyenamicsandfriends.compat.CrystalixCompat;
 import cy.jdkdigital.dyenamicsandfriends.compat.LuminaxCompat;
 import cy.jdkdigital.dyenamicsandfriends.compat.ProductiveMetalworksCompat;
@@ -22,6 +23,14 @@ public class BlockTagProvider extends BlockTagsProvider
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        var MINEABLE_PICKAXE = tag(BlockTags.MINEABLE_WITH_PICKAXE);
+
+        MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/quark_pickaxe")));
+        MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/ceramics_pickaxe")));
+        MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/clayworks_pickaxe")));
+        MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/glazedresymmetry_pickaxe")));
+        MINEABLE_PICKAXE.addOptionalTag(BlockTags.create(ResourceLocation.parse("botanypots:all_botany_pots")));
+
         if (ModList.get().isLoaded("productivemetalworks")) {
             var FOUNDRY_CONTROLLERS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")));
             var FOUNDRY_DRAINS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")));
@@ -74,6 +83,26 @@ public class BlockTagProvider extends BlockTagsProvider
             LuminaxCompat.DIM_WALLS.forEach((dyenamicDyeColor, holder) -> DIM_WALLS.addOptional(holder.getId()));
             LuminaxCompat.DIM_PRESSURE_PLATES.forEach((dyenamicDyeColor, holder) -> DIM_PRESSURE_PLATES.addOptional(holder.getId()));
             LuminaxCompat.DIM_BUTTONS.forEach((dyenamicDyeColor, holder) -> DIM_BUTTONS.addOptional(holder.getId()));
+        }
+
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+
+            var COOKING_TABLES = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:cooking_tables")));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.add(holder.get()));
+            var KITCHEN_CONNECTORS = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:kitchen_connectors")));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.add(holder.get()));
+            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.add(holder.get()));
+            var KITCHEN_ITEM_PROVIDERS = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:kitchen_item_providers")));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.add(holder.get()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.add(holder.get()));
         }
     }
 

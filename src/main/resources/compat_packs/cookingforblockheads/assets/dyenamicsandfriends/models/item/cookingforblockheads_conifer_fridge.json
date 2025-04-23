@@ -1,0 +1,10 @@
+{
+  "parent": "cookingforblockheads:item/fridge",
+  "textures": {
+    "fridge_back": "dyenamicsandfriends:block/cookingforblockheads/conifer_fridge_back",
+    "fridge_inside": "dyenamicsandfriends:block/cookingforblockheads/conifer_fridge_inside",
+    "fridge_side": "dyenamicsandfriends:block/cookingforblockheads/conifer_fridge_side",
+    "fridge_top": "dyenamicsandfriends:block/cookingforblockheads/conifer_fridge_top",
+    "particle": "dyenamicsandfriends:block/cookingforblockheads/conifer_fridge_side"
+  }
+}

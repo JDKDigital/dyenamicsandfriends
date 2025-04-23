@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/sink",
+  "textures": {
+    "all": "dyenamics:block/amber_terracotta",
+    "particle": "dyenamics:block/amber_terracotta"
+  }
+}

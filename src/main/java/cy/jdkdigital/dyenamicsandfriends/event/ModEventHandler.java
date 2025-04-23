@@ -87,12 +87,18 @@ public class ModEventHandler
         if (ModList.get().isLoaded("luminax")) {
             LuminaxCompat.buildTabContents(event);
         }
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.buildTabContents(event);
+        }
     }
 
     @SubscribeEvent
     public static void addBlocks(final BlockEntityTypeAddBlocksEvent event) {
         if (ModList.get().isLoaded("productivemetalworks")) {
             ProductiveMetalworksCompat.addBlocks(event);
+        }
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.addBlocks(event);
         }
     }
 }

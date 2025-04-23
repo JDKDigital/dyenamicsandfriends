@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/cabinet",
+  "textures": {
+    "all": "dyenamics:block/cherenkov_terracotta",
+    "particle": "dyenamics:block/cherenkov_terracotta"
+  }
+}

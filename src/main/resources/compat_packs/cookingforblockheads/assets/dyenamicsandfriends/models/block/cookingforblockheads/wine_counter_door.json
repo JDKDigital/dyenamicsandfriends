@@ -1,0 +1,6 @@
+{
+  "parent": "cookingforblockheads:block/counter_door",
+  "textures": {
+    "all": "dyenamics:block/wine_terracotta"
+  }
+}

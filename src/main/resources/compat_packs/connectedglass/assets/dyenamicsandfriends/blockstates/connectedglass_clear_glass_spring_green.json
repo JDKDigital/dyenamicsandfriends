@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:connectedglass/clear_glass_spring_green"
+      "model": "dyenamicsandfriends:block/connectedglass/clear_glass_spring_green"
     }
   }
 }

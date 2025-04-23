@@ -1,0 +1,6 @@
+{
+  "parent": "cookingforblockheads:item/counter",
+  "textures": {
+    "all": "dyenamics:block/$$_terracotta"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/icy_blue_cabinet",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/icy_blue_cabinet"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/icy_blue_cabinet",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/icy_blue_cabinet",
+      "y": 270
+    }
+  }
+}

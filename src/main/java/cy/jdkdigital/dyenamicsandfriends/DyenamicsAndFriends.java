@@ -78,7 +78,7 @@ public class DyenamicsAndFriends
         for (String modId: DyenamicRegistry.MODS) {
             if (ModList.get().isLoaded(modId)) {
                 event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.SERVER_DATA, Component.translatable("dataPack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.BOTTOM);
-                if (modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("crystalix")) {
+                if (modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("crystalix") || modId.equals("cookingforblockheads")) {
                     event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.CLIENT_RESOURCES, Component.translatable("resourcePack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.BOTTOM);
                 }
             }

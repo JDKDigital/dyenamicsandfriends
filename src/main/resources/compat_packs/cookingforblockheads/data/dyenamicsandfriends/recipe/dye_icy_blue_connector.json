@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "cookingforblockheads:connectors"
+    },
+    {
+      "tag": "c:dyes/icy_blue"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:cookingforblockheads_icy_blue_connector"
+  }
+}

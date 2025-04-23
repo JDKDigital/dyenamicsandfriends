@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/connector_outer_top_template",
+  "textures": {
+    "particle": "dyenamics:block/$$_terracotta",
+    "texture": "dyenamics:block/$$_terracotta"
+  }
+}

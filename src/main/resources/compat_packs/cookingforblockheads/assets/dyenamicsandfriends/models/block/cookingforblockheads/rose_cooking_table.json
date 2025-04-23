@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/cooking_table",
+  "textures": {
+    "all": "dyenamics:block/rose_terracotta",
+    "particle": "dyenamics:block/rose_terracotta"
+  }
+}

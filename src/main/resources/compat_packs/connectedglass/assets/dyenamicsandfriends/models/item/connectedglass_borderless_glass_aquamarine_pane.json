@@ -1,0 +1,7 @@
+{
+  "parent": "connectedglass:pane_item_template",
+  "textures": {
+    "all": "dyenamicsandfriends:block/connectedglass/borderless_glass/borderless_glass_aquamarine",
+    "edge": "dyenamicsandfriends:block/connectedglass/borderless_glass/borderless_glass_aquamarine_edge"
+  }
+}

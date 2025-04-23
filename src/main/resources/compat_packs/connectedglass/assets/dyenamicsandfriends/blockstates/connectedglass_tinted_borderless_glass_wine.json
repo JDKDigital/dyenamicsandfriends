@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "dyenamicsandfriends:connectedglass/tinted_borderless_glass_wine"
+      "model": "dyenamicsandfriends:block/connectedglass/tinted_borderless_glass_wine"
     }
   }
 }

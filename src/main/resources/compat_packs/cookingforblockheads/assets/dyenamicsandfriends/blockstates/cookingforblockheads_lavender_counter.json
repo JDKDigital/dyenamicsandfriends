@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/lavender_counter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/lavender_counter"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/lavender_counter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/cookingforblockheads/lavender_counter",
+      "y": 270
+    }
+  }
+}

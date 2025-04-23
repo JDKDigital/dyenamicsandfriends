@@ -1,0 +1,8 @@
+{
+  "type": "fusion:connecting",
+  "parent": "minecraft:block/cube_all",
+  "loader": "fusion:model",
+  "textures": {
+    "all": "dyenamicsandfriends:block/connectedglass/borderless_glass/borderless_glass_icy_blue"
+  }
+}

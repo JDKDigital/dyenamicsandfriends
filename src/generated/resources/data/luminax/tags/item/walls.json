@@ -1,15 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_amber_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_spring_green_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_icy_blue_luminax_wall",
       "required": false
     },
     {
@@ -17,39 +9,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_persimmon_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_honey_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_conifer_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_icy_blue_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_lavender_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_fluorescent_luminax_wall",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_cherenkov_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_mint_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_wine_luminax_wall",
       "required": false
     },
     {
@@ -57,11 +17,19 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_wall",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_maroon_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_rose_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_honey_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_mint_luminax_wall",
       "required": false
     },
     {
@@ -69,7 +37,39 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_rose_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_persimmon_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_fluorescent_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_lavender_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_wine_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_spring_green_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_maroon_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_amber_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_conifer_luminax_wall",
       "required": false
     }
   ]

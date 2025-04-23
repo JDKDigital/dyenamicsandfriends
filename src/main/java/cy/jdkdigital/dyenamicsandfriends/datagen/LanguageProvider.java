@@ -101,18 +101,13 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_crystalix_glass", colorName + " Crystalix Glass");
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_clear_crystalix_glass", colorName + " Clear Crystalix Glass");
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_bordered_crystalix_glass", colorName + " Bordered Crystalix Glass");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_block", colorName + " Luminax Block");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_stairs", colorName + " Luminax Stairs");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_slab", colorName + " Luminax Slab");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_wall", colorName + " Luminax Wall");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_pressure_plate", colorName + " Luminax Pressure Plate");
-            add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_button", colorName + " Luminax Button");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_block", "Dim " + colorName + " Luminax Block");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_stairs", "Dim " + colorName + " Luminax Stairs");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_slab", "Dim " + colorName + " Luminax Slab");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_wall", "Dim " + colorName + " Luminax Wall");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_pressure_plate", "Dim " + colorName + " Luminax Pressure Plate");
-            add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_button", "Dim " + colorName + " Luminax Button");
+            for (String name: new String[]{"block", "stairs", "slab", "wall", "pressure_plate", "button"}) {
+                add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_" + name, colorName + " " + capName(name));
+                add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_" + name, "Dim " + colorName + " " + capName(name));
+            }
+            for (String name: new String[]{"oven", "fridge", "connector", "kitchen_floor", "cooking_table", "counter", "cabinet", "sink"}) {
+                add("block.dyenamicsandfriends.cookingforblockheads_" + color.getSerializedName() + "_" + name, colorName + " " + capName(name));
+            }
 
             for (CGGlassType glassType : CGGlassType.values()) {
                 var typeName = glassType.name().toLowerCase(Locale.ROOT);

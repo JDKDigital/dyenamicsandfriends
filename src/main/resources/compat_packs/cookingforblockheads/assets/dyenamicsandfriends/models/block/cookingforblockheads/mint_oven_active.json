@@ -1,0 +1,12 @@
+{
+  "parent": "cookingforblockheads:block/oven",
+  "textures": {
+    "backsplash": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_side",
+    "ovenbottom": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_bottom",
+    "ovenfront": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_front_active",
+    "ovenfront_active": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_front_active",
+    "oventop": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_top",
+    "particle": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_side",
+    "texture": "dyenamicsandfriends:block/cookingforblockheads/mint_oven_side"
+  }
+}

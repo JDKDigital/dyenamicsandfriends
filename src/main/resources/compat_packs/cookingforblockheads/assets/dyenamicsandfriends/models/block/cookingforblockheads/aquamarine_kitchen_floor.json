@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/kitchen_floor",
+  "textures": {
+    "all": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_kitchen_floor",
+    "particle": "dyenamicsandfriends:block/cookingforblockheads/aquamarine_kitchen_floor"
+  }
+}

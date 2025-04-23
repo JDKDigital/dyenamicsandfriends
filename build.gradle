@@ -144,9 +144,10 @@ dependencies {
 //    implementation "curse.maven:autoreglib-250363:4100299")
     implementation "curse.maven:athena-841890:5629395" // supplementaries, sleep tight
     implementation "curse.maven:selene-499980:6391012" // supplementaries, sleep tight
-//    implementation "curse.maven:balm-531761:3914527")
+    implementation "curse.maven:balm-531761:6447094" // cfb
     implementation "curse.maven:bookshelf-228525:6390300" // botany pots
-//    implementation "curse.maven:blueprint-382216:4019850") // clayworks
+    implementation "curse.maven:blueprint-382216:6449863" // clayworks
+    implementation "curse.maven:gallery-1173553:6449910" // clayworks
 ////    implementation "curse.maven:ctm-267602:3933537") // chipped
     implementation "curse.maven:architectury-api-419699:5786327" // furnish, comforts
     implementation "curse.maven:terrablender-940057:6054947" // regions unexplored
@@ -162,6 +163,7 @@ dependencies {
     implementation "curse.maven:regions-unexplored-659110:6273893"
     implementation "curse.maven:handcrafted-538214:6330030"
     implementation "curse.maven:another-furniture-610492:5850327"
+    implementation "curse.maven:dyeable-jack-olanterns-1127220:5843404"
 
     implementation "curse.maven:fusion-connected-textures-854949:6396619"
     implementation "curse.maven:supermartijn642s-core-lib-454372:6076757"
@@ -182,6 +184,7 @@ dependencies {
     implementation "curse.maven:sophisticated-backpacks-422301:6377608"
     implementation "curse.maven:crystalix-1187033:6407169"
     implementation "curse.maven:luminax-1165932:6140008"
+    implementation "curse.maven:cooking-for-blockheads-231484:6446777"
 //    implementation "curse.maven:create-deco-509285:4183385")
 //    implementation "curse.maven:farmers-delight-398521:3999157")
 //    implementation "curse.maven:nightlights-651876:4618572") // TODO enable
@@ -193,7 +196,7 @@ dependencies {
 //    implementation "curse.maven:oreganized-769203:4377982")
 //    implementation "curse.maven:glazed-resymmetry-714619:4403239")
 //    implementation "curse.maven:ceramics-250617:4049193")
-//    implementation "curse.maven:clayworks-592162:4396960")
+    implementation "curse.maven:clayworks-592162:6449901"
 //    implementation "curse.maven:chipped-456956:4634856") // TODO enable
 }
 

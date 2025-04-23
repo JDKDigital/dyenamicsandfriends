@@ -1,0 +1,7 @@
+{
+  "parent": "cookingforblockheads:block/counter",
+  "textures": {
+    "all": "dyenamics:block/fluorescent_terracotta",
+    "particle": "dyenamics:block/fluorescent_terracotta"
+  }
+}
