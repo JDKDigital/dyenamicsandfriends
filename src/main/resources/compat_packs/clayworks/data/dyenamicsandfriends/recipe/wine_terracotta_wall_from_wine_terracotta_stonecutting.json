@@ -1,0 +1,16 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "clayworks:config",
+      "value": "terracotta_variants"
+    }
+  ],
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "dyenamics:wine_terracotta"
+  },
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:clayworks_wine_terracotta_stairs"
+  }
+}

@@ -1,10 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
-import cy.jdkdigital.dyenamicsandfriends.compat.CookingForBlockheadsCompat;
-import cy.jdkdigital.dyenamicsandfriends.compat.CrystalixCompat;
-import cy.jdkdigital.dyenamicsandfriends.compat.LuminaxCompat;
-import cy.jdkdigital.dyenamicsandfriends.compat.ProductiveMetalworksCompat;
+import cy.jdkdigital.dyenamicsandfriends.compat.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -24,6 +21,11 @@ public class BlockTagProvider extends BlockTagsProvider
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         var MINEABLE_PICKAXE = tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        var DOORS = tag(BlockTags.DOORS);
+        var TRAPDOORS = tag(BlockTags.TRAPDOORS);
+        var SLABS = tag(BlockTags.SLABS);
+        var WALLS = tag(BlockTags.WALLS);
+        var STAIRS = tag(BlockTags.STAIRS);
 
         MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/quark_pickaxe")));
         MINEABLE_PICKAXE.addTag(BlockTags.create(ResourceLocation.parse("dyenamicsandfriends:mineable/ceramics_pickaxe")));
@@ -57,18 +59,18 @@ public class BlockTagProvider extends BlockTagsProvider
 
         if (ModList.get().isLoaded("luminax")) {
             var BLOCKS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "blocks")));
-            var STAIRS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "stairs")));
-            var SLABS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "slabs")));
-            var WALLS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "walls")));
-            var PRESSURE_PLATES = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "pressure_plates")));
-            var BUTTONS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "buttons")));
+            var LUMINAX_STAIRS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "stairs")));
+            var LUMINAX_SLABS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "slabs")));
+            var LUMINAX_WALLS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "walls")));
+            var LUMINAX_PRESSURE_PLATES = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "pressure_plates")));
+            var LUMINAX_BUTTONS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "buttons")));
 
             LuminaxCompat.BLOCKS.forEach((dyenamicDyeColor, holder) -> BLOCKS.addOptional(holder.getId()));
-            LuminaxCompat.STAIRS.forEach((dyenamicDyeColor, holder) -> STAIRS.addOptional(holder.getId()));
-            LuminaxCompat.SLABS.forEach((dyenamicDyeColor, holder) -> SLABS.addOptional(holder.getId()));
-            LuminaxCompat.WALLS.forEach((dyenamicDyeColor, holder) -> WALLS.addOptional(holder.getId()));
-            LuminaxCompat.PRESSURE_PLATES.forEach((dyenamicDyeColor, holder) -> PRESSURE_PLATES.addOptional(holder.getId()));
-            LuminaxCompat.BUTTONS.forEach((dyenamicDyeColor, holder) -> BUTTONS.addOptional(holder.getId()));
+            LuminaxCompat.STAIRS.forEach((dyenamicDyeColor, holder) -> LUMINAX_STAIRS.addOptional(holder.getId()));
+            LuminaxCompat.SLABS.forEach((dyenamicDyeColor, holder) -> LUMINAX_SLABS.addOptional(holder.getId()));
+            LuminaxCompat.WALLS.forEach((dyenamicDyeColor, holder) -> LUMINAX_WALLS.addOptional(holder.getId()));
+            LuminaxCompat.PRESSURE_PLATES.forEach((dyenamicDyeColor, holder) -> LUMINAX_PRESSURE_PLATES.addOptional(holder.getId()));
+            LuminaxCompat.BUTTONS.forEach((dyenamicDyeColor, holder) -> LUMINAX_BUTTONS.addOptional(holder.getId()));
 
             var DIM_BLOCKS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "dim_blocks")));
             var DIM_STAIRS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "dim_stairs")));
@@ -86,23 +88,35 @@ public class BlockTagProvider extends BlockTagsProvider
         }
 
         if (ModList.get().isLoaded("cookingforblockheads")) {
-            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
-            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.add(holder.get()));
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> MINEABLE_PICKAXE.addOptional(holder.getId()));
 
             var COOKING_TABLES = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:cooking_tables")));
-            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.add(holder.get()));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.addOptional(holder.getId()));
             var KITCHEN_CONNECTORS = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:kitchen_connectors")));
-            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.add(holder.get()));
-            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.add(holder.get()));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.KITCHEN_FLOORS.forEach((dyenamicDyeColor, holder) -> KITCHEN_CONNECTORS.addOptional(holder.getId()));
             var KITCHEN_ITEM_PROVIDERS = tag(BlockTags.create(ResourceLocation.parse("cookingforblockheads:kitchen_item_providers")));
-            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.add(holder.get()));
-            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.add(holder.get()));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.addOptional(holder.getId()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> KITCHEN_ITEM_PROVIDERS.addOptional(holder.getId()));
+        }
+
+        if (ModList.get().isLoaded("clayworks")) {
+            ClayworksCompat.DOORS.forEach(holder -> DOORS.addOptional(holder.getId()));
+            ClayworksCompat.TRAPDOORS.forEach(holder -> TRAPDOORS.addOptional(holder.getId()));
+            ClayworksCompat.SLABS.forEach(holder -> SLABS.addOptional(holder.getId()));
+            ClayworksCompat.WALLS.forEach(holder -> WALLS.addOptional(holder.getId()));
+            ClayworksCompat.STAIRS.forEach(holder -> STAIRS.addOptional(holder.getId()));
+            ClayworksCompat.SLABS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            ClayworksCompat.WALLS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            ClayworksCompat.STAIRS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
+            ClayworksCompat.BLOCKS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
         }
     }
 

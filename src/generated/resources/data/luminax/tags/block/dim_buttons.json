@@ -1,59 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_dim_icy_blue_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_navy_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_cherenkov_luminax_button",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_dim_peach_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_honey_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_ultramarine_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_fluorescent_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_wine_luminax_button",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_aquamarine_luminax_button",
       "required": false
     },
     {
@@ -61,15 +9,67 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_button",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_dim_amber_luminax_button",
       "required": false
     },
     {
+      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_wine_luminax_button",
+      "required": false
+    },
+    {
       "id": "dyenamicsandfriends:luminax_dim_conifer_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_honey_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_navy_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_icy_blue_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_cherenkov_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_aquamarine_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_fluorescent_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_ultramarine_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_button",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_button",
       "required": false
     }
   ]

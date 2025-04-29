@@ -1,35 +1,23 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "item": "dyenamics:peach_terracotta"
-          }
-        },
-        "pattern": [
-          "##",
-          "##"
-        ],
-        "result": {
-          "count": 4,
-          "item": "dyenamicsandfriends:clayworks_peach_terracotta_bricks"
-        }
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "dyenamics:peach_terracotta"
     }
-  ]
+  },
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 4,
+    "id": "dyenamicsandfriends:clayworks_peach_terracotta_bricks"
+  }
 }

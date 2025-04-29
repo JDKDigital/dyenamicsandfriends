@@ -1,28 +1,19 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "kiln"
-        }
-      ],
-      "recipe": {
-        "type": "clayworks:baking",
-        "cookingtime": 100,
-        "experience": 0.1,
-        "ingredient": {
-          "item": "dyenamics:cherenkov_terracotta"
-        },
-        "result": "dyenamics:cherenkov_glazed_terracotta"
-      }
+      "type": "clayworks:config",
+      "value": "kiln"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
-    }
-  ]
+  "type": "clayworks:baking",
+  "category": "blocks",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "dyenamics:cherenkov_terracotta"
+  },
+  "result": {
+    "count": 1,
+    "id": "dyenamics:cherenkov_glazed_terracotta"
+  }
 }

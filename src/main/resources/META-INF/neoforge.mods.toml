@@ -16,6 +16,10 @@ license="${mod_license}"
 # A URL to refer people to when problems occur with this mod
 issueTrackerURL="${issue_url}"
 
+
+[[mixins]]
+    config="${mod_id}.mixin.json"
+
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
     # The modid of the mod

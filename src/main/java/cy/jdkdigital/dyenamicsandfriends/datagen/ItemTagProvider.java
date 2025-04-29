@@ -22,6 +22,12 @@ public class ItemTagProvider extends ItemTagsProvider
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        copy(BlockTags.DOORS, ItemTags.DOORS);
+        copy(BlockTags.TRAPDOORS, ItemTags.TRAPDOORS);
+        copy(BlockTags.SLABS, ItemTags.SLABS);
+        copy(BlockTags.WALLS, ItemTags.WALLS);
+        copy(BlockTags.STAIRS, ItemTags.STAIRS);
+
         if (ModList.get().isLoaded("productivemetalworks")) {
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")));
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")));

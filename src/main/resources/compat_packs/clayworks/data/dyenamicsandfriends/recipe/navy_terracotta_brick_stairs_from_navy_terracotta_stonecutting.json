@@ -1,27 +1,16 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:stonecutting",
-        "count": 1,
-        "ingredient": {
-          "item": "dyenamics:navy_terracotta"
-        },
-        "result": "dyenamicsandfriends:clayworks_navy_terracotta_brick_stairs"
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
-    }
-  ]
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "dyenamics:navy_terracotta"
+  },
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:clayworks_navy_terracotta_brick_stairs"
+  }
 }

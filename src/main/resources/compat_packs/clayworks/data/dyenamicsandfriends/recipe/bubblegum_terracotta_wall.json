@@ -1,35 +1,23 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_variants"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "item": "dyenamics:bubblegum_terracotta"
-          }
-        },
-        "pattern": [
-          "###",
-          "###"
-        ],
-        "result": {
-          "count": 6,
-          "item": "dyenamicsandfriends:clayworks_bubblegum_terracotta_wall"
-        }
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_variants"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dyenamics:bubblegum_terracotta"
     }
-  ]
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "dyenamicsandfriends:clayworks_bubblegum_terracotta_wall"
+  }
 }

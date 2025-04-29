@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "cy.jdkdigital.dyenamicsandfriends.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "clayworks.DecoratedPotRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "dyenamicsandfriends.refmap.json",
+  "minVersion": "0.8.5"
+}

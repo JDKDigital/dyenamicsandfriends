@@ -90,6 +90,9 @@ public class ModEventHandler
         if (ModList.get().isLoaded("cookingforblockheads")) {
             CookingForBlockheadsCompat.buildTabContents(event);
         }
+        if (ModList.get().isLoaded("clayworks")) {
+            ClayworksCompat.buildTabContents(event);
+        }
     }
 
     @SubscribeEvent
@@ -99,6 +102,9 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("cookingforblockheads")) {
             CookingForBlockheadsCompat.addBlocks(event);
+        }
+        if (ModList.get().isLoaded("clayworks")) {
+            ClayworksCompat.addBlocks(event);
         }
     }
 }

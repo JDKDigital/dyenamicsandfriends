@@ -1,34 +1,23 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "item": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_slab"
-          }
-        },
-        "pattern": [
-          "#",
-          "#"
-        ],
-        "result": {
-          "item": "dyenamicsandfriends:clayworks_persimmon_terracotta_chiseled_bricks"
-        }
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "dyenamicsandfriends:clayworks_persimmon_terracotta_brick_slab"
     }
-  ]
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:clayworks_persimmon_terracotta_chiseled_bricks"
+  }
 }

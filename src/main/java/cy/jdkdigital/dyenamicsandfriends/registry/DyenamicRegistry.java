@@ -15,6 +15,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.ModelEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -43,13 +44,13 @@ public class DyenamicRegistry
         add("crystalix");
         add("luminax");
         add("cookingforblockheads");
+        add("clayworks");
+//        add("glazedresymmetry");
+//        add("ls_djl");
 //        add("botanypots");
-//        add("handcrafted"); // OUT! it's hardcoded to only work with the 16 vanilla colors
 //        add("ceramics");
 //        add("chalk");
-//        add("clayworks");
 //        add("farmersdelight");
-//        add("glazedresymmetry");
 //        add("oreganized");
 //        add("quark");
 //        add("supplementaries");
@@ -154,7 +155,7 @@ public class DyenamicRegistry
 //                GlazedResymmetryCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("clayworks")) {
-//                ClayworksCompat.registerBlocks(color);
+                ClayworksCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("the_bumblezone")) {
                 BumblezoneCompat.registerBlocks(color);
@@ -254,6 +255,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("connectedglass")) {
             ConnectedGlassCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("clayworks")) {
+            ClayworksCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
@@ -324,8 +328,11 @@ public class DyenamicRegistry
     }
 
     public static void onCommonSetup(FMLCommonSetupEvent event) {
-        if (ModList.get().isLoaded("ae2")) {
-//            Ae2Compat.commonSetup(event);
+    }
+
+    public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
+        if (ModList.get().isLoaded("clayworks")) {
+            ClayworksCompat.Client.registerClientExtensions(event);
         }
     }
 }

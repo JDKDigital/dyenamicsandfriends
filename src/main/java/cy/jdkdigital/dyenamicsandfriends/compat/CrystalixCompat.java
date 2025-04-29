@@ -49,6 +49,7 @@ public class CrystalixCompat
             });
         }
     }
+
     public static class Client
     {
         public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {

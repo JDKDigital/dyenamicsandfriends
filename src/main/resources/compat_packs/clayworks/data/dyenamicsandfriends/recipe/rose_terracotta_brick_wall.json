@@ -1,35 +1,23 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:crafting_shaped",
-        "key": {
-          "#": {
-            "item": "dyenamicsandfriends:clayworks_rose_terracotta_bricks"
-          }
-        },
-        "pattern": [
-          "###",
-          "###"
-        ],
-        "result": {
-          "count": 6,
-          "item": "dyenamicsandfriends:clayworks_rose_terracotta_brick_wall"
-        }
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "dyenamicsandfriends:clayworks_rose_terracotta_bricks"
     }
-  ]
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 6,
+    "id": "dyenamicsandfriends:clayworks_rose_terracotta_brick_wall"
+  }
 }

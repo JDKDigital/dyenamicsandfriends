@@ -136,6 +136,8 @@ dependencies {
     implementation "curse.maven:productivemetalworks-1184570:6390845"
     implementation "curse.maven:curios-309927:6401872"
 
+    implementation "libs:botanypots-neoforge-1.21.1:21.1.10"
+
 //    implementation "libs:supplementaries-1.20:2.7.20")
 //    implementation "libs:suppsquared-1.19.2:1.0.14")
 //    implementation "libs:handcrafted-forge-1.20.1:3.0.5")
@@ -145,7 +147,8 @@ dependencies {
     implementation "curse.maven:athena-841890:5629395" // supplementaries, sleep tight
     implementation "curse.maven:selene-499980:6391012" // supplementaries, sleep tight
     implementation "curse.maven:balm-531761:6447094" // cfb
-    implementation "curse.maven:bookshelf-228525:6390300" // botany pots
+    implementation "curse.maven:bookshelf-228525:6464698" // botany pots
+    implementation "curse.maven:prickle-1023259:5836410" // botany pots
     implementation "curse.maven:blueprint-382216:6449863" // clayworks
     implementation "curse.maven:gallery-1173553:6449910" // clayworks
 ////    implementation "curse.maven:ctm-267602:3933537") // chipped

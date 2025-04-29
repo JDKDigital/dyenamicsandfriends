@@ -1,13 +1,8 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import com.google.common.collect.Lists;
-import com.vsngarcia.client.ColorCamoElevator;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
-import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.blay09.mods.balm.api.DeferredObject;
-import net.blay09.mods.balm.api.client.BalmClient;
-import net.blay09.mods.balm.api.client.rendering.BalmModels;
 import net.blay09.mods.cookingforblockheads.block.*;
 import net.blay09.mods.cookingforblockheads.block.entity.ModBlockEntities;
 import net.minecraft.client.resources.model.BakedModel;
@@ -25,7 +20,7 @@ import java.util.*;
 
 public class CookingForBlockheadsCompat
 {
-    // oven, fridge, connector, kitchen_floor, cooking_table, counter, cabinet, sink
+    // TODO right click with dye to switch block color
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> OVENS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FRIDGES = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CONNECTORS = new HashMap<>();
@@ -39,9 +34,7 @@ public class CookingForBlockheadsCompat
         String prefix = "cookingforblockheads_" + color.getSerializedName();
         OVENS.put(color, DyenamicRegistry.registerBlock(prefix + "_oven", () -> new OvenBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())), true));
         FRIDGES.put(color, DyenamicRegistry.registerBlock(prefix + "_fridge", () -> new FridgeBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())), true));
-        CONNECTORS.put(color, DyenamicRegistry.registerBlock(prefix + "_connector", () -> new DyedConnectorBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue()))
-        {
-        }, true));
+        CONNECTORS.put(color, DyenamicRegistry.registerBlock(prefix + "_connector", () -> new DyedConnectorBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())) {}, true));
         KITCHEN_FLOORS.put(color, DyenamicRegistry.registerBlock(prefix + "_kitchen_floor", () -> new Block(BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())), true));
         COOKING_TABLES.put(color, DyenamicRegistry.registerBlock(prefix + "_cooking_table", () -> new CookingTableBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())), true));
         COUNTERS.put(color, DyenamicRegistry.registerBlock(prefix + "_counter", () -> new CounterBlock(color.getAnalogue(), BlockBehaviour.Properties.of().lightLevel((state) -> color.getLightValue())), true));

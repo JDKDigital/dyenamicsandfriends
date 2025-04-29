@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "dyenamicsandfriends:block/clayworks/peach_stained_glass_door_bottom",
+    "top": "dyenamicsandfriends:block/clayworks/peach_stained_glass_door_top"
+  }
+}

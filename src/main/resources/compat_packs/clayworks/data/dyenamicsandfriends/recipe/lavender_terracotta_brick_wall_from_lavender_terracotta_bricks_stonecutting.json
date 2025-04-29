@@ -1,27 +1,16 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:stonecutting",
-        "count": 1,
-        "ingredient": {
-          "item": "dyenamicsandfriends:clayworks_lavender_terracotta_bricks"
-        },
-        "result": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_wall"
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
-    }
-  ]
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "dyenamicsandfriends:clayworks_lavender_terracotta_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:clayworks_lavender_terracotta_brick_wall"
+  }
 }

@@ -1,0 +1,76 @@
+{
+  "values": [
+    {
+      "id": "dyenamicsandfriends:clayworks_peach_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_aquamarine_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_fluorescent_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_mint_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_maroon_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_bubblegum_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_lavender_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_persimmon_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_cherenkov_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_amber_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_honey_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_ultramarine_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_spring_green_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_rose_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_navy_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_icy_blue_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_wine_stained_glass_door",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:clayworks_conifer_stained_glass_door",
+      "required": false
+    }
+  ]
+}

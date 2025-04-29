@@ -67,6 +67,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain", colorName + " Porcelain");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_terracotta_cistern", colorName + " Terracotta Cistern");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain_cistern", colorName + " Porcelain Cistern");
+            add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_decorated_pot", colorName + " Decorated Pot");
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_wall", colorName + " Terracotta Wall");
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_slab", colorName + " Terracotta Slab");
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_vertical_slab", colorName + " Terracotta Vertical Slab");
@@ -77,6 +78,8 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_brick_slab", colorName + " Terracotta Brick Slab");
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_brick_vertical_slab", colorName + " Terracotta Brick Vertical Slab");
             add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_terracotta_chiseled_bricks", "Chiseled " + colorName + " Terracotta Brick");
+            add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_stained_glass_door", "Chiseled " + colorName + " Stained Glass Door");
+            add("block.dyenamicsandfriends.clayworks_" + color.getSerializedName() + "_stained_glass_trapdoor", "Chiseled " + colorName + " Stained Glass Trapdoor");
             add("block.dyenamicsandfriends.glazedresymmetry_" + color.getSerializedName() + "_centered_glazed_terracotta", colorName + " Centered Glazed Terracotta");
             add("block.dyenamicsandfriends.glazedresymmetry_" + color.getSerializedName() + "_glazed_terracotta_pillar", colorName + " Glazed Terracotta Pillar");
             add("block.dyenamicsandfriends.glazedresymmetry_" + color.getSerializedName() + "_glazed_terracotta_slab", colorName + " Glazed Terracotta Slab");

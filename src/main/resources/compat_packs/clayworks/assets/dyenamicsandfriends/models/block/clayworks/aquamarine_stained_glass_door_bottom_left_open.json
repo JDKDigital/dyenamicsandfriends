@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "dyenamicsandfriends:block/clayworks/aquamarine_stained_glass_door_bottom",
+    "top": "dyenamicsandfriends:block/clayworks/aquamarine_stained_glass_door_top"
+  }
+}

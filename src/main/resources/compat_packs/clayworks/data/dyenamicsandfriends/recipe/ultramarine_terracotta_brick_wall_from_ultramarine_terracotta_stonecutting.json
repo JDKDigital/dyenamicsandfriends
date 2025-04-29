@@ -1,27 +1,16 @@
 {
-  "type": "forge:conditional",
-  "recipes": [
+  "neoforge:conditions": [
     {
-      "conditions": [
-        {
-          "type": "clayworks:config",
-          "value": "terracotta_bricks"
-        }
-      ],
-      "recipe": {
-        "type": "minecraft:stonecutting",
-        "count": 1,
-        "ingredient": {
-          "item": "dyenamics:ultramarine_terracotta"
-        },
-        "result": "dyenamicsandfriends:clayworks_ultramarine_terracotta_brick_wall"
-      }
+      "type": "clayworks:config",
+      "value": "terracotta_bricks"
     }
   ],
-  "conditions": [
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "clayworks"
-    }
-  ]
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "dyenamics:ultramarine_terracotta"
+  },
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:clayworks_ultramarine_terracotta_brick_wall"
+  }
 }

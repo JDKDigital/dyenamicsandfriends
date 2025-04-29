@@ -49,6 +49,7 @@ def genTextures():
     for path, subdirs, files in os.walk('templates'):
         for name in files:
             if not name.endswith('.png'): continue
+            if not "clayworks" in path: continue
             if '_overlay' in name: continue
             filename = os.path.join(path, name)
             print("F:" + filename)

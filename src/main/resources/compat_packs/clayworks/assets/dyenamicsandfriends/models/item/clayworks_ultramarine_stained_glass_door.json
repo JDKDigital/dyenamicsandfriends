@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dyenamicsandfriends:item/clayworks/ultramarine_stained_glass_door"
+  }
+}
