@@ -1,0 +1,8 @@
+{
+  "parent": "botanypots:block/template/hopper_pot",
+  "render_type": "cutout",
+  "textures": {
+    "material": "dyenamics:block/maroon_concrete",
+    "material_top": "dyenamicsandfriends:block/botanypots/maroon_concrete_pot_top"
+  }
+}

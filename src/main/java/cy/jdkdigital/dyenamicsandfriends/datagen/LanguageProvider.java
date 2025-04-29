@@ -44,10 +44,13 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("item.dyenamicsandfriends.handcrafted_" + color.getSerializedName() + "_cushion", colorName + " Cushion");
             add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_terracotta_botany_pot", colorName + " Botany Pot");
             add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_terracotta_hopper_botany_pot", colorName + " Hopper Botany Pot");
-            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_concrete_botany_pot", colorName + " Botany Pot");
-            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_concrete_hopper_botany_pot", colorName + " Hopper Botany Pot");
+            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_terracotta_waxed_botany_pot", colorName + " Waxed Botany Pot");
+            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_concrete_botany_pot", colorName + " Concrete Botany Pot");
+            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_concrete_hopper_botany_pot", colorName + " Concrete Hopper Botany Pot");
+            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_concrete_waxed_botany_pot", colorName + " Concrete Waxed Botany Pot");
             add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_glazed_terracotta_botany_pot", colorName + " Glazed Botany Pot");
             add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_glazed_terracotta_hopper_botany_pot", colorName + " Glazed Hopper Botany Pot");
+            add("block.dyenamicsandfriends.botanypots_" + color.getSerializedName() + "_glazed_terracotta_waxed_botany_pot", colorName + " Glazed Waxed Botany Pot");
             add("block.dyenamicsandfriends.furnish_" + color.getSerializedName() + "_amphora", colorName + " Amphora");
             add("block.dyenamicsandfriends.furnish_" + color.getSerializedName() + "_awning", colorName + " Awning");
             add("block.dyenamicsandfriends.furnish_" + color.getSerializedName() + "_curtain", colorName + " Curtain");

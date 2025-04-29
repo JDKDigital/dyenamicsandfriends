@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_fire_bricks",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_fire_bricks"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_fire_bricks",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_fire_bricks",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/mint_foundry_tank",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/mint_foundry_tank"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/mint_foundry_tank",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/mint_foundry_tank",
+      "y": 270
+    }
+  }
+}

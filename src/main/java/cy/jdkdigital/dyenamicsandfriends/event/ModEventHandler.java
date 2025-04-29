@@ -30,7 +30,7 @@ public class ModEventHandler
             AnotherFurnitureCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("botanypots")) {
-//            BotanyPotsCompat.buildTabContents(event);
+            BotanyPotsCompat.buildTabContents(event);
         }
         if (ModList.get().isLoaded("comforts")) {
             ComfortsCompat.buildTabContents(event);
@@ -105,6 +105,9 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("clayworks")) {
             ClayworksCompat.addBlocks(event);
+        }
+        if (ModList.get().isLoaded("botanypots")) {
+            BotanyPotsCompat.addBlocks(event);
         }
     }
 }

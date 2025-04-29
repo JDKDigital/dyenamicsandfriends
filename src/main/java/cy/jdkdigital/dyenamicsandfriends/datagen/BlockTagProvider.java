@@ -118,6 +118,13 @@ public class BlockTagProvider extends BlockTagsProvider
             ClayworksCompat.STAIRS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
             ClayworksCompat.BLOCKS.forEach(holder -> MINEABLE_PICKAXE.addOptional(holder.getId()));
         }
+
+        if (ModList.get().isLoaded("botanypots")) {
+            var COOKING_TABLES = tag(BlockTags.create(ResourceLocation.parse("botanypots:botany_pots")));
+            BotanyPotsCompat.BOTANY_POTS.forEach((dyenamicDyeColor, map) -> {
+                map.forEach((name, holder) -> COOKING_TABLES.addOptional(holder.getId()));
+            });
+        }
     }
 
     @Override

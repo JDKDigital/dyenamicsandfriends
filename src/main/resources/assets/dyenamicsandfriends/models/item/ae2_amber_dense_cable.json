@@ -1,6 +1,0 @@
-{
-  "parent": "ae2:item/dense_cable_base",
-  "textures": {
-    "base": "dyenamicsandfriends:item/ae2/part/cable/dense/amber"
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "parent": "botanypots:block/template/hopper_pot",
+  "render_type": "cutout",
+  "textures": {
+    "material": "dyenamics:block/rose_terracotta",
+    "material_top": "dyenamicsandfriends:block/botanypots/rose_terracotta_pot_top"
+  }
+}

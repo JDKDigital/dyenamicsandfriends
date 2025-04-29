@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/productivemetalworks/rose_fire_bricks",
+    "side": "dyenamicsandfriends:block/productivemetalworks/rose_fire_bricks",
+    "top": "dyenamicsandfriends:block/productivemetalworks/rose_fire_bricks"
+  }
+}

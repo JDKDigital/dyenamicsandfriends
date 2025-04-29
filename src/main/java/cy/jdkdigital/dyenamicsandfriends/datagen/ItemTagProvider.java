@@ -92,6 +92,10 @@ public class ItemTagProvider extends ItemTagsProvider
             var DYED_SINKS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_sinks")));
             CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> DYED_SINKS.add(holder.get().asItem()));
         }
+
+        if (ModList.get().isLoaded("botanypots")) {
+            copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("botanypots", "botany_pots")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("botanypots", "botany_pots")));
+        }
     }
 
     @Override

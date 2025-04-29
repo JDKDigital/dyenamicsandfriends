@@ -1,6 +1,0 @@
-{
-  "parent": "ae2:item/covered_dense_cable_base",
-  "textures": {
-    "base": "dyenamicsandfriends:item/ae2/part/cable/covered_dense/bubblegum"
-  }
-}

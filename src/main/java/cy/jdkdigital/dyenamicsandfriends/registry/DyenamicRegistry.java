@@ -47,7 +47,7 @@ public class DyenamicRegistry
         add("clayworks");
 //        add("glazedresymmetry");
 //        add("ls_djl");
-//        add("botanypots");
+        add("botanypots");
 //        add("ceramics");
 //        add("chalk");
 //        add("farmersdelight");
@@ -75,7 +75,7 @@ public class DyenamicRegistry
                 AnotherFurnitureCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("botanypots")) {
-//                BotanyPotsCompat.registerBlocks(color);
+                BotanyPotsCompat.registerBlocks(color);
             }
             if (ModList.get().isLoaded("comforts")) {
                 ComfortsCompat.registerBlocks(color);
@@ -225,9 +225,6 @@ public class DyenamicRegistry
     }
 
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        if (ModList.get().isLoaded("botanypots")) {
-//            BotanyPotsCompat.Client.registerBlockEntityRenderers(event);
-        }
         if (ModList.get().isLoaded("create")) {
             CreateCompat.Client.registerBlockEntityRenderers(event);
         }

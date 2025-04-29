@@ -1,6 +1,0 @@
-{
-  "parent": "ae2:item/smart_cable_base",
-  "textures": {
-    "base": "dyenamicsandfriends:item/ae2/part/cable/smart/maroon"
-  }
-}

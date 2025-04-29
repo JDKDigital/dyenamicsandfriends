@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_foundry_drain",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_foundry_drain"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_foundry_drain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/ultramarine_foundry_drain",
+      "y": 270
+    }
+  }
+}

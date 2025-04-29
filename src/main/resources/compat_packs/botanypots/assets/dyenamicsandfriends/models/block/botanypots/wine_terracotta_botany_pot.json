@@ -1,0 +1,8 @@
+{
+  "parent": "botanypots:block/template/pot",
+  "render_type": "cutout",
+  "textures": {
+    "material": "dyenamics:block/wine_terracotta",
+    "material_top": "dyenamicsandfriends:block/botanypots/wine_terracotta_pot_top"
+  }
+}
