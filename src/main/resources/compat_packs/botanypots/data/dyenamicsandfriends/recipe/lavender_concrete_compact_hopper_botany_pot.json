@@ -20,7 +20,7 @@
     "id": "dyenamicsandfriends:botanypots_lavender_concrete_hopper_botany_pot",
     "count": 1
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "botanypots"

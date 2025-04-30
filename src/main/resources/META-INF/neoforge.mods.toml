@@ -17,8 +17,8 @@ license="${mod_license}"
 issueTrackerURL="${issue_url}"
 
 
-[[mixins]]
-    config="${mod_id}.mixin.json"
+#[[mixins]]
+#    config="${mod_id}.mixin.json"
 
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory

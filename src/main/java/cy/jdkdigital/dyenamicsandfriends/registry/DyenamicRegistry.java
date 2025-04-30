@@ -118,10 +118,6 @@ public class DyenamicRegistry
 //                QuarkCompat.registerBlocks(color);
 //                QuarkCompat.registerItems(color);
             }
-            if (ModList.get().isLoaded("handcrafted")) {
-//                HandcraftedCompat.registerBlocks(color);
-//                HandcraftedCompat.registerItems(color);
-            }
             if (ModList.get().isLoaded("furnish")) {
                 FurnishCompat.registerBlocks(color);
             }
@@ -317,6 +313,9 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("create")) {
             CreateCompat.playerRightClick(event);
+        }
+        if (ModList.get().isLoaded("cookingforblockheads")) {
+            CookingForBlockheadsCompat.playerRightClick(event);
         }
     }
 

@@ -17,7 +17,7 @@
     "id": "dyenamicsandfriends:botanypots_spring_green_concrete_botany_pot",
     "count": 1
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "botanypots"

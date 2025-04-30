@@ -1,10 +1,10 @@
 1.21.1-2.1.0
 
 - Added Clayworks compat
-- Added Cooking for Blockheads compat (textures from RobinFloof)
 - Added Botany Pots compat
+- Added Cooking for Blockheads compat (textures from RobinFloof)
 - Refreshed Productive Metalworks textures (Cherry Rosy)
-- Fixed transparency for Connected Glass compat blocks
+- Fixed transparency for Connected Glass compat
 
 
 1.21.1-2.0.0

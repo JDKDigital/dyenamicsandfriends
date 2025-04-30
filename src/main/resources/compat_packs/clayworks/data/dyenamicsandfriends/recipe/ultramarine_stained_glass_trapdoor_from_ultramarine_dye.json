@@ -7,10 +7,9 @@
   ],
   "type": "minecraft:crafting_shapeless",
   "category": "redstone",
-  "group": "stained_glass_door",
   "ingredients": [
     {
-      "item": "clayworks:glass_door"
+      "item": "clayworks:glass_trapdoor"
     },
     {
       "tag": "c:dyes/ultramarine"

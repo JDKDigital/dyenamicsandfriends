@@ -1,19 +1,13 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
-import com.teamabnormals.blueprint.client.MemoizedBEWLR;
-import com.teamabnormals.clayworks.client.DecoratedPotBlockEntityWithoutLevelRenderer;
 import com.teamabnormals.clayworks.common.block.GlassDoorBlock;
 import com.teamabnormals.clayworks.common.block.GlassTrapDoorBlock;
 import com.teamabnormals.clayworks.core.registry.ClayworksBlocks;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
-import cy.jdkdigital.productivebees.client.render.item.JarBlockItemRenderer;
-import cy.jdkdigital.productivemetalworks.registry.MetalworksRegistrator;
-import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -21,14 +15,9 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
@@ -61,7 +50,7 @@ public class ClayworksCompat
         BLOCKS.add(DyenamicRegistry.registerBlock(prefix + "_terracotta_chiseled_bricks", () -> new Block(properties), true));
         DOORS.add(DyenamicRegistry.registerBlock(prefix + "_stained_glass_door", () -> new GlassDoorBlock(color.getAnalogue()), true));
         TRAPDOORS.add(DyenamicRegistry.registerBlock(prefix + "_stained_glass_trapdoor", () -> new GlassTrapDoorBlock(color.getAnalogue()), true));
-        POTS.add(createPot(prefix + "_decorated_pot", color));
+//        POTS.add(createPot(prefix + "_decorated_pot", color));
     }
 
     public static void buildTabContents(BuildCreativeModeTabContentsEvent event) {
@@ -72,7 +61,7 @@ public class ClayworksCompat
             STAIRS.forEach(holder -> event.accept(holder.get()));
             DOORS.forEach(holder -> event.accept(holder.get()));
             TRAPDOORS.forEach(holder -> event.accept(holder.get()));
-            POTS.forEach(holder -> event.accept(holder.get()));
+//            POTS.forEach(holder -> event.accept(holder.get()));
         }
         if (event.getTabKey().equals(CreativeModeTabs.REDSTONE_BLOCKS)) {
             DOORS.forEach(holder -> event.accept(holder.get()));
@@ -81,7 +70,7 @@ public class ClayworksCompat
     }
 
     public static void addBlocks(BlockEntityTypeAddBlocksEvent event) {
-        event.modify(BlockEntityType.DECORATED_POT, POTS.stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
+//        event.modify(BlockEntityType.DECORATED_POT, POTS.stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
     }
 
     public static DyenamicDyeColor getDyeColorFromPot(Block block) {
@@ -100,9 +89,9 @@ public class ClayworksCompat
         }
 
         public static void registerClientExtensions(RegisterClientExtensionsEvent event) {
-            POTS.forEach(holder -> {
-                event.registerItem(MemoizedBEWLR.asCustomItemRenderer((dispatcher, entityModelSet) -> new DecoratedPotBlockEntityWithoutLevelRenderer<>(dispatcher, entityModelSet, new DecoratedPotBlockEntity(BlockPos.ZERO, holder.get().defaultBlockState()))), holder.get().asItem());
-            });
+//            POTS.forEach(holder -> {
+//                event.registerItem(MemoizedBEWLR.asCustomItemRenderer((dispatcher, entityModelSet) -> new DecoratedPotBlockEntityWithoutLevelRenderer<>(dispatcher, entityModelSet, new DecoratedPotBlockEntity(BlockPos.ZERO, holder.get().defaultBlockState()))), holder.get().asItem());
+//            });
         }
     }
 

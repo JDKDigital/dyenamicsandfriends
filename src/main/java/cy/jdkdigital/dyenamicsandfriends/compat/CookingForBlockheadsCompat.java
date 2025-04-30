@@ -1,26 +1,36 @@
 package cy.jdkdigital.dyenamicsandfriends.compat;
 
+import cy.jdkdigital.dyenamics.common.item.DyenamicDyeItem;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
+import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.common.block.create.DyenamicsSailBlock;
 import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.blay09.mods.balm.api.DeferredObject;
 import net.blay09.mods.cookingforblockheads.block.*;
 import net.blay09.mods.cookingforblockheads.block.entity.ModBlockEntities;
+import net.blay09.mods.cookingforblockheads.block.entity.util.TransferableBlockEntity;
 import net.minecraft.client.resources.model.BakedModel;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
+import javax.annotation.Nullable;
 import java.util.*;
 
 public class CookingForBlockheadsCompat
 {
-    // TODO right click with dye to switch block color
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> OVENS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FRIDGES = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> CONNECTORS = new HashMap<>();
@@ -67,55 +77,78 @@ public class CookingForBlockheadsCompat
         event.modify(ModBlockEntities.sink.get(), SINKS.values().stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
     }
 
+    public static void playerRightClick(PlayerInteractEvent.RightClickBlock event) {
+        ItemStack itemStack = event.getItemStack();
+
+        if (event.getLevel() instanceof ServerLevel level) {
+            if (!itemStack.isEmpty() && itemStack.getItem() instanceof DyenamicDyeItem dyeItem) {
+                BlockState state = level.getBlockState(event.getPos());
+                if (state.getBlock() instanceof BaseKitchenBlock) {
+
+                    var newState = recolorBlock(state, dyeItem.getDyeColor());
+                    if (newState != null && !newState.is(state.getBlock())) {
+                        final var blockEntity = level.getBlockEntity(event.getPos());
+                        Object transferData = null;
+                        if (blockEntity instanceof TransferableBlockEntity transferableBlockEntity) {
+                            transferData = transferableBlockEntity.snapshotDataForTransfer();
+                        }
+
+                        level.setBlockAndUpdate(event.getPos(), newState);
+
+                        final var newBlockEntity = level.getBlockEntity(event.getPos());
+                        if (transferData != null && newBlockEntity instanceof TransferableBlockEntity transferableBlockEntity) {
+                            transferableBlockEntity.restoreFromTransferSnapshot(transferData);
+                        }
+
+                        if (!event.getEntity().isCreative()) {
+                            itemStack.shrink(1);
+                        }
+                        event.getEntity().swing(event.getHand());
+                        event.setCanceled(true);
+                    }
+                }
+            }
+        }
+    }
+
+
+    @Nullable
+    private static BlockState recolorBlock(BlockState state, DyenamicDyeColor color) {
+        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(state.getBlock());
+        BlockState newState = null;
+        DyenamicsAndFriends.LOGGER.info("recolor block " + key);
+        if (key.getPath().contains("_oven")) {
+            newState = OVENS.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_fridge")) {
+            newState = FRIDGES.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_connector")) {
+            newState = CONNECTORS.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_cooking_table")) {
+            newState = COOKING_TABLES.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_counter")) {
+            newState = COUNTERS.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_cabinet")) {
+            newState = CABINETS.get(color).get().defaultBlockState();
+        } else if (key.getPath().contains("_sink")) {
+            newState = SINKS.get(color).get().defaultBlockState();
+        }
+        if (newState != null) {
+            for (Property property : state.getProperties()) {
+                if (newState.hasProperty(property)) {
+                    newState = newState.setValue(property, state.getValue(property));
+                }
+            }
+            if (newState.hasProperty(BaseKitchenBlock.COLOR) && newState.hasProperty(BaseKitchenBlock.HAS_COLOR)) {
+                newState = newState.setValue(BaseKitchenBlock.HAS_COLOR, true).setValue(BaseKitchenBlock.COLOR, color.getAnalogue());
+            }
+        }
+
+        return newState;
+    }
+
     public static class Client
     {
-        public static List<DeferredObject<BakedModel>> ovenDoors;
-        public static List<DeferredObject<BakedModel>> ovenDoorHandles;
-        public static List<DeferredObject<BakedModel>> ovenDoorsActive;
-        public static List<DeferredObject<BakedModel>> fridgeDoors;
-        public static List<DeferredObject<BakedModel>> fridgeDoorsFlipped;
-        public static List<DeferredObject<BakedModel>> fridgeDoorsLargeLower;
-        public static List<DeferredObject<BakedModel>> fridgeDoorsLargeUpper;
-        public static List<DeferredObject<BakedModel>> fridgeDoorsLargeLowerFlipped;
-        public static List<DeferredObject<BakedModel>> fridgeDoorsLargeUpperFlipped;
-        public static List<DeferredObject<BakedModel>> counterDoors;
-        public static List<DeferredObject<BakedModel>> counterDoorsFlipped;
-        public static List<DeferredObject<BakedModel>> cabinetDoors;
-        public static List<DeferredObject<BakedModel>> cabinetDoorsFlipped;
-
         public static void register() {
-//            BalmModels models = BalmClient.getModels();
-//            DyenamicDyeColor[] colors = DyenamicDyeColor.values();
-//
-//            counterDoors = new ArrayList<>(colors.length);
-//            counterDoorsFlipped = new ArrayList<>(colors.length);
-//            cabinetDoors = Lists.newArrayListWithCapacity(colors.length);
-//            cabinetDoorsFlipped = Lists.newArrayListWithCapacity(colors.length);
-//            ovenDoors = new ArrayList<>(colors.length);
-//            ovenDoorHandles = new ArrayList<>(colors.length);
-//            ovenDoorsActive = new ArrayList<>(colors.length);
-//            fridgeDoors = new ArrayList<>(colors.length);
-//            fridgeDoorsFlipped = new ArrayList<>(colors.length);
-//            fridgeDoorsLargeLower = new ArrayList<>(colors.length);
-//            fridgeDoorsLargeUpper = new ArrayList<>(colors.length);
-//            fridgeDoorsLargeLowerFlipped = new ArrayList<>(colors.length);
-//            fridgeDoorsLargeUpperFlipped = new ArrayList<>(colors.length);
-//            for (DyenamicDyeColor color : colors) {
-//                final var colorPrefix = color.getSerializedName() + "_";
-//                counterDoors.add(color.getId() + 1, models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "counter_door")));
-//                counterDoorsFlipped.add(color.getId() + 1, models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "counter_door_flipped")));
-//                cabinetDoors.add(color.getId() + 1, models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "cabinet_door")));
-//                cabinetDoorsFlipped.add(color.getId() + 1, models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "cabinet_door_flipped")));
-//                ovenDoors.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "oven_door")));
-//                ovenDoorsActive.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "oven_door_active")));
-//                ovenDoorHandles.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "oven_door_handle")));
-//                fridgeDoors.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_door")));
-//                fridgeDoorsFlipped.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_door_flipped")));
-//                fridgeDoorsLargeLower.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_large_door_lower")));
-//                fridgeDoorsLargeLowerFlipped.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_large_door_lower_flipped")));
-//                fridgeDoorsLargeUpper.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_large_door_upper")));
-//                fridgeDoorsLargeUpperFlipped.add(color.getId(), models.loadModel(ResourceLocation.fromNamespaceAndPath(DyenamicsAndFriends.MODID, "block/cookingforblockheads/" + colorPrefix + "fridge_large_door_upper_flipped")));
-//            }
         }
 
         public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
