@@ -62,7 +62,6 @@ public class DyenamicRegistry
     }
 
     public static void registerCompatBlocks() {
-        DyenamicsAndFriends.LOGGER.info("registerCompatBlocks");
         for (DyenamicDyeColor color : DyenamicDyeColor.dyenamicValues()) {
             if (ModList.get().isLoaded("create")) {
                 CreateCompat.registerBlocks(color);

@@ -130,7 +130,7 @@ dependencies {
     implementation "curse.maven:jei-238222:5846880"
     implementation "curse.maven:jade-324717:5884231"
 
-    implementation "curse.maven:dyenamics-509276:6394640"
+    implementation "curse.maven:dyenamics-509276:6504540"
     implementation "libs:productivelib-1.21.0:0.1.12"
     implementation "curse.maven:productivebees-377897:6029033"
     implementation "curse.maven:productivemetalworks-1184570:6390845"
@@ -149,7 +149,7 @@ dependencies {
     implementation "curse.maven:balm-531761:6447094" // cfb
     implementation "curse.maven:bookshelf-228525:6464698" // botany pots
     implementation "curse.maven:prickle-1023259:5836410" // botany pots
-    implementation "curse.maven:blueprint-382216:6449863" // clayworks
+    implementation "curse.maven:blueprint-382216:6505319" // clayworks
     implementation "curse.maven:gallery-1173553:6449910" // clayworks
 ////    implementation "curse.maven:ctm-267602:3933537") // chipped
     implementation "curse.maven:architectury-api-419699:5786327" // furnish, comforts
@@ -168,7 +168,7 @@ dependencies {
     implementation "curse.maven:another-furniture-610492:5850327"
     implementation "curse.maven:dyeable-jack-olanterns-1127220:6460964"
 
-    implementation "curse.maven:fusion-connected-textures-854949:6396619"
+    implementation "curse.maven:fusion-connected-textures-854949:6453834"
     implementation "curse.maven:supermartijn642s-core-lib-454372:6076757"
     implementation "curse.maven:connected-glass-383129:6397204"
 
@@ -186,7 +186,7 @@ dependencies {
     implementation "curse.maven:sophisticated-core-618298:6384976"
     implementation "curse.maven:sophisticated-backpacks-422301:6377608"
     implementation "curse.maven:crystalix-1187033:6407169"
-    implementation "curse.maven:luminax-1165932:6140008"
+    implementation "curse.maven:luminax-1165932:6466960"
     implementation "curse.maven:cooking-for-blockheads-231484:6446777"
 //    implementation "curse.maven:create-deco-509285:4183385")
 //    implementation "curse.maven:farmers-delight-398521:3999157")
@@ -219,7 +219,8 @@ tasks.withType(ProcessResources).configureEach {
             mod_description        : mod_description,
             issue_url              : issue_url,
             dyenamics_version_range  : dyenamics_version_range,
-            metalworks_version_range : metalworks_version_range
+            metalworks_version_range : metalworks_version_range,
+            luminax_version_range    : luminax_version_range
     ]
     inputs.properties replaceProperties
 

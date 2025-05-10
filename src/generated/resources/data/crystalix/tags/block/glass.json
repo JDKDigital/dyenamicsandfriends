@@ -1,35 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:crystalix_peach_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_spring_green_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_navy_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_rose_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_aquamarine_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_conifer_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_maroon_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_icy_blue_crystalix_glass",
+      "id": "dyenamicsandfriends:crystalix_fluorescent_crystalix_glass",
       "required": false
     },
     {
@@ -37,27 +9,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:crystalix_mint_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_ultramarine_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_fluorescent_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_persimmon_crystalix_glass",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:crystalix_amber_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_bubblegum_crystalix_glass",
       "required": false
     },
     {
@@ -65,7 +17,55 @@
       "required": false
     },
     {
+      "id": "dyenamicsandfriends:crystalix_persimmon_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_rose_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_bubblegum_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_navy_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_aquamarine_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_icy_blue_crystalix_glass",
+      "required": false
+    },
+    {
       "id": "dyenamicsandfriends:crystalix_lavender_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_ultramarine_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_spring_green_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_peach_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_maroon_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_mint_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_conifer_crystalix_glass",
       "required": false
     },
     {

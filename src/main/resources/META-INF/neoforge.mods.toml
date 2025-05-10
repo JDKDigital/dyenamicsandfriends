@@ -100,14 +100,21 @@ issueTrackerURL="${issue_url}"
 
 [[dependencies.dyenamicsandfriends]]
     modId="dyenamics"
-    mandatory=true
+    type="required"
     versionRange="${dyenamics_version_range}"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dyenamicsandfriends]]
     modId="productivemetalworks"
-    mandatory=false
+    type="optional"
     versionRange="${metalworks_version_range}"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.dyenamicsandfriends]]
+    modId="luminax"
+    type="optional"
+    versionRange="${luminax_version_range}"
     ordering="AFTER"
     side="BOTH"
