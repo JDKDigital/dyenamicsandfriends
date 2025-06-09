@@ -1,0 +1,8 @@
+{
+  "parent": "productivemetalworks:block/foundry_capacitor_base",
+  "textures": {
+    "front": "dyenamicsandfriends:block/productivemetalworks/lavender_foundry_capacitor_front",
+    "side": "dyenamicsandfriends:block/productivemetalworks/lavender_fire_bricks",
+    "top": "dyenamicsandfriends:block/productivemetalworks/lavender_fire_bricks"
+  }
+}

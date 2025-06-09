@@ -32,6 +32,7 @@ public class ItemTagProvider extends ItemTagsProvider
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")));
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")));
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_tanks")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_tanks")));
+            copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_capacitors")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_capacitors")));
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_windows")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_windows")));
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "fire_bricks")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "fire_bricks")));
         }

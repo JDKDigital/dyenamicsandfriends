@@ -20,6 +20,7 @@ public class ProductiveMetalworksCompat
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_CONTROLLERS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_DRAINS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_TANKS = new HashMap<>();
+    public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_CAPACITORS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FOUNDRY_WINDOWS = new HashMap<>();
     public static Map<DyenamicDyeColor, DeferredHolder<Block, ? extends Block>> FIRE_BRICKS = new HashMap<>();
 
@@ -28,6 +29,7 @@ public class ProductiveMetalworksCompat
         FOUNDRY_CONTROLLERS.put(color, DyenamicRegistry.registerBlock(prefix + "_foundry_controller", () -> new FoundryControllerBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().lightLevel(state -> state.getValue(BlockStateProperties.ATTACHED) ? 8 : 0).sound(SoundType.NETHER_BRICKS)), true));
         FOUNDRY_DRAINS.put(color, DyenamicRegistry.registerBlock(prefix + "_foundry_drain", () -> new FoundryDrainBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).sound(SoundType.NETHER_BRICKS)), true));
         FOUNDRY_TANKS.put(color, DyenamicRegistry.registerBlock(prefix + "_foundry_tank", () -> new FoundryTankBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().sound(SoundType.NETHER_BRICKS)), true));
+        FOUNDRY_CAPACITORS.put(color, DyenamicRegistry.registerBlock(prefix + "_foundry_capacitor", () -> new FoundryCapacitorBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).noOcclusion().sound(SoundType.NETHER_BRICKS)), true));
         FOUNDRY_WINDOWS.put(color, DyenamicRegistry.registerBlock(prefix + "_foundry_window", () -> new FoundryWindowBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GLASS)), true));
         FIRE_BRICKS.put(color, DyenamicRegistry.registerBlock(prefix + "_fire_bricks", () -> new FireBricksBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).sound(SoundType.NETHER_BRICKS)), true));
     }
@@ -37,6 +39,7 @@ public class ProductiveMetalworksCompat
             FOUNDRY_CONTROLLERS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
             FOUNDRY_DRAINS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
             FOUNDRY_TANKS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
+            FOUNDRY_CAPACITORS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
             FOUNDRY_WINDOWS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
             FIRE_BRICKS.forEach((dyenamicDyeColor, registryObject) -> event.accept(registryObject.get()));
         }
@@ -46,5 +49,6 @@ public class ProductiveMetalworksCompat
         event.modify(MetalworksRegistrator.FOUNDRY_CONTROLLER_BLOCK_ENTITY.get(), FOUNDRY_CONTROLLERS.values().stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
         event.modify(MetalworksRegistrator.FOUNDRY_DRAIN_BLOCK_ENTITY.get(), FOUNDRY_DRAINS.values().stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
         event.modify(MetalworksRegistrator.FOUNDRY_TANK_BLOCK_ENTITY.get(), FOUNDRY_TANKS.values().stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
+        event.modify(MetalworksRegistrator.FOUNDRY_CAPACITOR_BLOCK_ENTITY.get(), FOUNDRY_CAPACITORS.values().stream().map(DeferredHolder::get).toList().toArray(new Block[0]));
     }
 }

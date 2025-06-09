@@ -37,12 +37,14 @@ public class BlockTagProvider extends BlockTagsProvider
             var FOUNDRY_CONTROLLERS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_controllers")));
             var FOUNDRY_DRAINS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_drains")));
             var FOUNDRY_TANKS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_tanks")));
+            var FOUNDRY_CAPACITORS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_capacitors")));
             var FOUNDRY_WINDOWS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "foundry_windows")));
             var FIRE_BRICKS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "fire_bricks")));
 
             ProductiveMetalworksCompat.FOUNDRY_CONTROLLERS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_CONTROLLERS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FOUNDRY_DRAINS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_DRAINS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FOUNDRY_TANKS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_TANKS.addOptional(holder.getId()));
+            ProductiveMetalworksCompat.FOUNDRY_CAPACITORS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_CAPACITORS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FOUNDRY_WINDOWS.forEach((dyenamicDyeColor, holder) -> FOUNDRY_WINDOWS.addOptional(holder.getId()));
             ProductiveMetalworksCompat.FIRE_BRICKS.forEach((dyenamicDyeColor, holder) -> FIRE_BRICKS.addOptional(holder.getId()));
         }

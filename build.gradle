@@ -131,9 +131,10 @@ dependencies {
     implementation "curse.maven:jade-324717:5884231"
 
     implementation "curse.maven:dyenamics-509276:6504540"
-    implementation "libs:productivelib-1.21.0:0.1.12"
+    implementation "libs:productivelib-1.21.0:0.1.17"
+    implementation "libs:productivemetalworks-1.21.1:1.7.0"
     implementation "curse.maven:productivebees-377897:6029033"
-    implementation "curse.maven:productivemetalworks-1184570:6390845"
+//    implementation "curse.maven:productivemetalworks-1184570:6508965"
     implementation "curse.maven:curios-309927:6401872"
 
     implementation "libs:botanypots-neoforge-1.21.1:21.1.10"
@@ -185,9 +186,10 @@ dependencies {
 
     implementation "curse.maven:sophisticated-core-618298:6384976"
     implementation "curse.maven:sophisticated-backpacks-422301:6377608"
-    implementation "curse.maven:crystalix-1187033:6407169"
+    implementation "curse.maven:crystalix-1187033:6513314"
     implementation "curse.maven:luminax-1165932:6466960"
     implementation "curse.maven:cooking-for-blockheads-231484:6446777"
+    implementation "curse.maven:justblahaj-1055947:6523205"
 //    implementation "curse.maven:create-deco-509285:4183385")
 //    implementation "curse.maven:farmers-delight-398521:3999157")
 //    implementation "curse.maven:nightlights-651876:4618572") // TODO enable

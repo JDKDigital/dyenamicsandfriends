@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/bubblegum_foundry_capacitor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/bubblegum_foundry_capacitor"
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/bubblegum_foundry_capacitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/productivemetalworks/bubblegum_foundry_capacitor",
+      "y": 270
+    }
+  }
+}

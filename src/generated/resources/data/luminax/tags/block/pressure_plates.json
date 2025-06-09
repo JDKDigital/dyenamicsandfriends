@@ -1,47 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_fluorescent_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_wine_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_amber_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_honey_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_persimmon_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_rose_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_navy_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_icy_blue_luminax_pressure_plate",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_lavender_luminax_pressure_plate",
+      "id": "dyenamicsandfriends:luminax_mint_luminax_pressure_plate",
       "required": false
     },
     {
@@ -49,7 +9,31 @@
       "required": false
     },
     {
+      "id": "dyenamicsandfriends:luminax_maroon_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_honey_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_lavender_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_cherenkov_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_navy_luminax_pressure_plate",
+      "required": false
+    },
+    {
       "id": "dyenamicsandfriends:luminax_spring_green_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_fluorescent_luminax_pressure_plate",
       "required": false
     },
     {
@@ -57,11 +41,19 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_maroon_luminax_pressure_plate",
+      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_pressure_plate",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_mint_luminax_pressure_plate",
+      "id": "dyenamicsandfriends:luminax_icy_blue_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_wine_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_rose_luminax_pressure_plate",
       "required": false
     },
     {
@@ -69,7 +61,15 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_cherenkov_luminax_pressure_plate",
+      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_persimmon_luminax_pressure_plate",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_amber_luminax_pressure_plate",
       "required": false
     }
   ]

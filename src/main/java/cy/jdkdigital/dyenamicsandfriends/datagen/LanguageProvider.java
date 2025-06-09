@@ -3,6 +3,7 @@ package cy.jdkdigital.dyenamicsandfriends.datagen;
 import com.supermartijn642.connectedglass.CGGlassType;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.registry.DyenamicRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 
@@ -18,6 +19,10 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
     protected void addTranslations() {
         add("item.dyenamicsandfriends.chalk_box", "Dyenamics Chalk Box");
         add("item.dyenamicsandfriends.chalk_box.tooltip.dyenamics", "This one works with Dyenamics dyes");
+
+        DyenamicRegistry.MODS.forEach(s -> {
+            add("resourcePack.dyenamicsandfriends." + s, "Dyenamics And Friends - " + capName(s));
+        });
 
         for (DyenamicDyeColor color: DyenamicDyeColor.dyenamicValues()) {
             String colorName = capName(Component.translatable(color.getTranslationKey()).getString());
@@ -65,6 +70,7 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_controller", colorName + " Foundry Controller");
             add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_drain", colorName + " Foundry Drain");
             add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_tank", colorName + " Foundry Tank");
+            add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_capacitor", colorName + " Foundry Capacitor");
             add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_foundry_window", colorName + " Foundry Window");
             add("block.dyenamicsandfriends.productivemetalworks_" + color.getSerializedName() + "_fire_bricks", colorName + " Fire Bricks");
             add("block.dyenamicsandfriends.ceramics_" + color.getSerializedName() + "_porcelain", colorName + " Porcelain");
