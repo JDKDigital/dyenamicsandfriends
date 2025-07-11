@@ -7,8 +7,6 @@ import com.google.gson.JsonPrimitive;
 import com.supermartijn642.connectedglass.CGGlassType;
 import com.supermartijn642.fusion.api.predicate.ConnectionPredicate;
 import com.supermartijn642.fusion.api.predicate.DefaultConnectionPredicates;
-import com.supermartijn642.fusion.predicate.IsSameBlockConnectionPredicate;
-import com.supermartijn642.fusion.predicate.OrConnectionPredicate;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import net.minecraft.data.CachedOutput;

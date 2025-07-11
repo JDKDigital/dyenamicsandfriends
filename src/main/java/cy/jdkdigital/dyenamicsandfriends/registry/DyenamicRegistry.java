@@ -234,6 +234,9 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("supplementaries")) {
 //            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
         }
+        if (ModList.get().isLoaded("connectedglass")) {
+            ConnectedGlassCompat.Client.registerBlockEntityRenderers(event);
+        }
     }
 
     public static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {

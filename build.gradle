@@ -133,7 +133,7 @@ dependencies {
     implementation fg.deobf("curse.maven:the-one-probe-245211:5159287")
 
     implementation fg.deobf("curse.maven:dyenamics-509276:5353528")
-    implementation fg.deobf("libs:productivelib-1.20.1:0.0.3")
+    implementation fg.deobf("libs:productivelib-1.20.1:0.0.4")
     implementation fg.deobf("curse.maven:productivebees-377897:5566102")
 
 //    implementation fg.deobf("libs:dyenamics-1.19.4:2.0.0")
@@ -169,7 +169,7 @@ dependencies {
     implementation fg.deobf("curse.maven:handcrafted-538214:5118729")
     implementation fg.deobf("curse.maven:another-furniture-610492:6276829")
 
-    implementation fg.deobf("curse.maven:fusion-connected-textures-854949:5129294")
+    implementation fg.deobf("curse.maven:fusion-connected-textures-854949:6453794")
     implementation fg.deobf("curse.maven:supermartijn642s-core-lib-454372:5668859")
     implementation fg.deobf("curse.maven:connected-glass-383129:6396996")
 

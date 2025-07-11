@@ -1,3 +1,8 @@
+1.20.1-1.9.3
+
+- Fixed connected glass being translucent
+
+
 1.20.1-1.9.2
 
 - Updated Connected Glass compat
