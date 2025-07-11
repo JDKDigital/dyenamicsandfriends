@@ -1,26 +1,6 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_mint_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_maroon_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_honey_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_lavender_cabinet",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:cookingforblockheads_cherenkov_cabinet",
       "required": false
     },
@@ -29,7 +9,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_cabinet",
+      "id": "dyenamicsandfriends:cookingforblockheads_rose_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_amber_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_conifer_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_maroon_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_cabinet",
       "required": false
     },
     {
@@ -41,7 +45,23 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_cabinet",
+      "id": "dyenamicsandfriends:cookingforblockheads_mint_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_lavender_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_honey_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_cabinet",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_cabinet",
       "required": false
     },
     {
@@ -53,46 +73,6 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_rose_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_conifer_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_amber_cabinet",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_mint_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_maroon_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_honey_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_lavender_counter",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:cookingforblockheads_cherenkov_counter",
       "required": false
     },
@@ -101,7 +81,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_counter",
+      "id": "dyenamicsandfriends:cookingforblockheads_rose_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_amber_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_conifer_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_maroon_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_counter",
       "required": false
     },
     {
@@ -113,7 +117,23 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_counter",
+      "id": "dyenamicsandfriends:cookingforblockheads_mint_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_lavender_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_honey_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_counter",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_counter",
       "required": false
     },
     {
@@ -122,26 +142,6 @@
     },
     {
       "id": "dyenamicsandfriends:cookingforblockheads_wine_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_rose_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_conifer_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_counter",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:cookingforblockheads_amber_counter",
       "required": false
     }
   ]

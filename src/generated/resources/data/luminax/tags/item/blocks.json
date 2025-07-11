@@ -1,26 +1,6 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_mint_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_ultramarine_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_maroon_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_honey_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_lavender_luminax_block",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_cherenkov_luminax_block",
       "required": false
     },
@@ -29,7 +9,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_spring_green_luminax_block",
+      "id": "dyenamicsandfriends:luminax_rose_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_amber_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_persimmon_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_conifer_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_maroon_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_ultramarine_luminax_block",
       "required": false
     },
     {
@@ -41,7 +45,23 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_bubblegum_luminax_block",
+      "id": "dyenamicsandfriends:luminax_mint_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_lavender_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_honey_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_block",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_spring_green_luminax_block",
       "required": false
     },
     {
@@ -50,26 +70,6 @@
     },
     {
       "id": "dyenamicsandfriends:luminax_wine_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_rose_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_conifer_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_aquamarine_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_persimmon_luminax_block",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_amber_luminax_block",
       "required": false
     }
   ]

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/cherenkov_carved_pumpkin",
+    "side": "dyenamicsandfriends:block/cherenkov_pumpkin_side",
+    "top": "dyenamicsandfriends:block/cherenkov_pumpkin_top"
+  }
+}

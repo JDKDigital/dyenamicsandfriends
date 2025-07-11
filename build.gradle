@@ -138,6 +138,7 @@ dependencies {
     implementation "curse.maven:curios-309927:6401872"
 
     implementation "libs:botanypots-neoforge-1.21.1:21.1.10"
+    implementation "libs:chromacarvings-1.21.1:0.1.0"
 
 //    implementation "libs:supplementaries-1.20:2.7.20")
 //    implementation "libs:suppsquared-1.19.2:1.0.14")
@@ -167,7 +168,6 @@ dependencies {
     implementation "curse.maven:regions-unexplored-659110:6273893"
     implementation "curse.maven:handcrafted-538214:6330030"
     implementation "curse.maven:another-furniture-610492:5850327"
-    implementation "curse.maven:dyeable-jack-olanterns-1127220:6460964"
 
     implementation "curse.maven:fusion-connected-textures-854949:6453834"
     implementation "curse.maven:supermartijn642s-core-lib-454372:6076757"

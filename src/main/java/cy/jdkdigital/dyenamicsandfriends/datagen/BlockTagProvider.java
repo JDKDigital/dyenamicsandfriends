@@ -6,7 +6,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -21,6 +24,8 @@ public class BlockTagProvider extends BlockTagsProvider
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         var MINEABLE_PICKAXE = tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        var MINEABLE_AXE = tag(BlockTags.MINEABLE_WITH_AXE);
+        var SWORD_EFFICIENT = tag(BlockTags.SWORD_EFFICIENT);
         var DOORS = tag(BlockTags.DOORS);
         var TRAPDOORS = tag(BlockTags.TRAPDOORS);
         var SLABS = tag(BlockTags.SLABS);
@@ -126,6 +131,28 @@ public class BlockTagProvider extends BlockTagsProvider
             BotanyPotsCompat.BOTANY_POTS.forEach((dyenamicDyeColor, map) -> {
                 map.forEach((name, holder) -> COOKING_TABLES.addOptional(holder.getId()));
             });
+        }
+
+        if (ModList.get().isLoaded("chromacarvings")) {
+            var PUMPKINS = tag(Tags.Blocks.PUMPKINS);
+            var PUMPKINS_CARVED = tag(Tags.Blocks.PUMPKINS_CARVED);
+            var JACK_O_LANTERNS = tag(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS);
+            var ENDERMAN_HOLDABLE = tag(BlockTags.ENDERMAN_HOLDABLE);
+
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS.add(holder.get()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_CARVED.add(holder.get()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> JACK_O_LANTERNS.add(holder.get()));
+
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
+
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
+
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.add(holder.get()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.add(holder.get()));
         }
     }
 

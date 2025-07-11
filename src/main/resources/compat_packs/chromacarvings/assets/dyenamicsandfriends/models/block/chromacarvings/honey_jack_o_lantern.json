@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/honey_jack_o_lantern",
+    "side": "dyenamicsandfriends:block/honey_pumpkin_side",
+    "top": "dyenamicsandfriends:block/honey_pumpkin_top"
+  }
+}

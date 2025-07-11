@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/spring_green_jack_o_lantern",
+    "side": "dyenamicsandfriends:block/spring_green_pumpkin_side",
+    "top": "dyenamicsandfriends:block/spring_green_pumpkin_top"
+  }
+}

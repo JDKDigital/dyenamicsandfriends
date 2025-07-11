@@ -1,0 +1,9 @@
+{
+  "parent": "just_blahaj:custom/blahajblack",
+  "textures": {
+    "all": "dyenamicsandfriends:block/spring_green_blahaj",
+    "particle": "dyenamicsandfriends:block/spring_green_blahaj",
+    "0": "dyenamicsandfriends:block/spring_green_blahaj"
+  },
+  "render_type": "cutout_mipped"
+}

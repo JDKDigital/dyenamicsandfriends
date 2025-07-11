@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dyenamicsandfriends:block/just_blahaj_navy_blahaj"
+    },
+    "facing=east": {
+      "model": "dyenamicsandfriends:block/just_blahaj_navy_blahaj",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "dyenamicsandfriends:block/just_blahaj_navy_blahaj",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dyenamicsandfriends:block/just_blahaj_navy_blahaj",
+      "y": 270
+    }
+  }
+}

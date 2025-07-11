@@ -13,6 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.*;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -42,6 +43,7 @@ public class DyenamicsAndFriends
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, MODID);
+    public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(BuiltInRegistries.ENTITY_TYPE, MODID);
     public static final DeferredRegister<MenuType<?>> CONTAINER_TYPES = DeferredRegister.create(BuiltInRegistries.MENU, MODID);
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, MODID);
     public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, MODID);
@@ -60,12 +62,13 @@ public class DyenamicsAndFriends
         modEventBus.addListener(this::onPackEvent);
 
         DyenamicRegistry.setup();
-        DyenamicRegistry.registerCompatBlocks();
+        DyenamicRegistry.registerCompatModules();
 
         BLOCKS.register(modEventBus);
+        ITEMS.register(modEventBus);
+        ENTITIES.register(modEventBus);
         BLOCK_ENTITIES.register(modEventBus);
         CONTAINER_TYPES.register(modEventBus);
-        ITEMS.register(modEventBus);
         RECIPE_SERIALIZERS.register(modEventBus);
         RECIPE_TYPES.register(modEventBus);
         PARTICLE_TYPES.register(modEventBus);
@@ -78,7 +81,7 @@ public class DyenamicsAndFriends
         for (String modId: DyenamicRegistry.MODS) {
             if (ModList.get().isLoaded(modId)) {
                 event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.SERVER_DATA, Component.translatable("dataPack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.BOTTOM);
-                if (modId.equals("productivemetalworks") || modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("crystalix") || modId.equals("cookingforblockheads") || modId.equals("clayworks") || modId.equals("botanypots")) {
+                if (modId.equals("productivemetalworks") || modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("crystalix") || modId.equals("cookingforblockheads") || modId.equals("clayworks") || modId.equals("botanypots") || modId.equals("chromacarvings") || modId.equals("just_blahaj")) {
                     event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.CLIENT_RESOURCES, Component.translatable("resourcePack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.BOTTOM);
                 }
             }

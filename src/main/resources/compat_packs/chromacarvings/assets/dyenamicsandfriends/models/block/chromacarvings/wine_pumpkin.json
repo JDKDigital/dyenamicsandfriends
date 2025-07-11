@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/pumpkin",
+  "textures": {
+    "end": "dyenamicsandfriends:block/wine_pumpkin_top",
+    "side": "dyenamicsandfriends:block/wine_pumpkin_side"
+  }
+}

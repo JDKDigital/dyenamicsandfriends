@@ -1,0 +1,9 @@
+{
+  "parent": "just_blahaj:custom/blahajblack",
+  "textures": {
+    "all": "dyenamicsandfriends:block/maroon_blahaj",
+    "particle": "dyenamicsandfriends:block/maroon_blahaj",
+    "0": "dyenamicsandfriends:block/maroon_blahaj"
+  },
+  "render_type": "cutout_mipped"
+}

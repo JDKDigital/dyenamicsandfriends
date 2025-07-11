@@ -1,22 +1,22 @@
 {
   "values": [
-    "dyenamicsandfriends:cookingforblockheads_mint_connector",
-    "dyenamicsandfriends:cookingforblockheads_ultramarine_connector",
-    "dyenamicsandfriends:cookingforblockheads_maroon_connector",
-    "dyenamicsandfriends:cookingforblockheads_honey_connector",
-    "dyenamicsandfriends:cookingforblockheads_lavender_connector",
     "dyenamicsandfriends:cookingforblockheads_cherenkov_connector",
     "dyenamicsandfriends:cookingforblockheads_navy_connector",
-    "dyenamicsandfriends:cookingforblockheads_spring_green_connector",
+    "dyenamicsandfriends:cookingforblockheads_rose_connector",
+    "dyenamicsandfriends:cookingforblockheads_amber_connector",
+    "dyenamicsandfriends:cookingforblockheads_persimmon_connector",
+    "dyenamicsandfriends:cookingforblockheads_conifer_connector",
+    "dyenamicsandfriends:cookingforblockheads_maroon_connector",
+    "dyenamicsandfriends:cookingforblockheads_bubblegum_connector",
+    "dyenamicsandfriends:cookingforblockheads_ultramarine_connector",
     "dyenamicsandfriends:cookingforblockheads_fluorescent_connector",
     "dyenamicsandfriends:cookingforblockheads_peach_connector",
-    "dyenamicsandfriends:cookingforblockheads_bubblegum_connector",
-    "dyenamicsandfriends:cookingforblockheads_icy_blue_connector",
-    "dyenamicsandfriends:cookingforblockheads_wine_connector",
-    "dyenamicsandfriends:cookingforblockheads_rose_connector",
-    "dyenamicsandfriends:cookingforblockheads_conifer_connector",
+    "dyenamicsandfriends:cookingforblockheads_mint_connector",
+    "dyenamicsandfriends:cookingforblockheads_lavender_connector",
+    "dyenamicsandfriends:cookingforblockheads_honey_connector",
     "dyenamicsandfriends:cookingforblockheads_aquamarine_connector",
-    "dyenamicsandfriends:cookingforblockheads_persimmon_connector",
-    "dyenamicsandfriends:cookingforblockheads_amber_connector"
+    "dyenamicsandfriends:cookingforblockheads_spring_green_connector",
+    "dyenamicsandfriends:cookingforblockheads_icy_blue_connector",
+    "dyenamicsandfriends:cookingforblockheads_wine_connector"
   ]
 }

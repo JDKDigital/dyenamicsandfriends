@@ -1,26 +1,6 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:crystalix_mint_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_ultramarine_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_maroon_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_honey_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_lavender_bordered_crystalix_glass",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:crystalix_cherenkov_bordered_crystalix_glass",
       "required": false
     },
@@ -29,7 +9,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:crystalix_spring_green_bordered_crystalix_glass",
+      "id": "dyenamicsandfriends:crystalix_rose_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_amber_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_persimmon_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_conifer_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_maroon_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_bubblegum_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_ultramarine_bordered_crystalix_glass",
       "required": false
     },
     {
@@ -41,7 +45,23 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:crystalix_bubblegum_bordered_crystalix_glass",
+      "id": "dyenamicsandfriends:crystalix_mint_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_lavender_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_honey_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_aquamarine_bordered_crystalix_glass",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:crystalix_spring_green_bordered_crystalix_glass",
       "required": false
     },
     {
@@ -50,26 +70,6 @@
     },
     {
       "id": "dyenamicsandfriends:crystalix_wine_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_rose_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_conifer_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_aquamarine_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_persimmon_bordered_crystalix_glass",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:crystalix_amber_bordered_crystalix_glass",
       "required": false
     }
   ]

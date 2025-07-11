@@ -1,0 +1,9 @@
+{
+  "parent": "just_blahaj:custom/blahajblack",
+  "textures": {
+    "all": "dyenamicsandfriends:block/cherenkov_blahaj",
+    "particle": "dyenamicsandfriends:block/cherenkov_blahaj",
+    "0": "dyenamicsandfriends:block/cherenkov_blahaj"
+  },
+  "render_type": "cutout_mipped"
+}

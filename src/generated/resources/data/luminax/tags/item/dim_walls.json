@@ -1,26 +1,6 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_ultramarine_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_honey_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_wall",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_dim_cherenkov_luminax_wall",
       "required": false
     },
@@ -29,7 +9,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_spring_green_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_amber_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_conifer_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_ultramarine_luminax_wall",
       "required": false
     },
     {
@@ -41,7 +45,23 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_wall",
+      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_honey_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_aquamarine_luminax_wall",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_spring_green_luminax_wall",
       "required": false
     },
     {
@@ -50,26 +70,6 @@
     },
     {
       "id": "dyenamicsandfriends:luminax_dim_wine_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_conifer_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_aquamarine_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_wall",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_amber_luminax_wall",
       "required": false
     }
   ]

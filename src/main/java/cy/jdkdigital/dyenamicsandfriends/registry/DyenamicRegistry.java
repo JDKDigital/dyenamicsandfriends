@@ -4,6 +4,8 @@ import cy.jdkdigital.dyenamics.core.init.BlockInit;
 import cy.jdkdigital.dyenamics.core.util.DyenamicDyeColor;
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
 import cy.jdkdigital.dyenamicsandfriends.compat.*;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -46,8 +48,9 @@ public class DyenamicRegistry
         add("cookingforblockheads");
         add("clayworks");
 //        add("glazedresymmetry");
-//        add("ls_djl");
         add("botanypots");
+        add("just_blahaj");
+        add("chromacarvings");
 //        add("ceramics");
 //        add("chalk");
 //        add("farmersdelight");
@@ -61,7 +64,7 @@ public class DyenamicRegistry
 //        QuarkCompat.setup();
     }
 
-    public static void registerCompatBlocks() {
+    public static void registerCompatModules() {
         for (DyenamicDyeColor color : DyenamicDyeColor.dyenamicValues()) {
             if (ModList.get().isLoaded("create")) {
                 CreateCompat.registerBlocks(color);
@@ -170,6 +173,13 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("cookingforblockheads")) {
                 CookingForBlockheadsCompat.registerBlocks(color);
             }
+            if (ModList.get().isLoaded("chromacarvings")) {
+                ChromaCarvingsCompat.registerEntities(color);
+                ChromaCarvingsCompat.registerBlocks(color);
+            }
+            if (ModList.get().isLoaded("just_blahaj")) {
+                JustBlahajCompat.registerBlocks(color);
+            }
         }
 
         if (ModList.get().isLoaded("luminax")) {
@@ -191,34 +201,11 @@ public class DyenamicRegistry
         }
     }
 
-    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {
-        var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
-        if (registerItem) {
-            registerItem(name, () -> new BlockItem(block.get(), new Item.Properties()));
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        if (ModList.get().isLoaded("chromacarvings")) {
+            ChromaCarvingsCompat.Client.registerEntityRenderers(event);
         }
-        return block;
     }
-
-    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, @Nullable Supplier<Item> itemSupplier) {
-        var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
-        if (itemSupplier != null) {
-            registerItem(name, itemSupplier);
-        }
-        return block;
-    }
-
-    public static DeferredHolder<Item, ? extends Item> registerItem(final String name, @Nullable Supplier<Item> itemSupplier) {
-        return DyenamicsAndFriends.ITEMS.register(name, itemSupplier);
-    }
-
-    public static <E extends BlockEntity, T extends BlockEntityType<E>> Supplier<T> registerBlockEntity(String id, Supplier<T> supplier) {
-        return DyenamicsAndFriends.BLOCK_ENTITIES.register(id, supplier);
-    }
-
-    public static <E extends BlockEntity> BlockEntityType<E> createBlockEntityType(BlockEntityType.BlockEntitySupplier<E> factory, Block... blocks) {
-        return BlockEntityType.Builder.of(factory, blocks).build(null);
-    }
-
     public static void registerBlockEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         if (ModList.get().isLoaded("create")) {
             CreateCompat.Client.registerBlockEntityRenderers(event);
@@ -329,5 +316,39 @@ public class DyenamicRegistry
         if (ModList.get().isLoaded("clayworks")) {
             ClayworksCompat.Client.registerClientExtensions(event);
         }
+    }
+
+    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, boolean registerItem) {
+        var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
+        if (registerItem) {
+            registerItem(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        }
+        return block;
+    }
+
+    public static DeferredHolder<Block, ? extends Block> registerBlock(final String name, final Supplier<? extends Block> sup, @Nullable Supplier<Item> itemSupplier) {
+        var block = DyenamicsAndFriends.BLOCKS.register(name, sup);
+        if (itemSupplier != null) {
+            registerItem(name, itemSupplier);
+        }
+        return block;
+    }
+
+    public static DeferredHolder<Item, ? extends Item> registerItem(final String name, @Nullable Supplier<Item> itemSupplier) {
+        return DyenamicsAndFriends.ITEMS.register(name, itemSupplier);
+    }
+
+    public static <E extends BlockEntity, T extends BlockEntityType<E>> Supplier<T> registerBlockEntity(String id, Supplier<T> supplier) {
+        return DyenamicsAndFriends.BLOCK_ENTITIES.register(id, supplier);
+    }
+
+    public static <E extends BlockEntity> BlockEntityType<E> createBlockEntityType(BlockEntityType.BlockEntitySupplier<E> factory, Block... blocks) {
+        return BlockEntityType.Builder.of(factory, blocks).build(null);
+    }
+
+    public static <E extends Entity> DeferredHolder<EntityType<?>, EntityType<E>> createEntity(String name, EntityType.Builder<E> builder) {
+        DeferredHolder<EntityType<?>, EntityType<E>> entity = DyenamicsAndFriends.ENTITIES.register(name, () -> builder.build(DyenamicsAndFriends.MODID + ":" + name));
+
+        return entity;
     }
 }

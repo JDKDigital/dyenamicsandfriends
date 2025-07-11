@@ -110,6 +110,11 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("item.dyenamicsandfriends.chalk_" + color.getSerializedName() + "_chalk", colorName + " Chalk");
             add("block.dyenamicsandfriends.suppsquared_" + color.getSerializedName() + "_gold_candle_holder", "Gold " + colorName + " Candle Holder");
             add("block.dyenamicsandfriends.suppsquared_" + color.getSerializedName() + "_sack", colorName + " Sack");
+            add("block.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_pumpkin", colorName + " Pumpkin");
+            add("block.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_carved_pumpkin", colorName + " Carved Pumpkin");
+            add("block.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_jack_o_lantern", colorName + " Jack o'Lantern");
+            add("entity.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_snow_golem", colorName + " Snow Golem");
+            add("block.dyenamicsandfriends.just_blahaj_" + color.getSerializedName() + "_blahaj", colorName + " Blahaj (Blåhaj)");
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_crystalix_glass", colorName + " Crystalix Glass");
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_clear_crystalix_glass", colorName + " Clear Crystalix Glass");
             add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_bordered_crystalix_glass", colorName + " Bordered Crystalix Glass");

@@ -1,0 +1,9 @@
+{
+  "parent": "just_blahaj:custom/blahajblack",
+  "textures": {
+    "all": "dyenamicsandfriends:block/conifer_blahaj",
+    "particle": "dyenamicsandfriends:block/conifer_blahaj",
+    "0": "dyenamicsandfriends:block/conifer_blahaj"
+  },
+  "render_type": "cutout_mipped"
+}

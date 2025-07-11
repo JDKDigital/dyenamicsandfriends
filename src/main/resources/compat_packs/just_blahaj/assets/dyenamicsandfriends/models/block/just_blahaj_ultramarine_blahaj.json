@@ -1,0 +1,9 @@
+{
+  "parent": "just_blahaj:custom/blahajblack",
+  "textures": {
+    "all": "dyenamicsandfriends:block/ultramarine_blahaj",
+    "particle": "dyenamicsandfriends:block/ultramarine_blahaj",
+    "0": "dyenamicsandfriends:block/ultramarine_blahaj"
+  },
+  "render_type": "cutout_mipped"
+}

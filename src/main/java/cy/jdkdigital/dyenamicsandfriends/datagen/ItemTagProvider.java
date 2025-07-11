@@ -1,6 +1,7 @@
 package cy.jdkdigital.dyenamicsandfriends.datagen;
 
 import cy.jdkdigital.dyenamicsandfriends.DyenamicsAndFriends;
+import cy.jdkdigital.dyenamicsandfriends.compat.ChromaCarvingsCompat;
 import cy.jdkdigital.dyenamicsandfriends.compat.CookingForBlockheadsCompat;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -10,6 +11,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
@@ -96,6 +98,26 @@ public class ItemTagProvider extends ItemTagsProvider
 
         if (ModList.get().isLoaded("botanypots")) {
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("botanypots", "botany_pots")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("botanypots", "botany_pots")));
+        }
+
+        if (ModList.get().isLoaded("justblahaj")) {
+            var HAJ = tag(ItemTags.create(ResourceLocation.parse("justblahaj:haj")));
+
+        }
+
+        if (ModList.get().isLoaded("chromacarvings")) {
+            copy(Tags.Blocks.PUMPKINS, Tags.Items.PUMPKINS);
+            copy(Tags.Blocks.PUMPKINS_CARVED, Tags.Items.PUMPKINS_CARVED);
+            copy(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS, Tags.Items.PUMPKINS_JACK_O_LANTERNS);
+
+            var PUMPKIN_CROPS = tag(Tags.Items.CROPS_PUMPKIN);
+            var PUMPKINS_NORMAL = tag(Tags.Items.PUMPKINS_NORMAL);
+            var EQUIPPABLE = tag(ItemTags.EQUIPPABLE_ENCHANTABLE);
+            var VANISHING = tag(ItemTags.VANISHING_ENCHANTABLE);
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKIN_CROPS.add(holder.get().asItem()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_NORMAL.add(holder.get().asItem()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> EQUIPPABLE.add(holder.get().asItem()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> VANISHING.add(holder.get().asItem()));
         }
     }
 

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/peach_carved_pumpkin",
+    "side": "dyenamicsandfriends:block/peach_pumpkin_side",
+    "top": "dyenamicsandfriends:block/peach_pumpkin_top"
+  }
+}

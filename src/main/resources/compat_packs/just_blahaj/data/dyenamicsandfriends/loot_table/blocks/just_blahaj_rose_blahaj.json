@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "dyenamicsandfriends:blocks/just_blahaj_rose_blahaj",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "dyenamicsandfriends:just_blahaj_rose_blahaj"
+        }
+      ]
+    }
+  ]
+}

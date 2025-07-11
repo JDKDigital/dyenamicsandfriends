@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, modid = DyenamicsAndFriends.MODID)
 public class ModEventHandler
@@ -93,6 +94,12 @@ public class ModEventHandler
         if (ModList.get().isLoaded("clayworks")) {
             ClayworksCompat.buildTabContents(event);
         }
+        if (ModList.get().isLoaded("chromacarvings")) {
+            ChromaCarvingsCompat.buildTabContents(event);
+        }
+        if (ModList.get().isLoaded("just_blahaj")) {
+            JustBlahajCompat.buildTabContents(event);
+        }
     }
 
     @SubscribeEvent
@@ -108,6 +115,13 @@ public class ModEventHandler
         }
         if (ModList.get().isLoaded("botanypots")) {
             BotanyPotsCompat.addBlocks(event);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onEntityAttributeCreate(EntityAttributeCreationEvent event) {
+        if (ModList.get().isLoaded("chromacarvings")) {
+            ChromaCarvingsCompat.createEntityAttributes(event);
         }
     }
 }

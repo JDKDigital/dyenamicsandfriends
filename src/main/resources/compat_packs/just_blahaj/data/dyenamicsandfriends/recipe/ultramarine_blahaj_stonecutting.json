@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:stonecutting",
+  "group": "haj",
+  "ingredient": {
+    "tag": "just_blahaj:haj"
+  },
+  "result": {
+    "id": "dyenamicsandfriends:blocks/just_blahaj_ultramarine_blahaj",
+    "count": 1
+  }
+}

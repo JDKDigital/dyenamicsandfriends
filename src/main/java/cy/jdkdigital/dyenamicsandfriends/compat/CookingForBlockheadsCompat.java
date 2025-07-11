@@ -113,7 +113,6 @@ public class CookingForBlockheadsCompat
     private static BlockState recolorBlock(BlockState state, DyenamicDyeColor color) {
         ResourceLocation key = BuiltInRegistries.BLOCK.getKey(state.getBlock());
         BlockState newState = null;
-        DyenamicsAndFriends.LOGGER.info("recolor block " + key);
         if (key.getPath().contains("_oven")) {
             newState = OVENS.get(color).get().defaultBlockState();
         } else if (key.getPath().contains("_fridge")) {

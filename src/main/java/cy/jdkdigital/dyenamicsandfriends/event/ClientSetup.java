@@ -27,6 +27,7 @@ public class ClientSetup
 
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        DyenamicRegistry.registerEntityRenderers(event);
         DyenamicRegistry.registerBlockEntityRenderers(event);
     }
 

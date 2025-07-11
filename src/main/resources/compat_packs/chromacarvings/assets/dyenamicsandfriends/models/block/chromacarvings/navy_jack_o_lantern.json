@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "dyenamicsandfriends:block/navy_jack_o_lantern",
+    "side": "dyenamicsandfriends:block/navy_pumpkin_side",
+    "top": "dyenamicsandfriends:block/navy_pumpkin_top"
+  }
+}

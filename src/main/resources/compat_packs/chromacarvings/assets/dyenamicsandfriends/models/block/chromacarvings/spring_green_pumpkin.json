@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/pumpkin",
+  "textures": {
+    "end": "dyenamicsandfriends:block/spring_green_pumpkin_top",
+    "side": "dyenamicsandfriends:block/spring_green_pumpkin_side"
+  }
+}
