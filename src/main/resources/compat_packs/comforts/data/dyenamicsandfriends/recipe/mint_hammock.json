@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "group": "hammock",
   "pattern": [
-    "sws",
+    " w ",
     "sas",
-    "sws"
+    " w "
   ],
   "key": {
     "a": {
       "item": "dyenamics:mint_wool"
     },
     "s": {
-      "tag": "c:string"
+      "tag": "c:strings"
     },
     "w": {
       "tag": "c:rods/wooden"
@@ -20,7 +20,7 @@
   "result": {
     "id": "dyenamicsandfriends:comforts_mint_hammock"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "comforts"

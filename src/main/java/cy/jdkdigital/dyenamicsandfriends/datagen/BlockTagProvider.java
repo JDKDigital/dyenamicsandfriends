@@ -139,20 +139,20 @@ public class BlockTagProvider extends BlockTagsProvider
             var JACK_O_LANTERNS = tag(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS);
             var ENDERMAN_HOLDABLE = tag(BlockTags.ENDERMAN_HOLDABLE);
 
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS.add(holder.get()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_CARVED.add(holder.get()));
-            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> JACK_O_LANTERNS.add(holder.get()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_CARVED.addOptional(holder.getId()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> JACK_O_LANTERNS.addOptional(holder.getId()));
 
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
-            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.add(holder.get()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.addOptional(holder.getId()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> MINEABLE_AXE.addOptional(holder.getId()));
 
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
-            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.add(holder.get()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.addOptional(holder.getId()));
+            ChromaCarvingsCompat.JACKOS.forEach((dyenamicDyeColor, holder) -> SWORD_EFFICIENT.addOptional(holder.getId()));
 
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.add(holder.get()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.add(holder.get()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> ENDERMAN_HOLDABLE.addOptional(holder.getId()));
         }
     }
 

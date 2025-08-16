@@ -1,22 +1,76 @@
 {
   "values": [
-    "dyenamicsandfriends:cookingforblockheads_cherenkov_fridge",
-    "dyenamicsandfriends:cookingforblockheads_navy_fridge",
-    "dyenamicsandfriends:cookingforblockheads_rose_fridge",
-    "dyenamicsandfriends:cookingforblockheads_amber_fridge",
-    "dyenamicsandfriends:cookingforblockheads_persimmon_fridge",
-    "dyenamicsandfriends:cookingforblockheads_conifer_fridge",
-    "dyenamicsandfriends:cookingforblockheads_maroon_fridge",
-    "dyenamicsandfriends:cookingforblockheads_bubblegum_fridge",
-    "dyenamicsandfriends:cookingforblockheads_ultramarine_fridge",
-    "dyenamicsandfriends:cookingforblockheads_fluorescent_fridge",
-    "dyenamicsandfriends:cookingforblockheads_peach_fridge",
-    "dyenamicsandfriends:cookingforblockheads_mint_fridge",
-    "dyenamicsandfriends:cookingforblockheads_lavender_fridge",
-    "dyenamicsandfriends:cookingforblockheads_honey_fridge",
-    "dyenamicsandfriends:cookingforblockheads_aquamarine_fridge",
-    "dyenamicsandfriends:cookingforblockheads_spring_green_fridge",
-    "dyenamicsandfriends:cookingforblockheads_icy_blue_fridge",
-    "dyenamicsandfriends:cookingforblockheads_wine_fridge"
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_maroon_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_navy_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_wine_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_amber_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_honey_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_fluorescent_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_cherenkov_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_rose_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_icy_blue_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_lavender_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_conifer_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_peach_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_mint_fridge",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_fridge",
+      "required": false
+    }
   ]
 }

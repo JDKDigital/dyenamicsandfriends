@@ -15,7 +15,7 @@
   "result": {
     "id": "dyenamicsandfriends:sleep_tight_mint_hammock"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "sleep_tight"

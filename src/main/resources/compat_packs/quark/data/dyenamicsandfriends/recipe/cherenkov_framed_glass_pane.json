@@ -13,7 +13,7 @@
     "id": "dyenamicsandfriends:quark_cherenkov_framed_glass_pane",
     "count": 16
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "quark"

@@ -21,7 +21,7 @@
     "count": 4,
     "id": "dyenamicsandfriends:crystalix_navy_bordered_crystalix_glass"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "crystalix"

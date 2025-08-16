@@ -23,7 +23,7 @@
   "result": {
     "id": "dyenamicsandfriends:bumblezone_$$_string_curtain"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "the_bumblezone"

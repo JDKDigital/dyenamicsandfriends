@@ -15,7 +15,7 @@
   "result": {
     "id": "dyenamics:$$_glazed_terracotta"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "glazedresymmetry"

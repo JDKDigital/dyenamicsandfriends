@@ -17,7 +17,7 @@
     "id": "dyenamicsandfriends:regions_unexplored_conifer_painted_planks",
     "count": 8
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "regions_unexplored"

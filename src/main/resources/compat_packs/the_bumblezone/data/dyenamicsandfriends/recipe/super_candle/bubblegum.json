@@ -15,7 +15,7 @@
   "result": {
     "id": "dyenamicsandfriends:bumblezone_bubblegum_super_candle_base"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "the_bumblezone"

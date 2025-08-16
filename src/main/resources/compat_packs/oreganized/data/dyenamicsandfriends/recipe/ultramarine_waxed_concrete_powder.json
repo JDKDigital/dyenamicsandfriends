@@ -11,7 +11,7 @@
   "result": {
     "id": "dyenamicsandfriends:oreganized_ultramarine_waxed_concrete_powder"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "oreganized"

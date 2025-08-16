@@ -1,22 +1,76 @@
 {
   "values": [
-    "dyenamicsandfriends:chromacarvings_cherenkov_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_navy_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_rose_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_amber_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_persimmon_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_conifer_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_maroon_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_bubblegum_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_ultramarine_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_fluorescent_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_peach_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_mint_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_lavender_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_honey_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_aquamarine_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_spring_green_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_icy_blue_jack_o_lantern",
-    "dyenamicsandfriends:chromacarvings_wine_jack_o_lantern"
+    {
+      "id": "dyenamicsandfriends:chromacarvings_maroon_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_navy_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_ultramarine_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_wine_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_amber_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_spring_green_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_aquamarine_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_bubblegum_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_honey_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_fluorescent_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_cherenkov_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_rose_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_icy_blue_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_lavender_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_conifer_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_peach_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_mint_jack_o_lantern",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_persimmon_jack_o_lantern",
+      "required": false
+    }
   ]
 }

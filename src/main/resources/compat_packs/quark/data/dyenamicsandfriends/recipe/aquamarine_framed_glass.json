@@ -34,7 +34,7 @@
     "id": "dyenamicsandfriends:quark_aquamarine_framed_glass",
     "count": 8
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "quark"

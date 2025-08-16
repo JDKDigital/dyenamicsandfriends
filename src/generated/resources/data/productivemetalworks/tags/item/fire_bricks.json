@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:productivemetalworks_cherenkov_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_maroon_fire_bricks",
       "required": false
     },
     {
@@ -9,7 +9,11 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_rose_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_ultramarine_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_wine_fire_bricks",
       "required": false
     },
     {
@@ -17,15 +21,11 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_persimmon_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_spring_green_fire_bricks",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_conifer_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_maroon_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_aquamarine_fire_bricks",
       "required": false
     },
     {
@@ -33,11 +33,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_ultramarine_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_honey_fire_bricks",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:productivemetalworks_fluorescent_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_cherenkov_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_rose_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_icy_blue_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_lavender_fire_bricks",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_conifer_fire_bricks",
       "required": false
     },
     {
@@ -49,27 +69,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_lavender_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_honey_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_aquamarine_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_spring_green_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_icy_blue_fire_bricks",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_wine_fire_bricks",
+      "id": "dyenamicsandfriends:productivemetalworks_persimmon_fire_bricks",
       "required": false
     }
   ]

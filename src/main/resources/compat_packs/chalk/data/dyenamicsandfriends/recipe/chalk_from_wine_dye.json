@@ -12,7 +12,7 @@
   "result": {
     "item": "dyenamicsandfriends:chalk_wine_chalk"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "chalk"

@@ -1,3 +1,23 @@
+1.21.1-2.1.7
+
+- Fixed some recipe conditions
+
+
+1.21.1-2.1.6
+
+- Fixed Luminax recipe conflicts
+
+
+1.21.1-2.1.5
+
+- Moved fusion overrides for metalworks to dynamic resourcepack
+
+
+1.21.1-2.1.4
+
+- Fixed some tag loading issues
+
+
 1.21.1-2.1.2
 
 - Updated Metalworks compat to include capaitors

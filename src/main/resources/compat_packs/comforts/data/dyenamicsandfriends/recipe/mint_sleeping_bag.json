@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "sleeping_bag",
   "pattern": [
-    "aaa"
+    "a",
+    "a",
+    "a"
   ],
   "key": {
     "a": {
@@ -12,7 +14,7 @@
   "result": {
     "id": "dyenamicsandfriends:comforts_mint_sleeping_bag"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "comforts"

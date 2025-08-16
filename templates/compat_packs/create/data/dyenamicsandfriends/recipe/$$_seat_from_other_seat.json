@@ -11,7 +11,7 @@
   "result": {
     "id": "dyenamicsandfriends:create_$$_seat"
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "create"

@@ -1,22 +1,76 @@
 {
   "values": [
-    "dyenamicsandfriends:cookingforblockheads_cherenkov_oven",
-    "dyenamicsandfriends:cookingforblockheads_navy_oven",
-    "dyenamicsandfriends:cookingforblockheads_rose_oven",
-    "dyenamicsandfriends:cookingforblockheads_amber_oven",
-    "dyenamicsandfriends:cookingforblockheads_persimmon_oven",
-    "dyenamicsandfriends:cookingforblockheads_conifer_oven",
-    "dyenamicsandfriends:cookingforblockheads_maroon_oven",
-    "dyenamicsandfriends:cookingforblockheads_bubblegum_oven",
-    "dyenamicsandfriends:cookingforblockheads_ultramarine_oven",
-    "dyenamicsandfriends:cookingforblockheads_fluorescent_oven",
-    "dyenamicsandfriends:cookingforblockheads_peach_oven",
-    "dyenamicsandfriends:cookingforblockheads_mint_oven",
-    "dyenamicsandfriends:cookingforblockheads_lavender_oven",
-    "dyenamicsandfriends:cookingforblockheads_honey_oven",
-    "dyenamicsandfriends:cookingforblockheads_aquamarine_oven",
-    "dyenamicsandfriends:cookingforblockheads_spring_green_oven",
-    "dyenamicsandfriends:cookingforblockheads_icy_blue_oven",
-    "dyenamicsandfriends:cookingforblockheads_wine_oven"
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_maroon_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_navy_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_ultramarine_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_wine_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_amber_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_spring_green_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_aquamarine_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_bubblegum_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_honey_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_fluorescent_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_cherenkov_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_rose_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_icy_blue_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_lavender_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_conifer_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_peach_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_mint_oven",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:cookingforblockheads_persimmon_oven",
+      "required": false
+    }
   ]
 }

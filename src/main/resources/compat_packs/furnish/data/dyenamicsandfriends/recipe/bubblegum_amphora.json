@@ -7,7 +7,7 @@
     "id": "dyenamicsandfriends:furnish_bubblegum_amphora",
     "count": 1
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "furnish"

@@ -19,7 +19,7 @@
     "item": "dyenamicsandfriends:ceramics_$$_porcelain_cistern",
     "count": 4
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "ceramics"

@@ -13,7 +13,7 @@
     "id": "dyenamics:persimmon_stained_glass"
   },
   "group": "quark:glass_shard",
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "quark"

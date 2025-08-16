@@ -2,8 +2,5 @@
   "pack": {
     "description": "Dyenamics and Friends Resources",
     "pack_format": 34
-  },
-  "fusion": {
-    "overrides_folder": "fusion-overrides"
   }
 }

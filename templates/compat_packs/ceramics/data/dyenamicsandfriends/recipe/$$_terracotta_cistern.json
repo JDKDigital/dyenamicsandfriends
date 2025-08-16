@@ -20,7 +20,7 @@
     "item": "dyenamicsandfriends:ceramics_$$_terracotta_cistern",
     "count": 4
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "ceramics"

@@ -18,7 +18,7 @@
     "item": "dyenamicsandfriends:ceramics_$$_porcelain",
     "count": 8
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "ceramics"

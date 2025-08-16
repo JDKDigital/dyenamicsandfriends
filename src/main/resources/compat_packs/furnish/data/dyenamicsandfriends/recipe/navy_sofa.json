@@ -7,7 +7,7 @@
     "id": "dyenamicsandfriends:furnish_navy_sofa",
     "count": 1
   },
-  "conditions": [
+  "neoforge:conditions": [
     {
       "type": "neoforge:mod_loaded",
       "modid": "furnish"

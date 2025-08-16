@@ -4,7 +4,6 @@
     "pack_format": 34
   },
   "fusion": {
-    "overrides_folder": "fusion-overrides",
-    "min_version": "1.2.7"
+    "overrides_folder": "fusion-overrides"
   }
 }

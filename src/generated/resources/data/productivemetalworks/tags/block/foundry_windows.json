@@ -1,7 +1,7 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:productivemetalworks_cherenkov_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_maroon_foundry_window",
       "required": false
     },
     {
@@ -9,7 +9,11 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_rose_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_ultramarine_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_wine_foundry_window",
       "required": false
     },
     {
@@ -17,15 +21,11 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_persimmon_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_spring_green_foundry_window",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_conifer_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_maroon_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_aquamarine_foundry_window",
       "required": false
     },
     {
@@ -33,11 +33,31 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_ultramarine_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_honey_foundry_window",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:productivemetalworks_fluorescent_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_cherenkov_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_rose_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_icy_blue_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_lavender_foundry_window",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:productivemetalworks_conifer_foundry_window",
       "required": false
     },
     {
@@ -49,27 +69,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:productivemetalworks_lavender_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_honey_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_aquamarine_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_spring_green_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_icy_blue_foundry_window",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:productivemetalworks_wine_foundry_window",
+      "id": "dyenamicsandfriends:productivemetalworks_persimmon_foundry_window",
       "required": false
     }
   ]

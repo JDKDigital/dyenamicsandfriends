@@ -54,46 +54,46 @@ public class ItemTagProvider extends ItemTagsProvider
 
         if (ModList.get().isLoaded("cookingforblockheads")) {
             var CABINETS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:cabinets")));
-            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> CABINETS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> CABINETS.addOptional(holder.getId()));
 
             var CONNECTORS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:connectors")));
-            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> CONNECTORS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> CONNECTORS.addOptional(holder.getId()));
 
             var COOKING_TABLES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:cooking_tables")));
-            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> COOKING_TABLES.addOptional(holder.getId()));
 
             var COUNTERS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:counters")));
-            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> COUNTERS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> COUNTERS.addOptional(holder.getId()));
 
             var FRIDGES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:fridges")));
-            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> FRIDGES.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> FRIDGES.addOptional(holder.getId()));
 
             var OVENS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:ovens")));
-            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> OVENS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> OVENS.addOptional(holder.getId()));
 
             var SINKS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:sinks")));
-            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> SINKS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> SINKS.addOptional(holder.getId()));
 
             var DYED_CABINETS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_cabinets")));
-            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> DYED_CABINETS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.CABINETS.forEach((dyenamicDyeColor, holder) -> DYED_CABINETS.addOptional(holder.getId()));
 
             var DYED_CONNECTORS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_connectors")));
-            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> DYED_CONNECTORS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.CONNECTORS.forEach((dyenamicDyeColor, holder) -> DYED_CONNECTORS.addOptional(holder.getId()));
 
             var DYED_COOKING_TABLES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_cooking_tables")));
-            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> DYED_COOKING_TABLES.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.COOKING_TABLES.forEach((dyenamicDyeColor, holder) -> DYED_COOKING_TABLES.addOptional(holder.getId()));
 
             var DYED_COUNTERS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_counters")));
-            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> DYED_COUNTERS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.COUNTERS.forEach((dyenamicDyeColor, holder) -> DYED_COUNTERS.addOptional(holder.getId()));
 
             var DYED_FRIDGES = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_fridges")));
-            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> DYED_FRIDGES.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.FRIDGES.forEach((dyenamicDyeColor, holder) -> DYED_FRIDGES.addOptional(holder.getId()));
 
             var DYED_OVENS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_ovens")));
-            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> DYED_OVENS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.OVENS.forEach((dyenamicDyeColor, holder) -> DYED_OVENS.addOptional(holder.getId()));
 
             var DYED_SINKS = tag(ItemTags.create(ResourceLocation.parse("cookingforblockheads:dyed_sinks")));
-            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> DYED_SINKS.add(holder.get().asItem()));
+            CookingForBlockheadsCompat.SINKS.forEach((dyenamicDyeColor, holder) -> DYED_SINKS.addOptional(holder.getId()));
         }
 
         if (ModList.get().isLoaded("botanypots")) {
@@ -114,10 +114,10 @@ public class ItemTagProvider extends ItemTagsProvider
             var PUMPKINS_NORMAL = tag(Tags.Items.PUMPKINS_NORMAL);
             var EQUIPPABLE = tag(ItemTags.EQUIPPABLE_ENCHANTABLE);
             var VANISHING = tag(ItemTags.VANISHING_ENCHANTABLE);
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKIN_CROPS.add(holder.get().asItem()));
-            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_NORMAL.add(holder.get().asItem()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> EQUIPPABLE.add(holder.get().asItem()));
-            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> VANISHING.add(holder.get().asItem()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKIN_CROPS.addOptional(holder.getId()));
+            ChromaCarvingsCompat.PUMPKINS.forEach((dyenamicDyeColor, holder) -> PUMPKINS_NORMAL.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> EQUIPPABLE.addOptional(holder.getId()));
+            ChromaCarvingsCompat.CARVED_PUMPKINS.forEach((dyenamicDyeColor, holder) -> VANISHING.addOptional(holder.getId()));
         }
     }
 
