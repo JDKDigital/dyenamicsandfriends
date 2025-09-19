@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ],
+          "name": "dyenamicsandfriends:chromacarvings_honey_jack_o_lantern"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dyenamicsandfriends:blocks/chromacarvings_honey_jack_o_lantern"
+}

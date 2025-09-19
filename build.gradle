@@ -138,7 +138,7 @@ dependencies {
     implementation "curse.maven:curios-309927:6401872"
 
     implementation "libs:botanypots-neoforge-1.21.1:21.1.10"
-    implementation "libs:chromacarvings-1.21.1:0.1.0"
+    implementation "libs:chromacarvings-1.21.1:0.2.0"
 
 //    implementation "libs:supplementaries-1.20:2.7.20")
 //    implementation "libs:suppsquared-1.19.2:1.0.14")

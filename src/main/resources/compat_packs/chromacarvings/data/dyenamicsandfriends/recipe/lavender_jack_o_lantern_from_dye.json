@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:pumpkins/jack_o_lanterns"
+    },
+    {
+      "tag": "c:dyes/lavender"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:chromacarvings_lavender_jack_o_lantern"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dyenamicsandfriends:chromacarvings_$$_carved_pumpkin"
+    },
+    {
+      "item": "minecraft:torch"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:chromacarvings_$$_jack_o_lantern"
+  }
+}

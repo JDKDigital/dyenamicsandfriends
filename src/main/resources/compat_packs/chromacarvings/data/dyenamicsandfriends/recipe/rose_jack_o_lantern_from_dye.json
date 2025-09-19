@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:pumpkins/jack_o_lanterns"
+    },
+    {
+      "tag": "c:dyes/rose"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:chromacarvings_rose_jack_o_lantern"
+  }
+}

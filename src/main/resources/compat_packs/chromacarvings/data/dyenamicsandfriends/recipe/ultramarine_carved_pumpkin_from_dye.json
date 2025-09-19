@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "c:pumpkins/carved"
+    },
+    {
+      "tag": "c:dyes/ultramarine"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dyenamicsandfriends:chromacarvings_ultramarine_carved_pumpkin"
+  }
+}

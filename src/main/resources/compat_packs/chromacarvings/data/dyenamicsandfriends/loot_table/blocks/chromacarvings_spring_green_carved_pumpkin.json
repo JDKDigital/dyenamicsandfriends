@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ],
+          "name": "dyenamicsandfriends:chromacarvings_spring_green_carved_pumpkin"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "dyenamicsandfriends:blocks/chromacarvings_spring_green_carved_pumpkin"
+}
