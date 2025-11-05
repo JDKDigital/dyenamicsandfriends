@@ -39,12 +39,6 @@ public class ItemTagProvider extends ItemTagsProvider
             copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "fire_bricks")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("productivemetalworks", "fire_bricks")));
         }
 
-        if (ModList.get().isLoaded("crystalix")) {
-            copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "glass")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "glass")));
-            copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "clear")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "clear")));
-            copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "bordered")), ItemTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "bordered")));
-        }
-
         if (ModList.get().isLoaded("luminax")) {
             for (String name: new String[]{"blocks", "stairs", "slabs", "walls", "pressure_plates", "buttons"}) {
                 copy(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", name)), ItemTags.create(ResourceLocation.fromNamespaceAndPath("luminax", name)));

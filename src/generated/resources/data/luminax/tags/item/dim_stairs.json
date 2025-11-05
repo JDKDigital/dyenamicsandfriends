@@ -1,11 +1,43 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_stairs",
+      "id": "dyenamicsandfriends:luminax_dim_peach_luminax_stairs",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:luminax_dim_navy_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_cherenkov_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_spring_green_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_maroon_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_amber_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_stairs",
       "required": false
     },
     {
@@ -17,19 +49,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_amber_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_spring_green_luminax_stairs",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_dim_aquamarine_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_bubblegum_luminax_stairs",
       "required": false
     },
     {
@@ -37,39 +57,19 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_fluorescent_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_cherenkov_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_rose_luminax_stairs",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:luminax_dim_icy_blue_luminax_stairs",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:luminax_dim_lavender_luminax_stairs",
+      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_stairs",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:luminax_dim_fluorescent_luminax_stairs",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:luminax_dim_conifer_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_peach_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_mint_luminax_stairs",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:luminax_dim_persimmon_luminax_stairs",
       "required": false
     }
   ]

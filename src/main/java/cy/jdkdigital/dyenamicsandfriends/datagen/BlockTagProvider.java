@@ -54,16 +54,6 @@ public class BlockTagProvider extends BlockTagsProvider
             ProductiveMetalworksCompat.FIRE_BRICKS.forEach((dyenamicDyeColor, holder) -> FIRE_BRICKS.addOptional(holder.getId()));
         }
 
-        if (ModList.get().isLoaded("crystalix")) {
-            var GLASS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "glass")));
-            var CLEAR = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "clear")));
-            var BORDERED = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("crystalix", "bordered")));
-
-            CrystalixCompat.GLASS.forEach((dyenamicDyeColor, holder) -> GLASS.addOptional(holder.getId()));
-            CrystalixCompat.CLEAR.forEach((dyenamicDyeColor, holder) -> CLEAR.addOptional(holder.getId()));
-            CrystalixCompat.BORDERED.forEach((dyenamicDyeColor, holder) -> BORDERED.addOptional(holder.getId()));
-        }
-
         if (ModList.get().isLoaded("luminax")) {
             var BLOCKS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "blocks")));
             var LUMINAX_STAIRS = tag(BlockTags.create(ResourceLocation.fromNamespaceAndPath("luminax", "stairs")));

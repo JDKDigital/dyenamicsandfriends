@@ -115,9 +115,6 @@ public class LanguageProvider extends net.neoforged.neoforge.common.data.Languag
             add("block.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_jack_o_lantern", colorName + " Jack o'Lantern");
             add("entity.dyenamicsandfriends.chromacarvings_" + color.getSerializedName() + "_snow_golem", colorName + " Snow Golem");
             add("block.dyenamicsandfriends.just_blahaj_" + color.getSerializedName() + "_blahaj", colorName + " Blahaj (Blåhaj)");
-            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_crystalix_glass", colorName + " Crystalix Glass");
-            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_clear_crystalix_glass", colorName + " Clear Crystalix Glass");
-            add("block.dyenamicsandfriends.crystalix_" + color.getSerializedName() + "_bordered_crystalix_glass", colorName + " Bordered Crystalix Glass");
             for (String name: new String[]{"block", "stairs", "slab", "wall", "pressure_plate", "button"}) {
                 add("block.dyenamicsandfriends.luminax_" + color.getSerializedName() + "_luminax_" + name, colorName + " Luminax " + capName(name));
                 add("block.dyenamicsandfriends.luminax_dim_" + color.getSerializedName() + "_luminax_" + name, "Dim " + colorName + " Luminax " + capName(name));

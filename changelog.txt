@@ -1,6 +1,13 @@
+1.21.1-2.2.1
+
+- Removed Crystalix compat
+
+
 1.21.1-2.2.0
 
 - Added Chroma Carvings compat
+- Added Ukranian translation (WajtEvie)
+- Fixed Luminax dim blocks not dropping
 
 
 1.21.1-2.1.7

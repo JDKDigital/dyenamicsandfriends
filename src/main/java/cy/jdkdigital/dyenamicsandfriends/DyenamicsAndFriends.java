@@ -81,7 +81,7 @@ public class DyenamicsAndFriends
         for (String modId: DyenamicRegistry.MODS) {
             if (ModList.get().isLoaded(modId)) {
                 event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.SERVER_DATA, Component.translatable("dataPack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.TOP);
-                if (modId.equals("productivemetalworks") || modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("crystalix") || modId.equals("cookingforblockheads") || modId.equals("clayworks") || modId.equals("botanypots") || modId.equals("chromacarvings") || modId.equals("just_blahaj")) {
+                if (modId.equals("productivemetalworks") || modId.equals("connectedglass") || modId.equals("luminax") || modId.equals("cookingforblockheads") || modId.equals("clayworks") || modId.equals("botanypots") || modId.equals("chromacarvings") || modId.equals("just_blahaj")) {
                     event.addPackFinders(ResourceLocation.fromNamespaceAndPath(MODID, "compat_packs/" + modId + "/"), PackType.CLIENT_RESOURCES, Component.translatable("resourcePack." + MODID + "." + modId), PackSource.BUILT_IN, true, Pack.Position.TOP);
                 }
             }

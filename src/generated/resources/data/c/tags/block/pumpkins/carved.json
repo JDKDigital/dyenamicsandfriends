@@ -1,11 +1,43 @@
 {
   "values": [
     {
-      "id": "dyenamicsandfriends:chromacarvings_maroon_carved_pumpkin",
+      "id": "dyenamicsandfriends:chromacarvings_peach_carved_pumpkin",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:chromacarvings_navy_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_bubblegum_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_cherenkov_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_spring_green_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_maroon_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_amber_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_rose_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_lavender_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_mint_carved_pumpkin",
       "required": false
     },
     {
@@ -17,19 +49,7 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:chromacarvings_amber_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_spring_green_carved_pumpkin",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:chromacarvings_aquamarine_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_bubblegum_carved_pumpkin",
       "required": false
     },
     {
@@ -37,39 +57,19 @@
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:chromacarvings_fluorescent_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_cherenkov_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_rose_carved_pumpkin",
-      "required": false
-    },
-    {
       "id": "dyenamicsandfriends:chromacarvings_icy_blue_carved_pumpkin",
       "required": false
     },
     {
-      "id": "dyenamicsandfriends:chromacarvings_lavender_carved_pumpkin",
+      "id": "dyenamicsandfriends:chromacarvings_persimmon_carved_pumpkin",
+      "required": false
+    },
+    {
+      "id": "dyenamicsandfriends:chromacarvings_fluorescent_carved_pumpkin",
       "required": false
     },
     {
       "id": "dyenamicsandfriends:chromacarvings_conifer_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_peach_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_mint_carved_pumpkin",
-      "required": false
-    },
-    {
-      "id": "dyenamicsandfriends:chromacarvings_persimmon_carved_pumpkin",
       "required": false
     }
   ]

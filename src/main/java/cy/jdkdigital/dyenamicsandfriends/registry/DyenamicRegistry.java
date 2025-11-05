@@ -43,7 +43,6 @@ public class DyenamicRegistry
         add("sophisticatedbackpacks");
         add("create");
         add("the_bumblezone");
-        add("crystalix");
         add("luminax");
         add("cookingforblockheads");
         add("clayworks");
@@ -164,9 +163,6 @@ public class DyenamicRegistry
             if (ModList.get().isLoaded("connectedglass")) {
                 ConnectedGlassCompat.registerBlocks(color);
             }
-            if (ModList.get().isLoaded("crystalix")) {
-                CrystalixCompat.registerBlocks(color);
-            }
             if (ModList.get().isLoaded("luminax")) {
                 LuminaxCompat.registerBlocks(color);
             }
@@ -227,9 +223,6 @@ public class DyenamicRegistry
         }
         if (ModList.get().isLoaded("supplementaries")) {
 //            SupplementariesCompat.Client.registerBlockEntityRenderers(event);
-        }
-        if (ModList.get().isLoaded("crystalix")) {
-            CrystalixCompat.Client.registerBlockEntityRenderers(event);
         }
         if (ModList.get().isLoaded("connectedglass")) {
             ConnectedGlassCompat.Client.registerBlockEntityRenderers(event);
