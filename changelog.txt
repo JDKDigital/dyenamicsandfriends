@@ -1,3 +1,8 @@
+1.21.1-2.2.2
+
+- Fixed some texture having been chewed over by Leanify
+
+
 1.21.1-2.2.1
 
 - Removed Crystalix compat
